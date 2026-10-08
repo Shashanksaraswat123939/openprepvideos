@@ -1,0 +1,67 @@
+{
+  "id": "m-geo-area_v3",
+  "skill": "m-geo-area",
+  "part": 3,
+  "title": "Area and Volume, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Geometry and Trigonometry",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes students make with area and volume, and then use Desmos to confirm a volume and to find a missing dimension.", "card": {"text": "Five traps, then Desmos"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: diameter or radius", "beats": [
+      {"say": "Trap one. A circle with a diameter of ten has a radius of five. Students put the diameter into the area formula.", "wrong": "A = π(10)^2 = 100π", "wrong_why": "10 is the diameter"},
+      {"say": "Halve the diameter first. The radius is five, and the area is pi times five squared, which is twenty-five pi.", "right": "A = π(5)^2 = 25π", "right_why": "Use the radius"}
+    ]},
+    {"type": "compare", "title": "Trap 2: the one third", "beats": [
+      {"say": "Trap two. The volume of a cone or a pyramid has a factor of one third. Students use the cylinder or prism formula by mistake.", "wrong": "cone: V = πr^2 h", "wrong_why": "That is a cylinder"},
+      {"say": "A cone holds one third of the matching cylinder. So the volume is one third times pi r squared times the height.", "right": "cone: V = frac(1,3)πr^2 h", "right_why": "Cones hold one third"}
+    ]},
+    {"type": "compare", "title": "Trap 3: scaling volume", "beats": [
+      {"say": "Trap three. If every edge of a box is doubled, students double the volume.", "wrong": "double every edge: V × 2", "wrong_why": "Volume scales by k cubed"},
+      {"say": "Volume scales by the cube of the scale factor. Two cubed is eight, so the volume is multiplied by eight. Area is multiplied by four.", "right": "double every edge: V × 8", "right_why": "k = 2, so k³ = 8"}
+    ]},
+    {"type": "compare", "title": "Trap 4: slant height", "beats": [
+      {"say": "Trap four. A cone has a radius of five and a slant height of thirteen. Students use the slant height as the height in the volume formula.", "wrong": "h = 13", "wrong_why": "13 is the slant height"},
+      {"say": "The height is perpendicular to the base. Use the Pythagorean theorem with the radius and the slant height. Thirteen squared minus five squared is one hundred forty-four, so the height is twelve.", "right": "h = sqrt(13^2 − 5^2) = 12", "right_why": "Perpendicular height"}
+    ]},
+    {"type": "compare", "title": "Trap 5: a semicircle", "beats": [
+      {"say": "Trap five. In a composite figure, a semicircle is only half of a circle. Students use the area of the full circle.", "wrong": "semicircle: A = πr^2", "wrong_why": "That is a full circle"},
+      {"say": "A semicircle has half the area of the full circle. So the area is one half times pi r squared.", "right": "semicircle: A = frac(1,2)πr^2", "right_why": "Half of a circle"}
+    ]},
+    {"type": "cards", "title": "The fast way", "beats": [
+      {"say": "Most of these questions are one formula plus careful arithmetic. Write the formula, substitute, and then simplify. Leave pi in until the end, since answers are often written as k pi.", "card": {"text": "Formula, substitute, simplify"}},
+      {"say": "For scaling questions, skip the formulas entirely. Find the length ratio k, then use k squared for area, and k cubed for volume.", "card": {"text": "Scaling: k² for area, k³ for volume"}}
+    ]},
+    {"type": "cards", "title": "Desmos: check a volume", "beats": [
+      {"say": "Desmos helps with arithmetic that involves pi. To confirm the cone's volume, type one third times pi times four squared times twenty-seven, and compare the result with one hundred forty-four pi.", "card": {"text": "frac(1,3)π(4)^2(27) = 144π ?", "sub": "Confirm numerically"}}
+    ]},
+    {"type": "desmos", "title": "Confirm a volume", "beats": [
+      {"say": "Open a fresh graph. We will type the cone's volume in one line.", "actions": ["hold: 2"]},
+      {"say": "Type one, a slash, and three. Press the right arrow to leave the fraction, then type times pi times four squared, and press the right arrow, then times twenty-seven.", "actions": ["type: 1/3>*pi*4^2>*27"]},
+      {"say": "Desmos shows about four hundred fifty-two point four. And one hundred forty-four times pi is also about four hundred fifty-two point four, so they match.", "actions": ["type: 144*pi", "hold: 4"]}
+    ]},
+    {"type": "cards", "title": "Desmos: a missing dimension", "beats": [
+      {"say": "Desmos can also find a missing dimension. A sphere has a volume of two hundred eighty-eight pi. To find its radius, graph the volume formula and the value, and find where they meet.", "card": {"text": "frac(4,3)πx^3 = 288π", "sub": "Find the radius x"}}
+    ]},
+    {"type": "desmos", "title": "Find the radius", "beats": [
+      {"say": "We type the volume of a sphere as a function of the radius x, and a horizontal line at the given volume.", "actions": ["hold: 2"]},
+      {"say": "Type y equals four thirds times pi times x cubed. Remember the right arrows after the fraction and after the exponent.", "actions": ["type: y=4/3>*pi*x^3>"]},
+      {"say": "Now type y equals two hundred eighty-eight times pi. This horizontal line is the given volume.", "actions": ["type: y=288*pi"]},
+      {"say": "Click the crossing point. The x value is six. So the sphere's radius is six.", "actions": ["bounds: left=-2 right=10 bottom=-100 top=1500", "click: 6,904.7787"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. A cone has a radius of three and a height of twelve. Find its volume in terms of pi. Pause the video, try it, and then watch the solution.", "card": {"text": "Cone: r = 3, h = 12", "sub": "Find the volume. Pause and try it first."}}
+    ]},
+    {"type": "steps", "title": "Practice: the cone's volume", "start": "frac(1,3)π(3)^2(12)", "beats": [
+      {"say": "Use the cone formula, one third pi r squared h, with a radius of three and a height of twelve."},
+      {"say": "Three squared is nine. So the volume is one third times pi times nine times twelve.", "op": "square the radius", "result": "frac(1,3)π(9)(12)"},
+      {"say": "Nine times twelve is one hundred eight, and one third of one hundred eight is thirty-six. So the volume is thirty-six pi.", "op": "simplify", "result": "36π", "final": true}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Use the radius, not the diameter. Remember the one third for cones, and use the perpendicular height.", "item": "Radius, one third, perpendicular height"},
+      {"say": "Scale volume by k cubed and area by k squared, and use half a circle for a semicircle.", "item": "k³ for volume, k² for area; half a circle"},
+      {"say": "Use Desmos for arithmetic with pi, or to solve for a missing dimension. In the next topic, we study lines, angles, and triangles.", "item": "Desmos for π arithmetic and dimensions"}
+    ]}
+  ]
+}

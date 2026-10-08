@@ -1,0 +1,46 @@
+{
+  "id": "m-geo-area_v2",
+  "skill": "m-geo-area",
+  "part": 2,
+  "title": "Area and Volume, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Geometry and Trigonometry",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we found the volume and surface area of a box, and we saw that cones and pyramids hold one third of the matching prism.", "card": {"text": "Cone = one third of the cylinder"}},
+      {"say": "In this video, we use scaling, and then solve a hard problem where a cylinder is melted and recast as a cone.", "card": {"text": "Today: scaling, then melted metal"}}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. A cube has an edge of three centimeters. Every edge is doubled. By what factor does the volume increase?", "card": {"text": "Edge 3 becomes edge 6", "sub": "Volume grows by what factor?"}},
+      {"say": "The tempting answer is two, because the edges doubled. But volume is cubed, so the factor must be two cubed.", "card": {"text": "Lengths ×k, volume ×k³"}}
+    ]},
+    {"type": "steps", "title": "Medium: compare the volumes", "start": "frac(6^3,3^3)", "beats": [
+      {"say": "The new cube has an edge of six, and the old cube has an edge of three. The ratio of the volumes is six cubed over three cubed."},
+      {"say": "Six cubed is two hundred sixteen, and three cubed is twenty-seven, so we have the two volumes.", "op": "evaluate the powers", "result": "frac(216,27)"},
+      {"say": "Two hundred sixteen divided by twenty-seven is eight. So the volume increases by a factor of eight, which is two cubed.", "op": "divide", "result": "8", "final": true}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. A solid metal cylinder with a radius of four and a height of nine is melted and recast as a cone with a radius of four. What is the height of the cone?", "card": {"text": "Cylinder: r = 4, h = 9", "sub": "Recast as a cone with r = 4. Find h."}},
+      {"say": "The key idea is that melting does not change the amount of metal. So the volume of the cone equals the volume of the cylinder.", "card": {"text": "The volume stays the same"}}
+    ]},
+    {"type": "steps", "title": "Hard: the cylinder's volume", "start": "π(4)^2(9)", "beats": [
+      {"say": "The volume of a cylinder is pi r squared times h. We substitute a radius of four and a height of nine."},
+      {"say": "Four squared is sixteen. So the volume is pi times sixteen times nine.", "op": "square the radius", "result": "π(16)(9)"},
+      {"say": "Sixteen times nine is one hundred forty-four. So the cylinder holds one hundred forty-four pi cubic units of metal.", "op": "multiply", "result": "144π", "final": true}
+    ]},
+    {"type": "steps", "title": "Hard: set the volumes equal", "start": "frac(1,3)π(4)^2 h = 144π", "beats": [
+      {"say": "The volume of a cone is one third pi r squared h. We set this equal to the volume of the cylinder, one hundred forty-four pi."},
+      {"say": "Four squared is sixteen. So one third times sixteen is sixteen thirds, and the equation is sixteen thirds pi h equals one hundred forty-four pi.", "op": "simplify", "result": "frac(16,3)πh = 144π"},
+      {"say": "Divide both sides by pi. The pi cancels, because it appears on both sides.", "op": "÷ π on both sides", "result": "frac(16,3)h = 144"},
+      {"say": "Multiply both sides by three sixteenths, the reciprocal of sixteen thirds. One hundred forty-four times three over sixteen.", "op": "multiply by 3/16", "result": "h = 144 × frac(3,16)"},
+      {"say": "One hundred forty-four divided by sixteen is nine, and nine times three is twenty-seven. So the height of the cone is twenty-seven.", "op": "simplify", "result": "h = 27", "final": true}
+    ]},
+    {"type": "check", "title": "Check with the same base", "beats": [
+      {"say": "Check with a shortcut. With the same base, a cone holds one third as much as a cylinder of the same height. So the cone must be three times as tall as the cylinder. Three times nine is twenty-seven.", "lines": ["3 × 9 = 27"], "verdict": "The cone's height is 27."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. When all lengths are multiplied by k, area is multiplied by k squared, and volume by k cubed.", "item": "Area ×k², volume ×k³"},
+      {"say": "When a solid is melted and recast, the volume stays the same, so set the two volume formulas equal.", "item": "Melt and recast: equal volumes"},
+      {"say": "Leave pi in until the end, since it cancels. In the next video, we look at common traps and the fast way with Desmos.", "item": "Keep π until the end"}
+    ]}
+  ]
+}

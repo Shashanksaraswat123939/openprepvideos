@@ -1,0 +1,50 @@
+{
+  "id": "m-geo-lines_v1",
+  "skill": "m-geo-lines",
+  "part": 1,
+  "title": "Lines, Angles, and Triangles, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Geometry and Trigonometry",
+  "scenes": [
+    {"type": "cards", "title": "Lines, angles, triangles", "beats": [
+      {"say": "This skill is about angle facts and triangle relationships. These include angles formed by intersecting lines, angles formed when a line cuts parallel lines, and the angle sum of a triangle.", "card": {"text": "Angle facts and triangle facts"}},
+      {"say": "It also includes isosceles triangles, and similar triangles, whose sides are proportional. Most questions combine one or two facts with a short algebra step.", "card": {"text": "One or two facts plus algebra"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "Angles that form a straight line add to one hundred eighty degrees. Vertical angles, which are opposite each other where two lines cross, are equal.", "item": "Straight line: 180°. Vertical angles are equal."},
+      {"say": "When a transversal crosses parallel lines, every acute angle is equal, every obtuse angle is equal, and any acute angle plus any obtuse angle makes one hundred eighty degrees.", "item": "Parallel lines: acute equal, obtuse equal"},
+      {"say": "The angles of a triangle add to one hundred eighty degrees. An exterior angle equals the sum of the two interior angles that are not next to it.", "item": "Triangle: angles add to 180°"},
+      {"say": "In an isosceles triangle, the angles opposite the equal sides are equal.", "item": "Isosceles: equal sides, equal angles opposite"},
+      {"say": "Two triangles are similar if two pairs of angles match. Then all corresponding sides share one ratio.", "item": "Similar: two angles match, sides proportional"}
+    ]},
+    {"type": "figure", "title": "A transversal and parallel lines", "kind": "parallel_lines", "data": {"angle": 55}, "beats": [
+      {"say": "Here are two parallel lines, crossed by a third line called a transversal. This creates eight angles, four at each crossing.", "show": ["transversal"]},
+      {"say": "At the upper crossing, the angles measure one hundred twenty-five degrees on two sides, and fifty-five degrees on the other two. Opposite angles are equal.", "show": ["angle1", "angle2", "angle3", "angle4"]},
+      {"say": "At the lower crossing, the same pattern repeats, because the lines are parallel. Every acute angle is fifty-five degrees, and every obtuse angle is one hundred twenty-five.", "show": ["angle5", "angle6", "angle7", "angle8"]},
+      {"say": "The circled angles are all equal to fifty-five degrees. An acute angle and an obtuse angle always add up to one hundred eighty degrees.", "show": ["equal_pairs"]}
+    ]},
+    {"type": "table", "title": "Angle pairs with parallel lines", "columns": ["Angle pair", "Relationship"], "rows": [["corresponding", "equal"], ["alternate interior", "equal"], ["same-side interior", "add to 180°"]], "beats": [
+      {"say": "Corresponding angles are in the same position at the two crossings, and they are equal.", "reveal_row": 0},
+      {"say": "Alternate interior angles are on opposite sides of the transversal, between the lines, and they are equal.", "reveal_row": 1},
+      {"say": "Same-side interior angles are on the same side of the transversal, between the lines, and they add up to one hundred eighty degrees.", "reveal_row": 2}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. The angles of a triangle measure two x plus ten, three x minus five, and x plus twenty-five degrees. Find each angle.", "card": {"text": "(2x + 10)°, (3x − 5)°, (x + 25)°", "sub": "Find each angle"}}
+    ]},
+    {"type": "steps", "title": "Easy: solve for x", "start": "(2x + 10) + (3x − 5) + (x + 25) = 180", "beats": [
+      {"say": "The three angles of a triangle add up to one hundred eighty degrees. So we add the three expressions, and set the sum equal to one hundred eighty."},
+      {"say": "Combine the x terms: two x plus three x plus x is six x. Combine the numbers: ten minus five plus twenty-five is thirty.", "op": "combine like terms", "result": "6x + 30 = 180"},
+      {"say": "Subtract thirty from both sides. One hundred eighty minus thirty is one hundred fifty.", "op": "− 30 on both sides", "result": "6x = 150"},
+      {"say": "Divide both sides by six. One hundred fifty divided by six is twenty-five. So x equals twenty-five.", "op": "÷ 6 on both sides", "result": "x = 25", "final": true}
+    ]},
+    {"type": "figure", "title": "Easy: the three angles", "kind": "triangle", "data": {"angles": [50, 60, 70], "labels": ["A", "B", "C"]}, "beats": [
+      {"say": "Now substitute x equals twenty-five into each expression. The angle x plus twenty-five is fifty degrees.", "show": ["A"]},
+      {"say": "Two x plus ten is two times twenty-five plus ten, which is sixty degrees. Three x minus five is seventy-five minus five, which is seventy degrees.", "show": ["B", "C"]},
+      {"say": "Check the angle sum. Fifty plus sixty plus seventy equals one hundred eighty degrees, exactly as a triangle requires.", "show": ["sum"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Straight lines make one hundred eighty degrees, and vertical angles are equal. With parallel lines, acute angles are equal, and obtuse angles are equal.", "item": "180° on a line; equal pairs"},
+      {"say": "The angles of a triangle add to one hundred eighty degrees. Write that as an equation, and solve for x.", "item": "Triangle angles sum to 180°"},
+      {"say": "After solving for x, substitute back to find the angles. In the next video, we work through a medium problem and a hard problem.", "item": "Substitute x back in"}
+    ]}
+  ]
+}
