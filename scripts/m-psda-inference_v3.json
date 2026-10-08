@@ -1,0 +1,62 @@
+{
+  "id": "m-psda-inference_v3",
+  "skill": "m-psda-inference",
+  "part": 3,
+  "title": "Inference and Margin of Error, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes students make with inference and margins of error, and then a reading checklist that makes these questions fast.", "card": {"text": "Five traps, then a checklist"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: intervals and individuals", "beats": [
+      {"say": "Trap one. A confidence interval is about a population parameter, such as a mean or a percent. Students read it as a statement about individual members.", "wrong": "most students sleep 6.8 to 7.4 hours", "wrong_why": "Intervals describe the mean"},
+      {"say": "The interval describes the population mean. It says the mean nightly sleep is plausibly between six point eight and seven point four hours, not that most students fall in that range.", "right": "the mean is plausibly 6.8 to 7.4 hours", "right_why": "About the population mean"}
+    ]},
+    {"type": "compare", "title": "Trap 2: bigger fixes bias", "beats": [
+      {"say": "Trap two. A larger sample gives a smaller margin of error, but it does not remove bias. A survey of five thousand volunteers can still misrepresent the population.", "wrong": "5,000 volunteers: no bias", "wrong_why": "Volunteers are self-selected"},
+      {"say": "Random selection is what makes a sample representative. A large sample that was not chosen at random can still be biased.", "right": "random selection avoids bias", "right_why": "Size does not fix bias"}
+    ]},
+    {"type": "compare", "title": "Trap 3: the wrong population", "beats": [
+      {"say": "Trap three. A sample of seniors at one school only tells you about seniors at that school. Students extend the result to everyone.", "wrong": "seniors at one school: all students", "wrong_why": "Wrong population"},
+      {"say": "A conclusion can only be extended to the population the sample was randomly chosen from. Here, that is the seniors at that school.", "right": "applies to seniors at that school", "right_why": "The sampled population only"}
+    ]},
+    {"type": "compare", "title": "Trap 4: forgetting the complement", "beats": [
+      {"say": "Trap four. If the question asks how many phones are not defective, the estimate of five hundred forty is the wrong group.", "wrong": "not defective: 540", "wrong_why": "540 are the defective ones"},
+      {"say": "Subtract from the total. Fifteen thousand minus five hundred forty is fourteen thousand four hundred sixty phones that are not defective.", "right": "15000 − 540 = 14460", "right_why": "Complement of the estimate"}
+    ]},
+    {"type": "compare", "title": "Trap 5: the margin of error", "beats": [
+      {"say": "Trap five. The margin of error is half the width of the interval. Students use the full width, and get twice the correct margin.", "wrong": "margin = 46.8 − 41.2 = 5.6", "wrong_why": "That is the full width"},
+      {"say": "Divide the width by two. Five point six divided by two is two point eight, which is the margin of error.", "right": "margin = frac(5.6,2) = 2.8", "right_why": "Half the width"}
+    ]},
+    {"type": "cards", "title": "A reading checklist", "beats": [
+      {"say": "Desmos adds little here, because the math is one multiplication or one midpoint. The fast way is a reading habit. For estimates, find the sample fraction, then multiply by the population, and simplify first when you can.", "card": {"text": "Estimates: fraction × population"}},
+      {"say": "For intervals, convert everything to the form from L to U, and compare the endpoints directly. For sampling questions, ask whether the sample was chosen at random, and from which group.", "card": {"text": "Intervals: compare endpoints"}},
+      {"say": "For conclusions, eliminate any choice that says proves, all, or exactly, and any choice that talks about individuals instead of the population mean or percent.", "card": {"text": "Avoid proves, all, exactly"}}
+    ]},
+    {"type": "cards", "title": "Desmos as a calculator", "beats": [
+      {"say": "Use Desmos only as a calculator for awkward numbers. Nine over two hundred fifty of fifteen thousand can be typed in one line, so that nothing is rounded too early.", "card": {"text": "frac(9,250) × 15000"}}
+    ]},
+    {"type": "desmos", "title": "A one-line estimate", "beats": [
+      {"say": "Open a fresh graph. We type the sample fraction and then multiply by the shipment size.", "actions": ["hold: 2"]},
+      {"say": "Type nine, a slash, and two hundred fifty, then press the right arrow to leave the fraction. Then type times fifteen thousand.", "actions": ["type: 9/250>*15000"]},
+      {"say": "Desmos shows five hundred forty, matching our earlier estimate of the defective phones.", "actions": ["hold: 4"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. A random sample of eighty bulbs from a batch of four thousand has three defective bulbs. Estimate the number of defective bulbs in the batch. Pause the video, try it, and then watch the solution.", "card": {"text": "3 defective in a sample of 80", "sub": "Batch of 4,000. Estimate the defective count."}}
+    ]},
+    {"type": "steps", "title": "Practice: scale up", "start": "frac(3,80) × 4000", "beats": [
+      {"say": "Simplify first. Four thousand divided by eighty is fifty, so the fraction of the batch becomes three times fifty."},
+      {"say": "Four thousand divided by eighty is fifty. So the expression becomes three times fifty.", "op": "simplify first", "result": "3 × 50"},
+      {"say": "Three times fifty is one hundred fifty. So we estimate about one hundred fifty defective bulbs in the batch.", "op": "multiply", "result": "150", "final": true}
+    ]},
+    {"type": "check", "title": "Check the proportion", "beats": [
+      {"say": "Check that the sample proportion matches. One hundred fifty out of four thousand is three out of eighty, which is the sample proportion.", "lines": ["frac(150,4000) = frac(3,80)"], "verdict": "About 150 defective bulbs."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Intervals describe a population parameter, not individuals. A bigger sample does not fix a biased sample.", "item": "Parameters, not individuals; size is not bias"},
+      {"say": "Conclusions apply only to the sampled population. The margin of error is half the width, and use the complement when asked for not.", "item": "Right population, half width, complement"},
+      {"say": "Use the reading checklist for every question. In the next topic, we study how to evaluate statistical claims.", "item": "Use the reading checklist"}
+    ]}
+  ]
+}

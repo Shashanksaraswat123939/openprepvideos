@@ -1,0 +1,59 @@
+{
+  "id": "m-psda-claims_v3",
+  "skill": "m-psda-claims",
+  "part": 3,
+  "title": "Evaluating Statistical Claims, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes students make with statistical claims, and then a two-question checklist that settles almost every study.", "card": {"text": "Five traps, then a checklist"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: cause from a survey", "beats": [
+      {"say": "Trap one. A survey found that people who garden report less stress. Students conclude that gardening reduces stress.", "wrong": "gardening reduces stress", "wrong_why": "No random assignment"},
+      {"say": "People chose whether to garden, so the study is observational. It supports only an association between gardening and lower stress.", "right": "gardening is associated with less stress", "right_why": "Association, not cause"}
+    ]},
+    {"type": "compare", "title": "Trap 2: beyond the sampled group", "beats": [
+      {"say": "Trap two. A random sample of one university's students tells you about that university's students. Students extend it to all adults.", "wrong": "applies to all adults", "wrong_why": "Only that university's students"},
+      {"say": "A result applies to the group the sample was randomly drawn from. Here, that means the students at that university.", "right": "applies to that university's students", "right_why": "The sampled group only"}
+    ]},
+    {"type": "compare", "title": "Trap 3: large but biased", "beats": [
+      {"say": "Trap three. Thousands of call-in votes to a radio show are still a self-selected group. Students trust the large number.", "wrong": "5,000 call-in votes: reliable", "wrong_why": "Self-selected group"},
+      {"say": "A large sample does not cure bias. Only random selection from the population makes a sample representative.", "right": "random selection makes it reliable", "right_why": "Size does not fix bias"}
+    ]},
+    {"type": "compare", "title": "Trap 4: selection or assignment", "beats": [
+      {"say": "Trap four. Random selection and random assignment answer different questions. A study with random selection but no assignment cannot claim cause.", "wrong": "random selection proves cause", "wrong_why": "That needs random assignment"},
+      {"say": "Random selection is about who is studied, and lets you generalize. Random assignment is about who gets which treatment, and lets you claim cause.", "right": "selection: who. assignment: cause.", "right_why": "Two different questions"}
+    ]},
+    {"type": "compare", "title": "Trap 5: ratio or difference", "beats": [
+      {"say": "Trap five. If a question asks by how many percentage points two groups differ, you subtract the percents. Students divide them instead.", "wrong": "frac(65,45) = 1.44", "wrong_why": "A ratio, not a difference"},
+      {"say": "Subtract the percents. Sixty-five percent minus forty-five percent is twenty percentage points.", "right": "65 − 45 = 20 points", "right_why": "Subtract the percents"}
+    ]},
+    {"type": "cards", "title": "The two-question checklist", "beats": [
+      {"say": "Desmos is no help here, because this skill is about reasoning, not computing. The fast way is a two-question checklist, used on every study.", "card": {"text": "Two questions for every study"}},
+      {"say": "Question one. Who was selected, and how? If they were selected randomly from a population, the conclusion can apply to that population. Otherwise, it applies only to the participants.", "card": {"text": "1. Randomly selected?", "sub": "Yes: generalize. No: participants only."}},
+      {"say": "Question two. Were treatments randomly assigned? If yes, causal words such as causes, leads to, or is effective are allowed. If no, only is associated with.", "card": {"text": "2. Randomly assigned?", "sub": "Yes: cause allowed. No: association only."}},
+      {"say": "Then eliminate any answer that claims more than both checks allow. The most modest correct claim is usually the answer.", "card": {"text": "Eliminate answers that claim too much"}}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. Researchers randomly selected one thousand adults in a state, and found that those who drink coffee daily reported better focus. Does the study show that coffee improves focus? Pause the video, try it, and then watch the answer.", "card": {"text": "1,000 randomly selected adults", "sub": "Coffee drinkers report better focus. Cause?"}}
+    ]},
+    {"type": "cards", "title": "Practice: apply the checklist", "beats": [
+      {"say": "Question one. Participants were randomly selected, so the result can be generalized to adults in that state.", "card": {"text": "Random selection: yes"}},
+      {"say": "Question two. Treatments were not assigned. People chose whether to drink coffee. So the study can only show an association, and cannot show that coffee improves focus.", "card": {"text": "Random assignment: no", "sub": "Association only"}}
+    ]},
+    {"type": "cards", "title": "Practice: the answer", "beats": [
+      {"say": "The best conclusion is that, among adults in the state, daily coffee drinking is associated with better focus. The study does not show that coffee causes the improvement.", "card": {"text": "Associated with better focus", "sub": "Not shown to cause it"}}
+    ]},
+    {"type": "steps", "title": "Practice: a rate difference", "start": "frac(22,40) × 100 − frac(14,40) × 100", "beats": [
+      {"say": "One more skill. In an experiment, twenty-two of forty people in one group improved, and fourteen of forty in the other. By how many percentage points do the rates differ?"},
+      {"say": "Twenty-two out of forty is fifty-five percent, and fourteen out of forty is thirty-five percent.", "op": "convert each to a percent", "result": "55 − 35"},
+      {"say": "Fifty-five minus thirty-five is twenty. So the rates differ by twenty percentage points.", "op": "subtract", "result": "20", "final": true}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Without random assignment, claim only an association. Without random selection, do not generalize beyond the participants.", "item": "No assignment: association. No selection: participants only."},
+      {"say": "A large sample does not cure bias, and a difference between percents is reported in percentage points.", "item": "Size is not bias; subtract percents"},
+      {"say": "That completes Problem-Solving and Data Analysis. In the next unit, we study Geometry and Trigonometry, starting with area and volume.", "item": "Next unit: Geometry and Trigonometry"}
+    ]}
+  ]
+}

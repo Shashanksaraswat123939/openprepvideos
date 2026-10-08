@@ -1,0 +1,51 @@
+{
+  "id": "m-psda-inference_v1",
+  "skill": "m-psda-inference",
+  "part": 1,
+  "title": "Inference and Margin of Error, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "Inference", "beats": [
+      {"say": "Inference means using a sample to say something about a whole population. A sample is a small group that was actually measured, and the population is the larger group we care about.", "card": {"text": "Sample to population"}},
+      {"say": "The SAT asks you to scale a sample result up to a population estimate, to read and compare margins of error and confidence intervals, and to judge which sampling method gives trustworthy results.", "card": {"text": "Estimate, interval, sampling method"}},
+      {"say": "Most of these questions need careful reading more than calculation, so we will focus on what each phrase means.", "card": {"text": "Read carefully, calculate little"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "A random sample represents the population it was drawn from. That is what lets us scale the sample results up to the whole population.", "item": "A random sample represents its population"},
+      {"say": "To estimate a count in the population, multiply the sample proportion by the population size.", "item": "Sample proportion × population size"},
+      {"say": "A sample result is an estimate. The margin of error gives a range of plausible values, which is the estimate plus or minus the margin of error.", "item": "Estimate ± margin of error"},
+      {"say": "Larger random samples give smaller margins of error. But sample size does not fix bias. A large biased sample is still biased.", "item": "Bigger samples help, but do not fix bias"},
+      {"say": "If two intervals overlap, the data do not clearly show which population value is larger. If they do not overlap, there is convincing evidence of a difference.", "item": "Overlap: no clear difference"}
+    ]},
+    {"type": "cards", "title": "The estimate formula", "beats": [
+      {"say": "The population estimate equals the count in the sample, divided by the sample size, multiplied by the population size. The fraction is the sample proportion.", "card": {"text": "est. = frac(count,sample size) × population"}},
+      {"say": "To estimate how many do not have a trait, use the complement. Either subtract the estimate from the population, or use one minus the sample proportion.", "card": {"text": "Not having the trait: use the complement"}}
+    ]},
+    {"type": "table", "title": "Estimates and intervals", "columns": ["Given", "Find"], "rows": [["estimate E, margin M", "interval from E − M to E + M"], ["interval from L to U", "estimate = (L + U) ÷ 2"], ["interval from L to U", "margin = (U − L) ÷ 2"]], "beats": [
+      {"say": "If you know the estimate and the margin of error, the interval runs from the estimate minus the margin, to the estimate plus the margin.", "reveal_row": 0},
+      {"say": "If you know the interval, the estimate is the midpoint, the average of the two endpoints.", "reveal_row": 1},
+      {"say": "And the margin of error is half the width of the interval, which is the upper endpoint minus the lower endpoint, divided by two.", "reveal_row": 2}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. An inspector tests a random sample of two hundred fifty phones from a shipment of fifteen thousand, and finds nine defective. Estimate the number of defective phones in the shipment.", "card": {"text": "9 defective in a sample of 250", "sub": "Shipment of 15,000. Estimate the defective count."}}
+    ]},
+    {"type": "steps", "title": "Easy: the sample proportion", "start": "frac(9,250)", "beats": [
+      {"say": "First find the sample proportion, the fraction of the sample that was defective. Nine out of two hundred fifty."},
+      {"say": "Nine divided by two hundred fifty is zero point zero three six. So three point six percent of the sample was defective.", "op": "divide", "result": "0.036", "final": true}
+    ]},
+    {"type": "steps", "title": "Easy: scale up", "start": "0.036 × 15000", "beats": [
+      {"say": "Because the sample was random, we assume the whole shipment has about the same fraction of defective phones. So we multiply the proportion by the shipment size."},
+      {"say": "Zero point zero three six times fifteen thousand is five hundred forty. So we estimate that about five hundred forty phones in the shipment are defective.", "op": "multiply", "result": "540", "final": true}
+    ]},
+    {"type": "steps", "title": "Check with a proportion", "start": "frac(9,250) = frac(x,15000)", "beats": [
+      {"say": "As a check, set up a proportion. Defective phones over phones tested equals the unknown over the shipment size."},
+      {"say": "Cross-multiply, which means multiplying diagonally. Two hundred fifty times x equals nine times fifteen thousand.", "op": "cross-multiply", "result": "250x = 9 × 15000"},
+      {"say": "Fifteen thousand divided by two hundred fifty is sixty, and nine times sixty is five hundred forty. So x equals five hundred forty, which matches.", "op": "solve for x", "result": "x = 540", "final": true}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. A random sample lets us scale up. Multiply the sample proportion by the population size to get an estimate.", "item": "Scale the proportion up"},
+      {"say": "An interval is the estimate plus or minus the margin of error. Overlapping intervals show no clear difference.", "item": "Interval = estimate ± margin"},
+      {"say": "In the next video, we work through a medium problem and a hard problem.", "item": "Next: medium and hard problems"}
+    ]}
+  ]
+}

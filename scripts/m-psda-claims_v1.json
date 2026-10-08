@@ -1,0 +1,42 @@
+{
+  "id": "m-psda-claims_v1",
+  "skill": "m-psda-claims",
+  "part": 1,
+  "title": "Evaluating Statistical Claims, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "Evaluating statistical claims", "beats": [
+      {"say": "These questions describe a study and ask which conclusion the study supports. Two design features decide almost everything.", "card": {"text": "Which conclusion does the study support?"}},
+      {"say": "The first is how the participants were selected, which controls whether you can generalize to a larger population. The second is whether treatments were randomly assigned, which controls whether you can claim cause and effect.", "card": {"text": "Selection: generalize. Assignment: cause."}},
+      {"say": "You also need to spot sampling bias, and compare results between groups.", "card": {"text": "Spot bias, compare groups"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "Random selection from a population lets you generalize the results to that population, and only to that one.", "item": "Random selection: generalize"},
+      {"say": "Random assignment of treatments in an experiment lets you conclude cause and effect, because the groups differ only by chance.", "item": "Random assignment: cause and effect"},
+      {"say": "An observational study, with no assigned treatment, can show an association, but never causation. People who choose a behavior may differ in other ways.", "item": "Observational: association only"},
+      {"say": "Sampling bias happens when the method favors certain people, such as volunteers, visitors to one website, customers at one store, or only those who are easy to reach.", "item": "Bias: who is favored?"},
+      {"say": "The strongest claims are usually wrong. The best answer on the SAT is often the most modest one. Wording like proves, all, or will is a red flag.", "item": "Modest claims win"}
+    ]},
+    {"type": "table", "title": "What can you conclude?", "columns": ["Random selection?", "Random assignment?", "Conclusion"], "rows": [["yes", "yes", "cause, for the whole population"], ["yes", "no", "association, for the population"], ["no", "yes", "cause, only for the participants"], ["no", "no", "association, for the participants"]], "beats": [
+      {"say": "If participants were randomly selected and treatments were randomly assigned, you can conclude cause and effect for the whole population that was sampled.", "reveal_row": 0},
+      {"say": "If participants were randomly selected, but there was no random assignment, you can only claim an association, but it applies to the population.", "reveal_row": 1},
+      {"say": "If participants were not randomly selected, but treatments were randomly assigned, you can claim cause and effect, but only for the participants and people similar to them.", "reveal_row": 2},
+      {"say": "If neither was random, you can only claim an association, and only for the participants themselves.", "reveal_row": 3}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. A researcher randomly selected three hundred members of a grocery chain's loyalty program, and found that sixty-two percent prefer evening hours. To which group can this result be generalized?", "card": {"text": "300 loyalty members, chosen at random", "sub": "62% prefer evening hours. Generalize to whom?"}}
+    ]},
+    {"type": "cards", "title": "Easy: the checklist", "beats": [
+      {"say": "Question one. Who was selected, and how? The three hundred members were chosen at random, so the sample represents the group it was drawn from.", "card": {"text": "Randomly selected: yes", "sub": "It represents its source group"}},
+      {"say": "Question two. Which group was that? The sample was drawn from the loyalty program members of this chain, not from all shoppers, and not from all residents of the area.", "card": {"text": "The group: loyalty program members"}}
+    ]},
+    {"type": "cards", "title": "Easy: the answer", "beats": [
+      {"say": "So the result can be generalized to the members of this chain's loyalty program, and to no larger group. Any answer that mentions all shoppers or all residents goes too far.", "card": {"text": "Generalize to the loyalty members", "sub": "Not all shoppers"}}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Random selection decides who you can generalize to, and only to the group the sample was drawn from.", "item": "Selection decides generalization"},
+      {"say": "Random assignment decides whether you can claim cause and effect. Without it, you can only claim an association.", "item": "Assignment decides causation"},
+      {"say": "In the next video, we work through a medium problem and a hard problem.", "item": "Next: medium and hard problems"}
+    ]}
+  ]
+}
