@@ -1,0 +1,55 @@
+{
+  "id": "rw-sec-boundaries_v2",
+  "skill": "rw-sec-boundaries",
+  "part": 2,
+  "title": "Boundaries, Part 2: A Hard Question and Common Traps",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "list", "title": "Recap of the method", "beats": [
+      {"say": "In part one, we learned to find the boundary, and to ask whether each side is an independent clause.", "item": "Is each side an independent clause?"},
+      {"say": "Two independent clauses need a period or a semicolon, and extra information needs matching marks on both sides.", "item": "Period or semicolon; matching marks"},
+      {"say": "In this video, we work through a hard question with a colon and a conjunctive adverb, and then the common traps.", "item": "Today: a hard question and traps"}
+    ]},
+    {"type": "cards", "title": "Hard question: however and colons", "beats": [
+      {"say": "Hard question. Words like however, therefore, and for example are not conjunctions. Between two independent clauses, they need a semicolon or a period before them.", "card": {"text": "; however,", "sub": "A semicolon before the word"}},
+      {"say": "A colon must follow a complete independent clause. If the words before the colon cannot stand alone, a colon is wrong.", "card": {"text": "A colon needs a full clause first"}}
+    ]},
+    {"type": "passage", "title": "Read the sentence", "text": "The committee expected the new bridge to ease traffic on Main Street ______ however, drivers reported longer delays during the first month.", "source": "original text", "beats": [
+      {"say": "The part before the blank is a complete sentence. The committee expected the new bridge to ease traffic.", "underline": "The committee expected"},
+      {"say": "The part after the blank begins with however, but still holds a full clause. Drivers reported longer delays. So both sides are independent.", "highlight": "drivers reported longer delays"}
+    ]},
+    {"type": "choices", "title": "Which punctuation fits?", "question": "Which choice completes the text so that it conforms to the conventions of Standard English?", "options": {"A": "Street,", "B": "Street:", "C": "Street;", "D": "Street"}, "beats": [
+      {"say": "Choice A uses only a comma before however. Between two independent clauses, that is a comma splice.", "eliminate": "A", "why": "comma splice"},
+      {"say": "Choice B uses a colon. The second clause does not explain the first, it contrasts with it, so a colon does not fit.", "eliminate": "B", "why": "no explanation follows"},
+      {"say": "Choice D uses no mark at all, so the two independent clauses run together.", "eliminate": "D", "why": "run-on"},
+      {"say": "Choice C uses a semicolon, with a comma after however. That correctly joins the two clauses. The answer is C.", "pick": "C"}
+    ]},
+    {"type": "cards", "title": "Common traps", "beats": [
+      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: mismatched pairs", "beats": [
+      {"say": "Trap one. Extra information that opens with a comma, but closes with a dash, is mismatched. The marks must be the same on both sides.", "wrong": "The mill, built in 1782— still runs", "wrong_why": "Comma then dash"},
+      {"say": "Use two commas, or use two dashes. Never use one of each, because the pair must match.", "right": "The mill, built in 1782, still runs", "right_why": "Matching commas"}
+    ]},
+    {"type": "compare", "title": "Trap 2: comma before however", "beats": [
+      {"say": "Trap two. A comma before however, between two independent clauses, is a comma splice. However is not a conjunction.", "wrong": "It was late, however, they stayed", "wrong_why": "Comma splice"},
+      {"say": "Use a semicolon or a period before however, and put a comma after it.", "right": "It was late; however, they stayed", "right_why": "Semicolon, then comma"}
+    ]},
+    {"type": "compare", "title": "Trap 3: colon after a fragment", "beats": [
+      {"say": "Trap three. A colon needs a full independent clause before it. The words the recipe needs are not a full clause on their own.", "wrong": "The recipe needs: flour and eggs", "wrong_why": "Not a full clause"},
+      {"say": "Finish the clause first, and then use the colon to introduce the list.", "right": "The recipe needs two items: flour, eggs", "right_why": "Full clause first"}
+    ]},
+    {"type": "compare", "title": "Trap 4: semicolon and which", "beats": [
+      {"say": "Trap four. A semicolon works like a period, so both sides must be independent. A clause starting with which is dependent.", "wrong": "He grew the plant; which flowers", "wrong_why": "Dependent after the semicolon"},
+      {"say": "Use a comma before which, or fix the words so that both sides can stand alone.", "right": "He grew the plant, which flowers", "right_why": "A comma before which"}
+    ]},
+    {"type": "compare", "title": "Trap 5: subject and verb", "beats": [
+      {"say": "Trap five. A comma between a subject and its verb is always wrong, even when the subject is long.", "wrong": "The result of the study, was clear", "wrong_why": "Splits subject and verb"},
+      {"say": "Remove the comma. Subject and verb stay together, with no mark in between.", "right": "The result of the study was clear", "right_why": "No mark between them"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Use a semicolon before however between two clauses, and a colon only after a full clause.", "item": "Semicolon before however; full clause before colon"},
+      {"say": "Match the marks around extra information, and never split a subject from its verb. In the next topic, we study form, structure, and sense.", "item": "Next: form, structure, and sense"}
+    ]}
+  ]
+}

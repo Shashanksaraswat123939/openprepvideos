@@ -1,0 +1,55 @@
+{
+  "id": "rw-sec-form_v2",
+  "skill": "rw-sec-form",
+  "part": 2,
+  "title": "Form, Structure, and Sense, Part 2: A Hard Question, Traps",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "list", "title": "Recap of the method", "beats": [
+      {"say": "In part one, we looked at the choices first, to see which rule was being tested.", "item": "See which rule is tested"},
+      {"say": "We crossed out prepositional phrases to find the true subject, and put the doer right after an opening phrase.", "item": "Find the subject; place the doer"},
+      {"say": "In this video, we work through a hard question about tense and pronouns, and then the common traps.", "item": "Today: a hard question and traps"}
+    ]},
+    {"type": "cards", "title": "Hard question: tense and pronouns", "beats": [
+      {"say": "Hard question. Tense follows time clues. If a sentence gives a past date, the verb must be in the past. If one past action happened before another, use the past perfect.", "card": {"text": "Time clue sets the tense", "sub": "Earlier past action: had plus participle"}},
+      {"say": "Also check each pronoun. A company, a team, or a museum is one thing, so it takes it and its, not they and their.", "card": {"text": "One organization: it, its"}}
+    ]},
+    {"type": "passage", "title": "Read the sentence", "text": "By the time the museum reopened in 2019, its curators ______ every painting in the east wing and had moved the collection to a new climate-controlled room.", "source": "original text", "beats": [
+      {"say": "The time clue is, by the time the museum reopened in twenty nineteen. The curators finished their work before that date.", "underline": "By the time the museum reopened"},
+      {"say": "The second verb, had moved, is in the past perfect. The first verb is joined by and, so it must match it, and it needs a past participle.", "highlight": "had moved"}
+    ]},
+    {"type": "choices", "title": "Which verb fits?", "question": "Which choice completes the text so that it conforms to the conventions of Standard English?", "options": {"A": "cleaned", "B": "had cleaned", "C": "were cleaning", "D": "will clean"}, "beats": [
+      {"say": "Choice A, cleaned, is the simple past. It does not show that the cleaning happened before the reopening, and it does not match had moved.", "eliminate": "A", "why": "does not match had moved"},
+      {"say": "Choice C, were cleaning, shows an action in progress. The sentence needs a finished action before the reopening.", "eliminate": "C", "why": "wrong tense"},
+      {"say": "Choice D, will clean, is the future. The sentence gives a past date, so a future verb is wrong.", "eliminate": "D", "why": "future tense"},
+      {"say": "Choice B, had cleaned, is the past perfect. It matches had moved, and the earlier action. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Common traps", "beats": [
+      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: the nearest noun", "beats": [
+      {"say": "Trap one. Students make the verb agree with the noun closest to it. But that noun is often inside a phrase.", "wrong": "The collection of maps are old", "wrong_why": "Agrees with maps"},
+      {"say": "Cross out the phrase, and agree with the true subject. The collection is singular.", "right": "The collection of maps is old", "right_why": "Agrees with collection"}
+    ]},
+    {"type": "compare", "title": "Trap 2: singular-sounding plurals", "beats": [
+      {"say": "Trap two. Some subjects sound plural but are singular. Each of the students, the number of cases, and the team are all singular.", "wrong": "Each of the students are ready", "wrong_why": "Each is singular"},
+      {"say": "Find the head word of the subject. Each is singular, so the verb is singular.", "right": "Each of the students is ready", "right_why": "Singular verb"}
+    ]},
+    {"type": "compare", "title": "Trap 3: they for one company", "beats": [
+      {"say": "Trap three. A company, a school, or a city is a single thing. Students often write they or their for it.", "wrong": "The company said they would hire", "wrong_why": "One company is it"},
+      {"say": "Use it and its for a single organization, and match the pronoun to the noun.", "right": "The company said it would hire", "right_why": "Matches in number"}
+    ]},
+    {"type": "compare", "title": "Trap 4: apostrophes", "beats": [
+      {"say": "Trap four. An apostrophe does not make a plural. Sale apostrophe s is wrong when you only mean more than one sale.", "wrong": "The sale's rose last year", "wrong_why": "A plural, not a possessive"},
+      {"say": "Use a plain s for a plural, and use an apostrophe only to show that something belongs to someone.", "right": "The sales rose last year", "right_why": "A plain plural"}
+    ]},
+    {"type": "compare", "title": "Trap 5: the wrong participle", "beats": [
+      {"say": "Trap five. After had or was, use the past participle. Had wrote and was wrote are wrong.", "wrong": "She had wrote the report", "wrong_why": "Wrong participle"},
+      {"say": "Use had written. The simple past, wrote, stands alone, but had needs the participle.", "right": "She had written the report", "right_why": "Past participle"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Cross out phrases, find the true subject, and watch for singular words that sound plural.", "item": "True subject; singular words"},
+      {"say": "Use the time clue for tense, it for one organization, and the past participle after had. That completes all the topics, so now practice them.", "item": "All topics complete: practice"}
+    ]}
+  ]
+}

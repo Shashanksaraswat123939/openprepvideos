@@ -1,0 +1,55 @@
+{
+  "id": "rw-ei-synthesis_v2",
+  "skill": "rw-ei-synthesis",
+  "part": 2,
+  "title": "Rhetorical Synthesis, Part 2: A Hard Question and Traps",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "list", "title": "Recap of the method", "beats": [
+      {"say": "In part one, we learned to read the goal first, and to turn it into a short checklist.", "item": "Read the goal; make a checklist"},
+      {"say": "Then we checked each choice against the checklist. All four choices were true, so we eliminated by the goal.", "item": "Eliminate by the goal"},
+      {"say": "In this video, we work through a hard question about an audience, and then the common traps.", "item": "Today: a hard question and traps"}
+    ]},
+    {"type": "cards", "title": "Hard question: the audience", "beats": [
+      {"say": "Hard question. When the goal says the audience is unfamiliar with a topic, the sentence must say what the topic is. A term used without explanation fails.", "card": {"text": "Unfamiliar audience", "sub": "Name it and say what it is"}},
+      {"say": "A goal can also have two parts, such as a difference and a similarity. Then the sentence needs both parts.", "card": {"text": "Two-part goal: both parts"}}
+    ]},
+    {"type": "passage", "title": "The student's notes", "text": "A kilim is a flat-woven rug. Kilims are made by weaving colored threads across a frame, without tying knots. Many kilims come from Turkey, and their bold geometric patterns often carry symbolic meanings. Knotted rugs are thicker, because each knot adds a tuft of yarn.", "source": "student notes", "beats": [
+      {"say": "Suppose the goal is to introduce kilims to an audience that has never heard of them. The checklist is, the name, and what it is.", "underline": "A kilim is a flat-woven rug"},
+      {"say": "The best sentence should name the kilim, and say it is a flat-woven rug made without knots. A detail like Turkey is optional.", "highlight": "without tying knots"}
+    ]},
+    {"type": "choices", "title": "Which sentence meets the goal?", "question": "Which choice most effectively introduces kilims to an audience unfamiliar with them?", "options": {"A": "Many kilims come from Turkey, where their bold patterns carry symbolic meanings.", "B": "Unlike knotted rugs, kilims are thin because no knots add tufts of yarn.", "C": "A kilim is a flat-woven rug made by weaving colored threads across a frame, without tying knots.", "D": "The patterns of a kilim are geometric and bold."}, "beats": [
+      {"say": "Choice A talks about where kilims come from, and the meaning of their patterns. It never says what a kilim is, so a new reader would be lost.", "eliminate": "A", "why": "never says what it is"},
+      {"say": "Choice B compares kilims with knotted rugs. A new reader does not know either one, so the comparison does not introduce a kilim.", "eliminate": "B", "why": "assumes knowledge"},
+      {"say": "Choice D describes the patterns, but it never says that a kilim is a rug. An unfamiliar reader cannot tell what it is.", "eliminate": "D", "why": "never says what it is"},
+      {"say": "Choice C names the kilim, and says what it is and how it is made. The answer is C.", "pick": "C"}
+    ]},
+    {"type": "cards", "title": "Common traps", "beats": [
+      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: the most detailed choice", "beats": [
+      {"say": "Trap one. The longest sentence, with the most facts, looks like the best one. But more facts is not better.", "wrong": "the sentence with the most facts", "wrong_why": "Not tied to the goal"},
+      {"say": "The right facts are better than more facts. Choose the sentence that meets the goal, even if it is short.", "right": "the sentence that meets the goal", "right_why": "The goal decides"}
+    ]},
+    {"type": "compare", "title": "Trap 2: true but off-goal", "beats": [
+      {"say": "Trap two. This is the main trap. Every wrong choice is accurate to the notes, so accuracy cannot be the test.", "wrong": "it is true, so it must be right", "wrong_why": "All choices are true"},
+      {"say": "Test each choice against the goal that the question states, and not against the notes.", "right": "does it do what the goal asks?", "right_why": "The goal is the test"}
+    ]},
+    {"type": "compare", "title": "Trap 3: a one-sided comparison", "beats": [
+      {"say": "Trap three. A compare or contrast goal needs both items. A sentence about only one of them cannot be the answer.", "wrong": "Saffron is picked by hand.", "wrong_why": "Only one item"},
+      {"say": "Look for a sentence that names both items, and shows how they relate.", "right": "While saffron is X, turmeric is Y.", "right_why": "Both items"}
+    ]},
+    {"type": "compare", "title": "Trap 4: half of the goal", "beats": [
+      {"say": "Trap four. If the goal asks for a difference and a similarity, a sentence with only one of them is incomplete.", "wrong": "they differ in source", "wrong_why": "Missing the similarity"},
+      {"say": "Write each part of the goal in your checklist, and tick them off one by one.", "right": "they differ in source, yet share color", "right_why": "Both parts"}
+    ]},
+    {"type": "compare", "title": "Trap 5: ignoring the audience", "beats": [
+      {"say": "Trap five. If the reader has never heard of the topic, a sentence that uses a term without explaining it fails.", "wrong": "Kilims have bold patterns.", "wrong_why": "Does not say what a kilim is"},
+      {"say": "For a new reader, name the topic and say what it is, before you add details.", "right": "A kilim is a flat-woven rug.", "right_why": "Names and defines it"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. All choices are true, so the goal decides. Use a checklist, and tick every part of the goal.", "item": "The goal decides; use a checklist"},
+      {"say": "Mention both items in a comparison, and define the topic for an unfamiliar reader. In the next topic, we study boundaries.", "item": "Next: boundaries"}
+    ]}
+  ]
+}
