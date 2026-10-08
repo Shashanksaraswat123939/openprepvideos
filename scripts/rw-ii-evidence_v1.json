@@ -1,0 +1,58 @@
+{
+  "id": "rw-ii-evidence_v1",
+  "skill": "rw-ii-evidence",
+  "part": 1,
+  "title": "Command of Evidence, Part 1: The Method and Two Questions",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "cards", "title": "Command of evidence", "beats": [
+      {"say": "Command of evidence questions give you a claim, and ask which piece of evidence relates to it. Your job is to match the evidence to the exact claim.", "card": {"text": "Match the evidence to the claim"}},
+      {"say": "There are two kinds. Textual evidence asks which finding would support or weaken a hypothesis, or which quotation illustrates a claim about a character.", "card": {"text": "Textual evidence", "sub": "Support, weaken, or illustrate"}},
+      {"say": "Quantitative evidence gives you a table or a graph, and asks which choice uses the data to support a claim.", "card": {"text": "Quantitative evidence", "sub": "A table or graph"}}
+    ]},
+    {"type": "list", "title": "The method", "beats": [
+      {"say": "Step one. Find the exact claim. It is often in the last sentence of the text, such as the researchers hypothesized that, or the narrator portrays.", "item": "Find the exact claim"},
+      {"say": "Step two. Turn the claim into a prediction. Finish this sentence in your head: if this is true, we should see what?", "item": "Predict: if true, we should see ___"},
+      {"say": "Step three. For a table, read the column headers and the units before you read the choices.", "item": "Read headers and units"},
+      {"say": "Step four. Eliminate anything inaccurate, then anything irrelevant to the claim. The survivor is the answer.", "item": "Cross out inaccurate, then irrelevant"}
+    ]},
+    {"type": "table", "title": "What the answer must do", "columns": ["Question asks", "The answer must"], "rows": [["support a hypothesis", "show the predicted result"], ["weaken a claim", "show it failing, or another cause"], ["illustrate a portrayal", "contain every trait named"], ["use data", "be accurate and match the claim"]], "beats": [
+      {"say": "To support a hypothesis, the answer must show the predicted result happening, in the group the hypothesis is about.", "reveal_row": 0},
+      {"say": "To weaken a claim, the answer must show the predicted result not happening, or offer another explanation.", "reveal_row": 1},
+      {"say": "To illustrate a portrayal, a quotation must show every trait that the claim names, not just one of them.", "reveal_row": 2},
+      {"say": "With data, a choice must be accurate according to the table, and also match the comparison made in the claim.", "reveal_row": 3}
+    ]},
+    {"type": "cards", "title": "Easy question: support a claim", "beats": [
+      {"say": "Easy question. We read a short hypothesis, and then pick the finding that would most directly support it. First we turn the hypothesis into a prediction.", "card": {"text": "Support the hypothesis", "sub": "Predict first"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "A biologist hypothesized that a species of desert beetle collects drinking water from morning fog, which condenses on the bumps of its shell.", "source": "original text", "beats": [
+      {"say": "The claim is that the beetle gets its drinking water from fog. Notice that fog is the key part.", "underline": "morning fog"},
+      {"say": "Our prediction is, if fog gives the beetles water, then beetles without fog should end up drier.", "highlight": "collects drinking water"}
+    ]},
+    {"type": "choices", "title": "Which finding supports the hypothesis?", "question": "Which finding, if true, would most directly support the biologist's hypothesis?", "options": {"A": "The beetles are most active in the late afternoon.", "B": "Beetles kept without fog lost more body water than beetles kept with fog.", "C": "The beetles' shells are darker than the sand around them.", "D": "Other desert insects also have bumps on their shells."}, "beats": [
+      {"say": "Choice A is about when the beetles are active. It says nothing about water, so it is irrelevant.", "eliminate": "A", "why": "about activity, not water"},
+      {"say": "Choice C is about the color of the shell. Color has nothing to do with fog, so it does not test the hypothesis.", "eliminate": "C", "why": "color is unrelated"},
+      {"say": "Choice D is about other insects. The hypothesis is about this species, so this is the wrong group.", "eliminate": "D", "why": "wrong group"},
+      {"say": "Choice B compares fog with no fog, and shows the predicted difference. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Medium question: use the data", "beats": [
+      {"say": "Medium question. Now a table. Every wrong choice may be true, so we check two things: is it accurate, and does it connect to the claim?", "card": {"text": "Accurate and relevant", "sub": "Both must be true"}}
+    ]},
+    {"type": "table", "title": "Riders per day on three streets", "columns": ["Street", "2021", "2023", "New lanes?"], "rows": [["Harlow", "310", "590", "yes"], ["Penn", "280", "290", "no"], ["Doyle", "150", "160", "no"]], "beats": [
+      {"say": "A planner claims that new bike lanes on Harlow Street increased cycling there, while nearby streets without lanes stayed about the same.", "reveal_row": 0},
+      {"say": "Penn Street had no new lanes, and its riders went from two hundred eighty to two hundred ninety. That is almost the same.", "reveal_row": 1},
+      {"say": "Doyle Street also had no new lanes, and went from one hundred fifty to one hundred sixty. The claim has two parts, so we need both.", "reveal_row": 2}
+    ]},
+    {"type": "choices", "title": "Which choice supports the claim?", "question": "Which choice best describes data from the table that support the planner's claim?", "options": {"A": "Harlow Street had more riders per day in 2023 than any other street.", "B": "Harlow riders nearly doubled, while Penn and Doyle each gained only ten.", "C": "Doyle Street had the fewest riders per day in both years.", "D": "Penn Street had two hundred eighty riders per day in 2021."}, "beats": [
+      {"say": "Choice D is accurate, but it only gives one number. It says nothing about change, so it is irrelevant.", "eliminate": "D", "why": "accurate, no change shown"},
+      {"say": "Choice C is accurate too, but it is about the ranking of Doyle Street, not about the claim.", "eliminate": "C", "why": "accurate, but off-claim"},
+      {"say": "Choice A is accurate, but it only shows that Harlow is the largest. It does not show growth, or that the other streets stayed flat.", "eliminate": "A", "why": "only half the claim"},
+      {"say": "Choice B covers both parts of the claim with correct numbers. Harlow went from three hundred ten to five hundred ninety, and each other street gained ten. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Find the exact claim, and turn it into a prediction before you read the choices.", "item": "Claim first, then a prediction"},
+      {"say": "Cross out the inaccurate choices, then the choices that are accurate but irrelevant. The survivor matches every part of the claim.", "item": "Inaccurate, then irrelevant"},
+      {"say": "In the next video, we work through a hard question about a character, and the common traps.", "item": "Next: a hard question and traps"}
+    ]}
+  ]
+}
