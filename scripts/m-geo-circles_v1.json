@@ -1,0 +1,56 @@
+{
+  "id": "m-geo-circles_v1",
+  "skill": "m-geo-circles",
+  "part": 1,
+  "title": "Circles, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Geometry and Trigonometry",
+  "scenes": [
+    {"type": "cards", "title": "Circles", "beats": [
+      {"say": "Circle questions ask for the circumference and area, the length of an arc or the area of a sector, and the measures of angles in circles.", "card": {"text": "Circumference, area, arcs, sectors"}},
+      {"say": "They also ask for the equation of a circle in the coordinate plane. Angles may be given in degrees or in radians.", "card": {"text": "Equation of a circle; degrees or radians"}}
+    ]},
+    {"type": "figure", "title": "The parts of a circle", "kind": "circle", "data": {"center": "O", "radius": 5, "sectors": [{"deg": 90}]}, "beats": [
+      {"say": "Every circle has a center, and every point on the circle is the same distance from the center. That distance is the radius.", "show": ["radius"]},
+      {"say": "A diameter is a segment through the center, with both ends on the circle. It is twice as long as the radius.", "show": ["diameter"]},
+      {"say": "A chord is a segment with both ends on the circle. A diameter is the longest possible chord.", "show": ["chord"]},
+      {"say": "A sector is a slice of the circle between two radii, and the curved part of its edge is an arc.", "show": ["sector", "arc"]},
+      {"say": "A tangent line touches the circle at exactly one point. The radius drawn to that point is perpendicular to the tangent.", "show": ["tangent"]}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "Everything about a circle comes from its radius. If you are given a diameter, an area, or a circumference, find the radius first.", "item": "Find the radius first"},
+      {"say": "An arc or a sector is a fraction of the whole circle. The fraction is the central angle over three hundred sixty degrees, or over two pi radians.", "item": "Arc or sector: angle ÷ 360°"},
+      {"say": "A central angle equals the measure of its arc. An inscribed angle, whose vertex is on the circle, is half of its intercepted arc.", "item": "Inscribed angle = half the arc"},
+      {"say": "The equation x minus h, squared, plus y minus k, squared, equals r squared describes a circle with center h comma k and radius r.", "item": "Center (h, k), radius r"}
+    ]},
+    {"type": "table", "title": "Arc length and sector area", "columns": ["Measure", "Degrees", "Radians"], "rows": [["arc length", "(θ/360) · 2πr", "rθ"], ["sector area", "(θ/360) · πr²", "½r²θ"]], "beats": [
+      {"say": "With degrees, the arc length is the fraction of the circle, theta over three hundred sixty, times the circumference, two pi r. With radians, it is simply r times theta.", "reveal_row": 0},
+      {"say": "With degrees, the sector area is the fraction times pi r squared. With radians, it is one half r squared theta. Never mix the two systems.", "reveal_row": 1}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. A circle has a radius of nine. Find the length of the arc, and the area of the sector, cut off by an eighty degree central angle.", "card": {"text": "r = 9, central angle 80°", "sub": "Arc length and sector area"}}
+    ]},
+    {"type": "steps", "title": "Easy: the fraction of the circle", "start": "frac(80,360)", "beats": [
+      {"say": "The arc and the sector are both a fraction of the whole circle. The fraction is the central angle, eighty, over three hundred sixty."},
+      {"say": "Eighty and three hundred sixty can both be divided by forty. So the fraction simplifies to two ninths.", "op": "reduce", "result": "frac(2,9)", "final": true}
+    ]},
+    {"type": "steps", "title": "Easy: the arc length", "start": "frac(2,9) × 2π(9)", "beats": [
+      {"say": "The circumference is two pi r. With a radius of nine, that is two times nine times pi. We take two ninths of it."},
+      {"say": "Two pi times nine is eighteen pi. So the circumference is eighteen pi, and we take two ninths of that.", "op": "find the circumference", "result": "frac(2,9) × 18π"},
+      {"say": "Two ninths of eighteen is four. So the arc length is four pi.", "op": "multiply", "result": "4π", "final": true}
+    ]},
+    {"type": "steps", "title": "Easy: the sector area", "start": "frac(2,9) × π(9)^2", "beats": [
+      {"say": "The area of the whole circle is pi r squared. With a radius of nine, we take two ninths of it."},
+      {"say": "Nine squared is eighty-one. So the area of the whole circle is eighty-one pi, and we take two ninths of that.", "op": "square the radius", "result": "frac(2,9) × 81π"},
+      {"say": "Two ninths of eighty-one is eighteen. So the sector area is eighteen pi.", "op": "multiply", "result": "18π", "final": true}
+    ]},
+    {"type": "steps", "title": "Check with radians", "start": "9 × frac(4π,9)", "beats": [
+      {"say": "As a check, convert eighty degrees to radians. Eighty times pi over one hundred eighty is four pi over nine. Then use r times theta."},
+      {"say": "The nines cancel. Nine times four pi over nine is four pi, which matches the arc length we found.", "op": "cancel the nines", "result": "4π", "final": true}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Find the radius first. An arc or a sector is a fraction of the circle, using the central angle over three hundred sixty.", "item": "Radius first; fraction = angle ÷ 360°"},
+      {"say": "Keep answers in terms of pi. Check using radians and r times theta.", "item": "Keep π; check with radians"},
+      {"say": "In the next video, we work through a medium problem and a hard problem.", "item": "Next: medium and hard problems"}
+    ]}
+  ]
+}

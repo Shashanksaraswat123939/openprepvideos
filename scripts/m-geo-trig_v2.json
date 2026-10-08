@@ -1,0 +1,55 @@
+{
+  "id": "m-geo-trig_v2",
+  "skill": "m-geo-trig",
+  "part": 2,
+  "title": "Right Triangles and Trigonometry, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Geometry and Trigonometry",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we found a hypotenuse with the Pythagorean theorem, and wrote the three trig ratios as opposite, adjacent, and hypotenuse fractions.", "card": {"text": "SOH CAH TOA"}},
+      {"say": "In this video, we use a special right triangle and convert degrees to radians, and then find a trig ratio of the other acute angle.", "card": {"text": "Today: special triangles, then complementary angles"}}
+    ]},
+    {"type": "cards", "title": "Medium example 1", "beats": [
+      {"say": "Medium example one. A thirty, sixty, ninety triangle has a hypotenuse of ten. Find the lengths of the two legs.", "card": {"text": "30°-60°-90°, hypotenuse 10", "sub": "Find both legs"}},
+      {"say": "In this triangle, the hypotenuse is twice the short leg. The short leg is opposite the thirty degree angle, and the long leg is the short leg times the square root of three.", "card": {"text": "Sides: x, x√3, 2x"}}
+    ]},
+    {"type": "steps", "title": "Medium 1: the short leg", "start": "x = frac(10,2)", "beats": [
+      {"say": "The hypotenuse is two x, so x is half of the hypotenuse. Half of ten is five."},
+      {"say": "Ten divided by two is five. So the short leg, opposite the thirty degree angle, is five.", "op": "divide", "result": "x = 5", "final": true}
+    ]},
+    {"type": "cards", "title": "Medium 1: the long leg", "beats": [
+      {"say": "The long leg is the short leg times the square root of three. So the legs are five, and five times the square root of three, which is about eight point six six.", "card": {"text": "Legs: 5 and 5√3", "sub": "Hypotenuse 10"}}
+    ]},
+    {"type": "cards", "title": "Medium example 2", "beats": [
+      {"say": "Medium example two. Convert sixty degrees to radians. Degrees are converted to radians by multiplying by pi over one hundred eighty.", "card": {"text": "60° in radians", "sub": "Multiply by frac(π,180)"}}
+    ]},
+    {"type": "steps", "title": "Medium 2: degrees to radians", "start": "60 × frac(π,180)", "beats": [
+      {"say": "Multiply sixty by pi over one hundred eighty. Sixty over one hundred eighty simplifies to one third, because sixty goes into one hundred eighty three times."},
+      {"say": "Sixty over one hundred eighty is one third, so the angle is pi over three radians. Likewise, three hundred degrees is five pi over three radians.", "op": "simplify", "result": "frac(π,3)", "final": true}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. In right triangle J K L, angle K is the right angle, and the tangent of angle J is eight fifteenths. What is the cosine of angle L?", "card": {"text": "Right angle at K, tan J = frac(8,15)", "sub": "Find cos L"}},
+      {"say": "Our plan is to sketch the triangle from the tangent, find the hypotenuse, and then read the cosine from the point of view of angle L.", "card": {"text": "Sketch, find the hypotenuse, read cos L"}}
+    ]},
+    {"type": "cards", "title": "Hard: sides from the tangent", "beats": [
+      {"say": "Tangent is opposite over adjacent. Relative to angle J, the opposite side K L is eight, and the adjacent side J K is fifteen.", "card": {"text": "KL = 8, JK = 15", "sub": "Relative to angle J"}}
+    ]},
+    {"type": "steps", "title": "Hard: the hypotenuse", "start": "sqrt(8^2 + 15^2)", "beats": [
+      {"say": "The hypotenuse J L is found with the Pythagorean theorem. We add the squares of the two legs, and take the square root."},
+      {"say": "Eight squared is sixty-four, and fifteen squared is two hundred twenty-five, so we add those two squares.", "op": "square each leg", "result": "sqrt(64 + 225)"},
+      {"say": "Sixty-four plus two hundred twenty-five is two hundred eighty-nine, which is the square of the hypotenuse.", "op": "add", "result": "sqrt(289)"},
+      {"say": "The square root of two hundred eighty-nine is seventeen, because seventeen times seventeen is two hundred eighty-nine. So the hypotenuse is seventeen.", "op": "square root", "result": "17", "final": true}
+    ]},
+    {"type": "cards", "title": "Hard: switch to angle L", "beats": [
+      {"say": "Now look from angle L. The side adjacent to L is K L, the leg of length eight, and the hypotenuse is seventeen. So the cosine of L is eight over seventeen.", "card": {"text": "cos L = frac(8,17)", "sub": "adjacent KL = 8, hypotenuse 17"}}
+    ]},
+    {"type": "check", "title": "Check with complementary angles", "beats": [
+      {"say": "Check with complementary angles. J and L add up to ninety degrees, so the cosine of L equals the sine of J. The sine of J is opposite over hypotenuse, which is eight over seventeen. They match.", "lines": ["sin J = frac(8,17)", "cos L = sin J = frac(8,17)"], "verdict": "cos L = 8/17."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. In a thirty, sixty, ninety triangle, the sides are x, x times root three, and two x. Convert degrees to radians by multiplying by pi over one hundred eighty.", "item": "30-60-90: x, x√3, 2x"},
+      {"say": "To switch between the two acute angles, swap opposite and adjacent. The sine of one equals the cosine of the other.", "item": "sin of one = cos of the other"},
+      {"say": "In the next video, we look at common traps and the fast way with Desmos.", "item": "Next: traps and the fast way"}
+    ]}
+  ]
+}

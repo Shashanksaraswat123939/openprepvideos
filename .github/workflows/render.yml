@@ -3,6 +3,8 @@ name: Render OpenPrep videos
 # Run it from the repo's Actions tab: "Render OpenPrep videos" -> Run workflow.
 # It splits the scripts in scripts/ over 4 parallel jobs and uploads the finished MP4s as artifacts.
 on:
+  push:
+    tags: ['render-*']
   workflow_dispatch:
     inputs:
       only:
@@ -52,8 +54,15 @@ jobs:
           mkdir -p out cache logs
           for f in scripts/*.json; do python render.py "$f" --check; done
 
+      - name: Decide what to render
+        id: sel
+        run: |
+          ONLY="${{ inputs.only }}"
+          if [[ "${GITHUB_REF_NAME}" == render-only-* ]]; then ONLY="${GITHUB_REF_NAME#render-only-}"; fi
+          echo "only=$ONLY" >> "$GITHUB_OUTPUT"
+
       - name: Render this shard
-        run: python worker.py --once --shard ${{ matrix.shard }}/4 ${{ inputs.only != '' && format('--only {0}', inputs.only) || '' }}
+        run: python worker.py --once --shard ${{ matrix.shard }}/4 ${{ steps.sel.outputs.only != '' && format('--only {0}', steps.sel.outputs.only) || '' }}
 
       - name: Logs
         if: always()
