@@ -30,7 +30,7 @@
       {"say": "The equation is expanded, so we complete the square in x and in y to get back to the standard form with a center and a radius.", "card": {"text": "Complete the square in x and y"}}
     ]},
     {"type": "steps", "title": "Hard: complete the squares", "start": "x^2 + y^2 + 10x − 4y = 7", "beats": [
-      {"say": "First, group the x terms together and the y terms together."},
+      {"say": "First, group the x terms together and the y terms together, so that each variable can be handled on its own."},
       {"say": "The x terms are x squared plus ten x, and the y terms are y squared minus four y.", "op": "group the terms", "result": "(x^2 + 10x) + (y^2 − 4y) = 7"},
       {"say": "To complete a square, take half of the coefficient, and square it. Half of ten is five, and five squared is twenty-five. Half of negative four is negative two, and its square is four.", "op": "complete each square", "result": "(x + 5)^2 − 25 + (y − 2)^2 − 4 = 7"},
       {"say": "Now add twenty-five and four to both sides. Seven plus twenty-five plus four is thirty-six.", "op": "add 25 and 4 to both sides", "result": "(x + 5)^2 + (y − 2)^2 = 36", "final": true}
