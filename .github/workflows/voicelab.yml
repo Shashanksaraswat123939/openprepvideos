@@ -26,6 +26,12 @@ jobs:
           pip install chatterbox-tts "kokoro>=0.9.4" soundfile edge-tts
       - name: Generate the samples
         run: python voice_lab.py
+      - name: Save the timings where they can be read
+        run: |
+          git config user.name "voice-lab"; git config user.email "voice-lab@users.noreply.github.com"
+          git checkout -b voicelab-results
+          mkdir -p voicelab_results; cp voice_lab_out/timings.json voicelab_results/timings.json; ls voice_lab_out > voicelab_results/files.txt
+          git add voicelab_results; git commit -m "voice lab results"; git push -f origin voicelab-results
       - name: Draft release with the samples
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
