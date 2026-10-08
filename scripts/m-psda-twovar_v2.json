@@ -1,0 +1,65 @@
+{
+  "id": "m-psda-twovar_v2",
+  "skill": "m-psda-twovar",
+  "part": 2,
+  "title": "Two-Variable Data, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we used a line of best fit to make a prediction, and we interpreted its slope. Linear data changes by a constant difference.", "card": {"text": "Linear: constant difference"}},
+      {"say": "In this video, we decide between a linear and an exponential model, and then compute a residual for a data point.", "card": {"text": "Today: model type, residual"}}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. A table shows x equals zero, one, two, three, and y equals five, fifteen, forty-five, one hundred thirty-five. Is the data linear or exponential, and what is the model?", "card": {"text": "x: 0, 1, 2, 3", "sub": "y: 5, 15, 45, 135"}},
+      {"say": "Check both the differences and the ratios between consecutive y values. A constant difference means linear, and a constant ratio means exponential.", "card": {"text": "Check differences and ratios"}}
+    ]},
+    {"type": "steps", "title": "Medium: the first ratio", "start": "frac(15,5)", "beats": [
+      {"say": "Divide each y value by the one before it. The first ratio is fifteen divided by five."},
+      {"say": "Fifteen divided by five is three. The differences are not constant, because fifteen minus five is ten, but forty-five minus fifteen is thirty.", "op": "divide", "result": "3", "final": true}
+    ]},
+    {"type": "steps", "title": "Medium: the next ratios", "start": "frac(45,15)", "beats": [
+      {"say": "The second ratio is forty-five divided by fifteen, the next y value divided by the one before it."},
+      {"say": "Forty-five divided by fifteen is three. The first two ratios are both three, so the pattern looks exponential.", "op": "divide", "result": "3", "final": true}
+    ]},
+    {"type": "steps", "title": "Medium: the third ratio", "start": "frac(135,45)", "beats": [
+      {"say": "The third ratio is one hundred thirty-five divided by forty-five, again the next y value over the previous one."},
+      {"say": "One hundred thirty-five divided by forty-five is three. Every ratio is three, so each step multiplies y by three.", "op": "divide", "result": "3", "final": true}
+    ]},
+    {"type": "cards", "title": "Medium: the model", "beats": [
+      {"say": "The starting value, when x is zero, is five, and the factor per step is three. So the model is y equals five times three to the x.", "card": {"text": "y = 5 × 3^x", "sub": "Start 5, triples each step"}},
+      {"say": "Check with x equal to three. Three cubed is twenty-seven, and five times twenty-seven is one hundred thirty-five, which matches the table.", "card": {"text": "5 × 27 = 135", "sub": "Matches the table"}}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. A line of best fit passes through the points four comma eighteen, and ten comma thirty-three. One data point is sixteen comma forty-four point five. What is the residual for this point?", "card": {"text": "Line through (4, 18) and (10, 33)", "sub": "Data point (16, 44.5). Residual?"}},
+      {"say": "Our plan has four steps. Find the slope, find the intercept, predict y at x equals sixteen, and subtract the prediction from the actual value.", "card": {"text": "Slope, intercept, predict, subtract"}}
+    ]},
+    {"type": "steps", "title": "Hard: the slope", "start": "frac(33 − 18,10 − 4)", "beats": [
+      {"say": "The slope is the change in y over the change in x. Both subtractions use the second point first, so the order matches."},
+      {"say": "Thirty-three minus eighteen is fifteen, and ten minus four is six. So the slope is fifteen over six.", "op": "subtract", "result": "frac(15,6)"},
+      {"say": "Fifteen divided by six is two point five. So the line rises two and a half units for each one unit of x.", "op": "divide", "result": "2.5", "final": true}
+    ]},
+    {"type": "steps", "title": "Hard: the intercept", "start": "18 = 2.5(4) + b", "beats": [
+      {"say": "The line has the form y equals two point five x plus b. We substitute the first point, four comma eighteen, to find b."},
+      {"say": "Two point five times four is ten. So the equation becomes eighteen equals ten plus b.", "op": "multiply", "result": "18 = 10 + b"},
+      {"say": "Subtract ten from both sides. So b equals eight, and the line is y equals two point five x plus eight.", "op": "− 10 on both sides", "result": "b = 8", "final": true}
+    ]},
+    {"type": "steps", "title": "Hard: the predicted value", "start": "2.5(16) + 8", "beats": [
+      {"say": "Now predict y at x equals sixteen, the x value of our data point, by substituting it into the line."},
+      {"say": "Two point five times sixteen is forty. So the prediction is forty plus eight.", "op": "multiply", "result": "40 + 8"},
+      {"say": "Forty plus eight is forty-eight. So the line predicts forty-eight at x equals sixteen.", "op": "add", "result": "48", "final": true}
+    ]},
+    {"type": "steps", "title": "Hard: the residual", "start": "44.5 − 48", "beats": [
+      {"say": "A residual is the actual value minus the predicted value. The actual value is forty-four point five, and the predicted value is forty-eight."},
+      {"say": "Forty-four point five minus forty-eight is negative three point five. The negative sign means the point lies below the line.", "op": "subtract", "result": "−3.5", "final": true}
+    ]},
+    {"type": "figure", "title": "The residual on the graph", "kind": "scatter", "data": {"points": [[4, 18], [10, 33], [16, 44.5]], "line": {"slope": 2.5, "intercept": 8}}, "beats": [
+      {"say": "Here are the three points and the line of best fit. The line passes through the first two points exactly.", "show": ["points", "line"]},
+      {"say": "The third point, at x equals sixteen, lies a little below the line. The gray segment shows the residual, which is three and a half units long.", "show": ["residual"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. A constant difference means a linear model, and a constant ratio means an exponential model.", "item": "Difference: linear. Ratio: exponential."},
+      {"say": "To find a residual, predict with the line, then subtract the prediction from the actual value.", "item": "Residual = actual − predicted"},
+      {"say": "A negative residual means the point is below the line. In the next video, we look at common traps and the fast way with Desmos.", "item": "Negative residual: below the line"}
+    ]}
+  ]
+}

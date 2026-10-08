@@ -1,0 +1,53 @@
+{
+  "id": "m-psda-onevar_v1",
+  "skill": "m-psda-onevar",
+  "part": 1,
+  "title": "One-Variable Data, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "One-variable data", "beats": [
+      {"say": "One-variable data is a list of values of a single quantity, such as test scores, heights, or the number of pets in each home.", "card": {"text": "A list of values of one quantity"}},
+      {"say": "The SAT asks you to find the center, using the mean and the median, to read data from frequency tables and dot plots, and to predict how an outlier affects each measure.", "card": {"text": "Center, tables, plots, outliers"}},
+      {"say": "It also asks you to compare spread, using the range and the standard deviation, without heavy calculation.", "card": {"text": "Compare spread without calculating"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "The mean is the total divided by the count. Many questions are easier if you think in totals, because the total equals the mean times the count.", "item": "Mean = total ÷ count"},
+      {"say": "The median is the middle value after sorting. With an even count, it is the average of the two middle values.", "item": "Median: the middle after sorting"},
+      {"say": "A frequency table is a compressed list. The row with value three and frequency four means the numbers three, three, three, three.", "item": "A frequency table is a compressed list"},
+      {"say": "An outlier pulls the mean toward it a lot, but barely moves the median. With a high outlier, the mean is usually greater than the median.", "item": "Outliers move the mean, not the median"},
+      {"say": "Standard deviation measures how far values typically are from the mean. Tight clusters have a small one, and widely spread data has a large one. Adding the same number to every value does not change the spread.", "item": "Standard deviation measures spread"}
+    ]},
+    {"type": "table", "title": "Which measures react to an outlier?", "columns": ["Measure", "Changes a lot with an outlier?"], "rows": [["mean", "yes"], ["median", "barely"], ["range", "yes"], ["standard deviation", "yes"]], "beats": [
+      {"say": "The mean uses every value, so one extreme value changes it a lot.", "reveal_row": 0},
+      {"say": "The median depends only on the middle of the sorted list, so an outlier barely moves it.", "reveal_row": 1},
+      {"say": "The range is the largest value minus the smallest, so an extreme value changes it directly.", "reveal_row": 2},
+      {"say": "The standard deviation also grows with an outlier, because the outlier is far from the mean.", "reveal_row": 3}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. Find the mean and the median of the numbers three, eight, five, twelve, five, and nine.", "card": {"text": "3, 8, 5, 12, 5, 9", "sub": "Find the mean and the median"}}
+    ]},
+    {"type": "figure", "title": "The data as a dot plot", "kind": "dot_plot", "data": {"values": [3, 5, 5, 8, 9, 12]}, "beats": [
+      {"say": "Here are the six values on a dot plot. Each dot is one value, and the two dots stacked above five show that five appears twice.", "show": ["points"]},
+      {"say": "The median is the middle of the sorted list. With six values, it is halfway between the third and fourth values, which is six point five.", "show": ["median"]},
+      {"say": "The mean is the balance point of the dots. It is seven, a little above the median, because the value twelve stretches the upper end.", "show": ["mean"]}
+    ]},
+    {"type": "steps", "title": "Easy: the mean", "start": "frac(3 + 8 + 5 + 12 + 5 + 9,6)", "beats": [
+      {"say": "The mean is the sum of the values divided by the number of values. We add the six numbers, and divide by six."},
+      {"say": "Three plus eight plus five plus twelve plus five plus nine is forty-two.", "op": "add the values", "result": "frac(42,6)"},
+      {"say": "Forty-two divided by six is seven. So the mean of the six numbers is seven, which matches the dot plot.", "op": "divide", "result": "7", "final": true}
+    ]},
+    {"type": "steps", "title": "Easy: the median", "start": "frac(5 + 8,2)", "beats": [
+      {"say": "First sort the list from smallest to largest. It becomes three, five, five, eight, nine, twelve. There are six values, so the median is the average of the third and fourth."},
+      {"say": "The third value is five and the fourth value is eight. Their sum is thirteen, and we divide by two.", "op": "add", "result": "frac(13,2)"},
+      {"say": "Thirteen divided by two is six point five. So the median is six point five.", "op": "divide", "result": "6.5", "final": true}
+    ]},
+    {"type": "check", "title": "A quick sense check", "beats": [
+      {"say": "The mean of seven is a little above the median of six point five. That makes sense, because the largest value, twelve, is far from the others and pulls the mean upward.", "lines": ["mean 7 is above median 6.5"], "verdict": "The high value 12 pulls the mean up."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. The mean is the total divided by the count, and the median is the middle of the sorted list.", "item": "Mean: total ÷ count. Median: sorted middle."},
+      {"say": "An outlier moves the mean, the range, and the standard deviation a lot, but the median barely.", "item": "Outliers move the mean, not the median"},
+      {"say": "Always sort before finding the median. In the next video, we work through a medium problem and a hard problem.", "item": "Sort first"}
+    ]}
+  ]
+}

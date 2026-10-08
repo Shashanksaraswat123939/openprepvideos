@@ -379,7 +379,7 @@ def fig_box_plot(c, sc):
 
 def fig_scatter(c, sc):
     dt = sc["data"]; pts = dt["points"]; xs = [p[0] for p in pts]; ys = [p[1] for p in pts]; ln = dt.get("line")
-    xmax = max(xs) + 1; ymax = max(ys + ([ln["slope"] * xmax + ln["intercept"]] if ln else [0])) + 1; x0, x1, y0, y1 = 200, 1080, 150, 520
+    xmax = max(xs) + 1; ymax = max(ys + ([ln["slope"] * xmax + ln["intercept"], ln["intercept"]] if ln else [0])) + 1; x0, x1, y0, y1 = 200, 1080, 150, 520
     sx = lambda v: x0 + v / xmax * (x1 - x0); sy = lambda v: y1 - v / ymax * (y1 - y0); d = c.d; sh = _shows(sc, c)
     d.line([(x0, y1), (x1 + 10, y1)], fill=INK, width=4); d.line([(x0, y0 - 10), (x0, y1)], fill=INK, width=4)
     stx = _nice(0, xmax); sty = _nice(0, ymax); v = 0
