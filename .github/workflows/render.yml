@@ -1,7 +1,7 @@
 name: Render OpenPrep videos
 
 # Run it from the repo's Actions tab: "Render OpenPrep videos" -> Run workflow.
-# It splits the scripts in scripts/ over 4 parallel jobs and uploads the finished MP4s as artifacts.
+# It splits the scripts over 20 parallel jobs, voices them with Chatterbox, then collects every MP4 into one draft release.
 on:
   push:
     tags: ['render-*']
@@ -14,15 +14,17 @@ on:
 
 jobs:
   render:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     timeout-minutes: 350
     strategy:
       fail-fast: false
       matrix:
-        shard: [0, 1, 2, 3]
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     env:
       PYTHONUTF8: "1"
-      OPENPREP_TTS: kokoro
+      OPENPREP_TTS: chatterbox
       HF_HUB_DISABLE_TELEMETRY: "1"
     steps:
       - uses: actions/checkout@v4
@@ -35,19 +37,20 @@ jobs:
       - name: System packages (voice engine, fonts)
         run: |
           sudo apt-get update -y
-          sudo apt-get install -y espeak-ng fonts-dejavu-core ffmpeg
+          sudo apt-get install -y espeak-ng fonts-dejavu-core ffmpeg libsndfile1
 
       - name: Python packages
         run: |
-          pip install torch --index-url https://download.pytorch.org/whl/cpu
-          pip install -r requirements.txt
+          pip install torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install chatterbox-tts
+          pip install -r requirements-cloud.txt
           python -m playwright install --with-deps chromium
 
       - name: Cache voice model
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: kokoro-model-v1
+          key: chatterbox-model-v1
 
       - name: Check every script (invalid ones are skipped)
         run: |
@@ -62,7 +65,7 @@ jobs:
           echo "only=$ONLY" >> "$GITHUB_OUTPUT"
 
       - name: Render this shard
-        run: python worker.py --once --shard ${{ matrix.shard }}/4 ${{ steps.sel.outputs.only != '' && format('--only {0}', steps.sel.outputs.only) || '' }}
+        run: python worker.py --once --shard ${{ matrix.shard }}/20 ${{ steps.sel.outputs.only != '' && format('--only {0}', steps.sel.outputs.only) || '' }}
 
       - name: Logs
         if: always()
@@ -76,3 +79,23 @@ jobs:
           path: out/*.mp4
           if-no-files-found: ignore
           retention-days: 14
+
+  collect:
+    needs: render
+    if: always() && startsWith(github.ref_name, 'render-all')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: videos-shard-*
+          merge-multiple: true
+          path: videos
+      - name: Draft release with every video
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ls videos | wc -l
+          cd videos && zip -q ../OpenPrep-videos.zip *.mp4 && cd ..
+          gh release create "$GITHUB_REF_NAME" videos/*.mp4 OpenPrep-videos.zip --draft --repo "$GITHUB_REPOSITORY" --title "OpenPrep videos ($GITHUB_REF_NAME)" --notes "Every rendered video. Draft: only repo writers can see it."

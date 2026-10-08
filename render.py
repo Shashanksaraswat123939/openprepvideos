@@ -731,7 +731,9 @@ async def _tts(items):
 
 def tts_speak(text, path):
     """Windows: VoiceBox (Teacher profile). Linux, or OPENPREP_TTS=kokoro: the Kokoro package directly (same voice, af_heart)."""
-    if os.environ.get("OPENPREP_TTS") == "kokoro" or sys.platform != "win32":
+    if os.environ.get("OPENPREP_TTS") == "chatterbox":
+        import chatterbox_wrap; chatterbox_wrap.speak(text, path)
+    elif os.environ.get("OPENPREP_TTS") == "kokoro" or sys.platform != "win32":
         import kokoro_tts; kokoro_tts.speak(text, path)
     else:
         import vb_tts; vb_tts.speak(text, path)
@@ -741,7 +743,7 @@ def build_plan(js):
     paths = []
     for sc in js["scenes"]:
         for b in sc["beats"]:
-            p = os.path.join(CACHE, "vb_" + hashlib.sha1((b["say"] + "teacher-af_heart").encode()).hexdigest()[:16] + ".wav")
+            p = os.path.join(CACHE, "vb_" + hashlib.sha1((b["say"] + "teacher-af_heart" + os.environ.get("OPENPREP_TTS", "")).encode()).hexdigest()[:16] + ".wav")
             if not os.path.exists(p): tts_speak(b["say"], p)
             paths.append(p)
     durs = [AudioFileClip(p).duration for p in paths]; plan = []; t0 = .7; k = 0

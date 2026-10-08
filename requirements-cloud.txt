@@ -1,0 +1,6 @@
+moviepy==1.0.3
+imageio-ffmpeg
+pillow
+sympy
+playwright
+soundfile
