@@ -1,0 +1,13 @@
+{
+  "chatterbox_stiff_ex0.5_cfg0.5_seconds_to_generate": 42.5,
+  "chatterbox_stiff_ex0.5_cfg0.5_audio_seconds": 6.4,
+  "chatterbox_stiff_ex0.8_cfg0.3_seconds_to_generate": 28.8,
+  "chatterbox_stiff_ex0.8_cfg0.3_audio_seconds": 5.2,
+  "chatterbox_spoken_ex0.5_cfg0.5_seconds_to_generate": 64.7,
+  "chatterbox_spoken_ex0.5_cfg0.5_audio_seconds": 12.6,
+  "chatterbox_spoken_ex0.8_cfg0.3_seconds_to_generate": 63.9,
+  "chatterbox_spoken_ex0.8_cfg0.3_audio_seconds": 12.3,
+  "chatterbox": 231.6,
+  "kokoro": 30.9,
+  "edge": 1.6
+}

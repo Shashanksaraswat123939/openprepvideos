@@ -1,0 +1,11 @@
+chatterbox_spoken_ex0.5_cfg0.5.wav
+chatterbox_spoken_ex0.8_cfg0.3.wav
+chatterbox_stiff_ex0.5_cfg0.5.wav
+chatterbox_stiff_ex0.8_cfg0.3.wav
+edge_ava_spoken.mp3
+edge_ava_stiff.mp3
+kokoro_spoken_blend.wav
+kokoro_spoken_heart.wav
+kokoro_stiff_blend.wav
+kokoro_stiff_heart.wav
+timings.json
