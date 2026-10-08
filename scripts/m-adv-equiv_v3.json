@@ -1,69 +1,274 @@
 {
-  "id": "m-adv-equiv_v3",
-  "skill": "m-adv-equiv",
-  "part": 3,
-  "title": "Equivalent Expressions, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Advanced Math",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with equivalent expressions, and then use Desmos as an equivalence checker and as a factor finder.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: squaring term by term", "beats": [
-      {"say": "Trap one. Squaring x plus six does not mean squaring each term. Students write x squared plus thirty-six, and miss the middle term completely.", "wrong": "(x + 6)^2 = x^2 + 36", "wrong_why": "The middle term is missing"},
-      {"say": "Squaring means multiplying the binomial by itself. The middle term is two times x times six, which is twelve x.", "right": "(x + 6)^2 = x^2 + 12x + 36", "right_why": "Add the middle term 2ab"}
-    ]},
-    {"type": "compare", "title": "Trap 2: losing a negative", "beats": [
-      {"say": "Trap two. Distributing a negative number across a subtraction flips the sign of every term. Students often keep the second sign the same.", "wrong": "−3(x − 5) = −3x − 15", "wrong_why": "Negative times negative is positive"},
-      {"say": "Negative three times negative five is positive fifteen. So the correct result is negative three x plus fifteen.", "right": "−3(x − 5) = −3x + 15", "right_why": "Distribute to every term"}
-    ]},
-    {"type": "compare", "title": "Trap 3: adding or multiplying exponents", "beats": [
-      {"say": "Trap three. When you multiply powers with the same base, you add the exponents. Students multiply them, because the other rule, for a power of a power, is also on their mind.", "wrong": "x^2 × x^3 = x^6", "wrong_why": "Exponents were multiplied"},
-      {"say": "Two plus three is five. So x squared times x cubed is x to the fifth. You multiply exponents only for a power of a power.", "right": "x^2 × x^3 = x^5", "right_why": "Same base: add the exponents"}
-    ]},
-    {"type": "compare", "title": "Trap 4: the coefficient in a power", "beats": [
-      {"say": "Trap four. When a whole term is raised to a power, the coefficient is raised too. Students apply the power only to the variable part.", "wrong": "(2x^5)^3 = 2x^15", "wrong_why": "The 2 was not cubed"},
-      {"say": "Two cubed is eight, and five times three is fifteen. So the correct result is eight x to the fifteenth.", "right": "(2x^5)^3 = 8x^15", "right_why": "Cube the coefficient too"}
-    ]},
-    {"type": "compare", "title": "Trap 5: canceling terms", "beats": [
-      {"say": "Trap five. In a fraction, you may cancel common factors, but never individual terms. A student might cancel x squared from the top and bottom of x squared minus sixteen over x squared plus seven x plus twelve.", "wrong": "cancel x^2: frac(−16,7x + 12)", "wrong_why": "x^2 is a term, not a factor"},
-      {"say": "Factor first. The top is x minus four times x plus four, and the bottom is x plus three times x plus four. Now x plus four is a common factor, and it can cancel.", "right": "frac(x − 4,x + 3)", "right_why": "Factor, then cancel (x + 4)"}
-    ]},
-    {"type": "cards", "title": "The fast way: Desmos", "beats": [
-      {"say": "Desmos is a reliable equivalence checker. Graph the original expression, then graph each answer choice. The equivalent choice draws exactly on top of the original.", "card": {"text": "Equivalent graphs lie on top of each other"}},
-      {"say": "Our example is two x minus three, times four x plus one, minus five x. We compare it with two choices, eight x squared minus fifteen x minus three, and eight x squared minus ten x minus three.", "card": {"text": "Which choice matches?", "sub": "8x^2 − 15x − 3  or  8x^2 − 10x − 3"}}
-    ]},
-    {"type": "desmos", "title": "Compare graphs", "beats": [
-      {"say": "Open a fresh graph. We will type the original expression first, and then each choice.", "actions": ["hold: 2"]},
-      {"say": "Type y equals two x minus three, times four x plus one, minus five x. Desmos draws a parabola.", "actions": ["type: y=(2x-3)(4x+1)-5x"]},
-      {"say": "Now type the first choice, y equals eight x squared minus fifteen x minus three. Remember the right arrow after the exponent.", "actions": ["type: y=8x^2>-15x-3"]},
-      {"say": "Now type the second choice, y equals eight x squared minus ten x minus three.", "actions": ["type: y=8x^2>-10x-3", "bounds: left=-3 right=4 bottom=-30 top=40"]},
-      {"say": "Only two curves are visible. The first choice lies exactly on top of the original, so they are equivalent. The second choice is a different curve, so it is wrong.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Desmos finds factors", "beats": [
-      {"say": "Desmos can also find factors. If the graph of a polynomial crosses the x axis at x equals four thirds, then three x minus four is a factor. Let us try three x squared minus x minus four.", "card": {"text": "3x^2 − x − 4", "sub": "Find the factors from the intercepts"}}
-    ]},
-    {"type": "desmos", "title": "Factors from intercepts", "beats": [
-      {"say": "We graph the polynomial and click its x-intercepts. Each intercept tells us one factor.", "actions": ["hold: 2"]},
-      {"say": "Type y equals three x squared minus x minus four. Desmos draws an upward-opening parabola.", "actions": ["type: y=3x^2>-x-4"]},
-      {"say": "Click the left intercept. It is at negative one, which means x plus one is a factor.", "actions": ["bounds: left=-3 right=4 bottom=-8 top=8", "click: -1,0"]},
-      {"say": "Click the right intercept. It is at one and one third, which means three x minus four is a factor. So the polynomial factors as three x minus four, times x plus one.", "actions": ["click: 1.3333333,0", "hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. Write x plus five, times x minus two, plus three x, as a quadratic in standard form. Pause the video, try it, and then watch the solution.", "card": {"text": "(x + 5)(x − 2) + 3x", "sub": "Pause and try it first"}}
-    ]},
-    {"type": "steps", "title": "Practice: expand and combine", "start": "(x + 5)(x − 2) + 3x", "beats": [
-      {"say": "First expand the product. We multiply each term of the first factor by each term of the second factor."},
-      {"say": "x times x is x squared. x times negative two is negative two x. Five times x is five x. Five times negative two is negative ten.", "op": "expand the product", "result": "x^2 − 2x + 5x − 10 + 3x"},
-      {"say": "Combine the x terms. Negative two x plus five x plus three x is six x. So the standard form is x squared plus six x minus ten.", "op": "combine like terms", "result": "x^2 + 6x − 10", "final": true}
-    ]},
-    {"type": "check", "title": "Check with x = 2", "beats": [
-      {"say": "Check with x equal to two. The original is seven times zero, plus six, which is six. The answer is four plus twelve minus ten, which is also six.", "lines": ["(2 + 5)(2 − 2) + 6 = 6", "4 + 12 − 10 = 6"], "verdict": "Both expressions equal 6."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Square a binomial by multiplying it by itself, add exponents when multiplying powers, and raise the coefficient too.", "item": "Square binomials, add exponents"},
-      {"say": "Distribute negatives to every term, and cancel only common factors, never single terms.", "item": "Cancel factors, not terms"},
-      {"say": "Use Desmos graphs to check equivalence, and intercepts to find factors. In the next topic, we study nonlinear equations and systems.", "item": "Desmos checks equivalence and factors"}
-    ]}
-  ]
+ "id": "m-adv-equiv_v3",
+ "skill": "m-adv-equiv",
+ "part": 3,
+ "title": "Equivalent Expressions, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Advanced Math",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with equivalent expressions, and then use Desmos as an equivalence checker and as a factor finder.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: squaring term by term",
+   "beats": [
+    {
+     "say": "Trap one. Squaring x plus six doesn't mean squaring each term. Students write x squared plus thirty-six, and miss the middle term completely.",
+     "wrong": "(x + 6)^2 = x^2 + 36",
+     "wrong_why": "The middle term is missing"
+    },
+    {
+     "say": "Squaring means multiplying the binomial by itself. The middle term is two times x times six, which is twelve x.",
+     "right": "(x + 6)^2 = x^2 + 12x + 36",
+     "right_why": "Add the middle term 2ab"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: losing a negative",
+   "beats": [
+    {
+     "say": "Trap two. Distributing a negative number across a subtraction flips the sign of every term. Students often keep the second sign the same.",
+     "wrong": "−3(x − 5) = −3x − 15",
+     "wrong_why": "Negative times negative is positive"
+    },
+    {
+     "say": "Negative three times negative five is positive fifteen. So the correct result is negative three x plus fifteen.",
+     "right": "−3(x − 5) = −3x + 15",
+     "right_why": "Distribute to every term"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: adding or multiplying exponents",
+   "beats": [
+    {
+     "say": "Trap three. When you multiply powers with the same base, you add the exponents. Students multiply them, because the other rule, for a power of a power, is also on their mind.",
+     "wrong": "x^2 × x^3 = x^6",
+     "wrong_why": "Exponents were multiplied"
+    },
+    {
+     "say": "Two plus three is five. So x squared times x cubed is x to the fifth. You multiply exponents only for a power of a power.",
+     "right": "x^2 × x^3 = x^5",
+     "right_why": "Same base: add the exponents"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: the coefficient in a power",
+   "beats": [
+    {
+     "say": "Trap four. When a whole term is raised to a power, the coefficient is raised too. Students apply the power only to the variable part.",
+     "wrong": "(2x^5)^3 = 2x^15",
+     "wrong_why": "The 2 was not cubed"
+    },
+    {
+     "say": "Two cubed is eight, and five times three is fifteen. So the correct result is eight x to the fifteenth.",
+     "right": "(2x^5)^3 = 8x^15",
+     "right_why": "Cube the coefficient too"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: canceling terms",
+   "beats": [
+    {
+     "say": "Trap five. In a fraction, you may cancel common factors, but never individual terms. A student might cancel x squared from the top and bottom of x squared minus sixteen over x squared plus seven x plus twelve.",
+     "wrong": "cancel x^2: frac(−16,7x + 12)",
+     "wrong_why": "x^2 is a term, not a factor"
+    },
+    {
+     "say": "Factor first. The top is x minus four times x plus four, and the bottom is x plus three times x plus four. Now x plus four is a common factor, and it can cancel.",
+     "right": "frac(x − 4,x + 3)",
+     "right_why": "Factor, then cancel (x + 4)"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: Desmos",
+   "beats": [
+    {
+     "say": "Desmos is a reliable equivalence checker. Graph the original expression, then graph each answer choice. The equivalent choice draws exactly on top of the original.",
+     "card": {
+      "text": "Equivalent graphs lie on top of each other"
+     }
+    },
+    {
+     "say": "Our example is two x minus three, times four x plus one, minus five x. We compare it with two choices, eight x squared minus fifteen x minus three, and eight x squared minus ten x minus three.",
+     "card": {
+      "text": "Which choice matches?",
+      "sub": "8x^2 − 15x − 3  or  8x^2 − 10x − 3"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Compare graphs",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We'll type the original expression first, and then each choice.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals two x minus three, times four x plus one, minus five x. Desmos draws a parabola.",
+     "actions": [
+      "type: y=(2x-3)(4x+1)-5x"
+     ]
+    },
+    {
+     "say": "Now type the first choice, y equals eight x squared minus fifteen x minus three. Remember the right arrow after the exponent.",
+     "actions": [
+      "type: y=8x^2>-15x-3"
+     ]
+    },
+    {
+     "say": "Now type the second choice, y equals eight x squared minus ten x minus three.",
+     "actions": [
+      "type: y=8x^2>-10x-3",
+      "bounds: left=-3 right=4 bottom=-30 top=40"
+     ]
+    },
+    {
+     "say": "Only two curves are visible. The first choice lies exactly on top of the original, so they're equivalent. The second choice is a different curve, so it's wrong.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Desmos finds factors",
+   "beats": [
+    {
+     "say": "Desmos can also find factors. If the graph of a polynomial crosses the x axis at x equals four thirds, then three x minus four is a factor. Let's try three x squared minus x minus four.",
+     "card": {
+      "text": "3x^2 − x − 4",
+      "sub": "Find the factors from the intercepts"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Factors from intercepts",
+   "beats": [
+    {
+     "say": "We graph the polynomial and click its x-intercepts. Each intercept tells us one factor.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals three x squared minus x minus four. Desmos draws an upward-opening parabola.",
+     "actions": [
+      "type: y=3x^2>-x-4"
+     ]
+    },
+    {
+     "say": "Click the left intercept. It's at negative one, which means x plus one is a factor.",
+     "actions": [
+      "bounds: left=-3 right=4 bottom=-8 top=8",
+      "click: -1,0"
+     ]
+    },
+    {
+     "say": "Click the right intercept. It's at one and one third, which means three x minus four is a factor. So the polynomial factors as three x minus four, times x plus one.",
+     "actions": [
+      "click: 1.3333333,0",
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. Write x plus five, times x minus two, plus three x, as a quadratic in standard form. Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "(x + 5)(x − 2) + 3x",
+      "sub": "Pause and try it first"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: expand and combine",
+   "start": "(x + 5)(x − 2) + 3x",
+   "beats": [
+    {
+     "say": "First expand the product. We multiply each term of the first factor by each term of the second factor."
+    },
+    {
+     "say": "x times x is x squared. x times negative two is negative two x. Five times x is five x. Five times negative two is negative ten.",
+     "op": "expand the product",
+     "result": "x^2 − 2x + 5x − 10 + 3x"
+    },
+    {
+     "say": "Combine the x terms. Negative two x plus five x plus three x is six x. So the standard form is x squared plus six x minus ten.",
+     "op": "combine like terms",
+     "result": "x^2 + 6x − 10",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check with x = 2",
+   "beats": [
+    {
+     "say": "Check with x equal to two. The original is seven times zero, plus six, which is six. The answer is four plus twelve minus ten, which is also six.",
+     "lines": [
+      "(2 + 5)(2 − 2) + 6 = 6",
+      "4 + 12 − 10 = 6"
+     ],
+     "verdict": "Both expressions equal 6."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Square a binomial by multiplying it by itself, add exponents when multiplying powers, and raise the coefficient too.",
+     "item": "Square binomials, add exponents"
+    },
+    {
+     "say": "Distribute negatives to every term, and cancel only common factors, never single terms.",
+     "item": "Cancel factors, not terms"
+    },
+    {
+     "say": "Use Desmos graphs to check equivalence, and intercepts to find factors. In the next topic, we study nonlinear equations and systems.",
+     "item": "Desmos checks equivalence and factors"
+    }
+   ]
+  }
+ ]
 }

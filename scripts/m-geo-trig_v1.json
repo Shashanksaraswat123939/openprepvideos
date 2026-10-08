@@ -1,60 +1,249 @@
 {
-  "id": "m-geo-trig_v1",
-  "skill": "m-geo-trig",
-  "part": 1,
-  "title": "Right Triangles and Trigonometry, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Geometry and Trigonometry",
-  "scenes": [
-    {"type": "cards", "title": "Right triangles and trigonometry", "beats": [
-      {"say": "This skill covers right triangles. It includes the Pythagorean theorem, the trigonometric ratios sine, cosine, and tangent, and the special right triangles.", "card": {"text": "Pythagorean theorem, sin, cos, tan"}},
-      {"say": "It also covers the link between the sine and the cosine of complementary angles, and angles measured in radians on the unit circle.", "card": {"text": "Complementary angles and radians"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "In a right triangle, the hypotenuse is the longest side, and it sits opposite the right angle.", "item": "The hypotenuse is opposite the right angle"},
-      {"say": "Each trig ratio compares two sides, relative to a chosen acute angle. The names opposite and adjacent change when you switch to the other acute angle.", "item": "Opposite and adjacent depend on the angle"},
-      {"say": "The two acute angles of a right triangle add up to ninety degrees, so the side opposite one is adjacent to the other. That is why the sine of an angle equals the cosine of its complement.", "item": "sin x = cos(90° − x)"},
-      {"say": "If you know one trig ratio, sketch a triangle with those side lengths, find the third side with the Pythagorean theorem, and read off any other ratio.", "item": "Know one ratio? Sketch the triangle"},
-      {"say": "Radians measure angles by arc length on a circle of radius one. Pi radians equals one hundred eighty degrees.", "item": "π radians = 180°"}
-    ]},
-    {"type": "cards", "title": "The core formulas", "beats": [
-      {"say": "The Pythagorean theorem says a squared plus b squared equals c squared, where c is the hypotenuse.", "card": {"text": "a^2 + b^2 = c^2"}},
-      {"say": "Sine is opposite over hypotenuse, cosine is adjacent over hypotenuse, and tangent is opposite over adjacent. Many students remember this as SOH, CAH, TOA.", "card": {"text": "sin = opp/hyp, cos = adj/hyp, tan = opp/adj", "sub": "SOH CAH TOA"}}
-    ]},
-    {"type": "table", "title": "Special right triangles", "columns": ["Triangle", "Side ratios"], "rows": [["45°-45°-90°", "x : x : x√2"], ["30°-60°-90°", "x : x√3 : 2x"], ["Pythagorean triples", "3-4-5, 5-12-13, 8-15-17, 7-24-25"]], "beats": [
-      {"say": "In a forty-five, forty-five, ninety triangle, the two legs are equal, and the hypotenuse is the leg times the square root of two.", "reveal_row": 0},
-      {"say": "In a thirty, sixty, ninety triangle, the short leg is opposite the thirty degree angle. The long leg is the short leg times the square root of three, and the hypotenuse is twice the short leg.", "reveal_row": 1},
-      {"say": "Common Pythagorean triples, whole-number side lengths, are worth memorizing, together with their multiples.", "reveal_row": 2}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. A right triangle has legs of seven and twenty-four. Find the hypotenuse, and find the sine, cosine, and tangent of the angle theta opposite the side of length seven.", "card": {"text": "Legs 7 and 24", "sub": "Find the hypotenuse, sin θ, cos θ, tan θ"}}
-    ]},
-    {"type": "figure", "title": "The triangle", "kind": "right_triangle", "data": {"a": 24, "b": 7, "c": 25, "angle": "θ"}, "beats": [
-      {"say": "Here is the triangle. The legs are twenty-four and seven, and the right angle is at the lower right corner.", "show": ["a", "b", "right_mark"]},
-      {"say": "The angle theta is at the lower left corner. The side opposite theta is the leg of length seven, and the side adjacent to theta is the leg of length twenty-four.", "show": ["angle"]},
-      {"say": "The hypotenuse is the longest side, opposite the right angle. We will find its length with the Pythagorean theorem.", "show": ["c"]}
-    ]},
-    {"type": "steps", "title": "Easy: the hypotenuse", "start": "7^2 + 24^2", "beats": [
-      {"say": "The square of the hypotenuse equals the sum of the squares of the legs. We start with seven squared plus twenty-four squared."},
-      {"say": "Seven squared is forty-nine, and twenty-four squared is five hundred seventy-six, so we add those two numbers.", "op": "square each leg", "result": "49 + 576"},
-      {"say": "Forty-nine plus five hundred seventy-six is six hundred twenty-five. This is the square of the hypotenuse.", "op": "add", "result": "625", "final": true}
-    ]},
-    {"type": "steps", "title": "Easy: take the square root", "start": "c = sqrt(625)", "beats": [
-      {"say": "The hypotenuse c is the square root of six hundred twenty-five, since c squared equals that number."},
-      {"say": "Twenty-five times twenty-five is six hundred twenty-five. So the hypotenuse is twenty-five. This is the seven, twenty-four, twenty-five triple.", "op": "square root", "result": "c = 25", "final": true}
-    ]},
-    {"type": "cards", "title": "Easy: the three ratios", "beats": [
-      {"say": "Relative to theta, the opposite side is seven, the adjacent side is twenty-four, and the hypotenuse is twenty-five. So sine theta is seven over twenty-five.", "card": {"text": "sin θ = frac(7,25)", "sub": "opposite ÷ hypotenuse"}},
-      {"say": "Cosine theta is adjacent over hypotenuse, which is twenty-four over twenty-five. And tangent theta is opposite over adjacent, which is seven over twenty-four.", "card": {"text": "cos θ = frac(24,25),  tan θ = frac(7,24)"}}
-    ]},
-    {"type": "steps", "title": "Check: sin² + cos² = 1", "start": "frac(49,625) + frac(576,625)", "beats": [
-      {"say": "As a check, the squares of the sine and the cosine of the same angle always add to one. Seven twenty-fifths squared is forty-nine over six hundred twenty-five, and twenty-four twenty-fifths squared is five hundred seventy-six over six hundred twenty-five."},
-      {"say": "Forty-nine plus five hundred seventy-six is six hundred twenty-five, over six hundred twenty-five.", "op": "add the fractions", "result": "frac(625,625)"},
-      {"say": "Six hundred twenty-five over six hundred twenty-five is one. The identity holds, so our ratios are consistent.", "op": "simplify", "result": "1", "final": true}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. The hypotenuse is opposite the right angle, and the sides are named opposite or adjacent relative to a chosen angle.", "item": "Opposite and adjacent depend on the angle"},
-      {"say": "Use the Pythagorean theorem to find a missing side, and SOH CAH TOA for the three ratios.", "item": "Pythagorean theorem, then SOH CAH TOA"},
-      {"say": "In the next video, we work through a medium problem and a hard problem.", "item": "Next: medium and hard problems"}
-    ]}
-  ]
+ "id": "m-geo-trig_v1",
+ "skill": "m-geo-trig",
+ "part": 1,
+ "title": "Right Triangles and Trigonometry, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Geometry and Trigonometry",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Right triangles and trigonometry",
+   "beats": [
+    {
+     "say": "This skill covers right triangles. It includes the Pythagorean theorem, the trigonometric ratios sine, cosine, and tangent, and the special right triangles.",
+     "card": {
+      "text": "Pythagorean theorem, sin, cos, tan"
+     }
+    },
+    {
+     "say": "It also covers the link between the sine and the cosine of complementary angles, and angles measured in radians on the unit circle.",
+     "card": {
+      "text": "Complementary angles and radians"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "In a right triangle, the hypotenuse is the longest side, and it sits opposite the right angle.",
+     "item": "The hypotenuse is opposite the right angle"
+    },
+    {
+     "say": "Each trig ratio compares two sides, relative to a chosen acute angle. The names opposite and adjacent change when you switch to the other acute angle.",
+     "item": "Opposite and adjacent depend on the angle"
+    },
+    {
+     "say": "The two acute angles of a right triangle add up to ninety degrees, so the side opposite one is adjacent to the other. That's why the sine of an angle equals the cosine of its complement.",
+     "item": "sin x = cos(90° − x)"
+    },
+    {
+     "say": "If you know one trig ratio, sketch a triangle with those side lengths, find the third side with the Pythagorean theorem, and read off any other ratio.",
+     "item": "Know one ratio? Sketch the triangle"
+    },
+    {
+     "say": "Radians measure angles by arc length on a circle of radius one. Pi radians equals one hundred eighty degrees.",
+     "item": "π radians = 180°"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The core formulas",
+   "beats": [
+    {
+     "say": "The Pythagorean theorem says a squared plus b squared equals c squared, where c is the hypotenuse.",
+     "card": {
+      "text": "a^2 + b^2 = c^2"
+     }
+    },
+    {
+     "say": "Sine is opposite over hypotenuse, cosine is adjacent over hypotenuse, and tangent is opposite over adjacent. Many students remember this as SOH, CAH, TOA.",
+     "card": {
+      "text": "sin = opp/hyp, cos = adj/hyp, tan = opp/adj",
+      "sub": "SOH CAH TOA"
+     }
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Special right triangles",
+   "columns": [
+    "Triangle",
+    "Side ratios"
+   ],
+   "rows": [
+    [
+     "45°-45°-90°",
+     "x : x : x√2"
+    ],
+    [
+     "30°-60°-90°",
+     "x : x√3 : 2x"
+    ],
+    [
+     "Pythagorean triples",
+     "3-4-5, 5-12-13, 8-15-17, 7-24-25"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "In a forty-five, forty-five, ninety triangle, the two legs are equal, and the hypotenuse is the leg times the square root of two.",
+     "reveal_row": 0
+    },
+    {
+     "say": "In a thirty, sixty, ninety triangle, the short leg is opposite the thirty degree angle. The long leg is the short leg times the square root of three, and the hypotenuse is twice the short leg.",
+     "reveal_row": 1
+    },
+    {
+     "say": "Common Pythagorean triples, whole-number side lengths, are worth memorizing, together with their multiples.",
+     "reveal_row": 2
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. A right triangle has legs of seven and twenty-four. Find the hypotenuse, and find the sine, cosine, and tangent of the angle theta opposite the side of length seven.",
+     "card": {
+      "text": "Legs 7 and 24",
+      "sub": "Find the hypotenuse, sin θ, cos θ, tan θ"
+     }
+    }
+   ]
+  },
+  {
+   "type": "figure",
+   "title": "The triangle",
+   "kind": "right_triangle",
+   "data": {
+    "a": 24,
+    "b": 7,
+    "c": 25,
+    "angle": "θ"
+   },
+   "beats": [
+    {
+     "say": "Here's the triangle. The legs are twenty-four and seven, and the right angle is at the lower right corner.",
+     "show": [
+      "a",
+      "b",
+      "right_mark"
+     ]
+    },
+    {
+     "say": "The angle theta is at the lower left corner. The side opposite theta is the leg of length seven, and the side adjacent to theta is the leg of length twenty-four.",
+     "show": [
+      "angle"
+     ]
+    },
+    {
+     "say": "The hypotenuse is the longest side, opposite the right angle. We'll find its length with the Pythagorean theorem.",
+     "show": [
+      "c"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: the hypotenuse",
+   "start": "7^2 + 24^2",
+   "beats": [
+    {
+     "say": "The square of the hypotenuse equals the sum of the squares of the legs. We start with seven squared plus twenty-four squared."
+    },
+    {
+     "say": "Seven squared is forty-nine, and twenty-four squared is five hundred seventy-six, so we add those two numbers.",
+     "op": "square each leg",
+     "result": "49 + 576"
+    },
+    {
+     "say": "Forty-nine plus five hundred seventy-six is six hundred twenty-five. This is the square of the hypotenuse.",
+     "op": "add",
+     "result": "625",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: take the square root",
+   "start": "c = sqrt(625)",
+   "beats": [
+    {
+     "say": "The hypotenuse c is the square root of six hundred twenty-five, since c squared equals that number."
+    },
+    {
+     "say": "Twenty-five times twenty-five is six hundred twenty-five. So the hypotenuse is twenty-five. This is the seven, twenty-four, twenty-five triple.",
+     "op": "square root",
+     "result": "c = 25",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy: the three ratios",
+   "beats": [
+    {
+     "say": "Relative to theta, the opposite side is seven, the adjacent side is twenty-four, and the hypotenuse is twenty-five. So sine theta is seven over twenty-five.",
+     "card": {
+      "text": "sin θ = frac(7,25)",
+      "sub": "opposite ÷ hypotenuse"
+     }
+    },
+    {
+     "say": "Cosine theta is adjacent over hypotenuse, which is twenty-four over twenty-five. And tangent theta is opposite over adjacent, which is seven over twenty-four.",
+     "card": {
+      "text": "cos θ = frac(24,25),  tan θ = frac(7,24)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Check: sin² + cos² = 1",
+   "start": "frac(49,625) + frac(576,625)",
+   "beats": [
+    {
+     "say": "As a check, the squares of the sine and the cosine of the same angle always add to one. Seven twenty-fifths squared is forty-nine over six hundred twenty-five, and twenty-four twenty-fifths squared is five hundred seventy-six over six hundred twenty-five."
+    },
+    {
+     "say": "Forty-nine plus five hundred seventy-six is six hundred twenty-five, over six hundred twenty-five.",
+     "op": "add the fractions",
+     "result": "frac(625,625)"
+    },
+    {
+     "say": "Six hundred twenty-five over six hundred twenty-five is one. The identity holds, so our ratios are consistent.",
+     "op": "simplify",
+     "result": "1",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. The hypotenuse is opposite the right angle, and the sides are named opposite or adjacent relative to a chosen angle.",
+     "item": "Opposite and adjacent depend on the angle"
+    },
+    {
+     "say": "Use the Pythagorean theorem to find a missing side, and SOH CAH TOA for the three ratios.",
+     "item": "Pythagorean theorem, then SOH CAH TOA"
+    },
+    {
+     "say": "In the next video, we work through a medium problem and a hard problem.",
+     "item": "Next: medium and hard problems"
+    }
+   ]
+  }
+ ]
 }

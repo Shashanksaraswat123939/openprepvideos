@@ -1,51 +1,192 @@
 {
-  "id": "m-geo-circles_v2",
-  "skill": "m-geo-circles",
-  "part": 2,
-  "title": "Circles, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Geometry and Trigonometry",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we found an arc length and a sector area as a fraction of the whole circle, using the central angle over three hundred sixty.", "card": {"text": "Fraction = angle ÷ 360°"}},
-      {"say": "In this video, we use an inscribed angle and a sector in radians, and then find the center and radius from an equation.", "card": {"text": "Today: inscribed angles, equation of a circle"}}
-    ]},
-    {"type": "cards", "title": "Medium example 1", "beats": [
-      {"say": "Medium example one. An inscribed angle intercepts an arc of one hundred forty degrees. What is the measure of the inscribed angle?", "card": {"text": "Intercepted arc 140°", "sub": "Inscribed angle?"}},
-      {"say": "An inscribed angle has its vertex on the circle. It is half of the intercepted arc, unlike a central angle, which equals its arc.", "card": {"text": "Inscribed angle = half the arc"}}
-    ]},
-    {"type": "steps", "title": "Medium 1: half the arc", "start": "frac(1,2) × 140", "beats": [
-      {"say": "Take half of the intercepted arc, because the angle sits on the circle. Half of one hundred forty is seventy."},
-      {"say": "One half times one hundred forty is seventy. So the inscribed angle measures seventy degrees.", "op": "multiply", "result": "70", "final": true}
-    ]},
-    {"type": "cards", "title": "Medium example 2", "beats": [
-      {"say": "Medium example two. A circle has a radius of six. A central angle of pi over three radians cuts out a sector. Find the area of the sector.", "card": {"text": "r = 6, θ = π/3 radians", "sub": "Sector area?"}}
-    ]},
-    {"type": "steps", "title": "Medium 2: sector area in radians", "start": "frac(1,2) × 6^2 × frac(π,3)", "beats": [
-      {"say": "With radians, the sector area is one half r squared theta. We substitute a radius of six and an angle of pi over three."},
-      {"say": "Six squared is thirty-six. So the expression is one half times thirty-six times pi over three.", "op": "square the radius", "result": "frac(1,2) × 36 × frac(π,3)"},
-      {"say": "One half of thirty-six is eighteen, and eighteen divided by three is six. So the sector area is six pi.", "op": "simplify", "result": "6π", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. A circle in the coordinate plane has the equation x squared plus y squared plus ten x minus four y equals seven. What are its center and its radius?", "card": {"text": "x^2 + y^2 + 10x − 4y = 7", "sub": "Find the center and radius"}},
-      {"say": "The equation is expanded, so we complete the square in x and in y to get back to the standard form with a center and a radius.", "card": {"text": "Complete the square in x and y"}}
-    ]},
-    {"type": "steps", "title": "Hard: complete the squares", "start": "x^2 + y^2 + 10x − 4y = 7", "beats": [
-      {"say": "First, group the x terms together and the y terms together, so that each variable can be handled on its own."},
-      {"say": "The x terms are x squared plus ten x, and the y terms are y squared minus four y.", "op": "group the terms", "result": "(x^2 + 10x) + (y^2 − 4y) = 7"},
-      {"say": "To complete a square, take half of the coefficient, and square it. Half of ten is five, and five squared is twenty-five. Half of negative four is negative two, and its square is four.", "op": "complete each square", "result": "(x + 5)^2 − 25 + (y − 2)^2 − 4 = 7"},
-      {"say": "Now add twenty-five and four to both sides. Seven plus twenty-five plus four is thirty-six.", "op": "add 25 and 4 to both sides", "result": "(x + 5)^2 + (y − 2)^2 = 36", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard: read the center and radius", "beats": [
-      {"say": "The standard form is x minus h squared, plus y minus k squared, equals r squared. Here x plus five means h is negative five, and y minus two means k is two. So the center is negative five comma two.", "card": {"text": "Center (−5, 2)", "sub": "The signs are the opposite of the parentheses"}},
-      {"say": "The right side is thirty-six, which is r squared. So the radius is the square root of thirty-six, which is six.", "card": {"text": "Radius = 6", "sub": "r² = 36, so r = 6"}}
-    ]},
-    {"type": "check", "title": "Check with a point", "beats": [
-      {"say": "Check with a point. The point one comma two is six units to the right of the center, so it should be on the circle. Putting it into the original equation, one plus four plus ten minus eight is seven. That matches.", "lines": ["1 + 4 + 10 − 8 = 7"], "verdict": "Center (−5, 2), radius 6."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. An inscribed angle is half of its intercepted arc. With radians, use r theta for arc length and one half r squared theta for sector area.", "item": "Inscribed = half the arc; radian formulas"},
-      {"say": "To read a circle from an expanded equation, complete the square in both variables, and add the same amounts to both sides.", "item": "Complete both squares; add to both sides"},
-      {"say": "In the next video, we look at common traps and the fast way with Desmos.", "item": "Next: traps and the fast way"}
-    ]}
-  ]
+ "id": "m-geo-circles_v2",
+ "skill": "m-geo-circles",
+ "part": 2,
+ "title": "Circles, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Geometry and Trigonometry",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we found an arc length and a sector area as a fraction of the whole circle, using the central angle over three hundred sixty.",
+     "card": {
+      "text": "Fraction = angle ÷ 360°"
+     }
+    },
+    {
+     "say": "In this video, we use an inscribed angle and a sector in radians, and then find the center and radius from an equation.",
+     "card": {
+      "text": "Today: inscribed angles, equation of a circle"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example 1",
+   "beats": [
+    {
+     "say": "Medium example one. An inscribed angle intercepts an arc of one hundred forty degrees. What's the measure of the inscribed angle?",
+     "card": {
+      "text": "Intercepted arc 140°",
+      "sub": "Inscribed angle?"
+     }
+    },
+    {
+     "say": "An inscribed angle has its vertex on the circle. It's half of the intercepted arc, unlike a central angle, which equals its arc.",
+     "card": {
+      "text": "Inscribed angle = half the arc"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium 1: half the arc",
+   "start": "frac(1,2) × 140",
+   "beats": [
+    {
+     "say": "Take half of the intercepted arc, because the angle sits on the circle. Half of one hundred forty is seventy."
+    },
+    {
+     "say": "One half times one hundred forty is seventy. So the inscribed angle measures seventy degrees.",
+     "op": "multiply",
+     "result": "70",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example 2",
+   "beats": [
+    {
+     "say": "Medium example two. A circle has a radius of six. A central angle of pi over three radians cuts out a sector. Find the area of the sector.",
+     "card": {
+      "text": "r = 6, θ = π/3 radians",
+      "sub": "Sector area?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium 2: sector area in radians",
+   "start": "frac(1,2) × 6^2 × frac(π,3)",
+   "beats": [
+    {
+     "say": "With radians, the sector area is one half r squared theta. We substitute a radius of six and an angle of pi over three."
+    },
+    {
+     "say": "Six squared is thirty-six. So the expression is one half times thirty-six times pi over three.",
+     "op": "square the radius",
+     "result": "frac(1,2) × 36 × frac(π,3)"
+    },
+    {
+     "say": "One half of thirty-six is eighteen, and eighteen divided by three is six. So the sector area is six pi.",
+     "op": "simplify",
+     "result": "6π",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. A circle in the coordinate plane has the equation x squared plus y squared plus ten x minus four y equals seven. What are its center and its radius?",
+     "card": {
+      "text": "x^2 + y^2 + 10x − 4y = 7",
+      "sub": "Find the center and radius"
+     }
+    },
+    {
+     "say": "The equation is expanded, so we complete the square in x and in y to get back to the standard form with a center and a radius.",
+     "card": {
+      "text": "Complete the square in x and y"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: complete the squares",
+   "start": "x^2 + y^2 + 10x − 4y = 7",
+   "beats": [
+    {
+     "say": "First, group the x terms together and the y terms together, so that each variable can be handled on its own."
+    },
+    {
+     "say": "The x terms are x squared plus ten x, and the y terms are y squared minus four y.",
+     "op": "group the terms",
+     "result": "(x^2 + 10x) + (y^2 − 4y) = 7"
+    },
+    {
+     "say": "To complete a square, take half of the coefficient, and square it. Half of ten is five, and five squared is twenty-five. Half of negative four is negative two, and its square is four.",
+     "op": "complete each square",
+     "result": "(x + 5)^2 − 25 + (y − 2)^2 − 4 = 7"
+    },
+    {
+     "say": "Now add twenty-five and four to both sides. Seven plus twenty-five plus four is thirty-six.",
+     "op": "add 25 and 4 to both sides",
+     "result": "(x + 5)^2 + (y − 2)^2 = 36",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard: read the center and radius",
+   "beats": [
+    {
+     "say": "The standard form is x minus h squared, plus y minus k squared, equals r squared. Here x plus five means h is negative five, and y minus two means k is two. So the center is negative five comma two.",
+     "card": {
+      "text": "Center (−5, 2)",
+      "sub": "The signs are the opposite of the parentheses"
+     }
+    },
+    {
+     "say": "The right side is thirty-six, which is r squared. So the radius is the square root of thirty-six, which is six.",
+     "card": {
+      "text": "Radius = 6",
+      "sub": "r² = 36, so r = 6"
+     }
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check with a point",
+   "beats": [
+    {
+     "say": "Check with a point. The point one comma two is six units to the right of the center, so it should be on the circle. Putting it into the original equation, one plus four plus ten minus eight is seven. That matches.",
+     "lines": [
+      "1 + 4 + 10 − 8 = 7"
+     ],
+     "verdict": "Center (−5, 2), radius 6."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. An inscribed angle is half of its intercepted arc. With radians, use r theta for arc length and one half r squared theta for sector area.",
+     "item": "Inscribed = half the arc; radian formulas"
+    },
+    {
+     "say": "To read a circle from an expanded equation, complete the square in both variables, and add the same amounts to both sides.",
+     "item": "Complete both squares; add to both sides"
+    },
+    {
+     "say": "In the next video, we look at common traps and the fast way with Desmos.",
+     "item": "Next: traps and the fast way"
+    }
+   ]
+  }
+ ]
 }

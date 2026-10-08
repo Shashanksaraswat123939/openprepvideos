@@ -1,49 +1,201 @@
 {
-  "id": "desmos-solving-any-equation-by-graphing_v1",
-  "skill": "desmos-solving-any-equation-by-graphing",
-  "part": 1,
-  "title": "Desmos Basics: Solving by Graphing",
-  "section_label": "Desmos basics",
-  "scenes": [
-    {"type": "cards", "title": "Solving by graphing", "beats": [
-      {"say": "Any equation in one variable can be solved by graphing each side as its own curve, and finding where the curves meet. The x value of each meeting point is a solution.", "card": {"text": "Graph each side, find the crossings"}},
-      {"say": "This method is especially useful for radical, absolute value, and messy fraction equations, where algebra is slow and mistakes are easy to make.", "card": {"text": "Best for radicals and absolute values"}},
-      {"say": "We will work through three examples, from an easy one to a hard one, and you will see every key press.", "card": {"text": "Three examples: easy, medium, hard"}}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. Solve two x plus three equals x plus eight. The left side and the right side will each become a line.", "card": {"text": "2x + 3 = x + 8", "sub": "Solve for x"}}
-    ]},
-    {"type": "desmos", "title": "Easy: two lines", "beats": [
-      {"say": "Open a fresh graph. We will type the left side as one line and the right side as another.", "actions": ["hold: 2"]},
-      {"say": "Type y equals two x plus three for the left side of the equation.", "actions": ["type: y=2x+3"]},
-      {"say": "Now type y equals x plus eight for the right side. The two lines will meet at the solution.", "actions": ["type: y=x+8"]},
-      {"say": "Click where the lines cross, then click the grey dot. Desmos shows the point five comma thirteen. The solution to the equation is the x value, which is five.", "actions": ["bounds: left=-4 right=10 bottom=-2 top=20", "click: 5,13"]},
-      {"say": "So x equals five. Both sides equal thirteen there. The y value is just the common value of the two sides.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. Solve the absolute value equation, the absolute value of x minus three equals two x minus nine.", "card": {"text": "abs(x − 3) = 2x − 9", "sub": "Solve for x"}}
-    ]},
-    {"type": "desmos", "title": "Medium: absolute value", "beats": [
-      {"say": "Absolute value equations usually need two cases and a check. Graphing handles all of that at once.", "actions": ["hold: 2"]},
-      {"say": "Type y equals the absolute value of x minus three. Typing abs and an opening parenthesis gives you the absolute value bars. Press the right arrow to leave them.", "actions": ["type: y=abs(x-3>"]},
-      {"say": "Now type y equals two x minus nine for the right side. We get a V shape and a line.", "actions": ["type: y=2x-9"]},
-      {"say": "Click the crossing point and then its grey dot. Desmos shows six comma three, so the only solution is x equals six.", "actions": ["bounds: left=-4 right=12 bottom=-8 top=10", "click: 6,3"]},
-      {"say": "Check by hand. The absolute value of six minus three is three, and two times six minus nine is also three. The line never crosses the left branch, so there is only one solution.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. Solve the equation, the square root of x plus seven equals x minus five. Squaring both sides by hand produces a false solution.", "card": {"text": "sqrt(x + 7) = x − 5", "sub": "Solve. Watch for extraneous roots."}}
-    ]},
-    {"type": "desmos", "title": "Hard: avoid false answers", "beats": [
-      {"say": "Squaring both sides gives a quadratic with two solutions, but one of them may not work in the original equation. Graphing shows us which is real.", "actions": ["hold: 2"]},
-      {"say": "Type y equals the square root of x plus seven. Typing sqrt and an opening parenthesis makes the root sign. Press the right arrow to leave it.", "actions": ["type: y=sqrt(x+7>"]},
-      {"say": "Now type y equals x minus five, the right side of the equation.", "actions": ["type: y=x-5"]},
-      {"say": "Click the crossing point and then its grey dot. The curve and the line cross only once, at nine comma four. So the only solution is x equals nine.", "actions": ["bounds: left=-8 right=14 bottom=-4 top=10", "click: 9,4"]},
-      {"say": "The value two appears when we square both sides, but the graphs never meet at x equals two. Putting two back in gives three on the left and negative three on the right, so two is extraneous.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Type the left side as one curve and the right side as another, and click where they meet.", "item": "Graph each side, click the crossing"},
-      {"say": "The solution is the x value of the crossing point, not the y value.", "item": "The answer is the x value"},
-      {"say": "Graphing also removes extraneous solutions automatically. In the next video, we use Desmos for mean and median.", "item": "Graphs expose false solutions"}
-    ]}
-  ]
+ "id": "desmos-solving-any-equation-by-graphing_v1",
+ "skill": "desmos-solving-any-equation-by-graphing",
+ "part": 1,
+ "title": "Desmos Basics: Solving by Graphing",
+ "section_label": "Desmos basics",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Solving by graphing",
+   "beats": [
+    {
+     "say": "Any equation in one variable can be solved by graphing each side as its own curve, and finding where the curves meet. The x value of each meeting point is a solution.",
+     "card": {
+      "text": "Graph each side, find the crossings"
+     }
+    },
+    {
+     "say": "This method is especially useful for radical, absolute value, and messy fraction equations, where algebra is slow and mistakes are easy to make.",
+     "card": {
+      "text": "Best for radicals and absolute values"
+     }
+    },
+    {
+     "say": "We'll work through three examples, from an easy one to a hard one, and you'll see every key press.",
+     "card": {
+      "text": "Three examples: easy, medium, hard"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. Solve two x plus three equals x plus eight. The left side and the right side will each become a line.",
+     "card": {
+      "text": "2x + 3 = x + 8",
+      "sub": "Solve for x"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Easy: two lines",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We'll type the left side as one line and the right side as another.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals two x plus three for the left side of the equation.",
+     "actions": [
+      "type: y=2x+3"
+     ]
+    },
+    {
+     "say": "Now type y equals x plus eight for the right side. The two lines will meet at the solution.",
+     "actions": [
+      "type: y=x+8"
+     ]
+    },
+    {
+     "say": "Click where the lines cross, then click the grey dot. Desmos shows the point five comma thirteen. The solution to the equation is the x value, which is five.",
+     "actions": [
+      "bounds: left=-4 right=10 bottom=-2 top=20",
+      "click: 5,13"
+     ]
+    },
+    {
+     "say": "So x equals five. Both sides equal thirteen there. The y value is just the common value of the two sides.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. Solve the absolute value equation, the absolute value of x minus three equals two x minus nine.",
+     "card": {
+      "text": "abs(x − 3) = 2x − 9",
+      "sub": "Solve for x"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Medium: absolute value",
+   "beats": [
+    {
+     "say": "Absolute value equations usually need two cases and a check. Graphing handles all of that at once.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals the absolute value of x minus three. Typing abs and an opening parenthesis gives you the absolute value bars. Press the right arrow to leave them.",
+     "actions": [
+      "type: y=abs(x-3>"
+     ]
+    },
+    {
+     "say": "Now type y equals two x minus nine for the right side. We get a V shape and a line.",
+     "actions": [
+      "type: y=2x-9"
+     ]
+    },
+    {
+     "say": "Click the crossing point and then its grey dot. Desmos shows six comma three, so the only solution is x equals six.",
+     "actions": [
+      "bounds: left=-4 right=12 bottom=-8 top=10",
+      "click: 6,3"
+     ]
+    },
+    {
+     "say": "Check by hand. The absolute value of six minus three is three, and two times six minus nine is also three. The line never crosses the left branch, so there's only one solution.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. Solve the equation, the square root of x plus seven equals x minus five. Squaring both sides by hand produces a false solution.",
+     "card": {
+      "text": "sqrt(x + 7) = x − 5",
+      "sub": "Solve. Watch for extraneous roots."
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Hard: avoid false answers",
+   "beats": [
+    {
+     "say": "Squaring both sides gives a quadratic with two solutions, but one of them may not work in the original equation. Graphing shows us which is real.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals the square root of x plus seven. Typing sqrt and an opening parenthesis makes the root sign. Press the right arrow to leave it.",
+     "actions": [
+      "type: y=sqrt(x+7>"
+     ]
+    },
+    {
+     "say": "Now type y equals x minus five, the right side of the equation.",
+     "actions": [
+      "type: y=x-5"
+     ]
+    },
+    {
+     "say": "Click the crossing point and then its grey dot. The curve and the line cross only once, at nine comma four. So the only solution is x equals nine.",
+     "actions": [
+      "bounds: left=-8 right=14 bottom=-4 top=10",
+      "click: 9,4"
+     ]
+    },
+    {
+     "say": "The value two appears when we square both sides, but the graphs never meet at x equals two. Putting two back in gives three on the left and negative three on the right, so two is extraneous.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Type the left side as one curve and the right side as another, and click where they meet.",
+     "item": "Graph each side, click the crossing"
+    },
+    {
+     "say": "The solution is the x value of the crossing point, not the y value.",
+     "item": "The answer is the x value"
+    },
+    {
+     "say": "Graphing also removes extraneous solutions automatically. In the next video, we use Desmos for mean and median.",
+     "item": "Graphs expose false solutions"
+    }
+   ]
+  }
+ ]
 }

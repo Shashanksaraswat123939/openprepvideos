@@ -1,50 +1,213 @@
 {
-  "id": "m-geo-area_v1",
-  "skill": "m-geo-area",
-  "part": 1,
-  "title": "Area and Volume, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Geometry and Trigonometry",
-  "scenes": [
-    {"type": "cards", "title": "Area and volume", "beats": [
-      {"say": "This skill covers the area of flat shapes, the volume and surface area of solid shapes, and how these measures change when a figure is scaled.", "card": {"text": "Area, volume, surface area, scaling"}},
-      {"say": "The SAT gives you a reference sheet with most formulas. So the real challenge is choosing the right formula, finding missing dimensions, and handling composite figures and unit changes.", "card": {"text": "Choose the formula, find the dimension"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "Area is measured in square units, and volume in cubic units. Always keep track of which one the question wants.", "item": "Area: square units. Volume: cubic units."},
-      {"say": "For composite figures, split the shape into familiar pieces, such as rectangles, triangles, and semicircles, and then add or subtract their areas.", "item": "Composite figures: split, then add or subtract"},
-      {"say": "Cones and pyramids hold exactly one third of the matching cylinder or prism with the same base and height.", "item": "Cones and pyramids: one third"},
-      {"say": "Surface area is the total area of all faces. A cube with edge s has six square faces, so its surface area is six s squared.", "item": "Surface area: add every face"},
-      {"say": "If every length is multiplied by k, areas are multiplied by k squared, and volumes are multiplied by k cubed.", "item": "Scale k: area ×k², volume ×k³"}
-    ]},
-    {"type": "table", "title": "Formulas on the reference sheet", "columns": ["Shape", "Area or volume"], "rows": [["rectangle", "A = lw"], ["triangle", "A = ½bh"], ["circle", "A = πr²"], ["rectangular prism", "V = lwh"], ["cylinder", "V = πr²h"], ["cone", "V = ⅓πr²h"]], "beats": [
-      {"say": "The area of a rectangle is length times width, and the area of a triangle is one half times base times height.", "reveal_row": 1},
-      {"say": "The area of a circle is pi times the radius squared. Remember that it uses the radius, not the diameter.", "reveal_row": 2},
-      {"say": "The volume of a rectangular prism is length times width times height, and the volume of a cylinder is pi r squared times the height.", "reveal_row": 4},
-      {"say": "The volume of a cone is one third times pi r squared times the height. The one third is easy to forget.", "reveal_row": 5}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. A closed box is eight centimeters long, five centimeters wide, and three centimeters tall. Find its volume and its surface area.", "card": {"text": "8 cm × 5 cm × 3 cm", "sub": "Find the volume and surface area"}}
-    ]},
-    {"type": "figure", "title": "One face of the box", "kind": "rectangle", "data": {"w": 8, "h": 5, "labels": {"w": "8 cm", "h": "5 cm"}}, "beats": [
-      {"say": "The top and bottom faces of the box are rectangles that measure eight centimeters by five centimeters. Let us use this face as our starting point.", "show": ["w", "h"]}
-    ]},
-    {"type": "steps", "title": "Easy: the volume", "start": "8 × 5 × 3", "beats": [
-      {"say": "The volume of a rectangular prism is length times width times height. Eight times five times three."},
-      {"say": "Eight times five is forty, and forty times three is one hundred twenty. So the volume is one hundred twenty cubic centimeters.", "op": "multiply", "result": "120", "final": true}
-    ]},
-    {"type": "steps", "title": "Easy: the surface area", "start": "2(8 × 5 + 8 × 3 + 5 × 3)", "beats": [
-      {"say": "A box has three pairs of matching faces. The top and bottom are eight by five, the front and back are eight by three, and the two sides are five by three. We add one of each and double it."},
-      {"say": "Eight times five is forty, eight times three is twenty-four, and five times three is fifteen.", "op": "find each face", "result": "2(40 + 24 + 15)"},
-      {"say": "Forty plus twenty-four plus fifteen is seventy-nine, which is the area of one of each kind of face.", "op": "add", "result": "2(79)"},
-      {"say": "Two times seventy-nine is one hundred fifty-eight. So the surface area is one hundred fifty-eight square centimeters.", "op": "double", "result": "158", "final": true}
-    ]},
-    {"type": "check", "title": "Check by adding all six faces", "beats": [
-      {"say": "Check by adding all six faces one at a time. Two faces of forty, two faces of twenty-four, and two faces of fifteen add up to one hundred fifty-eight.", "lines": ["40 + 40 + 24 + 24 + 15 + 15 = 158"], "verdict": "Volume 120 cm³, surface area 158 cm²."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Area uses square units and volume uses cubic units. The reference sheet gives the formulas.", "item": "Area: square. Volume: cubic."},
-      {"say": "A cone or pyramid is one third of the matching prism, and surface area is the total of every face.", "item": "Cones: one third. Surface area: every face."},
-      {"say": "In the next video, we work through a medium problem and a hard problem.", "item": "Next: medium and hard problems"}
-    ]}
-  ]
+ "id": "m-geo-area_v1",
+ "skill": "m-geo-area",
+ "part": 1,
+ "title": "Area and Volume, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Geometry and Trigonometry",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Area and volume",
+   "beats": [
+    {
+     "say": "This skill covers the area of flat shapes, the volume and surface area of solid shapes, and how these measures change when a figure is scaled.",
+     "card": {
+      "text": "Area, volume, surface area, scaling"
+     }
+    },
+    {
+     "say": "The SAT gives you a reference sheet with most formulas. So the real challenge is choosing the right formula, finding missing dimensions, and handling composite figures and unit changes.",
+     "card": {
+      "text": "Choose the formula, find the dimension"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "Area is measured in square units, and volume in cubic units. Always keep track of which one the question wants.",
+     "item": "Area: square units. Volume: cubic units."
+    },
+    {
+     "say": "For composite figures, split the shape into familiar pieces, such as rectangles, triangles, and semicircles, and then add or subtract their areas.",
+     "item": "Composite figures: split, then add or subtract"
+    },
+    {
+     "say": "Cones and pyramids hold exactly one third of the matching cylinder or prism with the same base and height.",
+     "item": "Cones and pyramids: one third"
+    },
+    {
+     "say": "Surface area is the total area of all faces. A cube with edge s has six square faces, so its surface area is six s squared.",
+     "item": "Surface area: add every face"
+    },
+    {
+     "say": "If every length is multiplied by k, areas are multiplied by k squared, and volumes are multiplied by k cubed.",
+     "item": "Scale k: area ×k², volume ×k³"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Formulas on the reference sheet",
+   "columns": [
+    "Shape",
+    "Area or volume"
+   ],
+   "rows": [
+    [
+     "rectangle",
+     "A = lw"
+    ],
+    [
+     "triangle",
+     "A = ½bh"
+    ],
+    [
+     "circle",
+     "A = πr²"
+    ],
+    [
+     "rectangular prism",
+     "V = lwh"
+    ],
+    [
+     "cylinder",
+     "V = πr²h"
+    ],
+    [
+     "cone",
+     "V = ⅓πr²h"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "The area of a rectangle is length times width, and the area of a triangle is one half times base times height.",
+     "reveal_row": 1
+    },
+    {
+     "say": "The area of a circle is pi times the radius squared. Remember that it uses the radius, not the diameter.",
+     "reveal_row": 2
+    },
+    {
+     "say": "The volume of a rectangular prism is length times width times height, and the volume of a cylinder is pi r squared times the height.",
+     "reveal_row": 4
+    },
+    {
+     "say": "The volume of a cone is one third times pi r squared times the height. The one third is easy to forget.",
+     "reveal_row": 5
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. A closed box is eight centimeters long, five centimeters wide, and three centimeters tall. Find its volume and its surface area.",
+     "card": {
+      "text": "8 cm × 5 cm × 3 cm",
+      "sub": "Find the volume and surface area"
+     }
+    }
+   ]
+  },
+  {
+   "type": "figure",
+   "title": "One face of the box",
+   "kind": "rectangle",
+   "data": {
+    "w": 8,
+    "h": 5,
+    "labels": {
+     "w": "8 cm",
+     "h": "5 cm"
+    }
+   },
+   "beats": [
+    {
+     "say": "The top and bottom faces of the box are rectangles that measure eight centimeters by five centimeters. Let's use this face as our starting point.",
+     "show": [
+      "w",
+      "h"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: the volume",
+   "start": "8 × 5 × 3",
+   "beats": [
+    {
+     "say": "The volume of a rectangular prism is length times width times height. Eight times five times three."
+    },
+    {
+     "say": "Eight times five is forty, and forty times three is one hundred twenty. So the volume is one hundred twenty cubic centimeters.",
+     "op": "multiply",
+     "result": "120",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: the surface area",
+   "start": "2(8 × 5 + 8 × 3 + 5 × 3)",
+   "beats": [
+    {
+     "say": "A box has three pairs of matching faces. The top and bottom are eight by five, the front and back are eight by three, and the two sides are five by three. We add one of each and double it."
+    },
+    {
+     "say": "Eight times five is forty, eight times three is twenty-four, and five times three is fifteen.",
+     "op": "find each face",
+     "result": "2(40 + 24 + 15)"
+    },
+    {
+     "say": "Forty plus twenty-four plus fifteen is seventy-nine, which is the area of one of each kind of face.",
+     "op": "add",
+     "result": "2(79)"
+    },
+    {
+     "say": "Two times seventy-nine is one hundred fifty-eight. So the surface area is one hundred fifty-eight square centimeters.",
+     "op": "double",
+     "result": "158",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check by adding all six faces",
+   "beats": [
+    {
+     "say": "Check by adding all six faces one at a time. Two faces of forty, two faces of twenty-four, and two faces of fifteen add up to one hundred fifty-eight.",
+     "lines": [
+      "40 + 40 + 24 + 24 + 15 + 15 = 158"
+     ],
+     "verdict": "Volume 120 cm³, surface area 158 cm²."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Area uses square units and volume uses cubic units. The reference sheet gives the formulas.",
+     "item": "Area: square. Volume: cubic."
+    },
+    {
+     "say": "A cone or pyramid is one third of the matching prism, and surface area is the total of every face.",
+     "item": "Cones: one third. Surface area: every face."
+    },
+    {
+     "say": "In the next video, we work through a medium problem and a hard problem.",
+     "item": "Next: medium and hard problems"
+    }
+   ]
+  }
+ ]
 }

@@ -1,63 +1,241 @@
 {
-  "id": "m-geo-lines_v3",
-  "skill": "m-geo-lines",
-  "part": 3,
-  "title": "Lines, Angles, and Triangles, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Geometry and Trigonometry",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with angles and triangles, and then the fast way: mark the diagram before you solve, and use Desmos for a messy proportion.", "card": {"text": "Five traps, then the fast way"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: the piece, not the whole", "beats": [
-      {"say": "Trap one. In the similar triangles problem, P S corresponds to the whole side P Q, which is ten. Students compare P S with the piece S Q.", "wrong": "frac(9,QR) = frac(6,4)", "wrong_why": "4 is only a piece of PQ"},
-      {"say": "Use the whole side of the large triangle, six plus four, which is ten. Then nine over Q R equals six over ten, so Q R is fifteen.", "right": "frac(9,QR) = frac(6,10)", "right_why": "PS matches the whole side PQ"}
-    ]},
-    {"type": "compare", "title": "Trap 2: mismatched sides", "beats": [
-      {"say": "Trap two. When you write that two triangles are similar, the vertex order tells you which sides match. A scrambled order matches the wrong sides.", "wrong": "△PST ~ △QRP", "wrong_why": "The vertices are out of order"},
-      {"say": "Write the vertices in matching order. P matches P, S matches Q, and T matches R. So triangle P S T is similar to triangle P Q R.", "right": "△PST ~ △PQR", "right_why": "Matching vertex order"}
-    ]},
-    {"type": "compare", "title": "Trap 3: same-side interior angles", "beats": [
-      {"say": "Trap three. With parallel lines, same-side interior angles are not equal. Students assume every pair of angles between the lines is equal.", "wrong": "same-side interior angles are equal", "wrong_why": "They are supplementary"},
-      {"say": "Same-side interior angles add up to one hundred eighty degrees. Only alternate interior and corresponding angles are equal.", "right": "same-side interior add to 180°", "right_why": "One acute and one obtuse"}
-    ]},
-    {"type": "compare", "title": "Trap 4: the equal angles", "beats": [
-      {"say": "Trap four. In an isosceles triangle, the equal angles are opposite the equal sides. Students pick the angle between the equal sides as one of the equal angles.", "wrong": "the vertex angle is a base angle", "wrong_why": "That is the vertex angle"},
-      {"say": "The angle between the equal sides is the different one, the vertex angle. The two base angles, opposite the equal sides, are equal to each other.", "right": "equal angles are opposite equal sides", "right_why": "The base angles match"}
-    ]},
-    {"type": "compare", "title": "Trap 5: x or the angle", "beats": [
-      {"say": "Trap five. After solving for x equals twenty-five, students report x when the question asks for the smallest angle.", "wrong": "smallest angle: 25°", "wrong_why": "25 is the value of x"},
-      {"say": "Substitute back into each expression. The smallest angle is x plus twenty-five, which is fifty degrees.", "right": "smallest angle: 25 + 25 = 50°", "right_why": "Substitute x back in"}
-    ]},
-    {"type": "cards", "title": "The fast way: mark the diagram", "beats": [
-      {"say": "Desmos rarely helps here, because there is usually no equation to graph until you write one. The fast way is to mark the diagram. Label every angle you can with a number or an expression before solving.", "card": {"text": "Label every angle you can"}},
-      {"say": "With parallel lines, decide quickly whether two angles are equal, because both are acute or both are obtuse, or supplementary, because one is of each kind.", "card": {"text": "Equal or supplementary?"}},
-      {"say": "For similar triangles, write one ratio with the unknown on top, and solve with one cross-multiplication.", "card": {"text": "One ratio, one cross-multiplication"}}
-    ]},
-    {"type": "cards", "title": "Desmos for a messy proportion", "beats": [
-      {"say": "If a question leads to a messy equation, Desmos can solve it. For example, x plus three over twelve equals eight over x minus one. Graph each side, and find where they meet.", "card": {"text": "frac(x + 3,12) = frac(8,x − 1)", "sub": "Find x, a length"}}
-    ]},
-    {"type": "desmos", "title": "Solve with two curves", "beats": [
-      {"say": "We graph each side as its own curve. The crossing point gives the value of x.", "actions": ["hold: 2"]},
-      {"say": "Type y equals the quantity x plus three, over twelve. Press the right arrow after twelve to leave the fraction.", "actions": ["type: y=(x+3)/12>"]},
-      {"say": "Now type y equals eight over x minus one. This second curve is a hyperbola.", "actions": ["type: y=8/(x-1)"]},
-      {"say": "Click the crossing point on the right. It is at nine comma one, so x equals nine. The other crossing has a negative x, which makes no sense for a length.", "actions": ["bounds: left=-14 right=14 bottom=-6 top=6", "click: 9,1"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. The angles of a triangle measure two x, three x, and four x degrees. Find the smallest angle. Pause the video, try it, and then watch the solution.", "card": {"text": "(2x)°, (3x)°, (4x)°", "sub": "Find the smallest angle"}}
-    ]},
-    {"type": "steps", "title": "Practice: solve for x", "start": "2x + 3x + 4x = 180", "beats": [
-      {"say": "The three angles add up to one hundred eighty degrees. So we set the sum of the three expressions equal to one hundred eighty."},
-      {"say": "Two x plus three x plus four x is nine x, because we add the numbers in front of the x.", "op": "combine like terms", "result": "9x = 180"},
-      {"say": "Divide both sides by nine. One hundred eighty divided by nine is twenty. So x equals twenty.", "op": "÷ 9 on both sides", "result": "x = 20", "final": true}
-    ]},
-    {"type": "check", "title": "Practice: find the smallest angle", "beats": [
-      {"say": "Substitute x equals twenty. The angles are forty, sixty, and eighty degrees. The smallest angle is two x, which is forty degrees. And forty plus sixty plus eighty is one hundred eighty.", "lines": ["2(20) = 40, 3(20) = 60, 4(20) = 80", "40 + 60 + 80 = 180"], "verdict": "The smallest angle is 40°."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Use the whole side in similar triangles, match the vertices in order, and remember that same-side interior angles add to one hundred eighty.", "item": "Whole side, matching order, supplementary"},
-      {"say": "Equal angles in an isosceles triangle are opposite the equal sides, and always substitute x back in before answering.", "item": "Base angles; substitute back"},
-      {"say": "Mark the diagram first. In the next topic, we study right triangles and trigonometry.", "item": "Mark the diagram first"}
-    ]}
-  ]
+ "id": "m-geo-lines_v3",
+ "skill": "m-geo-lines",
+ "part": 3,
+ "title": "Lines, Angles, and Triangles, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Geometry and Trigonometry",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with angles and triangles, and then the fast way: mark the diagram before you solve, and use Desmos for a messy proportion.",
+     "card": {
+      "text": "Five traps, then the fast way"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: the piece, not the whole",
+   "beats": [
+    {
+     "say": "Trap one. In the similar triangles problem, P S corresponds to the whole side P Q, which is ten. Students compare P S with the piece S Q.",
+     "wrong": "frac(9,QR) = frac(6,4)",
+     "wrong_why": "4 is only a piece of PQ"
+    },
+    {
+     "say": "Use the whole side of the large triangle, six plus four, which is ten. Then nine over Q R equals six over ten, so Q R is fifteen.",
+     "right": "frac(9,QR) = frac(6,10)",
+     "right_why": "PS matches the whole side PQ"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: mismatched sides",
+   "beats": [
+    {
+     "say": "Trap two. When you write that two triangles are similar, the vertex order tells you which sides match. A scrambled order matches the wrong sides.",
+     "wrong": "△PST ~ △QRP",
+     "wrong_why": "The vertices are out of order"
+    },
+    {
+     "say": "Write the vertices in matching order. P matches P, S matches Q, and T matches R. So triangle P S T is similar to triangle P Q R.",
+     "right": "△PST ~ △PQR",
+     "right_why": "Matching vertex order"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: same-side interior angles",
+   "beats": [
+    {
+     "say": "Trap three. With parallel lines, same-side interior angles aren't equal. Students assume every pair of angles between the lines is equal.",
+     "wrong": "same-side interior angles are equal",
+     "wrong_why": "They are supplementary"
+    },
+    {
+     "say": "Same-side interior angles add up to one hundred eighty degrees. Only alternate interior and corresponding angles are equal.",
+     "right": "same-side interior add to 180°",
+     "right_why": "One acute and one obtuse"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: the equal angles",
+   "beats": [
+    {
+     "say": "Trap four. In an isosceles triangle, the equal angles are opposite the equal sides. Students pick the angle between the equal sides as one of the equal angles.",
+     "wrong": "the vertex angle is a base angle",
+     "wrong_why": "That is the vertex angle"
+    },
+    {
+     "say": "The angle between the equal sides is the different one, the vertex angle. The two base angles, opposite the equal sides, are equal to each other.",
+     "right": "equal angles are opposite equal sides",
+     "right_why": "The base angles match"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: x or the angle",
+   "beats": [
+    {
+     "say": "Trap five. After solving for x equals twenty-five, students report x when the question asks for the smallest angle.",
+     "wrong": "smallest angle: 25°",
+     "wrong_why": "25 is the value of x"
+    },
+    {
+     "say": "Substitute back into each expression. The smallest angle is x plus twenty-five, which is fifty degrees.",
+     "right": "smallest angle: 25 + 25 = 50°",
+     "right_why": "Substitute x back in"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: mark the diagram",
+   "beats": [
+    {
+     "say": "Desmos rarely helps here, because there's usually no equation to graph until you write one. The fast way is to mark the diagram. Label every angle you can with a number or an expression before solving.",
+     "card": {
+      "text": "Label every angle you can"
+     }
+    },
+    {
+     "say": "With parallel lines, decide quickly whether two angles are equal, because both are acute or both are obtuse, or supplementary, because one is of each kind.",
+     "card": {
+      "text": "Equal or supplementary?"
+     }
+    },
+    {
+     "say": "For similar triangles, write one ratio with the unknown on top, and solve with one cross-multiplication.",
+     "card": {
+      "text": "One ratio, one cross-multiplication"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Desmos for a messy proportion",
+   "beats": [
+    {
+     "say": "If a question leads to a messy equation, Desmos can solve it. For example, x plus three over twelve equals eight over x minus one. Graph each side, and find where they meet.",
+     "card": {
+      "text": "frac(x + 3,12) = frac(8,x − 1)",
+      "sub": "Find x, a length"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Solve with two curves",
+   "beats": [
+    {
+     "say": "We graph each side as its own curve. The crossing point gives the value of x.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals the quantity x plus three, over twelve. Press the right arrow after twelve to leave the fraction.",
+     "actions": [
+      "type: y=(x+3)/12>"
+     ]
+    },
+    {
+     "say": "Now type y equals eight over x minus one. This second curve is a hyperbola.",
+     "actions": [
+      "type: y=8/(x-1)"
+     ]
+    },
+    {
+     "say": "Click the crossing point on the right. It's at nine comma one, so x equals nine. The other crossing has a negative x, which makes no sense for a length.",
+     "actions": [
+      "bounds: left=-14 right=14 bottom=-6 top=6",
+      "click: 9,1"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. The angles of a triangle measure two x, three x, and four x degrees. Find the smallest angle. Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "(2x)°, (3x)°, (4x)°",
+      "sub": "Find the smallest angle"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: solve for x",
+   "start": "2x + 3x + 4x = 180",
+   "beats": [
+    {
+     "say": "The three angles add up to one hundred eighty degrees. So we set the sum of the three expressions equal to one hundred eighty."
+    },
+    {
+     "say": "Two x plus three x plus four x is nine x, because we add the numbers in front of the x.",
+     "op": "combine like terms",
+     "result": "9x = 180"
+    },
+    {
+     "say": "Divide both sides by nine. One hundred eighty divided by nine is twenty. So x equals twenty.",
+     "op": "÷ 9 on both sides",
+     "result": "x = 20",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Practice: find the smallest angle",
+   "beats": [
+    {
+     "say": "Substitute x equals twenty. The angles are forty, sixty, and eighty degrees. The smallest angle is two x, which is forty degrees. And forty plus sixty plus eighty is one hundred eighty.",
+     "lines": [
+      "2(20) = 40, 3(20) = 60, 4(20) = 80",
+      "40 + 60 + 80 = 180"
+     ],
+     "verdict": "The smallest angle is 40°."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Use the whole side in similar triangles, match the vertices in order, and remember that same-side interior angles add to one hundred eighty.",
+     "item": "Whole side, matching order, supplementary"
+    },
+    {
+     "say": "Equal angles in an isosceles triangle are opposite the equal sides, and always substitute x back in before answering.",
+     "item": "Base angles; substitute back"
+    },
+    {
+     "say": "Mark the diagram first. In the next topic, we study right triangles and trigonometry.",
+     "item": "Mark the diagram first"
+    }
+   ]
+  }
+ ]
 }

@@ -1,50 +1,196 @@
 {
-  "id": "m-alg-linfunc_v1",
-  "skill": "m-alg-linfunc",
-  "part": 1,
-  "title": "Linear Functions, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Algebra",
-  "scenes": [
-    {"type": "cards", "title": "Linear functions", "beats": [
-      {"say": "A linear function changes by the same amount every time its input goes up by one. That steady change is what makes its graph a straight line.", "card": {"text": "Same change for every step in x"}},
-      {"say": "On the SAT, you will evaluate functions written in function notation, find a slope from two points or a table, and read intercepts from an equation.", "card": {"text": "Evaluate, find slope, read intercepts"}},
-      {"say": "You will also interpret what the numbers mean in a real situation, such as a cost model where one number is a starting fee and another is a price per item.", "card": {"text": "Explain what the numbers mean"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "In the function f of x equals m x plus b, the number m is the slope, which is the rate of change. The number b is f of zero, which is the y-intercept.", "item": "f(x) = mx + b: slope m, intercept b"},
-      {"say": "The notation f of four means put four in for x. That is different from the question, for what x is f of x equal to four, which asks you to set the expression equal to four and solve.", "item": "f(4) is different from f(x) = 4"},
-      {"say": "Slope is the change in output divided by the change in input. Any two points on the same line give the same slope.", "item": "Slope = change in output over input"},
-      {"say": "If f of x plus one equals f of x plus three, the slope is three. If f of x plus five equals f of x plus ten, the slope is ten divided by five, which is two.", "item": "Read the slope from a pattern"},
-      {"say": "In a model, the slope is the rate, such as dollars per mile, and the intercept is the starting value when the input is zero.", "item": "Model: slope is rate, intercept is start"}
-    ]},
-    {"type": "table", "title": "Two forms of a line", "columns": ["Form", "What you see"], "rows": [["f(x) = mx + b", "slope m, y-intercept (0, b)"], ["f(x) = m(x − x1) + y1", "slope m, passes through (x1, y1)"]], "beats": [
-      {"say": "Lines are often written in one of two forms. In the first, f of x equals m x plus b, you can read the slope m and the y-intercept zero comma b directly.", "reveal_row": 0},
-      {"say": "In the second form, called point-slope form, you read the slope m and a point the line passes through. This form is handy when a question gives you a point and a slope.", "reveal_row": 1}
-    ]},
-    {"type": "cards", "title": "The slope formula", "beats": [
-      {"say": "To find the slope from two points, divide the change in y by the change in x. This is often remembered as rise over run.", "card": {"text": "m = frac(y2 − y1,x2 − x1)", "sub": "Rise over run"}},
-      {"say": "The order matters only in one way. If y two is on top, then x two must be on the bottom, in the same order, so that the signs stay consistent.", "card": {"text": "Keep the same order top and bottom"}}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. The function f is defined by f of x equals seven minus two x. Find f of negative three, and find the value of x for which f of x equals negative five.", "card": {"text": "f(x) = 7 − 2x", "sub": "Find f(−3), and x when f(x) = −5"}}
-    ]},
-    {"type": "steps", "title": "Part A: evaluate f(−3)", "start": "f(−3) = 7 − 2(−3)", "beats": [
-      {"say": "The notation f of negative three means replace x with negative three. We write that substitution first, keeping the parentheses around the negative number."},
-      {"say": "Now multiply. Negative two times negative three is positive six, because a negative times a negative is positive. So the expression becomes seven plus six.", "op": "negative times negative", "result": "f(−3) = 7 + 6"},
-      {"say": "Seven plus six is thirteen. So f of negative three equals thirteen. Notice that the input was negative three, and the output is thirteen.", "op": "add", "result": "f(−3) = 13", "final": true}
-    ]},
-    {"type": "steps", "title": "Part B: solve f(x) = −5", "start": "7 − 2x = −5", "beats": [
-      {"say": "This time the output is given, and we need the input. So we set the expression equal to negative five and solve, just like a linear equation."},
-      {"say": "Subtract seven from both sides, so the plain number leaves the left side. Negative five minus seven is negative twelve.", "op": "− 7 on both sides", "strike": ["7"], "result": "−2x = −12"},
-      {"say": "Divide both sides by negative two. Negative twelve divided by negative two is six. So x equals six.", "op": "÷ (−2) on both sides", "result": "x = 6", "final": true}
-    ]},
-    {"type": "check", "title": "Check both answers", "beats": [
-      {"say": "Check part B by putting six back into the function. Seven minus two times six is seven minus twelve, which is negative five. That matches, so x equals six is correct.", "lines": ["f(6) = 7 − 2(6)", "f(6) = 7 − 12 = −5"], "verdict": "f(6) = −5. Correct."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. In f of x equals m x plus b, the slope is m and the y-intercept is b.", "item": "Slope m, intercept b"},
-      {"say": "Evaluating f of a number means substituting it in. Solving f of x equals a number means setting the expression equal to it.", "item": "Input versus output questions"},
-      {"say": "Slope is rise over run, with the same order on top and bottom. In the next video, we work through a medium problem and a hard problem.", "item": "Slope is rise over run"}
-    ]}
-  ]
+ "id": "m-alg-linfunc_v1",
+ "skill": "m-alg-linfunc",
+ "part": 1,
+ "title": "Linear Functions, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Algebra",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Linear functions",
+   "beats": [
+    {
+     "say": "A linear function changes by the same amount every time its input goes up by one. That steady change is what makes its graph a straight line.",
+     "card": {
+      "text": "Same change for every step in x"
+     }
+    },
+    {
+     "say": "On the SAT, you'll evaluate functions written in function notation, find a slope from two points or a table, and read intercepts from an equation.",
+     "card": {
+      "text": "Evaluate, find slope, read intercepts"
+     }
+    },
+    {
+     "say": "You'll also interpret what the numbers mean in a real situation, such as a cost model where one number is a starting fee and another is a price per item.",
+     "card": {
+      "text": "Explain what the numbers mean"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "In the function f of x equals m x plus b, the number m is the slope, which is the rate of change. The number b is f of zero, which is the y-intercept.",
+     "item": "f(x) = mx + b: slope m, intercept b"
+    },
+    {
+     "say": "The notation f of four means put four in for x. That's different from the question, for what x is f of x equal to four, which asks you to set the expression equal to four and solve.",
+     "item": "f(4) is different from f(x) = 4"
+    },
+    {
+     "say": "Slope is the change in output divided by the change in input. Any two points on the same line give the same slope.",
+     "item": "Slope = change in output over input"
+    },
+    {
+     "say": "If f of x plus one equals f of x plus three, the slope is three. If f of x plus five equals f of x plus ten, the slope is ten divided by five, which is two.",
+     "item": "Read the slope from a pattern"
+    },
+    {
+     "say": "In a model, the slope is the rate, such as dollars per mile, and the intercept is the starting value when the input is zero.",
+     "item": "Model: slope is rate, intercept is start"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Two forms of a line",
+   "columns": [
+    "Form",
+    "What you see"
+   ],
+   "rows": [
+    [
+     "f(x) = mx + b",
+     "slope m, y-intercept (0, b)"
+    ],
+    [
+     "f(x) = m(x − x1) + y1",
+     "slope m, passes through (x1, y1)"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Lines are often written in one of two forms. In the first, f of x equals m x plus b, you can read the slope m and the y-intercept zero comma b directly.",
+     "reveal_row": 0
+    },
+    {
+     "say": "In the second form, called point-slope form, you read the slope m and a point the line passes through. This form is handy when a question gives you a point and a slope.",
+     "reveal_row": 1
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The slope formula",
+   "beats": [
+    {
+     "say": "To find the slope from two points, divide the change in y by the change in x. This is often remembered as rise over run.",
+     "card": {
+      "text": "m = frac(y2 − y1,x2 − x1)",
+      "sub": "Rise over run"
+     }
+    },
+    {
+     "say": "The order matters only in one way. If y two is on top, then x two must be on the bottom, in the same order, so that the signs stay consistent.",
+     "card": {
+      "text": "Keep the same order top and bottom"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. The function f is defined by f of x equals seven minus two x. Find f of negative three, and find the value of x for which f of x equals negative five.",
+     "card": {
+      "text": "f(x) = 7 − 2x",
+      "sub": "Find f(−3), and x when f(x) = −5"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Part A: evaluate f(−3)",
+   "start": "f(−3) = 7 − 2(−3)",
+   "beats": [
+    {
+     "say": "The notation f of negative three means replace x with negative three. We write that substitution first, keeping the parentheses around the negative number."
+    },
+    {
+     "say": "Now multiply. Negative two times negative three is positive six, because a negative times a negative is positive. So the expression becomes seven plus six.",
+     "op": "negative times negative",
+     "result": "f(−3) = 7 + 6"
+    },
+    {
+     "say": "Seven plus six is thirteen. So f of negative three equals thirteen. Notice that the input was negative three, and the output is thirteen.",
+     "op": "add",
+     "result": "f(−3) = 13",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Part B: solve f(x) = −5",
+   "start": "7 − 2x = −5",
+   "beats": [
+    {
+     "say": "This time the output is given, and we need the input. So we set the expression equal to negative five and solve, just like a linear equation."
+    },
+    {
+     "say": "Subtract seven from both sides, so the plain number leaves the left side. Negative five minus seven is negative twelve.",
+     "op": "− 7 on both sides",
+     "strike": [
+      "7"
+     ],
+     "result": "−2x = −12"
+    },
+    {
+     "say": "Divide both sides by negative two. Negative twelve divided by negative two is six. So x equals six.",
+     "op": "÷ (−2) on both sides",
+     "result": "x = 6",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check both answers",
+   "beats": [
+    {
+     "say": "Check part B by putting six back into the function. Seven minus two times six is seven minus twelve, which is negative five. That matches, so x equals six is correct.",
+     "lines": [
+      "f(6) = 7 − 2(6)",
+      "f(6) = 7 − 12 = −5"
+     ],
+     "verdict": "f(6) = −5. Correct."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. In f of x equals m x plus b, the slope is m and the y-intercept is b.",
+     "item": "Slope m, intercept b"
+    },
+    {
+     "say": "Evaluating f of a number means substituting it in. Solving f of x equals a number means setting the expression equal to it.",
+     "item": "Input versus output questions"
+    },
+    {
+     "say": "Slope is rise over run, with the same order on top and bottom. In the next video, we work through a medium problem and a hard problem.",
+     "item": "Slope is rise over run"
+    }
+   ]
+  }
+ ]
 }

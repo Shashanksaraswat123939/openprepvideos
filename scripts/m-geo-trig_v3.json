@@ -1,64 +1,245 @@
 {
-  "id": "m-geo-trig_v3",
-  "skill": "m-geo-trig",
-  "part": 3,
-  "title": "Right Triangles and Trigonometry, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Geometry and Trigonometry",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with right triangles and trigonometry, and then use Desmos to check ratios and radian values.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: the wrong angle", "beats": [
-      {"say": "Trap one. Opposite and adjacent depend on which angle you are using. In the triangle with legs seven and twenty-four, the side opposite theta is seven. Students read the sides from the other angle.", "wrong": "sin θ = frac(24,25)", "wrong_why": "24 is adjacent to θ"},
-      {"say": "Relabel the sides from the angle named in the question. Opposite theta is seven, so the sine of theta is seven over twenty-five.", "right": "sin θ = frac(7,25)", "right_why": "Opposite θ is 7"}
-    ]},
-    {"type": "compare", "title": "Trap 2: finding a leg", "beats": [
-      {"say": "Trap two. The hypotenuse is alone on one side of the Pythagorean theorem. To find a leg, you subtract. Students add the squares again.", "wrong": "leg = sqrt(13^2 + 5^2)", "wrong_why": "Added instead of subtracted"},
-      {"say": "A leg is the square root of the hypotenuse squared minus the other leg squared. Thirteen squared minus five squared is one hundred forty-four, so the leg is twelve.", "right": "leg = sqrt(13^2 − 5^2) = 12", "right_why": "Subtract to find a leg"}
-    ]},
-    {"type": "compare", "title": "Trap 3: the special triangle", "beats": [
-      {"say": "Trap three. In a thirty, sixty, ninety triangle, the short leg is opposite the thirty degree angle. Students put the short leg opposite the sixty.", "wrong": "the short leg is opposite 60°", "wrong_why": "The smallest angle is opposite"},
-      {"say": "The smallest side is opposite the smallest angle. So the short leg is opposite thirty degrees, and the long leg, root three times as long, is opposite sixty.", "right": "the short leg is opposite 30°", "right_why": "Smallest angle, smallest side"}
-    ]},
-    {"type": "compare", "title": "Trap 4: complementary or supplementary", "beats": [
-      {"say": "Trap four. If the sine of x degrees equals the cosine of y degrees, the angles are complementary. Students make them add to one hundred eighty.", "wrong": "sin x = cos y means x + y = 180", "wrong_why": "That is supplementary"},
-      {"say": "The two acute angles of a right triangle add to ninety degrees. So x plus y equals ninety.", "right": "sin x = cos y means x + y = 90", "right_why": "Complementary angles"}
-    ]},
-    {"type": "compare", "title": "Trap 5: the unit circle sign", "beats": [
-      {"say": "Trap five. On the unit circle, the angle four pi over three points below the x axis, so its sine is negative. Students forget the sign.", "wrong": "sin(4π/3) = frac(√3,2)", "wrong_why": "The sign is missing"},
-      {"say": "The reference angle is sixty degrees, and sine is negative below the x axis. So the sine of four pi over three is negative root three over two.", "right": "sin(4π/3) = −frac(√3,2)", "right_why": "Below the x-axis: negative"}
-    ]},
-    {"type": "cards", "title": "The fast way", "beats": [
-      {"say": "Know the Pythagorean triples and the special triangles by heart, and most questions become a quick ten second sketch.", "card": {"text": "Know the triples and special triangles"}},
-      {"say": "Use the special-triangle ratios instead of a calculator when the answer choices contain the square root of two or three, because exact forms are easier to match than decimals.", "card": {"text": "Exact forms beat decimals"}},
-      {"say": "Desmos is useful for checking. Be careful, because Desmos uses radians by default. For degree questions, open the settings with the wrench, and switch the angle mode to degrees.", "card": {"text": "Check the angle mode first", "sub": "Radians by default"}}
-    ]},
-    {"type": "cards", "title": "Desmos: radian values", "beats": [
-      {"say": "In radian mode, you can type a trig function of a radian angle and read the exact decimal. Let us check the sine of eleven pi over six.", "card": {"text": "sin(11π/6)", "sub": "Read the decimal"}}
-    ]},
-    {"type": "desmos", "title": "Check radian values", "beats": [
-      {"say": "Open a fresh graph. We are in radian mode, which is the default.", "actions": ["hold: 2"]},
-      {"say": "Type sin, an opening parenthesis, eleven pi over six. Press the right arrow to leave the fraction, and then close the parenthesis.", "actions": ["type: sin(11pi/6>)"]},
-      {"say": "Desmos shows negative zero point five. So the sine of eleven pi over six is negative one half, which matches the unit circle.", "actions": ["hold: 3"]},
-      {"say": "Now check the earlier example. Type the sine of five pi over three.", "actions": ["type: sin(5pi/3>)"]},
-      {"say": "Desmos shows about negative zero point eight six six. That is negative root three over two, which agrees with the exact value.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. A right triangle has legs of five and twelve. Find the hypotenuse, and the sine and cosine of the angle opposite the side of length five. Pause the video, try it, and then watch the solution.", "card": {"text": "Legs 5 and 12", "sub": "Find c, sin θ and cos θ for θ opposite 5"}}
-    ]},
-    {"type": "steps", "title": "Practice: the hypotenuse", "start": "5^2 + 12^2", "beats": [
-      {"say": "Add the squares of the legs to get the square of the hypotenuse."},
-      {"say": "Five squared is twenty-five, and twelve squared is one hundred forty-four, so we add those two squares.", "op": "square each leg", "result": "25 + 144"},
-      {"say": "Twenty-five plus one hundred forty-four is one hundred sixty-nine, and its square root is thirteen. So the hypotenuse is thirteen.", "op": "add", "result": "169", "final": true}
-    ]},
-    {"type": "cards", "title": "Practice: the ratios", "beats": [
-      {"say": "Opposite theta is five, adjacent is twelve, and the hypotenuse is thirteen. So the sine of theta is five over thirteen, and the cosine of theta is twelve over thirteen.", "card": {"text": "sin θ = frac(5,13),  cos θ = frac(12,13)"}}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Name the sides from the angle in the question, and subtract the squares to find a leg.", "item": "Sides from the right angle; subtract for a leg"},
-      {"say": "In a thirty, sixty, ninety triangle, the short leg is opposite thirty. Complementary angles add to ninety. And watch the signs on the unit circle.", "item": "Short leg opposite 30°; complementary = 90°"},
-      {"say": "Check the angle mode in Desmos. In the next topic, we study circles.", "item": "Check Desmos angle mode"}
-    ]}
-  ]
+ "id": "m-geo-trig_v3",
+ "skill": "m-geo-trig",
+ "part": 3,
+ "title": "Right Triangles and Trigonometry, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Geometry and Trigonometry",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with right triangles and trigonometry, and then use Desmos to check ratios and radian values.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: the wrong angle",
+   "beats": [
+    {
+     "say": "Trap one. Opposite and adjacent depend on which angle you are using. In the triangle with legs seven and twenty-four, the side opposite theta is seven. Students read the sides from the other angle.",
+     "wrong": "sin θ = frac(24,25)",
+     "wrong_why": "24 is adjacent to θ"
+    },
+    {
+     "say": "Relabel the sides from the angle named in the question. Opposite theta is seven, so the sine of theta is seven over twenty-five.",
+     "right": "sin θ = frac(7,25)",
+     "right_why": "Opposite θ is 7"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: finding a leg",
+   "beats": [
+    {
+     "say": "Trap two. The hypotenuse is alone on one side of the Pythagorean theorem. To find a leg, you subtract. Students add the squares again.",
+     "wrong": "leg = sqrt(13^2 + 5^2)",
+     "wrong_why": "Added instead of subtracted"
+    },
+    {
+     "say": "A leg is the square root of the hypotenuse squared minus the other leg squared. Thirteen squared minus five squared is one hundred forty-four, so the leg is twelve.",
+     "right": "leg = sqrt(13^2 − 5^2) = 12",
+     "right_why": "Subtract to find a leg"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: the special triangle",
+   "beats": [
+    {
+     "say": "Trap three. In a thirty, sixty, ninety triangle, the short leg is opposite the thirty degree angle. Students put the short leg opposite the sixty.",
+     "wrong": "the short leg is opposite 60°",
+     "wrong_why": "The smallest angle is opposite"
+    },
+    {
+     "say": "The smallest side is opposite the smallest angle. So the short leg is opposite thirty degrees, and the long leg, root three times as long, is opposite sixty.",
+     "right": "the short leg is opposite 30°",
+     "right_why": "Smallest angle, smallest side"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: complementary or supplementary",
+   "beats": [
+    {
+     "say": "Trap four. If the sine of x degrees equals the cosine of y degrees, the angles are complementary. Students make them add to one hundred eighty.",
+     "wrong": "sin x = cos y means x + y = 180",
+     "wrong_why": "That is supplementary"
+    },
+    {
+     "say": "The two acute angles of a right triangle add to ninety degrees. So x plus y equals ninety.",
+     "right": "sin x = cos y means x + y = 90",
+     "right_why": "Complementary angles"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: the unit circle sign",
+   "beats": [
+    {
+     "say": "Trap five. On the unit circle, the angle four pi over three points below the x axis, so its sine is negative. Students forget the sign.",
+     "wrong": "sin(4π/3) = frac(√3,2)",
+     "wrong_why": "The sign is missing"
+    },
+    {
+     "say": "The reference angle is sixty degrees, and sine is negative below the x axis. So the sine of four pi over three is negative root three over two.",
+     "right": "sin(4π/3) = −frac(√3,2)",
+     "right_why": "Below the x-axis: negative"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way",
+   "beats": [
+    {
+     "say": "Know the Pythagorean triples and the special triangles by heart, and most questions become a quick ten second sketch.",
+     "card": {
+      "text": "Know the triples and special triangles"
+     }
+    },
+    {
+     "say": "Use the special-triangle ratios instead of a calculator when the answer choices contain the square root of two or three, because exact forms are easier to match than decimals.",
+     "card": {
+      "text": "Exact forms beat decimals"
+     }
+    },
+    {
+     "say": "Desmos is useful for checking. Be careful, because Desmos uses radians by default. For degree questions, open the settings with the wrench, and switch the angle mode to degrees.",
+     "card": {
+      "text": "Check the angle mode first",
+      "sub": "Radians by default"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Desmos: radian values",
+   "beats": [
+    {
+     "say": "In radian mode, you can type a trig function of a radian angle and read the exact decimal. Let's check the sine of eleven pi over six.",
+     "card": {
+      "text": "sin(11π/6)",
+      "sub": "Read the decimal"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Check radian values",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We're in radian mode, which is the default.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type sin, an opening parenthesis, eleven pi over six. Press the right arrow to leave the fraction, and then close the parenthesis.",
+     "actions": [
+      "type: sin(11pi/6>)"
+     ]
+    },
+    {
+     "say": "Desmos shows negative zero point five. So the sine of eleven pi over six is negative one half, which matches the unit circle.",
+     "actions": [
+      "hold: 3"
+     ]
+    },
+    {
+     "say": "Now check the earlier example. Type the sine of five pi over three.",
+     "actions": [
+      "type: sin(5pi/3>)"
+     ]
+    },
+    {
+     "say": "Desmos shows about negative zero point eight six six. That's negative root three over two, which agrees with the exact value.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. A right triangle has legs of five and twelve. Find the hypotenuse, and the sine and cosine of the angle opposite the side of length five. Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "Legs 5 and 12",
+      "sub": "Find c, sin θ and cos θ for θ opposite 5"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: the hypotenuse",
+   "start": "5^2 + 12^2",
+   "beats": [
+    {
+     "say": "Add the squares of the legs to get the square of the hypotenuse."
+    },
+    {
+     "say": "Five squared is twenty-five, and twelve squared is one hundred forty-four, so we add those two squares.",
+     "op": "square each leg",
+     "result": "25 + 144"
+    },
+    {
+     "say": "Twenty-five plus one hundred forty-four is one hundred sixty-nine, and its square root is thirteen. So the hypotenuse is thirteen.",
+     "op": "add",
+     "result": "169",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice: the ratios",
+   "beats": [
+    {
+     "say": "Opposite theta is five, adjacent is twelve, and the hypotenuse is thirteen. So the sine of theta is five over thirteen, and the cosine of theta is twelve over thirteen.",
+     "card": {
+      "text": "sin θ = frac(5,13),  cos θ = frac(12,13)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Name the sides from the angle in the question, and subtract the squares to find a leg.",
+     "item": "Sides from the right angle; subtract for a leg"
+    },
+    {
+     "say": "In a thirty, sixty, ninety triangle, the short leg is opposite thirty. Complementary angles add to ninety. And watch the signs on the unit circle.",
+     "item": "Short leg opposite 30°; complementary = 90°"
+    },
+    {
+     "say": "Check the angle mode in Desmos. In the next topic, we study circles.",
+     "item": "Check Desmos angle mode"
+    }
+   ]
+  }
+ ]
 }

@@ -1,69 +1,269 @@
 {
-  "id": "m-psda-twovar_v3",
-  "skill": "m-psda-twovar",
-  "part": 3,
-  "title": "Two-Variable Data, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with two-variable data, and then use Desmos regressions to find a linear model and an exponential model from a table.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: the residual backward", "beats": [
-      {"say": "Trap one. A residual is the actual value minus the predicted value. Reversing the order gives the right size but the wrong sign.", "wrong": "48 − 44.5 = 3.5", "wrong_why": "Predicted minus actual"},
-      {"say": "Subtract in the right order. Actual minus predicted is forty-four point five minus forty-eight, which is negative three point five.", "right": "44.5 − 48 = −3.5", "right_why": "Actual − predicted"}
-    ]},
-    {"type": "compare", "title": "Trap 2: a prediction is not certain", "beats": [
-      {"say": "Trap two. A line of best fit gives an estimate. Answer choices that say will or exactly are usually wrong.", "wrong": "sales will be exactly 65 drinks", "wrong_why": "A model gives an estimate"},
-      {"say": "The correct wording is that sales are predicted to be about sixty-five drinks, since individual days vary around the line.", "right": "predicted sales are about 65 drinks", "right_why": "A prediction is approximate"}
-    ]},
-    {"type": "compare", "title": "Trap 3: slope is not a total", "beats": [
-      {"say": "Trap three. In d equals three point two t plus seven, the number three point two is a rate. Students read it as the total amount of growth.", "wrong": "d grows by 3.2 in total", "wrong_why": "The slope is a rate"},
-      {"say": "The slope is the predicted change in d per one unit of t. If t is in days, d grows by three point two each day.", "right": "d grows by 3.2 per day", "right_why": "Change per one unit of t"}
-    ]},
-    {"type": "compare", "title": "Trap 4: exponential, not linear", "beats": [
-      {"say": "Trap four. The values five, fifteen, forty-five, one hundred thirty-five rise quickly, and the first few might look close to a line.", "wrong": "5, 15, 45, 135: roughly linear", "wrong_why": "The differences keep growing"},
-      {"say": "Check the ratios as well as the differences. Every ratio is three, so the data is exponential, with the model five times three to the x.", "right": "ratios are all 3: exponential", "right_why": "A constant ratio"}
-    ]},
-    {"type": "compare", "title": "Trap 5: association and cause", "beats": [
-      {"say": "Trap five. A strong pattern in a scatterplot does not show that changing x causes y to change.", "wrong": "strong pattern: x causes y", "wrong_why": "Association is not cause"},
-      {"say": "A strong association only shows that the variables move together. A cause needs an experiment, or other evidence, beyond the scatterplot.", "right": "association does not prove cause", "right_why": "Other factors may be involved"}
-    ]},
-    {"type": "cards", "title": "The fast way: Desmos", "beats": [
-      {"say": "Desmos regressions answer which equation fits the data directly. Enter the table, type a tilde, and match the reported constants to the answer choices.", "card": {"text": "Table, tilde, read the constants"}},
-      {"say": "Our first example is the café data. Six temperatures from ten to thirty-five degrees, with the hot-drink sales for each.", "card": {"text": "x: 10, 15, 20, 25, 30, 35", "sub": "y: 115, 105, 92, 78, 66, 52"}}
-    ]},
-    {"type": "desmos", "title": "A linear regression", "beats": [
-      {"say": "Open a fresh graph. We will enter the six data points as a table.", "actions": ["hold: 2"]},
-      {"say": "Create a table with the temperatures in the first column and the sales in the second. Each row becomes a point on the graph.", "actions": ["table: x_1 10 15 20 25 30 35; y_1 115 105 92 78 66 52", "bounds: left=0 right=45 bottom=0 top=160"]},
-      {"say": "Type y sub one, a tilde, then m times x sub one plus b. Press the right arrow after each subscript.", "actions": ["type: y_1>~mx_1>+b"]},
-      {"say": "Desmos reports a slope of about negative two point five five, and an intercept of about one hundred forty-two. That is close to the given line, negative two point five x plus one hundred forty.", "actions": ["hold: 4"]}
-    ]},
-    {"type": "cards", "title": "An exponential regression", "beats": [
-      {"say": "For exponential data, type a times b to the x instead. Our data is x equals zero to three, and y equals five, fifteen, forty-five, one hundred thirty-five.", "card": {"text": "x: 0, 1, 2, 3", "sub": "y: 5, 15, 45, 135"}}
-    ]},
-    {"type": "desmos", "title": "An exponential regression", "beats": [
-      {"say": "Again we enter the table, and then ask Desmos for the best fitting exponential.", "actions": ["hold: 2"]},
-      {"say": "Create a table with the four x values and the four y values. The points curve upward.", "actions": ["table: x_1 0 1 2 3; y_1 5 15 45 135", "bounds: left=-1 right=5 bottom=-20 top=160"]},
-      {"say": "Type y sub one, a tilde, then a b to the x sub one. Press the right arrow to leave the subscript, and again to leave the exponent.", "actions": ["type: y_1>~ab^x_1>>"]},
-      {"say": "Desmos reports a equals five and b equals three. So the model is y equals five times three to the x, matching our work by hand.", "actions": ["hold: 4"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. The line of best fit is y equals negative two point five x plus one hundred forty. A data point is twenty comma ninety-two. Find the residual. Pause the video, try it, and then watch the solution.", "card": {"text": "y = −2.5x + 140", "sub": "Data point (20, 92). Residual?"}}
-    ]},
-    {"type": "steps", "title": "Practice: the prediction", "start": "y = −2.5(20) + 140", "beats": [
-      {"say": "First predict y at x equals twenty by substituting into the line, keeping the parentheses around twenty."},
-      {"say": "Negative two point five times twenty is negative fifty. So the equation becomes negative fifty plus one hundred forty.", "op": "multiply", "result": "y = −50 + 140"},
-      {"say": "Negative fifty plus one hundred forty is ninety. So the line predicts ninety drinks at twenty degrees.", "op": "add", "result": "y = 90", "final": true}
-    ]},
-    {"type": "steps", "title": "Practice: the residual", "start": "92 − 90", "beats": [
-      {"say": "The residual is the actual value minus the predicted value. The actual value is ninety-two, and the prediction is ninety."},
-      {"say": "Ninety-two minus ninety is two. The positive sign means that the point lies two units above the line.", "op": "subtract", "result": "2", "final": true}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. A residual is actual minus predicted, a prediction is an estimate, and the slope is a rate per one unit of x.", "item": "Residual, estimate, rate"},
-      {"say": "Check differences and ratios to choose linear or exponential, and remember that association does not prove cause.", "item": "Differences or ratios; no cause"},
-      {"say": "Use Desmos regressions to read the constants. In the next topic, we study probability.", "item": "Desmos regressions read the constants"}
-    ]}
-  ]
+ "id": "m-psda-twovar_v3",
+ "skill": "m-psda-twovar",
+ "part": 3,
+ "title": "Two-Variable Data, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with two-variable data, and then use Desmos regressions to find a linear model and an exponential model from a table.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: the residual backward",
+   "beats": [
+    {
+     "say": "Trap one. A residual is the actual value minus the predicted value. Reversing the order gives the right size but the wrong sign.",
+     "wrong": "48 − 44.5 = 3.5",
+     "wrong_why": "Predicted minus actual"
+    },
+    {
+     "say": "Subtract in the right order. Actual minus predicted is forty-four point five minus forty-eight, which is negative three point five.",
+     "right": "44.5 − 48 = −3.5",
+     "right_why": "Actual − predicted"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: a prediction is not certain",
+   "beats": [
+    {
+     "say": "Trap two. A line of best fit gives an estimate. Answer choices that say will or exactly are usually wrong.",
+     "wrong": "sales will be exactly 65 drinks",
+     "wrong_why": "A model gives an estimate"
+    },
+    {
+     "say": "The correct wording is that sales are predicted to be about sixty-five drinks, since individual days vary around the line.",
+     "right": "predicted sales are about 65 drinks",
+     "right_why": "A prediction is approximate"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: slope is not a total",
+   "beats": [
+    {
+     "say": "Trap three. In d equals three point two t plus seven, the number three point two is a rate. Students read it as the total amount of growth.",
+     "wrong": "d grows by 3.2 in total",
+     "wrong_why": "The slope is a rate"
+    },
+    {
+     "say": "The slope is the predicted change in d per one unit of t. If t is in days, d grows by three point two each day.",
+     "right": "d grows by 3.2 per day",
+     "right_why": "Change per one unit of t"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: exponential, not linear",
+   "beats": [
+    {
+     "say": "Trap four. The values five, fifteen, forty-five, one hundred thirty-five rise quickly, and the first few might look close to a line.",
+     "wrong": "5, 15, 45, 135: roughly linear",
+     "wrong_why": "The differences keep growing"
+    },
+    {
+     "say": "Check the ratios as well as the differences. Every ratio is three, so the data is exponential, with the model five times three to the x.",
+     "right": "ratios are all 3: exponential",
+     "right_why": "A constant ratio"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: association and cause",
+   "beats": [
+    {
+     "say": "Trap five. A strong pattern in a scatterplot doesn't show that changing x causes y to change.",
+     "wrong": "strong pattern: x causes y",
+     "wrong_why": "Association is not cause"
+    },
+    {
+     "say": "A strong association only shows that the variables move together. A cause needs an experiment, or other evidence, beyond the scatterplot.",
+     "right": "association does not prove cause",
+     "right_why": "Other factors may be involved"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: Desmos",
+   "beats": [
+    {
+     "say": "Desmos regressions answer which equation fits the data directly. Enter the table, type a tilde, and match the reported constants to the answer choices.",
+     "card": {
+      "text": "Table, tilde, read the constants"
+     }
+    },
+    {
+     "say": "Our first example is the café data. Six temperatures from ten to thirty-five degrees, with the hot-drink sales for each.",
+     "card": {
+      "text": "x: 10, 15, 20, 25, 30, 35",
+      "sub": "y: 115, 105, 92, 78, 66, 52"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "A linear regression",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We'll enter the six data points as a table.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Create a table with the temperatures in the first column and the sales in the second. Each row becomes a point on the graph.",
+     "actions": [
+      "table: x_1 10 15 20 25 30 35; y_1 115 105 92 78 66 52",
+      "bounds: left=0 right=45 bottom=0 top=160"
+     ]
+    },
+    {
+     "say": "Type y sub one, a tilde, then m times x sub one plus b. Press the right arrow after each subscript.",
+     "actions": [
+      "type: y_1>~mx_1>+b"
+     ]
+    },
+    {
+     "say": "Desmos reports a slope of about negative two point five five, and an intercept of about one hundred forty-two. That's close to the given line, negative two point five x plus one hundred forty.",
+     "actions": [
+      "hold: 4"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "An exponential regression",
+   "beats": [
+    {
+     "say": "For exponential data, type a times b to the x instead. Our data is x equals zero to three, and y equals five, fifteen, forty-five, one hundred thirty-five.",
+     "card": {
+      "text": "x: 0, 1, 2, 3",
+      "sub": "y: 5, 15, 45, 135"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "An exponential regression",
+   "beats": [
+    {
+     "say": "Again we enter the table, and then ask Desmos for the best fitting exponential.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Create a table with the four x values and the four y values. The points curve upward.",
+     "actions": [
+      "table: x_1 0 1 2 3; y_1 5 15 45 135",
+      "bounds: left=-1 right=5 bottom=-20 top=160"
+     ]
+    },
+    {
+     "say": "Type y sub one, a tilde, then a b to the x sub one. Press the right arrow to leave the subscript, and again to leave the exponent.",
+     "actions": [
+      "type: y_1>~ab^x_1>>"
+     ]
+    },
+    {
+     "say": "Desmos reports a equals five and b equals three. So the model is y equals five times three to the x, matching our work by hand.",
+     "actions": [
+      "hold: 4"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. The line of best fit is y equals negative two point five x plus one hundred forty. A data point is twenty comma ninety-two. Find the residual. Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "y = −2.5x + 140",
+      "sub": "Data point (20, 92). Residual?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: the prediction",
+   "start": "y = −2.5(20) + 140",
+   "beats": [
+    {
+     "say": "First predict y at x equals twenty by substituting into the line, keeping the parentheses around twenty."
+    },
+    {
+     "say": "Negative two point five times twenty is negative fifty. So the equation becomes negative fifty plus one hundred forty.",
+     "op": "multiply",
+     "result": "y = −50 + 140"
+    },
+    {
+     "say": "Negative fifty plus one hundred forty is ninety. So the line predicts ninety drinks at twenty degrees.",
+     "op": "add",
+     "result": "y = 90",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: the residual",
+   "start": "92 − 90",
+   "beats": [
+    {
+     "say": "The residual is the actual value minus the predicted value. The actual value is ninety-two, and the prediction is ninety."
+    },
+    {
+     "say": "Ninety-two minus ninety is two. The positive sign means that the point lies two units above the line.",
+     "op": "subtract",
+     "result": "2",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. A residual is actual minus predicted, a prediction is an estimate, and the slope is a rate per one unit of x.",
+     "item": "Residual, estimate, rate"
+    },
+    {
+     "say": "Check differences and ratios to choose linear or exponential, and remember that association doesn't prove cause.",
+     "item": "Differences or ratios; no cause"
+    },
+    {
+     "say": "Use Desmos regressions to read the constants. In the next topic, we study probability.",
+     "item": "Desmos regressions read the constants"
+    }
+   ]
+  }
+ ]
 }

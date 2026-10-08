@@ -1,55 +1,200 @@
 {
-  "id": "rw-ei-transitions_v2",
-  "skill": "rw-ei-transitions",
-  "part": 2,
-  "title": "Transitions, Part 2: A Hard Question and Common Traps",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "list", "title": "Recap of the method", "beats": [
-      {"say": "In part one, we covered the choices and said the relationship between two sentences in plain words.", "item": "Say the relationship in plain words"},
-      {"say": "Then we named the category, such as contrast, concession, cause, addition, example, or elaboration.", "item": "Name the category"},
-      {"say": "In this video, we work through a hard question where the relationship is subtle, and then the common traps.", "item": "Today: a hard question and traps"}
-    ]},
-    {"type": "cards", "title": "Hard question: look back further", "beats": [
-      {"say": "Hard question. Sometimes the sentence right before the blank is not the one that matters. You may need to look two sentences back to see the true relationship.", "card": {"text": "Look two sentences back"}},
-      {"say": "Also, notice the difference between restatement and example. In other words needs the same idea said again. For example needs a specific case.", "card": {"text": "Restatement or example?", "sub": "Same idea, or a specific case?"}}
-    ]},
-    {"type": "passage", "title": "Read the text", "text": "Many people believe that a plant needs sunlight every day to survive. In reality, a cactus can go for weeks without much light or water. ______ it stores water in its thick stem and uses it slowly when conditions are harsh.", "source": "original text", "beats": [
-      {"say": "The second sentence says a cactus survives a long time without light or water. That is a claim that needs an explanation.", "underline": "go for weeks"},
-      {"say": "The third sentence says how it does that, by storing water in its stem. In plain words, it gives more detail, so the category is elaboration, such as in fact or specifically.", "highlight": "stores water in its thick stem"}
-    ]},
-    {"type": "choices", "title": "Which transition fits?", "question": "Which choice completes the text with the most logical transition?", "options": {"A": "Specifically,", "B": "Nevertheless,", "C": "Instead,", "D": "In contrast,"}, "beats": [
-      {"say": "Choice B, nevertheless, says the sentence is true despite what came before. But storing water explains the claim, it does not fight it.", "eliminate": "B", "why": "no concession"},
-      {"say": "Choice C, instead, means the third sentence replaces the second. Nothing is replaced.", "eliminate": "C", "why": "nothing replaced"},
-      {"say": "Choice D, in contrast, signals opposing ideas. The two sentences agree, so this does not fit.", "eliminate": "D", "why": "no contrast"},
-      {"say": "Choice A, specifically, introduces the detail of how the cactus survives. The answer is A.", "pick": "A"}
-    ]},
-    {"type": "cards", "title": "Common traps", "beats": [
-      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: reading only one sentence", "beats": [
-      {"say": "Trap one. Students read only the sentence with the blank, and guess. The relationship depends on what came before.", "wrong": "read only the blank's sentence", "wrong_why": "The link is missing"},
-      {"say": "Read the sentence before the blank too, and sometimes the one before that.", "right": "read the sentence before it as well", "right_why": "See the relationship"}
-    ]},
-    {"type": "compare", "title": "Trap 2: cause or sequence", "beats": [
-      {"say": "Trap two. The word then only means next in time. The word therefore means because of that. They are very different.", "wrong": "He left. Then he was tired.", "wrong_why": "Order, not cause"},
-      {"say": "If the first idea causes the second, use a cause transition. If it only comes next, use a time transition.", "right": "He ran. Therefore, he was tired.", "right_why": "The first causes the second"}
-    ]},
-    {"type": "compare", "title": "Trap 3: example or restatement", "beats": [
-      {"say": "Trap three. For example needs a specific case. In other words needs the same idea, said in simpler words.", "wrong": "Plants are green. In other words, ferns.", "wrong_why": "A specific case"},
-      {"say": "Ask whether the second sentence is a specific case, or the same idea again. Pick the transition to match.", "right": "Plants are green. For example, ferns.", "right_why": "A specific case"}
-    ]},
-    {"type": "compare", "title": "Trap 4: contrast or concession", "beats": [
-      {"say": "Trap four. However contrasts two facts. Nevertheless says something happens despite the first idea. When the second sentence goes ahead anyway, concession fits better.", "wrong": "worry. However, he kept the glass.", "wrong_why": "He kept it despite the worry"},
-      {"say": "Say despite that in your head. If it fits, use even so, or nevertheless.", "right": "worry. Even so, he kept the glass.", "right_why": "Despite the worry"}
-    ]},
-    {"type": "compare", "title": "Trap 5: choosing by feel", "beats": [
-      {"say": "Trap five. Choosing a transition because it sounds right is risky. Every choice sounds fine in a sentence.", "wrong": "pick the one that sounds right", "wrong_why": "All choices sound fine"},
-      {"say": "Say the relationship in plain words first. Then match the category, and pick the transition that fits it.", "right": "say it in plain words first", "right_why": "Logic decides"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Read the sentence before the blank, and sometimes two back. Say the relationship in plain words.", "item": "Look back; say it in plain words"},
-      {"say": "Tell cause from time, example from restatement, and contrast from concession. In the next topic, we study rhetorical synthesis.", "item": "Next: rhetorical synthesis"}
-    ]}
-  ]
+ "id": "rw-ei-transitions_v2",
+ "skill": "rw-ei-transitions",
+ "part": 2,
+ "title": "Transitions, Part 2: A Hard Question and Common Traps",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "list",
+   "title": "Recap of the method",
+   "beats": [
+    {
+     "say": "In part one, we covered the choices and said the relationship between two sentences in plain words.",
+     "item": "Say the relationship in plain words"
+    },
+    {
+     "say": "Then we named the category, such as contrast, concession, cause, addition, example, or elaboration.",
+     "item": "Name the category"
+    },
+    {
+     "say": "In this video, we work through a hard question where the relationship is subtle, and then the common traps.",
+     "item": "Today: a hard question and traps"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard question: look back further",
+   "beats": [
+    {
+     "say": "Hard question. Sometimes the sentence right before the blank isn't the one that matters. You may need to look two sentences back to see the true relationship.",
+     "card": {
+      "text": "Look two sentences back"
+     }
+    },
+    {
+     "say": "Also, notice the difference between restatement and example. In other words needs the same idea said again. For example needs a specific case.",
+     "card": {
+      "text": "Restatement or example?",
+      "sub": "Same idea, or a specific case?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the text",
+   "text": "Many people believe that a plant needs sunlight every day to survive. In reality, a cactus can go for weeks without much light or water. ______ it stores water in its thick stem and uses it slowly when conditions are harsh.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The second sentence says a cactus survives a long time without light or water. That's a claim that needs an explanation.",
+     "underline": "go for weeks"
+    },
+    {
+     "say": "The third sentence says how it does that, by storing water in its stem. In plain words, it gives more detail, so the category is elaboration, such as in fact or specifically.",
+     "highlight": "stores water in its thick stem"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which transition fits?",
+   "question": "Which choice completes the text with the most logical transition?",
+   "options": {
+    "A": "Specifically,",
+    "B": "Nevertheless,",
+    "C": "Instead,",
+    "D": "In contrast,"
+   },
+   "beats": [
+    {
+     "say": "Choice B, nevertheless, says the sentence is true despite what came before. But storing water explains the claim, it doesn't fight it.",
+     "eliminate": "B",
+     "why": "no concession"
+    },
+    {
+     "say": "Choice C, instead, means the third sentence replaces the second. Nothing is replaced.",
+     "eliminate": "C",
+     "why": "nothing replaced"
+    },
+    {
+     "say": "Choice D, in contrast, signals opposing ideas. The two sentences agree, so this doesn't fit.",
+     "eliminate": "D",
+     "why": "no contrast"
+    },
+    {
+     "say": "Choice A, specifically, introduces the detail of how the cactus survives. The answer is A.",
+     "pick": "A"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Common traps",
+   "beats": [
+    {
+     "say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We'll see the trap, and then the habit that avoids it.",
+     "card": {
+      "text": "Five common traps"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: reading only one sentence",
+   "beats": [
+    {
+     "say": "Trap one. Students read only the sentence with the blank, and guess. The relationship depends on what came before.",
+     "wrong": "read only the blank's sentence",
+     "wrong_why": "The link is missing"
+    },
+    {
+     "say": "Read the sentence before the blank too, and sometimes the one before that.",
+     "right": "read the sentence before it as well",
+     "right_why": "See the relationship"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: cause or sequence",
+   "beats": [
+    {
+     "say": "Trap two. The word then only means next in time. The word therefore means because of that. They're very different.",
+     "wrong": "He left. Then he was tired.",
+     "wrong_why": "Order, not cause"
+    },
+    {
+     "say": "If the first idea causes the second, use a cause transition. If it only comes next, use a time transition.",
+     "right": "He ran. Therefore, he was tired.",
+     "right_why": "The first causes the second"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: example or restatement",
+   "beats": [
+    {
+     "say": "Trap three. For example needs a specific case. In other words needs the same idea, said in simpler words.",
+     "wrong": "Plants are green. In other words, ferns.",
+     "wrong_why": "A specific case"
+    },
+    {
+     "say": "Ask whether the second sentence is a specific case, or the same idea again. Pick the transition to match.",
+     "right": "Plants are green. For example, ferns.",
+     "right_why": "A specific case"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: contrast or concession",
+   "beats": [
+    {
+     "say": "Trap four. However contrasts two facts. Nevertheless says something happens despite the first idea. When the second sentence goes ahead anyway, concession fits better.",
+     "wrong": "worry. However, he kept the glass.",
+     "wrong_why": "He kept it despite the worry"
+    },
+    {
+     "say": "Say despite that in your head. If it fits, use even so, or nevertheless.",
+     "right": "worry. Even so, he kept the glass.",
+     "right_why": "Despite the worry"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: choosing by feel",
+   "beats": [
+    {
+     "say": "Trap five. Choosing a transition because it sounds right is risky. Every choice sounds fine in a sentence.",
+     "wrong": "pick the one that sounds right",
+     "wrong_why": "All choices sound fine"
+    },
+    {
+     "say": "Say the relationship in plain words first. Then match the category, and pick the transition that fits it.",
+     "right": "say it in plain words first",
+     "right_why": "Logic decides"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Read the sentence before the blank, and sometimes two back. Say the relationship in plain words.",
+     "item": "Look back; say it in plain words"
+    },
+    {
+     "say": "Tell cause from time, example from restatement, and contrast from concession. In the next topic, we study rhetorical synthesis.",
+     "item": "Next: rhetorical synthesis"
+    }
+   ]
+  }
+ ]
 }

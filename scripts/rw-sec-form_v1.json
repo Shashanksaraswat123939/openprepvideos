@@ -1,57 +1,243 @@
 {
-  "id": "rw-sec-form_v1",
-  "skill": "rw-sec-form",
-  "part": 1,
-  "title": "Form, Structure, and Sense, Part 1: Method and Two Questions",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "cards", "title": "Form, structure, and sense", "beats": [
-      {"say": "These questions test grammar inside a sentence. They ask you to match verbs to subjects, choose the right tense, match pronouns, form possessives, and place modifiers.", "card": {"text": "Grammar inside the sentence"}},
-      {"say": "The question is always the same: which choice completes the text so that it conforms to the conventions of Standard English?", "card": {"text": "Standard English conventions"}},
-      {"say": "The best habit is to look at the choices first, and see which rule is being tested.", "card": {"text": "Look at what changes in the choices"}}
-    ]},
-    {"type": "list", "title": "The method", "beats": [
-      {"say": "Step one. Look at the choices, and see what is changing. Is it a singular or plural verb, a tense, a pronoun, an apostrophe, or the word order?", "item": "See what changes in the choices"},
-      {"say": "Step two. For agreement, cross out phrases that begin with of, in, or with. The true subject is never inside them.", "item": "Cross out prepositional phrases"},
-      {"say": "Step three. For tense, find the time clue in the sentence. A date or a word like currently tells you the tense.", "item": "Find the time clue"},
-      {"say": "Step four. For a modifier, ask who or what is doing the action. That noun must come right after the comma.", "item": "Who is doing it?"}
-    ]},
-    {"type": "table", "title": "Key rules", "columns": ["Topic", "Rule"], "rows": [["subject and verb", "singular subject, singular verb"], ["collective nouns", "team, committee: singular"], ["past perfect", "had plus a past participle"], ["pronouns", "match the noun in number"], ["possessives", "city's, cities', children's"]], "beats": [
-      {"say": "A singular subject takes a singular verb, which often ends in s. The list of names is long.", "reveal_row": 0},
-      {"say": "Collective nouns such as team, committee, and collection are singular. The committee has voted.", "reveal_row": 1},
-      {"say": "The past perfect, had plus a past participle, shows an action before another past action. By nineteen hundred, the canal had closed.", "reveal_row": 2},
-      {"say": "A pronoun must match its noun in number. The museum reopened its doors, not their doors.", "reveal_row": 3},
-      {"say": "A singular possessive is city apostrophe s. A plural that ends in s is cities apostrophe. An irregular plural is children apostrophe s.", "reveal_row": 4}
-    ]},
-    {"type": "cards", "title": "Easy question: agreement", "beats": [
-      {"say": "Easy question. We find the true subject by crossing out the phrases that sit between the subject and the verb.", "card": {"text": "Find the true subject", "sub": "Cross out the phrases"}}
-    ]},
-    {"type": "passage", "title": "Read the sentence", "text": "The set of instructions included with the new bookshelves ______ several diagrams that show how each panel fits together.", "source": "original text", "beats": [
-      {"say": "Cross out of instructions, and included with the new bookshelves. Those phrases only describe the subject.", "underline": "of instructions"},
-      {"say": "What remains is, the set, blank, several diagrams. The subject is the set, which is singular, so we need a singular verb.", "highlight": "The set"}
-    ]},
-    {"type": "choices", "title": "Which verb fits?", "question": "Which choice completes the text so that it conforms to the conventions of Standard English?", "options": {"A": "contain", "B": "contains", "C": "have contained", "D": "are containing"}, "beats": [
-      {"say": "Choice A, contain, is a plural form. It would agree with instructions, but instructions is not the subject.", "eliminate": "A", "why": "plural verb"},
-      {"say": "Choice C, have contained, is plural too. It does not agree with the set.", "eliminate": "C", "why": "plural verb"},
-      {"say": "Choice D, are containing, is also plural, so it cannot agree with a singular subject.", "eliminate": "D", "why": "plural verb"},
-      {"say": "Choice B, contains, is singular, and agrees with the set. The answer is B.", "pick": "B"}
-    ]},
-    {"type": "cards", "title": "Medium question: a modifier", "beats": [
-      {"say": "Medium question. An opening phrase describes the first noun after the comma. That noun must be the person or thing doing the action.", "card": {"text": "Opening phrase, then comma", "sub": "Who is doing it?"}}
-    ]},
-    {"type": "passage", "title": "Read the sentence", "text": "Carefully restored over three years by a team of conservators, ______", "source": "original text", "beats": [
-      {"say": "The opening phrase is carefully restored over three years. Something was restored.", "underline": "Carefully restored"},
-      {"say": "The thing that was restored must come right after the comma. In this story, that is the painting, not the team and not the hall.", "highlight": "a team of conservators"}
-    ]},
-    {"type": "choices", "title": "Which sentence is correct?", "question": "Which choice completes the text so that it conforms to the conventions of Standard English?", "options": {"A": "the team returned the painting to the gallery's main hall in 2022.", "B": "the gallery's main hall received the painting again in 2022.", "C": "the painting returned to the gallery's main hall in 2022.", "D": "the conservators' work was displayed in the gallery's main hall in 2022."}, "beats": [
-      {"say": "Choice A puts the team right after the comma. But the team did the restoring, it was not restored.", "eliminate": "A", "why": "the team was not restored"},
-      {"say": "Choice B puts the main hall right after the comma. The hall was not restored either.", "eliminate": "B", "why": "the hall was not restored"},
-      {"say": "Choice D puts the conservators' work after the comma. The work was not restored, the painting was.", "eliminate": "D", "why": "the work was not restored"},
-      {"say": "Choice C puts the painting right after the comma, so the modifier points to the right noun. The answer is C.", "pick": "C"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Look at the choices to see which rule is tested. Cross out phrases to find the true subject.", "item": "See the rule; find the subject"},
-      {"say": "Use the time clue for tense, and put the doer right after an opening phrase. In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
-    ]}
-  ]
+ "id": "rw-sec-form_v1",
+ "skill": "rw-sec-form",
+ "part": 1,
+ "title": "Form, Structure, and Sense, Part 1: Method and Two Questions",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Form, structure, and sense",
+   "beats": [
+    {
+     "say": "These questions test grammar inside a sentence. They ask you to match verbs to subjects, choose the right tense, match pronouns, form possessives, and place modifiers.",
+     "card": {
+      "text": "Grammar inside the sentence"
+     }
+    },
+    {
+     "say": "The question is always the same: which choice completes the text so that it conforms to the conventions of Standard English?",
+     "card": {
+      "text": "Standard English conventions"
+     }
+    },
+    {
+     "say": "The best habit is to look at the choices first, and see which rule is being tested.",
+     "card": {
+      "text": "Look at what changes in the choices"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "The method",
+   "beats": [
+    {
+     "say": "Step one. Look at the choices, and see what's changing. Is it a singular or plural verb, a tense, a pronoun, an apostrophe, or the word order?",
+     "item": "See what changes in the choices"
+    },
+    {
+     "say": "Step two. For agreement, cross out phrases that begin with of, in, or with. The true subject is never inside them.",
+     "item": "Cross out prepositional phrases"
+    },
+    {
+     "say": "Step three. For tense, find the time clue in the sentence. A date or a word like currently tells you the tense.",
+     "item": "Find the time clue"
+    },
+    {
+     "say": "Step four. For a modifier, ask who or what's doing the action. That noun must come right after the comma.",
+     "item": "Who is doing it?"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Key rules",
+   "columns": [
+    "Topic",
+    "Rule"
+   ],
+   "rows": [
+    [
+     "subject and verb",
+     "singular subject, singular verb"
+    ],
+    [
+     "collective nouns",
+     "team, committee: singular"
+    ],
+    [
+     "past perfect",
+     "had plus a past participle"
+    ],
+    [
+     "pronouns",
+     "match the noun in number"
+    ],
+    [
+     "possessives",
+     "city's, cities', children's"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "A singular subject takes a singular verb, which often ends in s. The list of names is long.",
+     "reveal_row": 0
+    },
+    {
+     "say": "Collective nouns such as team, committee, and collection are singular. The committee has voted.",
+     "reveal_row": 1
+    },
+    {
+     "say": "The past perfect, had plus a past participle, shows an action before another past action. By nineteen hundred, the canal had closed.",
+     "reveal_row": 2
+    },
+    {
+     "say": "A pronoun must match its noun in number. The museum reopened its doors, not their doors.",
+     "reveal_row": 3
+    },
+    {
+     "say": "A singular possessive is city apostrophe s. A plural that ends in s is cities apostrophe. An irregular plural is children apostrophe s.",
+     "reveal_row": 4
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy question: agreement",
+   "beats": [
+    {
+     "say": "Easy question. We find the true subject by crossing out the phrases that sit between the subject and the verb.",
+     "card": {
+      "text": "Find the true subject",
+      "sub": "Cross out the phrases"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the sentence",
+   "text": "The set of instructions included with the new bookshelves ______ several diagrams that show how each panel fits together.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "Cross out of instructions, and included with the new bookshelves. Those phrases only describe the subject.",
+     "underline": "of instructions"
+    },
+    {
+     "say": "What remains is, the set, blank, several diagrams. The subject is the set, which is singular, so we need a singular verb.",
+     "highlight": "The set"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which verb fits?",
+   "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "options": {
+    "A": "contain",
+    "B": "contains",
+    "C": "have contained",
+    "D": "are containing"
+   },
+   "beats": [
+    {
+     "say": "Choice A, contain, is a plural form. It would agree with instructions, but instructions isn't the subject.",
+     "eliminate": "A",
+     "why": "plural verb"
+    },
+    {
+     "say": "Choice C, have contained, is plural too. It doesn't agree with the set.",
+     "eliminate": "C",
+     "why": "plural verb"
+    },
+    {
+     "say": "Choice D, are containing, is also plural, so it can't agree with a singular subject.",
+     "eliminate": "D",
+     "why": "plural verb"
+    },
+    {
+     "say": "Choice B, contains, is singular, and agrees with the set. The answer is B.",
+     "pick": "B"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium question: a modifier",
+   "beats": [
+    {
+     "say": "Medium question. An opening phrase describes the first noun after the comma. That noun must be the person or thing doing the action.",
+     "card": {
+      "text": "Opening phrase, then comma",
+      "sub": "Who is doing it?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the sentence",
+   "text": "Carefully restored over three years by a team of conservators, ______",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The opening phrase is carefully restored over three years. Something was restored.",
+     "underline": "Carefully restored"
+    },
+    {
+     "say": "The thing that was restored must come right after the comma. In this story, that's the painting, not the team and not the hall.",
+     "highlight": "a team of conservators"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which sentence is correct?",
+   "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "options": {
+    "A": "the team returned the painting to the gallery's main hall in 2022.",
+    "B": "the gallery's main hall received the painting again in 2022.",
+    "C": "the painting returned to the gallery's main hall in 2022.",
+    "D": "the conservators' work was displayed in the gallery's main hall in 2022."
+   },
+   "beats": [
+    {
+     "say": "Choice A puts the team right after the comma. But the team did the restoring, it wasn't restored.",
+     "eliminate": "A",
+     "why": "the team was not restored"
+    },
+    {
+     "say": "Choice B puts the main hall right after the comma. The hall wasn't restored either.",
+     "eliminate": "B",
+     "why": "the hall was not restored"
+    },
+    {
+     "say": "Choice D puts the conservators' work after the comma. The work wasn't restored, the painting was.",
+     "eliminate": "D",
+     "why": "the work was not restored"
+    },
+    {
+     "say": "Choice C puts the painting right after the comma, so the modifier points to the right noun. The answer is C.",
+     "pick": "C"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Look at the choices to see which rule is tested. Cross out phrases to find the true subject.",
+     "item": "See the rule; find the subject"
+    },
+    {
+     "say": "Use the time clue for tense, and put the doer right after an opening phrase. In the next video, we work through a hard question and the common traps.",
+     "item": "Next: a hard question and traps"
+    }
+   ]
+  }
+ ]
 }

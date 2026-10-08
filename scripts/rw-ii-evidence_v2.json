@@ -1,56 +1,204 @@
 {
-  "id": "rw-ii-evidence_v2",
-  "skill": "rw-ii-evidence",
-  "part": 2,
-  "title": "Command of Evidence, Part 2: A Hard Question and Common Traps",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "list", "title": "Recap of the method", "beats": [
-      {"say": "In part one, we learned to find the exact claim, and to turn it into a prediction before reading the choices.", "item": "Find the claim; predict"},
-      {"say": "Then we crossed out answers that are inaccurate, and answers that are accurate but irrelevant to the claim.", "item": "Cross out inaccurate and irrelevant"},
-      {"say": "In this video, we use the method on a hard question about a character, and then look at the traps.", "item": "Today: a hard question and traps"}
-    ]},
-    {"type": "cards", "title": "Hard question: a quotation", "beats": [
-      {"say": "Hard question. Some questions ask which quotation best illustrates a claim about a character. The claim may name two traits, and the quotation must show both.", "card": {"text": "A claim with two traits", "sub": "The quotation needs both"}},
-      {"say": "Tick off each trait in the claim, one by one, and then check each quotation against the list.", "card": {"text": "Check every trait"}}
-    ]},
-    {"type": "passage", "title": "Read the text", "text": "The narrator of a story portrays Mr. Okafor as generous but proud. He gives away most of his harvest each year, yet he refuses to let anyone repay or even thank him.", "source": "original text", "beats": [
-      {"say": "The claim names two traits, generous, and proud. A good quotation must show both of them.", "underline": "generous but proud"},
-      {"say": "Our prediction is, we should see him giving something away, and also refusing thanks or help in a proud way.", "highlight": "refuses"}
-    ]},
-    {"type": "choices", "title": "Which quotation illustrates the claim?", "question": "Which quotation from the story best illustrates the claim about Mr. Okafor?", "options": {"A": "He rose early each morning to walk the long rows of his field.", "B": "He filled every neighbor's basket, then waved away their thanks without a word.", "C": "He kept his old coat buttoned up against the cold wind.", "D": "He gave a basket to a neighbor, who thanked him warmly."}, "beats": [
-      {"say": "Choice A is a vivid line about his morning routine. It shows neither trait, so it is off-claim.", "eliminate": "A", "why": "shows neither trait"},
-      {"say": "Choice C is about his coat and the wind. It describes the setting, and does not show either trait.", "eliminate": "C", "why": "setting, not a trait"},
-      {"say": "Choice D shows him giving a basket, which is generous. But he accepts thanks, so it misses the proud part.", "eliminate": "D", "why": "only half the claim"},
-      {"say": "Choice B shows both. He fills every basket, which is generous, and he waves away thanks, which is proud. The answer is B.", "pick": "B"}
-    ]},
-    {"type": "cards", "title": "Common traps", "beats": [
-      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: true but irrelevant", "beats": [
-      {"say": "Trap one. Most wrong choices on a table question are accurate. A true number can still be the wrong answer if it does not connect to the claim.", "wrong": "true number, so it is correct", "wrong_why": "Accurate is not enough"},
-      {"say": "Check relevance as well as accuracy. Ask whether the choice speaks to the exact comparison in the claim.", "right": "accurate and tied to the claim", "right_why": "Both tests pass"}
-    ]},
-    {"type": "compare", "title": "Trap 2: half the claim", "beats": [
-      {"say": "Trap two. A claim with two parts needs evidence for both parts. Evidence for only one part feels right, but it is incomplete.", "wrong": "Harlow rose, others not checked", "wrong_why": "Only half the claim"},
-      {"say": "Split the claim into its parts, and make sure the choice answers each one.", "right": "Harlow rose; others stayed flat", "right_why": "Covers both parts"}
-    ]},
-    {"type": "compare", "title": "Trap 3: the wrong group", "beats": [
-      {"say": "Trap three. A hypothesis is about a certain group. A finding about a different group does not test it, even if it sounds related.", "wrong": "finding about adult birds", "wrong_why": "Hypothesis is about young birds"},
-      {"say": "Match the group in the evidence to the group in the claim. If they differ, move on.", "right": "finding about young birds", "right_why": "Same group as the claim"}
-    ]},
-    {"type": "compare", "title": "Trap 4: support or weaken", "beats": [
-      {"say": "Trap four. Students read the stem too fast and answer backward. A question that asks to weaken the claim wants the opposite of support.", "wrong": "pick evidence that fits the claim", "wrong_why": "The stem said weaken"},
-      {"say": "Underline the verb in the question, support or weaken, before you do anything else.", "right": "pick evidence that breaks it", "right_why": "Matches the stem"}
-    ]},
-    {"type": "compare", "title": "Trap 5: a vivid quotation", "beats": [
-      {"say": "Trap five. A beautifully written line about the setting can look like good evidence. But a line must illustrate the trait in the claim.", "wrong": "a lovely line about the weather", "wrong_why": "It shows no trait"},
-      {"say": "Choose the plain line that shows the trait, even if it is less pretty.", "right": "a plain line showing both traits", "right_why": "Illustrates the claim"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Accurate is not enough. The choice must be relevant, must cover every part of the claim, and must be about the right group.", "item": "Relevant, complete, right group"},
-      {"say": "Read the verb in the question, support or weaken, and choose quotations that show every trait.", "item": "Check the verb; check every trait"},
-      {"say": "In the next topic, we study inferences, where you complete a logical conclusion from the text.", "item": "Next: inferences"}
-    ]}
-  ]
+ "id": "rw-ii-evidence_v2",
+ "skill": "rw-ii-evidence",
+ "part": 2,
+ "title": "Command of Evidence, Part 2: A Hard Question and Common Traps",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "list",
+   "title": "Recap of the method",
+   "beats": [
+    {
+     "say": "In part one, we learned to find the exact claim, and to turn it into a prediction before reading the choices.",
+     "item": "Find the claim; predict"
+    },
+    {
+     "say": "Then we crossed out answers that are inaccurate, and answers that are accurate but irrelevant to the claim.",
+     "item": "Cross out inaccurate and irrelevant"
+    },
+    {
+     "say": "In this video, we use the method on a hard question about a character, and then look at the traps.",
+     "item": "Today: a hard question and traps"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard question: a quotation",
+   "beats": [
+    {
+     "say": "Hard question. Some questions ask which quotation best illustrates a claim about a character. The claim may name two traits, and the quotation must show both.",
+     "card": {
+      "text": "A claim with two traits",
+      "sub": "The quotation needs both"
+     }
+    },
+    {
+     "say": "Tick off each trait in the claim, one by one, and then check each quotation against the list.",
+     "card": {
+      "text": "Check every trait"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the text",
+   "text": "The narrator of a story portrays Mr. Okafor as generous but proud. He gives away most of his harvest each year, yet he refuses to let anyone repay or even thank him.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The claim names two traits, generous, and proud. A good quotation must show both of them.",
+     "underline": "generous but proud"
+    },
+    {
+     "say": "Our prediction is, we should see him giving something away, and also refusing thanks or help in a proud way.",
+     "highlight": "refuses"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which quotation illustrates the claim?",
+   "question": "Which quotation from the story best illustrates the claim about Mr. Okafor?",
+   "options": {
+    "A": "He rose early each morning to walk the long rows of his field.",
+    "B": "He filled every neighbor's basket, then waved away their thanks without a word.",
+    "C": "He kept his old coat buttoned up against the cold wind.",
+    "D": "He gave a basket to a neighbor, who thanked him warmly."
+   },
+   "beats": [
+    {
+     "say": "Choice A is a vivid line about his morning routine. It shows neither trait, so it's off-claim.",
+     "eliminate": "A",
+     "why": "shows neither trait"
+    },
+    {
+     "say": "Choice C is about his coat and the wind. It describes the setting, and doesn't show either trait.",
+     "eliminate": "C",
+     "why": "setting, not a trait"
+    },
+    {
+     "say": "Choice D shows him giving a basket, which is generous. But he accepts thanks, so it misses the proud part.",
+     "eliminate": "D",
+     "why": "only half the claim"
+    },
+    {
+     "say": "Choice B shows both. He fills every basket, which is generous, and he waves away thanks, which is proud. The answer is B.",
+     "pick": "B"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Common traps",
+   "beats": [
+    {
+     "say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We'll see the trap, and then the habit that avoids it.",
+     "card": {
+      "text": "Five common traps"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: true but irrelevant",
+   "beats": [
+    {
+     "say": "Trap one. Most wrong choices on a table question are accurate. A true number can still be the wrong answer if it doesn't connect to the claim.",
+     "wrong": "true number, so it is correct",
+     "wrong_why": "Accurate is not enough"
+    },
+    {
+     "say": "Check relevance as well as accuracy. Ask whether the choice speaks to the exact comparison in the claim.",
+     "right": "accurate and tied to the claim",
+     "right_why": "Both tests pass"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: half the claim",
+   "beats": [
+    {
+     "say": "Trap two. A claim with two parts needs evidence for both parts. Evidence for only one part feels right, but it's incomplete.",
+     "wrong": "Harlow rose, others not checked",
+     "wrong_why": "Only half the claim"
+    },
+    {
+     "say": "Split the claim into its parts, and make sure the choice answers each one.",
+     "right": "Harlow rose; others stayed flat",
+     "right_why": "Covers both parts"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: the wrong group",
+   "beats": [
+    {
+     "say": "Trap three. A hypothesis is about a certain group. A finding about a different group doesn't test it, even if it sounds related.",
+     "wrong": "finding about adult birds",
+     "wrong_why": "Hypothesis is about young birds"
+    },
+    {
+     "say": "Match the group in the evidence to the group in the claim. If they differ, move on.",
+     "right": "finding about young birds",
+     "right_why": "Same group as the claim"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: support or weaken",
+   "beats": [
+    {
+     "say": "Trap four. Students read the stem too fast and answer backward. A question that asks to weaken the claim wants the opposite of support.",
+     "wrong": "pick evidence that fits the claim",
+     "wrong_why": "The stem said weaken"
+    },
+    {
+     "say": "Underline the verb in the question, support or weaken, before you do anything else.",
+     "right": "pick evidence that breaks it",
+     "right_why": "Matches the stem"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: a vivid quotation",
+   "beats": [
+    {
+     "say": "Trap five. A beautifully written line about the setting can look like good evidence. But a line must illustrate the trait in the claim.",
+     "wrong": "a lovely line about the weather",
+     "wrong_why": "It shows no trait"
+    },
+    {
+     "say": "Choose the plain line that shows the trait, even if it's less pretty.",
+     "right": "a plain line showing both traits",
+     "right_why": "Illustrates the claim"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Accurate isn't enough. The choice must be relevant, must cover every part of the claim, and must be about the right group.",
+     "item": "Relevant, complete, right group"
+    },
+    {
+     "say": "Read the verb in the question, support or weaken, and choose quotations that show every trait.",
+     "item": "Check the verb; check every trait"
+    },
+    {
+     "say": "In the next topic, we study inferences, where you complete a logical conclusion from the text.",
+     "item": "Next: inferences"
+    }
+   ]
+  }
+ ]
 }

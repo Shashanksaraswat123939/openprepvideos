@@ -1,58 +1,250 @@
 {
-  "id": "rw-ei-transitions_v1",
-  "skill": "rw-ei-transitions",
-  "part": 1,
-  "title": "Transitions, Part 1: The Method and Two Questions",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "cards", "title": "Transitions", "beats": [
-      {"say": "Transitions questions give you a short text with a blank at the start of a sentence. They ask for the most logical transition word or phrase.", "card": {"text": "Which transition is most logical?"}},
-      {"say": "A transition shows how a sentence relates to the one before it. It might show a contrast, a cause and effect, an example, or an addition.", "card": {"text": "How do the two sentences relate?"}},
-      {"say": "The question is about logic, not grammar. Every choice is grammatically fine, so you must decide by the meaning.", "card": {"text": "Logic, not grammar"}}
-    ]},
-    {"type": "list", "title": "The method", "beats": [
-      {"say": "Step one. Cover the choices. Read the sentence before the blank and the sentence with the blank.", "item": "Cover the choices; read both sentences"},
-      {"say": "Step two. Say the relationship in plain words, such as because of that, despite that, or for instance.", "item": "Say the relationship in plain words"},
-      {"say": "Step three. Name the category of the relationship, and find the choice in that category.", "item": "Name the category"},
-      {"say": "Step four. If two choices are in the same category, the answer is probably a different one, since only one answer can be right.", "item": "Two in one category? Look elsewhere"}
-    ]},
-    {"type": "table", "title": "Relationships and transitions", "columns": ["Relationship", "Transitions"], "rows": [["contrast", "however, in contrast"], ["concession", "even so, nevertheless"], ["cause and effect", "therefore, as a result"], ["addition", "moreover, additionally"], ["example", "for example, for instance"], ["elaboration", "specifically, in fact"]], "beats": [
-      {"say": "Contrast. The two ideas point in different directions. Try however, or in contrast.", "reveal_row": 0},
-      {"say": "Concession. The second idea is true despite the first. Try even so, or nevertheless.", "reveal_row": 1},
-      {"say": "Cause and effect. The first idea causes the second. Try therefore, or as a result.", "reveal_row": 2},
-      {"say": "Addition. The second sentence adds a similar point. Try moreover, or additionally.", "reveal_row": 3},
-      {"say": "Example. The second sentence is a specific case of the first. Try for example, or for instance.", "reveal_row": 4},
-      {"say": "Elaboration. The second sentence gives more detail. Try specifically, or in fact.", "reveal_row": 5}
-    ]},
-    {"type": "cards", "title": "Easy question", "beats": [
-      {"say": "Easy question. We read two sentences, say how they relate in plain words, and then find the transition in that category.", "card": {"text": "Say the relationship first"}}
-    ]},
-    {"type": "passage", "title": "Read the text", "text": "Snow leopards live at elevations where the air is thin and cold. ______ their large nasal cavities warm the air before it reaches their lungs.", "source": "original text", "beats": [
-      {"say": "The first sentence names a problem, thin and cold air. The second sentence names one particular adaptation that helps with it.", "underline": "thin and cold"},
-      {"say": "In plain words, the second sentence gives a specific detail about how they cope. So the category is elaboration.", "highlight": "large nasal cavities"}
-    ]},
-    {"type": "choices", "title": "Which transition fits?", "question": "Which choice completes the text with the most logical transition?", "options": {"A": "However,", "B": "Similarly,", "C": "Specifically,", "D": "Instead,"}, "beats": [
-      {"say": "Choice A, however, shows a contrast. The two sentences do not disagree, so this does not fit.", "eliminate": "A", "why": "no contrast"},
-      {"say": "Choice B, similarly, adds a similar fact. But the second sentence explains how leopards cope, so it is not a separate similar fact.", "eliminate": "B", "why": "not a separate fact"},
-      {"say": "Choice D, instead, shows that one thing replaces another. Nothing is being replaced here.", "eliminate": "D", "why": "nothing replaced"},
-      {"say": "Choice C, specifically, introduces a particular detail about how they handle the cold. The answer is C.", "pick": "C"}
-    ]},
-    {"type": "cards", "title": "Medium question: concession", "beats": [
-      {"say": "Medium question. Sometimes the second sentence happens anyway, despite the first. That is a concession, and it differs from a plain contrast.", "card": {"text": "Concession: despite that", "sub": "Even so, nevertheless"}}
-    ]},
-    {"type": "passage", "title": "Read the text", "text": "The architect's design for the new library was praised for its glass walls, which fill the reading rooms with light. Some librarians worried that sunlight would fade the book covers. ______ the architect insisted on keeping the glass, adding a coating that blocks most ultraviolet rays.", "source": "original text", "beats": [
-      {"say": "The second sentence raises a worry. The third sentence says the architect kept the glass anyway.", "underline": "worried that sunlight would fade"},
-      {"say": "In plain words, the glass stayed despite the worry. That is a concession.", "highlight": "insisted on keeping the glass"}
-    ]},
-    {"type": "choices", "title": "Which transition fits?", "question": "Which choice completes the text with the most logical transition?", "options": {"A": "Therefore,", "B": "Similarly,", "C": "For instance,", "D": "Even so,"}, "beats": [
-      {"say": "Choice A, therefore, means because of that. The worry did not cause the architect to keep the glass, so it does not fit.", "eliminate": "A", "why": "worry did not cause it"},
-      {"say": "Choice B, similarly, adds a like point. Keeping the glass is not similar to the worry.", "eliminate": "B", "why": "not similar"},
-      {"say": "Choice C, for instance, gives an example. The third sentence is not an example of the worry.", "eliminate": "C", "why": "not an example"},
-      {"say": "Choice D, even so, means despite that. It matches the concession. The answer is D.", "pick": "D"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Cover the choices, and say the relationship between the sentences in plain words.", "item": "Say the relationship in plain words"},
-      {"say": "Name the category and pick the choice in it. In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
-    ]}
-  ]
+ "id": "rw-ei-transitions_v1",
+ "skill": "rw-ei-transitions",
+ "part": 1,
+ "title": "Transitions, Part 1: The Method and Two Questions",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Transitions",
+   "beats": [
+    {
+     "say": "Transitions questions give you a short text with a blank at the start of a sentence. They ask for the most logical transition word or phrase.",
+     "card": {
+      "text": "Which transition is most logical?"
+     }
+    },
+    {
+     "say": "A transition shows how a sentence relates to the one before it. It might show a contrast, a cause and effect, an example, or an addition.",
+     "card": {
+      "text": "How do the two sentences relate?"
+     }
+    },
+    {
+     "say": "The question is about logic, not grammar. Every choice is grammatically fine, so you must decide by the meaning.",
+     "card": {
+      "text": "Logic, not grammar"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "The method",
+   "beats": [
+    {
+     "say": "Step one. Cover the choices. Read the sentence before the blank and the sentence with the blank.",
+     "item": "Cover the choices; read both sentences"
+    },
+    {
+     "say": "Step two. Say the relationship in plain words, such as because of that, despite that, or for instance.",
+     "item": "Say the relationship in plain words"
+    },
+    {
+     "say": "Step three. Name the category of the relationship, and find the choice in that category.",
+     "item": "Name the category"
+    },
+    {
+     "say": "Step four. If two choices are in the same category, the answer is probably a different one, since only one answer can be right.",
+     "item": "Two in one category? Look elsewhere"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Relationships and transitions",
+   "columns": [
+    "Relationship",
+    "Transitions"
+   ],
+   "rows": [
+    [
+     "contrast",
+     "however, in contrast"
+    ],
+    [
+     "concession",
+     "even so, nevertheless"
+    ],
+    [
+     "cause and effect",
+     "therefore, as a result"
+    ],
+    [
+     "addition",
+     "moreover, additionally"
+    ],
+    [
+     "example",
+     "for example, for instance"
+    ],
+    [
+     "elaboration",
+     "specifically, in fact"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Contrast. The two ideas point in different directions. Try however, or in contrast.",
+     "reveal_row": 0
+    },
+    {
+     "say": "Concession. The second idea is true despite the first. Try even so, or nevertheless.",
+     "reveal_row": 1
+    },
+    {
+     "say": "Cause and effect. The first idea causes the second. Try therefore, or as a result.",
+     "reveal_row": 2
+    },
+    {
+     "say": "Addition. The second sentence adds a similar point. Try moreover, or additionally.",
+     "reveal_row": 3
+    },
+    {
+     "say": "Example. The second sentence is a specific case of the first. Try for example, or for instance.",
+     "reveal_row": 4
+    },
+    {
+     "say": "Elaboration. The second sentence gives more detail. Try specifically, or in fact.",
+     "reveal_row": 5
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy question",
+   "beats": [
+    {
+     "say": "Easy question. We read two sentences, say how they relate in plain words, and then find the transition in that category.",
+     "card": {
+      "text": "Say the relationship first"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the text",
+   "text": "Snow leopards live at elevations where the air is thin and cold. ______ their large nasal cavities warm the air before it reaches their lungs.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The first sentence names a problem, thin and cold air. The second sentence names one particular adaptation that helps with it.",
+     "underline": "thin and cold"
+    },
+    {
+     "say": "In plain words, the second sentence gives a specific detail about how they cope. So the category is elaboration.",
+     "highlight": "large nasal cavities"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which transition fits?",
+   "question": "Which choice completes the text with the most logical transition?",
+   "options": {
+    "A": "However,",
+    "B": "Similarly,",
+    "C": "Specifically,",
+    "D": "Instead,"
+   },
+   "beats": [
+    {
+     "say": "Choice A, however, shows a contrast. The two sentences don't disagree, so this doesn't fit.",
+     "eliminate": "A",
+     "why": "no contrast"
+    },
+    {
+     "say": "Choice B, similarly, adds a similar fact. But the second sentence explains how leopards cope, so it isn't a separate similar fact.",
+     "eliminate": "B",
+     "why": "not a separate fact"
+    },
+    {
+     "say": "Choice D, instead, shows that one thing replaces another. Nothing is being replaced here.",
+     "eliminate": "D",
+     "why": "nothing replaced"
+    },
+    {
+     "say": "Choice C, specifically, introduces a particular detail about how they handle the cold. The answer is C.",
+     "pick": "C"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium question: concession",
+   "beats": [
+    {
+     "say": "Medium question. Sometimes the second sentence happens anyway, despite the first. That's a concession, and it differs from a plain contrast.",
+     "card": {
+      "text": "Concession: despite that",
+      "sub": "Even so, nevertheless"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the text",
+   "text": "The architect's design for the new library was praised for its glass walls, which fill the reading rooms with light. Some librarians worried that sunlight would fade the book covers. ______ the architect insisted on keeping the glass, adding a coating that blocks most ultraviolet rays.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The second sentence raises a worry. The third sentence says the architect kept the glass anyway.",
+     "underline": "worried that sunlight would fade"
+    },
+    {
+     "say": "In plain words, the glass stayed despite the worry. That's a concession.",
+     "highlight": "insisted on keeping the glass"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which transition fits?",
+   "question": "Which choice completes the text with the most logical transition?",
+   "options": {
+    "A": "Therefore,",
+    "B": "Similarly,",
+    "C": "For instance,",
+    "D": "Even so,"
+   },
+   "beats": [
+    {
+     "say": "Choice A, therefore, means because of that. The worry didn't cause the architect to keep the glass, so it doesn't fit.",
+     "eliminate": "A",
+     "why": "worry did not cause it"
+    },
+    {
+     "say": "Choice B, similarly, adds a like point. Keeping the glass isn't similar to the worry.",
+     "eliminate": "B",
+     "why": "not similar"
+    },
+    {
+     "say": "Choice C, for instance, gives an example. The third sentence isn't an example of the worry.",
+     "eliminate": "C",
+     "why": "not an example"
+    },
+    {
+     "say": "Choice D, even so, means despite that. It matches the concession. The answer is D.",
+     "pick": "D"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Cover the choices, and say the relationship between the sentences in plain words.",
+     "item": "Say the relationship in plain words"
+    },
+    {
+     "say": "Name the category and pick the choice in it. In the next video, we work through a hard question and the common traps.",
+     "item": "Next: a hard question and traps"
+    }
+   ]
+  }
+ ]
 }

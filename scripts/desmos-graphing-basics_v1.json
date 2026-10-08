@@ -1,46 +1,183 @@
 {
-  "id": "desmos-graphing-basics_v1",
-  "skill": "desmos-graphing-basics",
-  "part": 1,
-  "title": "Desmos Basics: Graphing",
-  "section_label": "Desmos basics",
-  "scenes": [
-    {"type": "cards", "title": "Graphing basics", "beats": [
-      {"say": "Desmos is the graphing calculator built into the SAT. It draws anything you type that starts with y equals or x equals, and it gives each expression its own line.", "card": {"text": "Type y = ... to draw a graph"}},
-      {"say": "When a question gives you an equation and asks about its graph, such as its intercepts or its highest point, type the equation in first and look before doing any algebra.", "card": {"text": "Graph first, then do the algebra"}},
-      {"say": "In this video, we work through three examples, from an easy one to a hard one, and you will see every key press.", "card": {"text": "Three examples: easy, medium, hard"}}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. Graph the line y equals two x plus one, and find the point where it crosses the y axis.", "card": {"text": "y = 2x + 1", "sub": "Find the y-intercept"}}
-    ]},
-    {"type": "desmos", "title": "Easy: a line", "beats": [
-      {"say": "Open Desmos. The list of expressions is on the left, and the graph is on the right. We will type our equation into the first row.", "actions": ["hold: 2"]},
-      {"say": "Type y equals two x plus one. Desmos draws the line right away, with no extra buttons to press.", "actions": ["type: y=2x+1"]},
-      {"say": "To read a point, click it. Grey dots mark important points like intercepts. Clicking the dot where the line meets the y axis shows the point zero comma one.", "actions": ["bounds: left=-6 right=6 bottom=-4 top=8", "click: 0,1"]},
-      {"say": "So the y-intercept is one. That matches the constant term in the equation, which is a good check on our work.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. Graph y equals x squared minus three, and find the lowest point of the curve.", "card": {"text": "y = x^2 − 3", "sub": "Find the vertex"}}
-    ]},
-    {"type": "desmos", "title": "Medium: a parabola", "beats": [
-      {"say": "We start with a fresh graph. An equation with x squared makes a curve called a parabola, which looks like a smile or a frown.", "actions": ["hold: 2"]},
-      {"say": "Type y equals x, then press the caret key and a two to make the exponent. Press the right arrow to leave the exponent, and type minus three. That arrow key is the step beginners miss most often.", "actions": ["type: y=x^2>-3"]},
-      {"say": "The lowest point is the vertex. Click the bottom of the curve to see its grey dot, then click the dot. Desmos shows the point zero comma negative three.", "actions": ["bounds: left=-6 right=6 bottom=-6 top=8", "click: 0,-3"]},
-      {"say": "The vertex has a y value of negative three, so the minimum value of this function is negative three.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. A function is y equals negative the quantity x minus three, squared, plus eleven. What is its maximum value, and where does it occur?", "card": {"text": "y = −(x − 3)^2 + 11", "sub": "Find the maximum"}}
-    ]},
-    {"type": "desmos", "title": "Hard: find the maximum", "beats": [
-      {"say": "Real questions often hide the answer inside a longer equation. We will let Desmos do the heavy lifting, and skip the algebra completely.", "actions": ["hold: 2"]},
-      {"say": "Type the whole function exactly as written. Put parentheses around x minus three, add the squared with the caret key, and press the right arrow before typing plus eleven.", "actions": ["type: y=-(x-3)^2>+11"]},
-      {"say": "Click the top of the curve, then click its grey dot. The maximum occurs at x equals three, where y equals eleven.", "actions": ["bounds: left=-6 right=12 bottom=-8 top=14", "click: 3,11"]},
-      {"say": "So the maximum value is eleven, and it occurs when x is three. If a graph ever disappears, zoom out with the minus button, because it is usually just off the screen.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Type the equation in first, and look at the graph before you start any algebra.", "item": "Type the equation, then look"},
-      {"say": "Click a curve, then click a grey dot, to read intercepts, vertices, and intersections exactly.", "item": "Click grey dots to read points"},
-      {"say": "If the graph seems to vanish, zoom out, because it is usually just off the screen. In the next video, we find where graphs cross.", "item": "Zoom out if the graph vanishes"}
-    ]}
-  ]
+ "id": "desmos-graphing-basics_v1",
+ "skill": "desmos-graphing-basics",
+ "part": 1,
+ "title": "Desmos Basics: Graphing",
+ "section_label": "Desmos basics",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Graphing basics",
+   "beats": [
+    {
+     "say": "Desmos is the graphing calculator built into the SAT. It draws anything you type that starts with y equals or x equals, and it gives each expression its own line.",
+     "card": {
+      "text": "Type y = ... to draw a graph"
+     }
+    },
+    {
+     "say": "When a question gives you an equation and asks about its graph, such as its intercepts or its highest point, type the equation in first and look before doing any algebra.",
+     "card": {
+      "text": "Graph first, then do the algebra"
+     }
+    },
+    {
+     "say": "In this video, we work through three examples, from an easy one to a hard one, and you'll see every key press.",
+     "card": {
+      "text": "Three examples: easy, medium, hard"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. Graph the line y equals two x plus one, and find the point where it crosses the y axis.",
+     "card": {
+      "text": "y = 2x + 1",
+      "sub": "Find the y-intercept"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Easy: a line",
+   "beats": [
+    {
+     "say": "Open Desmos. The list of expressions is on the left, and the graph is on the right. We'll type our equation into the first row.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals two x plus one. Desmos draws the line right away, with no extra buttons to press.",
+     "actions": [
+      "type: y=2x+1"
+     ]
+    },
+    {
+     "say": "To read a point, click it. Grey dots mark important points like intercepts. Clicking the dot where the line meets the y axis shows the point zero comma one.",
+     "actions": [
+      "bounds: left=-6 right=6 bottom=-4 top=8",
+      "click: 0,1"
+     ]
+    },
+    {
+     "say": "So the y-intercept is one. That matches the constant term in the equation, which is a good check on our work.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. Graph y equals x squared minus three, and find the lowest point of the curve.",
+     "card": {
+      "text": "y = x^2 − 3",
+      "sub": "Find the vertex"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Medium: a parabola",
+   "beats": [
+    {
+     "say": "We start with a fresh graph. An equation with x squared makes a curve called a parabola, which looks like a smile or a frown.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals x, then press the caret key and a two to make the exponent. Press the right arrow to leave the exponent, and type minus three. That arrow key is the step beginners miss most often.",
+     "actions": [
+      "type: y=x^2>-3"
+     ]
+    },
+    {
+     "say": "The lowest point is the vertex. Click the bottom of the curve to see its grey dot, then click the dot. Desmos shows the point zero comma negative three.",
+     "actions": [
+      "bounds: left=-6 right=6 bottom=-6 top=8",
+      "click: 0,-3"
+     ]
+    },
+    {
+     "say": "The vertex has a y value of negative three, so the minimum value of this function is negative three.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. A function is y equals negative the quantity x minus three, squared, plus eleven. What's its maximum value, and where does it occur?",
+     "card": {
+      "text": "y = −(x − 3)^2 + 11",
+      "sub": "Find the maximum"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Hard: find the maximum",
+   "beats": [
+    {
+     "say": "Real questions often hide the answer inside a longer equation. We'll let Desmos do the heavy lifting, and skip the algebra completely.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type the whole function exactly as written. Put parentheses around x minus three, add the squared with the caret key, and press the right arrow before typing plus eleven.",
+     "actions": [
+      "type: y=-(x-3)^2>+11"
+     ]
+    },
+    {
+     "say": "Click the top of the curve, then click its grey dot. The maximum occurs at x equals three, where y equals eleven.",
+     "actions": [
+      "bounds: left=-6 right=12 bottom=-8 top=14",
+      "click: 3,11"
+     ]
+    },
+    {
+     "say": "So the maximum value is eleven, and it occurs when x is three. If a graph ever disappears, zoom out with the minus button, because it's usually just off the screen.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Type the equation in first, and look at the graph before you start any algebra.",
+     "item": "Type the equation, then look"
+    },
+    {
+     "say": "Click a curve, then click a grey dot, to read intercepts, vertices, and intersections exactly.",
+     "item": "Click grey dots to read points"
+    },
+    {
+     "say": "If the graph seems to vanish, zoom out, because it's usually just off the screen. In the next video, we find where graphs cross.",
+     "item": "Zoom out if the graph vanishes"
+    }
+   ]
+  }
+ ]
 }

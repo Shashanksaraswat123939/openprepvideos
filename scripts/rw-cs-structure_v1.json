@@ -1,60 +1,256 @@
 {
-  "id": "rw-cs-structure_v1",
-  "skill": "rw-cs-structure",
-  "part": 1,
-  "title": "Structure and Purpose, Part 1: The Method and Two Questions",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "cards", "title": "Structure and purpose", "beats": [
-      {"say": "Structure and purpose questions ask why a text was written, or how it is built. They do not ask what the text says.", "card": {"text": "Why was it written? How is it built?"}},
-      {"say": "There are three kinds. Main purpose asks what the author is doing. Overall structure asks how the text is organized. Sentence function asks what one sentence does.", "card": {"text": "Purpose, structure, sentence function", "sub": "Three question types"}},
-      {"say": "Purpose answers usually begin with a verb, such as to explain, to argue, to describe, to challenge, or to show.", "card": {"text": "Purpose starts with a verb"}}
-    ]},
-    {"type": "list", "title": "The method", "beats": [
-      {"say": "Step one. Read the question first. Is it asking about the whole text, the structure, or one sentence?", "item": "Which of the three types?"},
-      {"say": "Step two. As you read, label each sentence with a two-word job, such as common view, contrast, example, or conclusion.", "item": "Label each sentence's job"},
-      {"say": "Step three. Check each choice word by word against your labels. Every step must match, in the same order.", "item": "Match the choices to the labels"},
-      {"say": "Step four. For a purpose question, check that the verb fits the tone. A neutral text explains, it does not argue.", "item": "Check the verb against the tone"}
-    ]},
-    {"type": "table", "title": "Sentence jobs and their signals", "columns": ["Job", "Signals"], "rows": [["introduces a view", "many believe, it is said"], ["challenges it", "however, but, yet"], ["gives an example", "for example, a named case"], ["gives evidence", "data, a study, because"], ["states a conclusion", "thus, as a result"]], "beats": [
-      {"say": "A sentence that introduces a view often begins with phrases such as many believe, or it is often said.", "reveal_row": 0},
-      {"say": "A sentence that challenges that view uses a turn word such as however, but, or yet.", "reveal_row": 1},
-      {"say": "An example is signaled by for example, or by a specific name, place, or case.", "reveal_row": 2},
-      {"say": "Evidence usually contains data, the results of a study, or the word because.", "reveal_row": 3},
-      {"say": "A conclusion often starts with thus, or as a result, and it is usually the final sentence.", "reveal_row": 4}
-    ]},
-    {"type": "cards", "title": "Easy question: main purpose", "beats": [
-      {"say": "Easy question. We read a short text about moss, label the sentences, and then choose the purpose with the right verb.", "card": {"text": "Main purpose", "sub": "Label, then match the verb"}}
-    ]},
-    {"type": "passage", "title": "Read the text", "text": "Most people think of moss as a plant that grows only in damp, shady forests. However, some mosses thrive on bare rock in deserts. These mosses dry out completely during the hot months and then revive within hours when rain falls.", "source": "original text", "beats": [
-      {"say": "Sentence one is the common view. Most people think moss grows only in damp forests.", "underline": "Most people think"},
-      {"say": "Sentence two is a contrast, signaled by however. Some mosses live on bare desert rock.", "highlight": "However"},
-      {"say": "Sentence three explains the contrast. These mosses dry out, and revive when it rains. So the text presents a fact that corrects a common idea.", "underline": "revive within hours"}
-    ]},
-    {"type": "choices", "title": "What is the main purpose?", "question": "Which choice best states the main purpose of the text?", "options": {"A": "To compare forest mosses with desert plants.", "B": "To argue that moss should be planted in desert gardens.", "C": "To present a fact that challenges a common assumption about moss.", "D": "To explain why forests are damp and shady."}, "beats": [
-      {"say": "Choice A compares forest mosses with desert plants. No desert plants other than moss are discussed.", "eliminate": "A", "why": "no other plants discussed"},
-      {"say": "Choice B says the author argues for planting moss in gardens. Nothing is argued or recommended, so the verb is too strong.", "eliminate": "B", "why": "nothing is argued"},
-      {"say": "Choice D explains why forests are damp. Forests only appear in the common view, so this is a side detail.", "eliminate": "D", "why": "a side detail"},
-      {"say": "Choice C matches our labels, a common view and then a contrast. The answer is C.", "pick": "C"}
-    ]},
-    {"type": "cards", "title": "Medium question: structure", "beats": [
-      {"say": "Medium question. Now we describe the structure. The correct answer lists the steps in order, and every step must match. One wrong step eliminates a choice.", "card": {"text": "Overall structure", "sub": "Every step, in order"}}
-    ]},
-    {"type": "passage", "title": "Read the text", "text": "Many people assume that bees can only be kept in the countryside. A beekeeper in Chicago disproves this. She manages twelve hives on a rooftop, and each year they produce more honey than the hives at her family's farm. Her success suggests that city flowers, parks, and gardens can support bees well.", "source": "original text", "beats": [
-      {"say": "Sentence one is the common view, that bees belong in the countryside.", "underline": "Many people assume"},
-      {"say": "Sentences two and three give a specific case. A rooftop beekeeper in a city does better than the farm.", "highlight": "twelve hives"},
-      {"say": "The last sentence draws a conclusion from the case. So the order is, common view, then an example, then a conclusion.", "underline": "Her success suggests"}
-    ]},
-    {"type": "choices", "title": "How is the text built?", "question": "Which choice best describes the overall structure of the text?", "options": {"A": "It states a common belief, gives a case that challenges it, and draws a conclusion.", "B": "It gives a conclusion, and then lists the facts behind it.", "C": "It describes a process step by step, and ends with a warning.", "D": "It compares two beekeepers, and picks the one with more hives."}, "beats": [
-      {"say": "Choice B puts the conclusion first. In the text, the conclusion comes last, so the order is wrong.", "eliminate": "B", "why": "order is wrong"},
-      {"say": "Choice C describes a process with a warning. There are no steps and no warning in the text.", "eliminate": "C", "why": "no steps, no warning"},
-      {"say": "Choice D compares two beekeepers and picks the one with more hives. Only one beekeeper is described, and the choice is not a pick.", "eliminate": "D", "why": "does not match"},
-      {"say": "Choice A matches every step in order: the belief, the challenging case, and the conclusion. The answer is A.", "pick": "A"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Read the question first, and label each sentence with a two-word job as you read.", "item": "Read the question; label the jobs"},
-      {"say": "Match purpose answers by the verb, and structure answers step by step, in order. One mismatch eliminates a choice.", "item": "Verb for purpose; steps for structure"},
-      {"say": "In the next video, we work through a hard sentence function question and the common traps.", "item": "Next: sentence function and traps"}
-    ]}
-  ]
+ "id": "rw-cs-structure_v1",
+ "skill": "rw-cs-structure",
+ "part": 1,
+ "title": "Structure and Purpose, Part 1: The Method and Two Questions",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Structure and purpose",
+   "beats": [
+    {
+     "say": "Structure and purpose questions ask why a text was written, or how it's built. They don't ask what the text says.",
+     "card": {
+      "text": "Why was it written? How is it built?"
+     }
+    },
+    {
+     "say": "There are three kinds. Main purpose asks what the author is doing. Overall structure asks how the text is organized. Sentence function asks what one sentence does.",
+     "card": {
+      "text": "Purpose, structure, sentence function",
+      "sub": "Three question types"
+     }
+    },
+    {
+     "say": "Purpose answers usually begin with a verb, such as to explain, to argue, to describe, to challenge, or to show.",
+     "card": {
+      "text": "Purpose starts with a verb"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "The method",
+   "beats": [
+    {
+     "say": "Step one. Read the question first. Is it asking about the whole text, the structure, or one sentence?",
+     "item": "Which of the three types?"
+    },
+    {
+     "say": "Step two. As you read, label each sentence with a two-word job, such as common view, contrast, example, or conclusion.",
+     "item": "Label each sentence's job"
+    },
+    {
+     "say": "Step three. Check each choice word by word against your labels. Every step must match, in the same order.",
+     "item": "Match the choices to the labels"
+    },
+    {
+     "say": "Step four. For a purpose question, check that the verb fits the tone. A neutral text explains, it doesn't argue.",
+     "item": "Check the verb against the tone"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Sentence jobs and their signals",
+   "columns": [
+    "Job",
+    "Signals"
+   ],
+   "rows": [
+    [
+     "introduces a view",
+     "many believe, it is said"
+    ],
+    [
+     "challenges it",
+     "however, but, yet"
+    ],
+    [
+     "gives an example",
+     "for example, a named case"
+    ],
+    [
+     "gives evidence",
+     "data, a study, because"
+    ],
+    [
+     "states a conclusion",
+     "thus, as a result"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "A sentence that introduces a view often begins with phrases such as many believe, or it's often said.",
+     "reveal_row": 0
+    },
+    {
+     "say": "A sentence that challenges that view uses a turn word such as however, but, or yet.",
+     "reveal_row": 1
+    },
+    {
+     "say": "An example is signaled by for example, or by a specific name, place, or case.",
+     "reveal_row": 2
+    },
+    {
+     "say": "Evidence usually contains data, the results of a study, or the word because.",
+     "reveal_row": 3
+    },
+    {
+     "say": "A conclusion often starts with thus, or as a result, and it's usually the final sentence.",
+     "reveal_row": 4
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy question: main purpose",
+   "beats": [
+    {
+     "say": "Easy question. We read a short text about moss, label the sentences, and then choose the purpose with the right verb.",
+     "card": {
+      "text": "Main purpose",
+      "sub": "Label, then match the verb"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the text",
+   "text": "Most people think of moss as a plant that grows only in damp, shady forests. However, some mosses thrive on bare rock in deserts. These mosses dry out completely during the hot months and then revive within hours when rain falls.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "Sentence one is the common view. Most people think moss grows only in damp forests.",
+     "underline": "Most people think"
+    },
+    {
+     "say": "Sentence two is a contrast, signaled by however. Some mosses live on bare desert rock.",
+     "highlight": "However"
+    },
+    {
+     "say": "Sentence three explains the contrast. These mosses dry out, and revive when it rains. So the text presents a fact that corrects a common idea.",
+     "underline": "revive within hours"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "What is the main purpose?",
+   "question": "Which choice best states the main purpose of the text?",
+   "options": {
+    "A": "To compare forest mosses with desert plants.",
+    "B": "To argue that moss should be planted in desert gardens.",
+    "C": "To present a fact that challenges a common assumption about moss.",
+    "D": "To explain why forests are damp and shady."
+   },
+   "beats": [
+    {
+     "say": "Choice A compares forest mosses with desert plants. No desert plants other than moss are discussed.",
+     "eliminate": "A",
+     "why": "no other plants discussed"
+    },
+    {
+     "say": "Choice B says the author argues for planting moss in gardens. Nothing is argued or recommended, so the verb is too strong.",
+     "eliminate": "B",
+     "why": "nothing is argued"
+    },
+    {
+     "say": "Choice D explains why forests are damp. Forests only appear in the common view, so this is a side detail.",
+     "eliminate": "D",
+     "why": "a side detail"
+    },
+    {
+     "say": "Choice C matches our labels, a common view and then a contrast. The answer is C.",
+     "pick": "C"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium question: structure",
+   "beats": [
+    {
+     "say": "Medium question. Now we describe the structure. The correct answer lists the steps in order, and every step must match. One wrong step eliminates a choice.",
+     "card": {
+      "text": "Overall structure",
+      "sub": "Every step, in order"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the text",
+   "text": "Many people assume that bees can only be kept in the countryside. A beekeeper in Chicago disproves this. She manages twelve hives on a rooftop, and each year they produce more honey than the hives at her family's farm. Her success suggests that city flowers, parks, and gardens can support bees well.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "Sentence one is the common view, that bees belong in the countryside.",
+     "underline": "Many people assume"
+    },
+    {
+     "say": "Sentences two and three give a specific case. A rooftop beekeeper in a city does better than the farm.",
+     "highlight": "twelve hives"
+    },
+    {
+     "say": "The last sentence draws a conclusion from the case. So the order is, common view, then an example, then a conclusion.",
+     "underline": "Her success suggests"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "How is the text built?",
+   "question": "Which choice best describes the overall structure of the text?",
+   "options": {
+    "A": "It states a common belief, gives a case that challenges it, and draws a conclusion.",
+    "B": "It gives a conclusion, and then lists the facts behind it.",
+    "C": "It describes a process step by step, and ends with a warning.",
+    "D": "It compares two beekeepers, and picks the one with more hives."
+   },
+   "beats": [
+    {
+     "say": "Choice B puts the conclusion first. In the text, the conclusion comes last, so the order is wrong.",
+     "eliminate": "B",
+     "why": "order is wrong"
+    },
+    {
+     "say": "Choice C describes a process with a warning. There are no steps and no warning in the text.",
+     "eliminate": "C",
+     "why": "no steps, no warning"
+    },
+    {
+     "say": "Choice D compares two beekeepers and picks the one with more hives. Only one beekeeper is described, and the choice isn't a pick.",
+     "eliminate": "D",
+     "why": "does not match"
+    },
+    {
+     "say": "Choice A matches every step in order: the belief, the challenging case, and the conclusion. The answer is A.",
+     "pick": "A"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Read the question first, and label each sentence with a two-word job as you read.",
+     "item": "Read the question; label the jobs"
+    },
+    {
+     "say": "Match purpose answers by the verb, and structure answers step by step, in order. One mismatch eliminates a choice.",
+     "item": "Verb for purpose; steps for structure"
+    },
+    {
+     "say": "In the next video, we work through a hard sentence function question and the common traps.",
+     "item": "Next: sentence function and traps"
+    }
+   ]
+  }
+ ]
 }

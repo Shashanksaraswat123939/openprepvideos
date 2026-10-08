@@ -1,57 +1,244 @@
 {
-  "id": "rw-ei-synthesis_v1",
-  "skill": "rw-ei-synthesis",
-  "part": 1,
-  "title": "Rhetorical Synthesis, Part 1: The Method and Two Questions",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "cards", "title": "Rhetorical synthesis", "beats": [
-      {"say": "Rhetorical synthesis questions show a list of research notes, and then state a goal. You pick the sentence that best uses the notes to reach that goal.", "card": {"text": "Notes, then a goal"}},
-      {"say": "The goal might be to emphasize something, to explain, to compare, or to introduce a topic to people who do not know it.", "card": {"text": "Emphasize, explain, compare, introduce"}},
-      {"say": "Here is the surprise. Every choice is accurate to the notes. Only one choice does what the goal asks.", "card": {"text": "All four choices are true", "sub": "Only one meets the goal"}}
-    ]},
-    {"type": "list", "title": "The method", "beats": [
-      {"say": "Step one. Read the goal in the question first, before the notes. The goal tells you which facts matter.", "item": "Read the goal first"},
-      {"say": "Step two. Turn the goal into a short checklist. For example, both items, plus their sources, plus a contrast.", "item": "Turn the goal into a checklist"},
-      {"say": "Step three. Check each choice against the checklist, and eliminate any choice that misses a part.", "item": "Eliminate what misses a part"},
-      {"say": "Step four. Look at the notes only if two choices both seem to fit.", "item": "Check the notes last"}
-    ]},
-    {"type": "table", "title": "Goals and what the answer needs", "columns": ["Goal word", "The sentence must"], "rows": [["emphasize size", "include the number or scale"], ["explain why", "include a reason"], ["compare or contrast", "mention both items"], ["similarity", "be true of both"], ["introduce", "name it, say what it is"]], "beats": [
-      {"say": "To emphasize a size or amount, the sentence must include the specific number or scale.", "reveal_row": 0},
-      {"say": "To explain why, the sentence must include a reason, such as because, or so that.", "reveal_row": 1},
-      {"say": "To compare or contrast, the sentence must mention both items, and how they relate.", "reveal_row": 2},
-      {"say": "To show a similarity, the sentence must state something that is true of both items.", "reveal_row": 3},
-      {"say": "To introduce a topic to people who do not know it, the sentence must name it, and say what it is.", "reveal_row": 4}
-    ]},
-    {"type": "cards", "title": "Easy question: emphasize", "beats": [
-      {"say": "Easy question. The goal is to emphasize the length of a bridge. Our checklist has one item: the sentence must talk about the length.", "card": {"text": "Goal: emphasize the length", "sub": "Checklist: length"}}
-    ]},
-    {"type": "passage", "title": "The student's notes", "text": "The Kessler Bridge crosses the Tamar River. It opened in 1932. It is 1,850 meters long. It was the longest bridge in the region when it opened.", "source": "student notes", "beats": [
-      {"say": "These are the notes. Only the last two facts talk about length. The others are true, but they are about the river and the date.", "underline": "1,850 meters long"},
-      {"say": "To emphasize length, the best sentence should give the number, and stress that it was the longest.", "highlight": "longest bridge in the region"}
-    ]},
-    {"type": "choices", "title": "Which sentence meets the goal?", "question": "Which choice most effectively uses relevant information from the notes to emphasize the length of the bridge?", "options": {"A": "The Kessler Bridge, which crosses the Tamar River, opened in 1932.", "B": "At 1,850 meters, the Kessler Bridge was the longest bridge in the region when it opened.", "C": "The Kessler Bridge opened in 1932 and crosses the Tamar River.", "D": "In 1932, a new bridge opened over the Tamar River."}, "beats": [
-      {"say": "Choice A is true, but it is about the river and the opening date. It never mentions length.", "eliminate": "A", "why": "no mention of length"},
-      {"say": "Choice C is also true, but again it gives the date and the river, and never mentions length.", "eliminate": "C", "why": "no mention of length"},
-      {"say": "Choice D gives only the date and the river. It does not even name the bridge, and it never mentions length.", "eliminate": "D", "why": "no mention of length"},
-      {"say": "Choice B gives the number and stresses it, by saying it was the longest in the region. The answer is B.", "pick": "B"}
-    ]},
-    {"type": "cards", "title": "Medium question: contrast", "beats": [
-      {"say": "Medium question. The goal is to contrast two things. The checklist has three parts: both spices, their sources, and a contrast between them.", "card": {"text": "Both items + a contrast", "sub": "Three checks"}}
-    ]},
-    {"type": "passage", "title": "The student's notes", "text": "Saffron and turmeric are both spices used to color food yellow. Saffron comes from the dried stigmas of a crocus flower. Turmeric comes from the dried root of a plant in the ginger family. Saffron is far more expensive because each flower yields only three stigmas, which are picked by hand.", "source": "student notes", "beats": [
-      {"say": "The goal is to contrast the sources of the two spices. So we need saffron's source, turmeric's source, and a word that shows the difference.", "underline": "dried stigmas of a crocus flower"},
-      {"say": "The facts we need are the second and the third. The first is a similarity, and the last is about price.", "highlight": "dried root of a plant"}
-    ]},
-    {"type": "choices", "title": "Which sentence meets the goal?", "question": "Which choice most effectively uses relevant information from the notes to contrast the sources of the two spices?", "options": {"A": "Saffron and turmeric are both used to give food a yellow color.", "B": "Saffron is expensive because its stigmas must be picked by hand.", "C": "While saffron comes from the dried stigmas of a crocus flower, turmeric comes from the dried root of a ginger-family plant.", "D": "Turmeric, a spice made from a dried root, is a member of the ginger family."}, "beats": [
-      {"say": "Choice A gives a similarity, not a contrast. It also says nothing about the sources.", "eliminate": "A", "why": "a similarity, not a contrast"},
-      {"say": "Choice B mentions only saffron, and it is about price, not about the source.", "eliminate": "B", "why": "one spice; about price"},
-      {"say": "Choice D mentions only turmeric. A contrast needs both items in the sentence.", "eliminate": "D", "why": "only one spice"},
-      {"say": "Choice C names both sources, and contrasts them with the word while. It passes all three checks. The answer is C.", "pick": "C"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Read the goal first, turn it into a checklist, and check each choice against it.", "item": "Goal, checklist, check each choice"},
-      {"say": "All choices are true, so eliminate by the goal. In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
-    ]}
-  ]
+ "id": "rw-ei-synthesis_v1",
+ "skill": "rw-ei-synthesis",
+ "part": 1,
+ "title": "Rhetorical Synthesis, Part 1: The Method and Two Questions",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Rhetorical synthesis",
+   "beats": [
+    {
+     "say": "Rhetorical synthesis questions show a list of research notes, and then state a goal. You pick the sentence that best uses the notes to reach that goal.",
+     "card": {
+      "text": "Notes, then a goal"
+     }
+    },
+    {
+     "say": "The goal might be to emphasize something, to explain, to compare, or to introduce a topic to people who don't know it.",
+     "card": {
+      "text": "Emphasize, explain, compare, introduce"
+     }
+    },
+    {
+     "say": "Here's the surprise. Every choice is accurate to the notes. Only one choice does what the goal asks.",
+     "card": {
+      "text": "All four choices are true",
+      "sub": "Only one meets the goal"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "The method",
+   "beats": [
+    {
+     "say": "Step one. Read the goal in the question first, before the notes. The goal tells you which facts matter.",
+     "item": "Read the goal first"
+    },
+    {
+     "say": "Step two. Turn the goal into a short checklist. For example, both items, plus their sources, plus a contrast.",
+     "item": "Turn the goal into a checklist"
+    },
+    {
+     "say": "Step three. Check each choice against the checklist, and eliminate any choice that misses a part.",
+     "item": "Eliminate what misses a part"
+    },
+    {
+     "say": "Step four. Look at the notes only if two choices both seem to fit.",
+     "item": "Check the notes last"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Goals and what the answer needs",
+   "columns": [
+    "Goal word",
+    "The sentence must"
+   ],
+   "rows": [
+    [
+     "emphasize size",
+     "include the number or scale"
+    ],
+    [
+     "explain why",
+     "include a reason"
+    ],
+    [
+     "compare or contrast",
+     "mention both items"
+    ],
+    [
+     "similarity",
+     "be true of both"
+    ],
+    [
+     "introduce",
+     "name it, say what it is"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "To emphasize a size or amount, the sentence must include the specific number or scale.",
+     "reveal_row": 0
+    },
+    {
+     "say": "To explain why, the sentence must include a reason, such as because, or so that.",
+     "reveal_row": 1
+    },
+    {
+     "say": "To compare or contrast, the sentence must mention both items, and how they relate.",
+     "reveal_row": 2
+    },
+    {
+     "say": "To show a similarity, the sentence must state something that's true of both items.",
+     "reveal_row": 3
+    },
+    {
+     "say": "To introduce a topic to people who don't know it, the sentence must name it, and say what it's.",
+     "reveal_row": 4
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy question: emphasize",
+   "beats": [
+    {
+     "say": "Easy question. The goal is to emphasize the length of a bridge. Our checklist has one item: the sentence must talk about the length.",
+     "card": {
+      "text": "Goal: emphasize the length",
+      "sub": "Checklist: length"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "The student's notes",
+   "text": "The Kessler Bridge crosses the Tamar River. It opened in 1932. It is 1,850 meters long. It was the longest bridge in the region when it opened.",
+   "source": "student notes",
+   "beats": [
+    {
+     "say": "These are the notes. Only the last two facts talk about length. The others are true, but they're about the river and the date.",
+     "underline": "1,850 meters long"
+    },
+    {
+     "say": "To emphasize length, the best sentence should give the number, and stress that it was the longest.",
+     "highlight": "longest bridge in the region"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which sentence meets the goal?",
+   "question": "Which choice most effectively uses relevant information from the notes to emphasize the length of the bridge?",
+   "options": {
+    "A": "The Kessler Bridge, which crosses the Tamar River, opened in 1932.",
+    "B": "At 1,850 meters, the Kessler Bridge was the longest bridge in the region when it opened.",
+    "C": "The Kessler Bridge opened in 1932 and crosses the Tamar River.",
+    "D": "In 1932, a new bridge opened over the Tamar River."
+   },
+   "beats": [
+    {
+     "say": "Choice A is true, but it's about the river and the opening date. It never mentions length.",
+     "eliminate": "A",
+     "why": "no mention of length"
+    },
+    {
+     "say": "Choice C is also true, but again it gives the date and the river, and never mentions length.",
+     "eliminate": "C",
+     "why": "no mention of length"
+    },
+    {
+     "say": "Choice D gives only the date and the river. It doesn't even name the bridge, and it never mentions length.",
+     "eliminate": "D",
+     "why": "no mention of length"
+    },
+    {
+     "say": "Choice B gives the number and stresses it, by saying it was the longest in the region. The answer is B.",
+     "pick": "B"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium question: contrast",
+   "beats": [
+    {
+     "say": "Medium question. The goal is to contrast two things. The checklist has three parts: both spices, their sources, and a contrast between them.",
+     "card": {
+      "text": "Both items + a contrast",
+      "sub": "Three checks"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "The student's notes",
+   "text": "Saffron and turmeric are both spices used to color food yellow. Saffron comes from the dried stigmas of a crocus flower. Turmeric comes from the dried root of a plant in the ginger family. Saffron is far more expensive because each flower yields only three stigmas, which are picked by hand.",
+   "source": "student notes",
+   "beats": [
+    {
+     "say": "The goal is to contrast the sources of the two spices. So we need saffron's source, turmeric's source, and a word that shows the difference.",
+     "underline": "dried stigmas of a crocus flower"
+    },
+    {
+     "say": "The facts we need are the second and the third. The first is a similarity, and the last is about price.",
+     "highlight": "dried root of a plant"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which sentence meets the goal?",
+   "question": "Which choice most effectively uses relevant information from the notes to contrast the sources of the two spices?",
+   "options": {
+    "A": "Saffron and turmeric are both used to give food a yellow color.",
+    "B": "Saffron is expensive because its stigmas must be picked by hand.",
+    "C": "While saffron comes from the dried stigmas of a crocus flower, turmeric comes from the dried root of a ginger-family plant.",
+    "D": "Turmeric, a spice made from a dried root, is a member of the ginger family."
+   },
+   "beats": [
+    {
+     "say": "Choice A gives a similarity, not a contrast. It also says nothing about the sources.",
+     "eliminate": "A",
+     "why": "a similarity, not a contrast"
+    },
+    {
+     "say": "Choice B mentions only saffron, and it's about price, not about the source.",
+     "eliminate": "B",
+     "why": "one spice; about price"
+    },
+    {
+     "say": "Choice D mentions only turmeric. A contrast needs both items in the sentence.",
+     "eliminate": "D",
+     "why": "only one spice"
+    },
+    {
+     "say": "Choice C names both sources, and contrasts them with the word while. It passes all three checks. The answer is C.",
+     "pick": "C"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Read the goal first, turn it into a checklist, and check each choice against it.",
+     "item": "Goal, checklist, check each choice"
+    },
+    {
+     "say": "All choices are true, so eliminate by the goal. In the next video, we work through a hard question and the common traps.",
+     "item": "Next: a hard question and traps"
+    }
+   ]
+  }
+ ]
 }

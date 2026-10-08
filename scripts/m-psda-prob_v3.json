@@ -1,62 +1,234 @@
 {
-  "id": "m-psda-prob_v3",
-  "skill": "m-psda-prob",
-  "part": 3,
-  "title": "Probability and Conditional Probability, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with probability, and then the fast way: name the denominator first, and use complements.", "card": {"text": "Five traps, then the fast way"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: the grand total", "beats": [
-      {"say": "Trap one. For under thirty, given that the customer shops online, students divide by the grand total of one hundred seventy.", "wrong": "frac(48,170)", "wrong_why": "That is online AND under 30"},
-      {"say": "The words given that shrink the group to the online customers. So the denominator is seventy-five.", "right": "frac(48,75)", "right_why": "Divide by the given group"}
-    ]},
-    {"type": "compare", "title": "Trap 2: swapping the condition", "beats": [
-      {"say": "Trap two. The probability of online given under thirty is different from the probability of under thirty given online. They share the same numerator, but not the same denominator.", "wrong": "P(online | under 30) = frac(48,75)", "wrong_why": "75 is the online total"},
-      {"say": "Given under thirty, the group is the Under thirty row, with a total of eighty. So the probability of online is forty-eight over eighty.", "right": "P(online | under 30) = frac(48,80)", "right_why": "Given under 30: the row total"}
-    ]},
-    {"type": "compare", "title": "Trap 3: forgetting to reduce the total", "beats": [
-      {"say": "Trap three. Without replacement, once a tile has been drawn, there are fewer tiles left. Students keep the same total for the second draw.", "wrong": "frac(5,12) × frac(4,12)", "wrong_why": "The total should drop to 11"},
-      {"say": "After one tile is removed, eleven tiles remain. So the second fraction is four over eleven, not four over twelve.", "right": "frac(5,12) × frac(4,11)", "right_why": "One fewer tile in total"}
-    ]},
-    {"type": "compare", "title": "Trap 4: adding for and then", "beats": [
-      {"say": "Trap four. For this and then that, with independent events, you multiply the probabilities. Students add them instead.", "wrong": "frac(1,2) + frac(1,6) = frac(2,3)", "wrong_why": "Both must happen: multiply"},
-      {"say": "The chance that both happen is smaller than either chance alone. One half times one sixth is one twelfth.", "right": "frac(1,2) × frac(1,6) = frac(1,12)", "right_why": "This AND that: multiply"}
-    ]},
-    {"type": "compare", "title": "Trap 5: at least one", "beats": [
-      {"say": "Trap five. Two spins each land on an even number with probability one third. For at least one even, students add the two probabilities, and double count the case where both spins are even.", "wrong": "frac(1,3) + frac(1,3) = frac(2,3)", "wrong_why": "Both-even was counted twice"},
-      {"say": "Use the complement. The chance of no even number on either spin is two thirds times two thirds. Subtracting from one gives five ninths.", "right": "1 − frac(2,3) × frac(2,3) = frac(5,9)", "right_why": "At least one: 1 − P(none)"}
-    ]},
-    {"type": "cards", "title": "The fast way", "beats": [
-      {"say": "Probability on the SAT is counting, so Desmos is only a calculator here. The fast way is to name the denominator before looking for the numerator.", "card": {"text": "Name the denominator first"}},
-      {"say": "Underline the group after the words given, of the, or selected from, and find that total first. Then count how many of that group fit the question.", "card": {"text": "Underline the given group"}},
-      {"say": "For percent-based questions, imagine a convenient total, such as one thousand people, and convert each percent to a count. Then read the answer as a fraction of counts.", "card": {"text": "Imagine 1,000 people"}}
-    ]},
-    {"type": "cards", "title": "Desmos as a calculator", "beats": [
-      {"say": "Desmos helps with messy arithmetic. Seventy percent of items come from machine A, with a four percent defect rate, and thirty percent from machine B, with a ten percent rate. Given a defective item, what is the probability it came from A?", "card": {"text": "frac(0.7·0.04,0.7·0.04 + 0.3·0.1)", "sub": "P(from A | defective)"}}
-    ]},
-    {"type": "desmos", "title": "A one-line calculation", "beats": [
-      {"say": "Open a fresh graph. We will type the whole fraction in one line, so nothing is rounded along the way.", "actions": ["hold: 2"]},
-      {"say": "Type the numerator in parentheses, zero point seven times zero point zero four, then a slash, and the denominator in parentheses, the same product plus zero point three times zero point one.", "actions": ["type: (0.7*0.04)/(0.7*0.04+0.3*0.1)"]},
-      {"say": "Desmos shows about zero point four eight three. So the probability that a defective item came from machine A is about forty-eight percent.", "actions": ["hold: 4"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. Two spins each land on an even number with probability one third. What is the probability of at least one even number? Pause the video, try it, and then watch the solution.", "card": {"text": "P(even) = frac(1,3) on each spin", "sub": "P(at least one even)?"}}
-    ]},
-    {"type": "steps", "title": "Practice: use the complement", "start": "1 − frac(2,3) × frac(2,3)", "beats": [
-      {"say": "The probability of no even number on one spin is two thirds. Both spins are independent, so the probability of no even on both spins is two thirds times two thirds."},
-      {"say": "Two thirds times two thirds is four ninths. So the probability of no even number on either spin is four ninths.", "op": "multiply", "result": "1 − frac(4,9)"},
-      {"say": "One is nine ninths, and nine ninths minus four ninths is five ninths. So the probability of at least one even number is five ninths.", "op": "subtract", "result": "frac(5,9)", "final": true}
-    ]},
-    {"type": "check", "title": "Check by listing the cases", "beats": [
-      {"say": "Check by counting the cases directly. Even then not even is one third times two thirds, not even then even is two thirds times one third, and even then even is one third times one third.", "lines": ["frac(2,9) + frac(2,9) + frac(1,9)", "= frac(5,9)"], "verdict": "Both methods give 5/9."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Name the denominator first, and do not swap the condition in a conditional probability.", "item": "Name the denominator; keep the condition"},
-      {"say": "Reduce the total without replacement, multiply for this and then that, and use the complement for at least one.", "item": "Reduce, multiply, use the complement"},
-      {"say": "Use Desmos as a calculator for messy arithmetic. In the next topic, we study inference and margin of error.", "item": "Desmos is a calculator here"}
-    ]}
-  ]
+ "id": "m-psda-prob_v3",
+ "skill": "m-psda-prob",
+ "part": 3,
+ "title": "Probability and Conditional Probability, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with probability, and then the fast way: name the denominator first, and use complements.",
+     "card": {
+      "text": "Five traps, then the fast way"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: the grand total",
+   "beats": [
+    {
+     "say": "Trap one. For under thirty, given that the customer shops online, students divide by the grand total of one hundred seventy.",
+     "wrong": "frac(48,170)",
+     "wrong_why": "That is online AND under 30"
+    },
+    {
+     "say": "The words given that shrink the group to the online customers. So the denominator is seventy-five.",
+     "right": "frac(48,75)",
+     "right_why": "Divide by the given group"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: swapping the condition",
+   "beats": [
+    {
+     "say": "Trap two. The probability of online given under thirty is different from the probability of under thirty given online. They share the same numerator, but not the same denominator.",
+     "wrong": "P(online | under 30) = frac(48,75)",
+     "wrong_why": "75 is the online total"
+    },
+    {
+     "say": "Given under thirty, the group is the Under thirty row, with a total of eighty. So the probability of online is forty-eight over eighty.",
+     "right": "P(online | under 30) = frac(48,80)",
+     "right_why": "Given under 30: the row total"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: forgetting to reduce the total",
+   "beats": [
+    {
+     "say": "Trap three. Without replacement, once a tile has been drawn, there are fewer tiles left. Students keep the same total for the second draw.",
+     "wrong": "frac(5,12) × frac(4,12)",
+     "wrong_why": "The total should drop to 11"
+    },
+    {
+     "say": "After one tile is removed, eleven tiles remain. So the second fraction is four over eleven, not four over twelve.",
+     "right": "frac(5,12) × frac(4,11)",
+     "right_why": "One fewer tile in total"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: adding for and then",
+   "beats": [
+    {
+     "say": "Trap four. For this and then that, with independent events, you multiply the probabilities. Students add them instead.",
+     "wrong": "frac(1,2) + frac(1,6) = frac(2,3)",
+     "wrong_why": "Both must happen: multiply"
+    },
+    {
+     "say": "The chance that both happen is smaller than either chance alone. One half times one sixth is one twelfth.",
+     "right": "frac(1,2) × frac(1,6) = frac(1,12)",
+     "right_why": "This AND that: multiply"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: at least one",
+   "beats": [
+    {
+     "say": "Trap five. Two spins each land on an even number with probability one third. For at least one even, students add the two probabilities, and double count the case where both spins are even.",
+     "wrong": "frac(1,3) + frac(1,3) = frac(2,3)",
+     "wrong_why": "Both-even was counted twice"
+    },
+    {
+     "say": "Use the complement. The chance of no even number on either spin is two thirds times two thirds. Subtracting from one gives five ninths.",
+     "right": "1 − frac(2,3) × frac(2,3) = frac(5,9)",
+     "right_why": "At least one: 1 − P(none)"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way",
+   "beats": [
+    {
+     "say": "Probability on the SAT is counting, so Desmos is only a calculator here. The fast way is to name the denominator before looking for the numerator.",
+     "card": {
+      "text": "Name the denominator first"
+     }
+    },
+    {
+     "say": "Underline the group after the words given, of the, or selected from, and find that total first. Then count how many of that group fit the question.",
+     "card": {
+      "text": "Underline the given group"
+     }
+    },
+    {
+     "say": "For percent-based questions, imagine a convenient total, such as one thousand people, and convert each percent to a count. Then read the answer as a fraction of counts.",
+     "card": {
+      "text": "Imagine 1,000 people"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Desmos as a calculator",
+   "beats": [
+    {
+     "say": "Desmos helps with messy arithmetic. Seventy percent of items come from machine A, with a four percent defect rate, and thirty percent from machine B, with a ten percent rate. Given a defective item, what's the probability it came from A?",
+     "card": {
+      "text": "frac(0.7·0.04,0.7·0.04 + 0.3·0.1)",
+      "sub": "P(from A | defective)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "A one-line calculation",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We'll type the whole fraction in one line, so nothing is rounded along the way.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type the numerator in parentheses, zero point seven times zero point zero four, then a slash, and the denominator in parentheses, the same product plus zero point three times zero point one.",
+     "actions": [
+      "type: (0.7*0.04)/(0.7*0.04+0.3*0.1)"
+     ]
+    },
+    {
+     "say": "Desmos shows about zero point four eight three. So the probability that a defective item came from machine A is about forty-eight percent.",
+     "actions": [
+      "hold: 4"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. Two spins each land on an even number with probability one third. What's the probability of at least one even number? Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "P(even) = frac(1,3) on each spin",
+      "sub": "P(at least one even)?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: use the complement",
+   "start": "1 − frac(2,3) × frac(2,3)",
+   "beats": [
+    {
+     "say": "The probability of no even number on one spin is two thirds. Both spins are independent, so the probability of no even on both spins is two thirds times two thirds."
+    },
+    {
+     "say": "Two thirds times two thirds is four ninths. So the probability of no even number on either spin is four ninths.",
+     "op": "multiply",
+     "result": "1 − frac(4,9)"
+    },
+    {
+     "say": "One is nine ninths, and nine ninths minus four ninths is five ninths. So the probability of at least one even number is five ninths.",
+     "op": "subtract",
+     "result": "frac(5,9)",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check by listing the cases",
+   "beats": [
+    {
+     "say": "Check by counting the cases directly. Even then not even is one third times two thirds, not even then even is two thirds times one third, and even then even is one third times one third.",
+     "lines": [
+      "frac(2,9) + frac(2,9) + frac(1,9)",
+      "= frac(5,9)"
+     ],
+     "verdict": "Both methods give 5/9."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Name the denominator first, and don't swap the condition in a conditional probability.",
+     "item": "Name the denominator; keep the condition"
+    },
+    {
+     "say": "Reduce the total without replacement, multiply for this and then that, and use the complement for at least one.",
+     "item": "Reduce, multiply, use the complement"
+    },
+    {
+     "say": "Use Desmos as a calculator for messy arithmetic. In the next topic, we study inference and margin of error.",
+     "item": "Desmos is a calculator here"
+    }
+   ]
+  }
+ ]
 }

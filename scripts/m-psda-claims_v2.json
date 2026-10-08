@@ -1,52 +1,191 @@
 {
-  "id": "m-psda-claims_v2",
-  "skill": "m-psda-claims",
-  "part": 2,
-  "title": "Evaluating Statistical Claims, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we learned that random selection allows generalizing to a population, and random assignment allows claiming cause and effect.", "card": {"text": "Selection: who. Assignment: cause."}},
-      {"say": "In this video, we judge a study with no random assignment, and then a full experiment with volunteers.", "card": {"text": "Today: observational, then experiment"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. A survey of randomly selected adults in a city found that people who garden weekly reported lower stress. A newspaper claims that gardening reduces stress. Is the claim supported?", "card": {"text": "Random adults surveyed", "sub": "Gardeners report less stress. Does gardening reduce stress?"}}
-    ]},
-    {"type": "cards", "title": "Medium: apply the checklist", "beats": [
-      {"say": "Question one. Were participants randomly selected? Yes, so the association can be generalized to adults in that city.", "card": {"text": "Random selection: yes", "sub": "Applies to adults in the city"}},
-      {"say": "Question two. Were treatments randomly assigned? No. People chose whether to garden. So the study is observational, and can only show an association.", "card": {"text": "Random assignment: no", "sub": "Association only"}}
-    ]},
-    {"type": "cards", "title": "Medium: the answer", "beats": [
-      {"say": "So the study supports the claim that gardening is associated with lower stress among adults in the city. It does not support the claim that gardening causes lower stress, because gardeners may differ in other ways.", "card": {"text": "Associated with, not caused by"}}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. A company recruited eighty volunteer employees. Half were randomly assigned standing desks, and half kept usual desks. After eight weeks, twenty-six of forty standing-desk users, and eighteen of forty others, reported less back pain. What do the results support?", "card": {"text": "80 volunteers; random assignment", "sub": "26 of 40 standing desks vs 18 of 40 usual desks"}}
-    ]},
-    {"type": "steps", "title": "Hard: the standing-desk rate", "start": "frac(26,40) × 100", "beats": [
-      {"say": "First compute each group's rate. For the standing-desk group, divide twenty-six by forty, and multiply by one hundred to get a percent."},
-      {"say": "Twenty-six divided by forty is zero point six five, which is the rate written as a decimal.", "op": "divide", "result": "0.65 × 100"},
-      {"say": "Zero point six five times one hundred is sixty-five. So sixty-five percent of the standing-desk users reported less back pain.", "op": "× 100", "result": "65", "final": true}
-    ]},
-    {"type": "steps", "title": "Hard: the usual-desk rate", "start": "frac(18,40) × 100", "beats": [
-      {"say": "Now the usual-desk group. Divide eighteen by forty, and multiply by one hundred to get a percent."},
-      {"say": "Eighteen divided by forty is zero point four five, which is the rate written as a decimal.", "op": "divide", "result": "0.45 × 100"},
-      {"say": "Zero point four five times one hundred is forty-five. So forty-five percent of the other group reported less back pain.", "op": "× 100", "result": "45", "final": true}
-    ]},
-    {"type": "steps", "title": "Hard: the difference", "start": "65 − 45", "beats": [
-      {"say": "To compare the two percents, subtract them. The result is reported in percentage points, because we are subtracting percents."},
-      {"say": "Sixty-five minus forty-five is twenty. So the standing-desk group had a rate that was twenty percentage points higher.", "op": "subtract", "result": "20", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard: what is supported?", "beats": [
-      {"say": "Treatments were randomly assigned, so it is reasonable to conclude that standing desks caused the reduction in back pain, for these participants.", "card": {"text": "Random assignment: cause, for these people"}},
-      {"say": "But the participants were volunteers, not a random sample. So the result cannot be generalized to all employees, or all office workers.", "card": {"text": "Volunteers: do not generalize"}}
-    ]},
-    {"type": "cards", "title": "Hard: the best answer", "beats": [
-      {"say": "The best choice says that standing desks likely reduce back pain for people similar to those in the study. A choice claiming the effect for all office workers overreaches, and a choice that only says association is too weak.", "card": {"text": "Likely reduces back pain for similar people"}}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. An observational study can show only an association, even when participants were randomly selected.", "item": "Observational: association only"},
-      {"say": "A randomized experiment with volunteers supports cause and effect for the participants, but cannot be generalized to a wider population.", "item": "Volunteers: cause here, not everywhere"},
-      {"say": "To compare two percents, subtract them, and report percentage points. In the next video, we look at common traps and the fast way.", "item": "Subtract percents: percentage points"}
-    ]}
-  ]
+ "id": "m-psda-claims_v2",
+ "skill": "m-psda-claims",
+ "part": 2,
+ "title": "Evaluating Statistical Claims, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we learned that random selection allows generalizing to a population, and random assignment allows claiming cause and effect.",
+     "card": {
+      "text": "Selection: who. Assignment: cause."
+     }
+    },
+    {
+     "say": "In this video, we judge a study with no random assignment, and then a full experiment with volunteers.",
+     "card": {
+      "text": "Today: observational, then experiment"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. A survey of randomly selected adults in a city found that people who garden weekly reported lower stress. A newspaper claims that gardening reduces stress. Is the claim supported?",
+     "card": {
+      "text": "Random adults surveyed",
+      "sub": "Gardeners report less stress. Does gardening reduce stress?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium: apply the checklist",
+   "beats": [
+    {
+     "say": "Question one. Were participants randomly selected? Yes, so the association can be generalized to adults in that city.",
+     "card": {
+      "text": "Random selection: yes",
+      "sub": "Applies to adults in the city"
+     }
+    },
+    {
+     "say": "Question two. Were treatments randomly assigned? No. People chose whether to garden. So the study is observational, and can only show an association.",
+     "card": {
+      "text": "Random assignment: no",
+      "sub": "Association only"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium: the answer",
+   "beats": [
+    {
+     "say": "So the study supports the claim that gardening is associated with lower stress among adults in the city. It doesn't support the claim that gardening causes lower stress, because gardeners may differ in other ways.",
+     "card": {
+      "text": "Associated with, not caused by"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. A company recruited eighty volunteer employees. Half were randomly assigned standing desks, and half kept usual desks. After eight weeks, twenty-six of forty standing-desk users, and eighteen of forty others, reported less back pain. What do the results support?",
+     "card": {
+      "text": "80 volunteers; random assignment",
+      "sub": "26 of 40 standing desks vs 18 of 40 usual desks"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: the standing-desk rate",
+   "start": "frac(26,40) × 100",
+   "beats": [
+    {
+     "say": "First compute each group's rate. For the standing-desk group, divide twenty-six by forty, and multiply by one hundred to get a percent."
+    },
+    {
+     "say": "Twenty-six divided by forty is zero point six five, which is the rate written as a decimal.",
+     "op": "divide",
+     "result": "0.65 × 100"
+    },
+    {
+     "say": "Zero point six five times one hundred is sixty-five. So sixty-five percent of the standing-desk users reported less back pain.",
+     "op": "× 100",
+     "result": "65",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: the usual-desk rate",
+   "start": "frac(18,40) × 100",
+   "beats": [
+    {
+     "say": "Now the usual-desk group. Divide eighteen by forty, and multiply by one hundred to get a percent."
+    },
+    {
+     "say": "Eighteen divided by forty is zero point four five, which is the rate written as a decimal.",
+     "op": "divide",
+     "result": "0.45 × 100"
+    },
+    {
+     "say": "Zero point four five times one hundred is forty-five. So forty-five percent of the other group reported less back pain.",
+     "op": "× 100",
+     "result": "45",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: the difference",
+   "start": "65 − 45",
+   "beats": [
+    {
+     "say": "To compare the two percents, subtract them. The result is reported in percentage points, because we're subtracting percents."
+    },
+    {
+     "say": "Sixty-five minus forty-five is twenty. So the standing-desk group had a rate that was twenty percentage points higher.",
+     "op": "subtract",
+     "result": "20",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard: what is supported?",
+   "beats": [
+    {
+     "say": "Treatments were randomly assigned, so it's reasonable to conclude that standing desks caused the reduction in back pain, for these participants.",
+     "card": {
+      "text": "Random assignment: cause, for these people"
+     }
+    },
+    {
+     "say": "But the participants were volunteers, not a random sample. So the result can't be generalized to all employees, or all office workers.",
+     "card": {
+      "text": "Volunteers: do not generalize"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard: the best answer",
+   "beats": [
+    {
+     "say": "The best choice says that standing desks likely reduce back pain for people similar to those in the study. A choice claiming the effect for all office workers overreaches, and a choice that only says association is too weak.",
+     "card": {
+      "text": "Likely reduces back pain for similar people"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. An observational study can show only an association, even when participants were randomly selected.",
+     "item": "Observational: association only"
+    },
+    {
+     "say": "A randomized experiment with volunteers supports cause and effect for the participants, but can't be generalized to a wider population.",
+     "item": "Volunteers: cause here, not everywhere"
+    },
+    {
+     "say": "To compare two percents, subtract them, and report percentage points. In the next video, we look at common traps and the fast way.",
+     "item": "Subtract percents: percentage points"
+    }
+   ]
+  }
+ ]
 }

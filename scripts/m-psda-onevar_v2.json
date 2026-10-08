@@ -1,49 +1,206 @@
 {
-  "id": "m-psda-onevar_v2",
-  "skill": "m-psda-onevar",
-  "part": 2,
-  "title": "One-Variable Data, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we found the mean and the median of a short list, and saw that an outlier pulls the mean but barely moves the median.", "card": {"text": "Mean: total ÷ count"}},
-      {"say": "In this video, we combine the means of two groups, and then find the mean and median from a frequency table.", "card": {"text": "Today: combined mean, frequency table"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. A class has twelve students who averaged seventy on a test, and another class has eighteen students who averaged eighty. What is the mean of all thirty students?", "card": {"text": "12 students: mean 70", "sub": "18 students: mean 80. Combined mean?"}},
-      {"say": "The tempting answer is seventy-five, the midpoint. But the groups have different sizes, so we must use totals instead. Total equals mean times count.", "card": {"text": "Use totals, not the midpoint"}}
-    ]},
-    {"type": "steps", "title": "Medium: combined mean", "start": "frac(12(70) + 18(80),12 + 18)", "beats": [
-      {"say": "The total score of the first group is twelve times seventy. The total score of the second group is eighteen times eighty. We add these totals, and divide by the total number of students."},
-      {"say": "Twelve times seventy is eight hundred forty, and eighteen times eighty is fourteen hundred forty. The count is thirty.", "op": "find each total", "result": "frac(840 + 1440,30)"},
-      {"say": "Eight hundred forty plus fourteen hundred forty is twenty-two hundred eighty, the total score of all thirty students.", "op": "add the totals", "result": "frac(2280,30)"},
-      {"say": "Twenty-two hundred eighty divided by thirty is seventy-six. The combined mean is seventy-six, which is closer to eighty because the second group is larger.", "op": "divide", "result": "76", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. The table shows how many books each of twenty students read over the summer. Find the mean and the median.", "card": {"text": "Books read by 20 students", "sub": "Find the mean and the median"}}
-    ]},
-    {"type": "table", "title": "Hard: the frequency table", "columns": ["Books read", "Number of students"], "rows": [["0", "4"], ["1", "7"], ["2", "5"], ["3", "3"], ["4", "1"]], "beats": [
-      {"say": "Each row is a compressed list. Four students read zero books, seven students read one book, and so on.", "reveal_row": 0},
-      {"say": "Seven students read one book, and five students read two books, so these are the most common values.", "reveal_row": 2},
-      {"say": "Three students read three books, and one student read four books. The frequencies add up to twenty, which is the number of students.", "reveal_row": 4}
-    ]},
-    {"type": "steps", "title": "Hard: the mean", "start": "frac(0(4)+1(7)+2(5)+3(3)+4(1),20)", "beats": [
-      {"say": "Each value must be weighted by its frequency. We multiply each number of books by the number of students, add those products, and divide by twenty."},
-      {"say": "Zero times four is zero. One times seven is seven. Two times five is ten. Three times three is nine. Four times one is four.", "op": "multiply value by frequency", "result": "frac(0 + 7 + 10 + 9 + 4,20)"},
-      {"say": "The total number of books read by all twenty students is thirty, so we now have the numerator.", "op": "add", "result": "frac(30,20)"},
-      {"say": "Thirty divided by twenty is one point five. So the mean is one point five books per student.", "op": "divide", "result": "1.5", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard: the median", "beats": [
-      {"say": "For the median, there are twenty values, so the median is the average of the tenth and eleventh values in sorted order.", "card": {"text": "Average the 10th and 11th values"}},
-      {"say": "The first four values are zero. Values five through eleven are all one, because seven students read one book. So both the tenth and eleventh values are one.", "card": {"text": "10th = 1 and 11th = 1", "sub": "The median is 1"}}
-    ]},
-    {"type": "check", "title": "Check the table", "beats": [
-      {"say": "Check that the frequencies add up to twenty. Four plus seven plus five plus three plus one is twenty. Also, the mean of one point five is above the median of one, which fits the long tail toward three and four books.", "lines": ["4 + 7 + 5 + 3 + 1 = 20", "mean 1.5 is above median 1"], "verdict": "Mean 1.5 books, median 1 book."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. To combine groups, add the group totals and divide by the total count. Never average the two means.", "item": "Combine totals, not means"},
-      {"say": "For a frequency table, multiply each value by its frequency, add, and divide by the total frequency.", "item": "Weight each value by its frequency"},
-      {"say": "For the median, find the middle position, and count through the frequencies. In the next video, we look at common traps and the fast way with Desmos.", "item": "Median: count positions"}
-    ]}
-  ]
+ "id": "m-psda-onevar_v2",
+ "skill": "m-psda-onevar",
+ "part": 2,
+ "title": "One-Variable Data, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we found the mean and the median of a short list, and saw that an outlier pulls the mean but barely moves the median.",
+     "card": {
+      "text": "Mean: total ÷ count"
+     }
+    },
+    {
+     "say": "In this video, we combine the means of two groups, and then find the mean and median from a frequency table.",
+     "card": {
+      "text": "Today: combined mean, frequency table"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. A class has twelve students who averaged seventy on a test, and another class has eighteen students who averaged eighty. What's the mean of all thirty students?",
+     "card": {
+      "text": "12 students: mean 70",
+      "sub": "18 students: mean 80. Combined mean?"
+     }
+    },
+    {
+     "say": "The tempting answer is seventy-five, the midpoint. But the groups have different sizes, so we must use totals instead. Total equals mean times count.",
+     "card": {
+      "text": "Use totals, not the midpoint"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: combined mean",
+   "start": "frac(12(70) + 18(80),12 + 18)",
+   "beats": [
+    {
+     "say": "The total score of the first group is twelve times seventy. The total score of the second group is eighteen times eighty. We add these totals, and divide by the total number of students."
+    },
+    {
+     "say": "Twelve times seventy is eight hundred forty, and eighteen times eighty is fourteen hundred forty. The count is thirty.",
+     "op": "find each total",
+     "result": "frac(840 + 1440,30)"
+    },
+    {
+     "say": "Eight hundred forty plus fourteen hundred forty is twenty-two hundred eighty, the total score of all thirty students.",
+     "op": "add the totals",
+     "result": "frac(2280,30)"
+    },
+    {
+     "say": "Twenty-two hundred eighty divided by thirty is seventy-six. The combined mean is seventy-six, which is closer to eighty because the second group is larger.",
+     "op": "divide",
+     "result": "76",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. The table shows how many books each of twenty students read over the summer. Find the mean and the median.",
+     "card": {
+      "text": "Books read by 20 students",
+      "sub": "Find the mean and the median"
+     }
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Hard: the frequency table",
+   "columns": [
+    "Books read",
+    "Number of students"
+   ],
+   "rows": [
+    [
+     "0",
+     "4"
+    ],
+    [
+     "1",
+     "7"
+    ],
+    [
+     "2",
+     "5"
+    ],
+    [
+     "3",
+     "3"
+    ],
+    [
+     "4",
+     "1"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Each row is a compressed list. Four students read zero books, seven students read one book, and so on.",
+     "reveal_row": 0
+    },
+    {
+     "say": "Seven students read one book, and five students read two books, so these are the most common values.",
+     "reveal_row": 2
+    },
+    {
+     "say": "Three students read three books, and one student read four books. The frequencies add up to twenty, which is the number of students.",
+     "reveal_row": 4
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: the mean",
+   "start": "frac(0(4)+1(7)+2(5)+3(3)+4(1),20)",
+   "beats": [
+    {
+     "say": "Each value must be weighted by its frequency. We multiply each number of books by the number of students, add those products, and divide by twenty."
+    },
+    {
+     "say": "Zero times four is zero. One times seven is seven. Two times five is ten. Three times three is nine. Four times one is four.",
+     "op": "multiply value by frequency",
+     "result": "frac(0 + 7 + 10 + 9 + 4,20)"
+    },
+    {
+     "say": "The total number of books read by all twenty students is thirty, so we now have the numerator.",
+     "op": "add",
+     "result": "frac(30,20)"
+    },
+    {
+     "say": "Thirty divided by twenty is one point five. So the mean is one point five books per student.",
+     "op": "divide",
+     "result": "1.5",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard: the median",
+   "beats": [
+    {
+     "say": "For the median, there are twenty values, so the median is the average of the tenth and eleventh values in sorted order.",
+     "card": {
+      "text": "Average the 10th and 11th values"
+     }
+    },
+    {
+     "say": "The first four values are zero. Values five through eleven are all one, because seven students read one book. So both the tenth and eleventh values are one.",
+     "card": {
+      "text": "10th = 1 and 11th = 1",
+      "sub": "The median is 1"
+     }
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check the table",
+   "beats": [
+    {
+     "say": "Check that the frequencies add up to twenty. Four plus seven plus five plus three plus one is twenty. Also, the mean of one point five is above the median of one, which fits the long tail toward three and four books.",
+     "lines": [
+      "4 + 7 + 5 + 3 + 1 = 20",
+      "mean 1.5 is above median 1"
+     ],
+     "verdict": "Mean 1.5 books, median 1 book."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. To combine groups, add the group totals and divide by the total count. Never average the two means.",
+     "item": "Combine totals, not means"
+    },
+    {
+     "say": "For a frequency table, multiply each value by its frequency, add, and divide by the total frequency.",
+     "item": "Weight each value by its frequency"
+    },
+    {
+     "say": "For the median, find the middle position, and count through the frequencies. In the next video, we look at common traps and the fast way with Desmos.",
+     "item": "Median: count positions"
+    }
+   ]
+  }
+ ]
 }

@@ -1,70 +1,272 @@
 {
-  "id": "m-psda-percent_v3",
-  "skill": "m-psda-percent",
-  "part": 3,
-  "title": "Percentages, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with percentages, and then use Desmos to find an unknown original value and to solve a mixture problem.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: adding percents", "beats": [
-      {"say": "Trap one. A sixty percent markup followed by a twenty-five percent discount is not a thirty-five percent increase. Students subtract the percents, but the changes use different bases.", "wrong": "60% up, 25% down: × 1.35", "wrong_why": "Percents cannot be subtracted"},
-      {"say": "Multiply the multipliers. One point six times zero point seven five is one point two, a twenty percent net increase.", "right": "1.60 × 0.75 = 1.20", "right_why": "Successive changes multiply"}
-    ]},
-    {"type": "compare", "title": "Trap 2: undoing a change", "beats": [
-      {"say": "Trap two. A price is sixty-eight dollars after a fifteen percent discount. Students add fifteen percent of sixty-eight, but the discount was taken from the original price.", "wrong": "68 + 0.15(68) = 78.20", "wrong_why": "15% of the wrong base"},
-      {"say": "To undo a multiplier of zero point eight five, divide by it. Sixty-eight divided by zero point eight five is eighty.", "right": "68 ÷ 0.85 = 80", "right_why": "Divide by the multiplier"}
-    ]},
-    {"type": "compare", "title": "Trap 3: the wrong base", "beats": [
-      {"say": "Trap three. From eighty dollars to one hundred dollars, students divide the change by the new value, one hundred, and get twenty percent.", "wrong": "frac(100 − 80,100) = 20%", "wrong_why": "The new value is not the base"},
-      {"say": "The base is always the original value, eighty. Twenty divided by eighty is zero point two five, which is twenty-five percent.", "right": "frac(100 − 80,80) = 25%", "right_why": "Divide by the original"}
-    ]},
-    {"type": "compare", "title": "Trap 4: the complement", "beats": [
-      {"say": "Trap four. If eighteen of forty-eight students are in a club, thirty-seven point five percent are in it, and sixty-two point five percent are not. Reading carelessly gives the wrong group.", "wrong": "in the club: 62.5%", "wrong_why": "That is the complement"},
-      {"say": "Read the question to see which group it asks for. Eighteen over forty-eight is thirty-seven point five percent in the club.", "right": "in the club: 37.5%", "right_why": "18 ÷ 48 = 0.375"}
-    ]},
-    {"type": "compare", "title": "Trap 5: percentage points", "beats": [
-      {"say": "Trap five. Going from forty percent to fifty percent is a change of ten percentage points, but students call it a ten percent increase.", "wrong": "40% to 50%: a 10% increase", "wrong_why": "Points are not percent change"},
-      {"say": "As a relative change, it is ten divided by forty, which is a twenty-five percent increase. The change in the percent itself is ten percentage points.", "right": "10 points, or 25% relative", "right_why": "Divide by the original 40%"}
-    ]},
-    {"type": "cards", "title": "The fast way: Desmos", "beats": [
-      {"say": "Multipliers are already the fast way, but Desmos helps when the unknown is buried. For the jacket problem, graph the sale price as a function of the cost, and a line at fifty-four.", "card": {"text": "y = 1.6 × 0.75x  and  y = 54", "sub": "Find the wholesale cost x"}}
-    ]},
-    {"type": "desmos", "title": "Unknown original value", "beats": [
-      {"say": "We let x be the wholesale cost. After the markup and the discount, the sale price is one point six times zero point seven five times x.", "actions": ["hold: 2"]},
-      {"say": "Type y equals one point six times zero point seven five x. This is the sale price for any wholesale cost x.", "actions": ["type: y=1.6*0.75x"]},
-      {"say": "Now type y equals fifty-four. This horizontal line is the actual sale price that the store charged for the jacket.", "actions": ["type: y=54"]},
-      {"say": "Click the crossing point. It is at forty-five comma fifty-four. So the wholesale cost is forty-five dollars, matching our answer.", "actions": ["bounds: left=-10 right=80 bottom=-10 top=100", "click: 45,54"]}
-    ]},
-    {"type": "cards", "title": "A mixture problem", "beats": [
-      {"say": "Desmos also handles mixtures. How much water turns five hundred grams of a twenty percent salt solution into a sixteen percent solution? The salt stays at one hundred grams.", "card": {"text": "frac(100,500 + x) = 0.16", "sub": "Find the water added, x"}}
-    ]},
-    {"type": "desmos", "title": "Mixture with two curves", "beats": [
-      {"say": "The salt is fixed at one hundred grams, while the total mass grows as we add x grams of water. So we graph the salt fraction as a curve.", "actions": ["hold: 2"]},
-      {"say": "Type y equals one hundred over five hundred plus x. This is the fraction of salt after adding x grams of water.", "actions": ["type: y=100/500+x"]},
-      {"say": "Now type y equals zero point one six, the target salt fraction.", "actions": ["type: y=0.16"]},
-      {"say": "Click the crossing point. It is at one hundred twenty-five comma zero point one six. So we need to add one hundred twenty-five grams of water.", "actions": ["bounds: left=-100 right=400 bottom=-0.1 top=0.5", "click: 125,0.16"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. A quantity goes up thirty percent, then down ten percent, and ends at two hundred thirty-four. What was the starting value? Pause the video, try it, and then watch the solution.", "card": {"text": "Up 30%, down 10%, ends at 234", "sub": "Pause and try it first"}}
-    ]},
-    {"type": "steps", "title": "Practice: the multiplier", "start": "1.3 × 0.9", "beats": [
-      {"say": "Combine the two changes into one multiplier. An increase of thirty percent is one point three, and a decrease of ten percent is zero point nine."},
-      {"say": "One point three times zero point nine is one point one seven. So the quantity ends at one hundred seventeen percent of its start.", "op": "multiply", "result": "1.17", "final": true}
-    ]},
-    {"type": "steps", "title": "Practice: work backward", "start": "234 ÷ 1.17", "beats": [
-      {"say": "The final value of two hundred thirty-four is one point one seven times the starting value. Divide to undo it."},
-      {"say": "Two hundred thirty-four divided by one point one seven is two hundred. So the starting value was two hundred.", "op": "divide", "result": "200", "final": true}
-    ]},
-    {"type": "check", "title": "Check going forward", "beats": [
-      {"say": "Check going forward. Two hundred times one point three is two hundred sixty. Then two hundred sixty times zero point nine is two hundred thirty-four, which matches.", "lines": ["200 × 1.3 = 260", "260 × 0.9 = 234"], "verdict": "The starting value was 200."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Multiply multipliers, divide to undo, and always use the original value as the base for percent change.", "item": "Multiply, divide to undo, original base"},
-      {"say": "Read which group the question wants, and tell percentage points apart from percent change.", "item": "Which group; points versus percent"},
-      {"say": "Use Desmos for buried unknowns and mixtures. In the next topic, we study one-variable data.", "item": "Desmos for buried unknowns"}
-    ]}
-  ]
+ "id": "m-psda-percent_v3",
+ "skill": "m-psda-percent",
+ "part": 3,
+ "title": "Percentages, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with percentages, and then use Desmos to find an unknown original value and to solve a mixture problem.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: adding percents",
+   "beats": [
+    {
+     "say": "Trap one. A sixty percent markup followed by a twenty-five percent discount isn't a thirty-five percent increase. Students subtract the percents, but the changes use different bases.",
+     "wrong": "60% up, 25% down: × 1.35",
+     "wrong_why": "Percents cannot be subtracted"
+    },
+    {
+     "say": "Multiply the multipliers. One point six times zero point seven five is one point two, a twenty percent net increase.",
+     "right": "1.60 × 0.75 = 1.20",
+     "right_why": "Successive changes multiply"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: undoing a change",
+   "beats": [
+    {
+     "say": "Trap two. A price is sixty-eight dollars after a fifteen percent discount. Students add fifteen percent of sixty-eight, but the discount was taken from the original price.",
+     "wrong": "68 + 0.15(68) = 78.20",
+     "wrong_why": "15% of the wrong base"
+    },
+    {
+     "say": "To undo a multiplier of zero point eight five, divide by it. Sixty-eight divided by zero point eight five is eighty.",
+     "right": "68 ÷ 0.85 = 80",
+     "right_why": "Divide by the multiplier"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: the wrong base",
+   "beats": [
+    {
+     "say": "Trap three. From eighty dollars to one hundred dollars, students divide the change by the new value, one hundred, and get twenty percent.",
+     "wrong": "frac(100 − 80,100) = 20%",
+     "wrong_why": "The new value is not the base"
+    },
+    {
+     "say": "The base is always the original value, eighty. Twenty divided by eighty is zero point two five, which is twenty-five percent.",
+     "right": "frac(100 − 80,80) = 25%",
+     "right_why": "Divide by the original"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: the complement",
+   "beats": [
+    {
+     "say": "Trap four. If eighteen of forty-eight students are in a club, thirty-seven point five percent are in it, and sixty-two point five percent aren't. Reading carelessly gives the wrong group.",
+     "wrong": "in the club: 62.5%",
+     "wrong_why": "That is the complement"
+    },
+    {
+     "say": "Read the question to see which group it asks for. Eighteen over forty-eight is thirty-seven point five percent in the club.",
+     "right": "in the club: 37.5%",
+     "right_why": "18 ÷ 48 = 0.375"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: percentage points",
+   "beats": [
+    {
+     "say": "Trap five. Going from forty percent to fifty percent is a change of ten percentage points, but students call it a ten percent increase.",
+     "wrong": "40% to 50%: a 10% increase",
+     "wrong_why": "Points are not percent change"
+    },
+    {
+     "say": "As a relative change, it's ten divided by forty, which is a twenty-five percent increase. The change in the percent itself is ten percentage points.",
+     "right": "10 points, or 25% relative",
+     "right_why": "Divide by the original 40%"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: Desmos",
+   "beats": [
+    {
+     "say": "Multipliers are already the fast way, but Desmos helps when the unknown is buried. For the jacket problem, graph the sale price as a function of the cost, and a line at fifty-four.",
+     "card": {
+      "text": "y = 1.6 × 0.75x  and  y = 54",
+      "sub": "Find the wholesale cost x"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Unknown original value",
+   "beats": [
+    {
+     "say": "We let x be the wholesale cost. After the markup and the discount, the sale price is one point six times zero point seven five times x.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals one point six times zero point seven five x. This is the sale price for any wholesale cost x.",
+     "actions": [
+      "type: y=1.6*0.75x"
+     ]
+    },
+    {
+     "say": "Now type y equals fifty-four. This horizontal line is the actual sale price that the store charged for the jacket.",
+     "actions": [
+      "type: y=54"
+     ]
+    },
+    {
+     "say": "Click the crossing point. It's at forty-five comma fifty-four. So the wholesale cost is forty-five dollars, matching our answer.",
+     "actions": [
+      "bounds: left=-10 right=80 bottom=-10 top=100",
+      "click: 45,54"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "A mixture problem",
+   "beats": [
+    {
+     "say": "Desmos also handles mixtures. How much water turns five hundred grams of a twenty percent salt solution into a sixteen percent solution? The salt stays at one hundred grams.",
+     "card": {
+      "text": "frac(100,500 + x) = 0.16",
+      "sub": "Find the water added, x"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Mixture with two curves",
+   "beats": [
+    {
+     "say": "The salt is fixed at one hundred grams, while the total mass grows as we add x grams of water. So we graph the salt fraction as a curve.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals one hundred over five hundred plus x. This is the fraction of salt after adding x grams of water.",
+     "actions": [
+      "type: y=100/500+x"
+     ]
+    },
+    {
+     "say": "Now type y equals zero point one six, the target salt fraction.",
+     "actions": [
+      "type: y=0.16"
+     ]
+    },
+    {
+     "say": "Click the crossing point. It's at one hundred twenty-five comma zero point one six. So we need to add one hundred twenty-five grams of water.",
+     "actions": [
+      "bounds: left=-100 right=400 bottom=-0.1 top=0.5",
+      "click: 125,0.16"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. A quantity goes up thirty percent, then down ten percent, and ends at two hundred thirty-four. What was the starting value? Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "Up 30%, down 10%, ends at 234",
+      "sub": "Pause and try it first"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: the multiplier",
+   "start": "1.3 × 0.9",
+   "beats": [
+    {
+     "say": "Combine the two changes into one multiplier. An increase of thirty percent is one point three, and a decrease of ten percent is zero point nine."
+    },
+    {
+     "say": "One point three times zero point nine is one point one seven. So the quantity ends at one hundred seventeen percent of its start.",
+     "op": "multiply",
+     "result": "1.17",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: work backward",
+   "start": "234 ÷ 1.17",
+   "beats": [
+    {
+     "say": "The final value of two hundred thirty-four is one point one seven times the starting value. Divide to undo it."
+    },
+    {
+     "say": "Two hundred thirty-four divided by one point one seven is two hundred. So the starting value was two hundred.",
+     "op": "divide",
+     "result": "200",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check going forward",
+   "beats": [
+    {
+     "say": "Check going forward. Two hundred times one point three is two hundred sixty. Then two hundred sixty times zero point nine is two hundred thirty-four, which matches.",
+     "lines": [
+      "200 × 1.3 = 260",
+      "260 × 0.9 = 234"
+     ],
+     "verdict": "The starting value was 200."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Multiply multipliers, divide to undo, and always use the original value as the base for percent change.",
+     "item": "Multiply, divide to undo, original base"
+    },
+    {
+     "say": "Read which group the question wants, and tell percentage points apart from percent change.",
+     "item": "Which group; points versus percent"
+    },
+    {
+     "say": "Use Desmos for buried unknowns and mixtures. In the next topic, we study one-variable data.",
+     "item": "Desmos for buried unknowns"
+    }
+   ]
+  }
+ ]
 }

@@ -1,47 +1,191 @@
 {
-  "id": "desmos-inequalities_v1",
-  "skill": "desmos-inequalities",
-  "part": 1,
-  "title": "Desmos Basics: Inequalities",
-  "section_label": "Desmos basics",
-  "scenes": [
-    {"type": "cards", "title": "Inequalities in Desmos", "beats": [
-      {"say": "In Desmos, you can type an inequality, and Desmos shades every point that makes it true. Where two shaded regions overlap is the solution region of a system.", "card": {"text": "Desmos shades the true points"}},
-      {"say": "A dashed boundary line means the line itself is not included, as with less than or greater than. A solid line means it is included, as with less than or equal to.", "card": {"text": "Dashed: not included. Solid: included."}},
-      {"say": "We will work through three examples, from an easy one to a hard one, and you will see every key press.", "card": {"text": "Three examples: easy, medium, hard"}}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. Graph the inequality y is less than two x plus one, and decide which points make it true.", "card": {"text": "y < 2x + 1", "sub": "Which points are solutions?"}}
-    ]},
-    {"type": "desmos", "title": "Easy: one inequality", "beats": [
-      {"say": "Start with a fresh graph. We will graph one inequality and see what Desmos shades.", "actions": ["hold: 2"]},
-      {"say": "Type y, a less than sign, and then two x plus one. Desmos shades the region below the line, and the boundary is dashed, because the sign is strictly less than.", "actions": ["type: y<2x+1"]},
-      {"say": "Every point in the shaded region makes the inequality true. Points on the dashed line, and points above it, do not.", "actions": ["bounds: left=-6 right=6 bottom=-4 top=8", "hold: 3"]},
-      {"say": "To test a point, type it as an ordered pair. The point one comma two sits inside the shading, so it is a solution.", "actions": ["type: (1,2)", "hold: 2"]}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. A system has two inequalities. y is less than two x plus one, and y is less than or equal to negative x plus seven.", "card": {"text": "y < 2x + 1  and  y ≤ −x + 7", "sub": "Find the overlap"}}
-    ]},
-    {"type": "desmos", "title": "Medium: a system", "beats": [
-      {"say": "Now we need the region where both inequalities are true at the same time.", "actions": ["hold: 2"]},
-      {"say": "Type the first inequality, y less than two x plus one. Desmos shades the area below a dashed line.", "actions": ["type: y<2x+1"]},
-      {"say": "Now type y, then a less than sign followed by an equals sign, then negative x plus seven. Desmos turns that into the less than or equal to symbol, and the boundary line is solid.", "actions": ["type: y<=-x+7"]},
-      {"say": "The darker area where both shadings overlap is the solution region of the system. Any point in that area makes both inequalities true.", "actions": ["bounds: left=-4 right=8 bottom=-4 top=12", "hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. For the same system, which point is a solution: the point one comma two, or the point three comma eight?", "card": {"text": "Is (1, 2) or (3, 8) a solution?", "sub": "Use the same system"}}
-    ]},
-    {"type": "desmos", "title": "Hard: test the choices", "beats": [
-      {"say": "SAT questions often ask which point is a solution to a system. The method is to graph the system, and then plot every answer choice.", "actions": ["hold: 2"]},
-      {"say": "First graph the system exactly as before. The overlap region is the set of all solutions.", "actions": ["type: y<2x+1", "type: y<=-x+7", "bounds: left=-4 right=8 bottom=-4 top=12"]},
-      {"say": "Now plot the first choice, the point one comma two. It lands inside the overlap, so it makes both inequalities true.", "actions": ["type: (1,2)"]},
-      {"say": "Plot the second choice, the point three comma eight. It lands outside the overlap, above the solid line, so it is not a solution.", "actions": ["type: (3,8)"]},
-      {"say": "So the correct choice is the point one comma two. No algebra was needed, only careful graphing and a look at where each point lands.", "actions": ["hold: 3"]}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Type an inequality and Desmos shades the true region. Dashed means the line is not included, and solid means it is.", "item": "Desmos shades the true region"},
-      {"say": "For a system, the solution region is where the shadings overlap. The darker area is where both inequalities hold.", "item": "Solution = where shadings overlap"},
-      {"say": "To test an answer choice, plot it as a point and see where it lands. In the next video, we solve any equation by graphing.", "item": "Plot each answer choice as a point"}
-    ]}
-  ]
+ "id": "desmos-inequalities_v1",
+ "skill": "desmos-inequalities",
+ "part": 1,
+ "title": "Desmos Basics: Inequalities",
+ "section_label": "Desmos basics",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Inequalities in Desmos",
+   "beats": [
+    {
+     "say": "In Desmos, you can type an inequality, and Desmos shades every point that makes it true. Where two shaded regions overlap is the solution region of a system.",
+     "card": {
+      "text": "Desmos shades the true points"
+     }
+    },
+    {
+     "say": "A dashed boundary line means the line itself isn't included, as with less than or greater than. A solid line means it's included, as with less than or equal to.",
+     "card": {
+      "text": "Dashed: not included. Solid: included."
+     }
+    },
+    {
+     "say": "We'll work through three examples, from an easy one to a hard one, and you'll see every key press.",
+     "card": {
+      "text": "Three examples: easy, medium, hard"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. Graph the inequality y is less than two x plus one, and decide which points make it true.",
+     "card": {
+      "text": "y < 2x + 1",
+      "sub": "Which points are solutions?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Easy: one inequality",
+   "beats": [
+    {
+     "say": "Start with a fresh graph. We'll graph one inequality and see what Desmos shades.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y, a less than sign, and then two x plus one. Desmos shades the region below the line, and the boundary is dashed, because the sign is strictly less than.",
+     "actions": [
+      "type: y<2x+1"
+     ]
+    },
+    {
+     "say": "Every point in the shaded region makes the inequality true. Points on the dashed line, and points above it, don't.",
+     "actions": [
+      "bounds: left=-6 right=6 bottom=-4 top=8",
+      "hold: 3"
+     ]
+    },
+    {
+     "say": "To test a point, type it as an ordered pair. The point one comma two sits inside the shading, so it's a solution.",
+     "actions": [
+      "type: (1,2)",
+      "hold: 2"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. A system has two inequalities. y is less than two x plus one, and y is less than or equal to negative x plus seven.",
+     "card": {
+      "text": "y < 2x + 1  and  y ≤ −x + 7",
+      "sub": "Find the overlap"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Medium: a system",
+   "beats": [
+    {
+     "say": "Now we need the region where both inequalities are true at the same time.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type the first inequality, y less than two x plus one. Desmos shades the area below a dashed line.",
+     "actions": [
+      "type: y<2x+1"
+     ]
+    },
+    {
+     "say": "Now type y, then a less than sign followed by an equals sign, then negative x plus seven. Desmos turns that into the less than or equal to symbol, and the boundary line is solid.",
+     "actions": [
+      "type: y<=-x+7"
+     ]
+    },
+    {
+     "say": "The darker area where both shadings overlap is the solution region of the system. Any point in that area makes both inequalities true.",
+     "actions": [
+      "bounds: left=-4 right=8 bottom=-4 top=12",
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. For the same system, which point is a solution: the point one comma two, or the point three comma eight?",
+     "card": {
+      "text": "Is (1, 2) or (3, 8) a solution?",
+      "sub": "Use the same system"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Hard: test the choices",
+   "beats": [
+    {
+     "say": "SAT questions often ask which point is a solution to a system. The method is to graph the system, and then plot every answer choice.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "First graph the system exactly as before. The overlap region is the set of all solutions.",
+     "actions": [
+      "type: y<2x+1",
+      "type: y<=-x+7",
+      "bounds: left=-4 right=8 bottom=-4 top=12"
+     ]
+    },
+    {
+     "say": "Now plot the first choice, the point one comma two. It lands inside the overlap, so it makes both inequalities true.",
+     "actions": [
+      "type: (1,2)"
+     ]
+    },
+    {
+     "say": "Plot the second choice, the point three comma eight. It lands outside the overlap, above the solid line, so it isn't a solution.",
+     "actions": [
+      "type: (3,8)"
+     ]
+    },
+    {
+     "say": "So the correct choice is the point one comma two. No algebra was needed, only careful graphing and a look at where each point lands.",
+     "actions": [
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Type an inequality and Desmos shades the true region. Dashed means the line isn't included, and solid means it's.",
+     "item": "Desmos shades the true region"
+    },
+    {
+     "say": "For a system, the solution region is where the shadings overlap. The darker area is where both inequalities hold.",
+     "item": "Solution = where shadings overlap"
+    },
+    {
+     "say": "To test an answer choice, plot it as a point and see where it lands. In the next video, we solve any equation by graphing.",
+     "item": "Plot each answer choice as a point"
+    }
+   ]
+  }
+ ]
 }

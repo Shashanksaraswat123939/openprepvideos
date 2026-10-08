@@ -1,62 +1,283 @@
 {
-  "id": "rw-sec-boundaries_v1",
-  "skill": "rw-sec-boundaries",
-  "part": 1,
-  "title": "Boundaries, Part 1: The Method and Two Questions",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "cards", "title": "Boundaries", "beats": [
-      {"say": "Boundaries questions ask you to choose the punctuation that correctly connects, or separates, the parts of a sentence.", "card": {"text": "Choose the correct punctuation"}},
-      {"say": "The choices are usually the same words, with different punctuation. They might be a comma, a semicolon, a colon, a dash, a period, or nothing at all.", "card": {"text": "Same words, different punctuation"}},
-      {"say": "The whole topic depends on one skill. You must tell an independent clause from a dependent clause.", "card": {"text": "Independent or dependent?"}}
-    ]},
-    {"type": "table", "title": "Two kinds of clause", "columns": ["Clause", "Can it stand alone?", "Example"], "rows": [["independent", "yes", "The museum opened in 1890."], ["dependent", "no", "because the museum opened"], ["dependent", "no", "which the museum displays"]], "beats": [
-      {"say": "An independent clause has a subject and a verb, and it can stand alone as a sentence. The museum opened in eighteen ninety.", "reveal_row": 0},
-      {"say": "A dependent clause cannot stand alone. Because the museum opened, is not a full sentence.", "reveal_row": 1},
-      {"say": "Which the museum displays, is also dependent. Words like because and which make a clause depend on something else.", "reveal_row": 2}
-    ]},
-    {"type": "list", "title": "The method", "beats": [
-      {"say": "Step one. Look at the choices, and see what changes. Is it a comma, a semicolon, a colon, or a period?", "item": "See what changes in the choices"},
-      {"say": "Step two. Find the boundary, and ask whether the part before it is an independent clause. Then ask the same about the part after.", "item": "Is each side an independent clause?"},
-      {"say": "Step three. If both sides are independent, use a period, a semicolon, or a comma with and, but, or so. If not, usually use a comma, or nothing.", "item": "Both independent: period or semicolon"},
-      {"say": "Step four. Look for extra information that needs matching marks on both sides.", "item": "Extra information: matching marks"}
-    ]},
-    {"type": "table", "title": "Joining the parts", "columns": ["Joining", "Correct"], "rows": [["clause + clause", "period or semicolon"], ["clause + comma + and", "comma, and"], ["clause + explanation", "colon"], ["extra information", "two commas or two dashes"], ["subject and verb", "no punctuation"]], "beats": [
-      {"say": "Two independent clauses are joined by a period, or a semicolon. A semicolon works just like a period.", "reveal_row": 0},
-      {"say": "They can also be joined by a comma followed by a conjunction such as and, but, or so.", "reveal_row": 1},
-      {"say": "A colon follows a complete independent clause. What comes after the colon explains or lists.", "reveal_row": 2},
-      {"say": "Extra information needs matching marks on both sides, two commas or two dashes, never one of each.", "reveal_row": 3},
-      {"say": "Finally, never put any punctuation between a subject and its verb, even when the subject is long.", "reveal_row": 4}
-    ]},
-    {"type": "cards", "title": "Easy question: two clauses", "beats": [
-      {"say": "Easy question. We split the sentence at the blank, and ask whether each side can stand alone.", "card": {"text": "Split at the blank", "sub": "Can each side stand alone?"}}
-    ]},
-    {"type": "passage", "title": "Read the sentence", "text": "The orchestra rehearsed for six weeks before the concert ______ the performance sold out within an hour.", "source": "original text", "beats": [
-      {"say": "The part before the blank is complete. The orchestra rehearsed for six weeks before the concert. It is an independent clause.", "underline": "The orchestra rehearsed"},
-      {"say": "The part after the blank is also complete. The performance sold out within an hour. So we are joining two independent clauses.", "underline": "the performance sold out"}
-    ]},
-    {"type": "choices", "title": "Which punctuation fits?", "question": "Which choice completes the text so that it conforms to the conventions of Standard English?", "options": {"A": "concert,", "B": "concert", "C": "concert;", "D": "concert, and,"}, "beats": [
-      {"say": "Choice A uses only a comma. A comma alone cannot join two independent clauses. That is a comma splice.", "eliminate": "A", "why": "comma splice"},
-      {"say": "Choice B uses nothing at all, which joins two clauses with no mark. That is a run-on.", "eliminate": "B", "why": "run-on"},
-      {"say": "Choice D adds a comma after and. That second comma is unnecessary, and it breaks the sentence.", "eliminate": "D", "why": "extra comma"},
-      {"say": "Choice C uses a semicolon, which correctly joins two independent clauses. The answer is C.", "pick": "C"}
-    ]},
-    {"type": "cards", "title": "Medium question: extra information", "beats": [
-      {"say": "Medium question. Extra information inside a sentence is set off by matching marks. If it opens with a comma, it must close with a comma.", "card": {"text": "Open with a comma, close with a comma", "sub": "Matching marks"}}
-    ]},
-    {"type": "passage", "title": "Read the sentence", "text": "The town's oldest building, a stone mill constructed in 1782 ______ still uses its original water wheel to grind grain for local bakeries.", "source": "original text", "beats": [
-      {"say": "The core sentence is, the town's oldest building still uses its original water wheel. That is the main idea.", "underline": "still uses its original water wheel"},
-      {"say": "A stone mill constructed in seventeen eighty-two, is extra information. It opened with a comma after building, so it must close with a comma.", "highlight": "a stone mill constructed in 1782"}
-    ]},
-    {"type": "choices", "title": "Which punctuation fits?", "question": "Which choice completes the text so that it conforms to the conventions of Standard English?", "options": {"A": "1782;", "B": "1782", "C": "1782—", "D": "1782,"}, "beats": [
-      {"say": "Choice A uses a semicolon. A semicolon would cut the subject off from its verb, so it cannot work.", "eliminate": "A", "why": "splits subject and verb"},
-      {"say": "Choice B uses no mark. Then the extra information is left open on one side, and the pair is unbalanced.", "eliminate": "B", "why": "no closing mark"},
-      {"say": "Choice C uses a dash. A dash does not match the opening comma, so the pair is mismatched.", "eliminate": "C", "why": "mismatched pair"},
-      {"say": "Choice D closes the pair with a comma, so the extra information has matching marks. The answer is D.", "pick": "D"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Find the boundary, and ask whether each side is an independent clause. Two independent clauses need a period or a semicolon.", "item": "Is each side independent?"},
-      {"say": "Extra information needs matching marks. In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
-    ]}
-  ]
+ "id": "rw-sec-boundaries_v1",
+ "skill": "rw-sec-boundaries",
+ "part": 1,
+ "title": "Boundaries, Part 1: The Method and Two Questions",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Boundaries",
+   "beats": [
+    {
+     "say": "Boundaries questions ask you to choose the punctuation that correctly connects, or separates, the parts of a sentence.",
+     "card": {
+      "text": "Choose the correct punctuation"
+     }
+    },
+    {
+     "say": "The choices are usually the same words, with different punctuation. They might be a comma, a semicolon, a colon, a dash, a period, or nothing at all.",
+     "card": {
+      "text": "Same words, different punctuation"
+     }
+    },
+    {
+     "say": "The whole topic depends on one skill. You must tell an independent clause from a dependent clause.",
+     "card": {
+      "text": "Independent or dependent?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Two kinds of clause",
+   "columns": [
+    "Clause",
+    "Can it stand alone?",
+    "Example"
+   ],
+   "rows": [
+    [
+     "independent",
+     "yes",
+     "The museum opened in 1890."
+    ],
+    [
+     "dependent",
+     "no",
+     "because the museum opened"
+    ],
+    [
+     "dependent",
+     "no",
+     "which the museum displays"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "An independent clause has a subject and a verb, and it can stand alone as a sentence. The museum opened in eighteen ninety.",
+     "reveal_row": 0
+    },
+    {
+     "say": "A dependent clause can't stand alone. Because the museum opened, isn't a full sentence.",
+     "reveal_row": 1
+    },
+    {
+     "say": "Which the museum displays, is also dependent. Words like because and which make a clause depend on something else.",
+     "reveal_row": 2
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "The method",
+   "beats": [
+    {
+     "say": "Step one. Look at the choices, and see what changes. Is it a comma, a semicolon, a colon, or a period?",
+     "item": "See what changes in the choices"
+    },
+    {
+     "say": "Step two. Find the boundary, and ask whether the part before it's an independent clause. Then ask the same about the part after.",
+     "item": "Is each side an independent clause?"
+    },
+    {
+     "say": "Step three. If both sides are independent, use a period, a semicolon, or a comma with and, but, or so. If not, usually use a comma, or nothing.",
+     "item": "Both independent: period or semicolon"
+    },
+    {
+     "say": "Step four. Look for extra information that needs matching marks on both sides.",
+     "item": "Extra information: matching marks"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Joining the parts",
+   "columns": [
+    "Joining",
+    "Correct"
+   ],
+   "rows": [
+    [
+     "clause + clause",
+     "period or semicolon"
+    ],
+    [
+     "clause + comma + and",
+     "comma, and"
+    ],
+    [
+     "clause + explanation",
+     "colon"
+    ],
+    [
+     "extra information",
+     "two commas or two dashes"
+    ],
+    [
+     "subject and verb",
+     "no punctuation"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Two independent clauses are joined by a period, or a semicolon. A semicolon works just like a period.",
+     "reveal_row": 0
+    },
+    {
+     "say": "They can also be joined by a comma followed by a conjunction such as and, but, or so.",
+     "reveal_row": 1
+    },
+    {
+     "say": "A colon follows a complete independent clause. What comes after the colon explains or lists.",
+     "reveal_row": 2
+    },
+    {
+     "say": "Extra information needs matching marks on both sides, two commas or two dashes, never one of each.",
+     "reveal_row": 3
+    },
+    {
+     "say": "Finally, never put any punctuation between a subject and its verb, even when the subject is long.",
+     "reveal_row": 4
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy question: two clauses",
+   "beats": [
+    {
+     "say": "Easy question. We split the sentence at the blank, and ask whether each side can stand alone.",
+     "card": {
+      "text": "Split at the blank",
+      "sub": "Can each side stand alone?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the sentence",
+   "text": "The orchestra rehearsed for six weeks before the concert ______ the performance sold out within an hour.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The part before the blank is complete. The orchestra rehearsed for six weeks before the concert. It's an independent clause.",
+     "underline": "The orchestra rehearsed"
+    },
+    {
+     "say": "The part after the blank is also complete. The performance sold out within an hour. So we're joining two independent clauses.",
+     "underline": "the performance sold out"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which punctuation fits?",
+   "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "options": {
+    "A": "concert,",
+    "B": "concert",
+    "C": "concert;",
+    "D": "concert, and,"
+   },
+   "beats": [
+    {
+     "say": "Choice A uses only a comma. A comma alone can't join two independent clauses. That's a comma splice.",
+     "eliminate": "A",
+     "why": "comma splice"
+    },
+    {
+     "say": "Choice B uses nothing at all, which joins two clauses with no mark. That's a run-on.",
+     "eliminate": "B",
+     "why": "run-on"
+    },
+    {
+     "say": "Choice D adds a comma after and. That second comma is unnecessary, and it breaks the sentence.",
+     "eliminate": "D",
+     "why": "extra comma"
+    },
+    {
+     "say": "Choice C uses a semicolon, which correctly joins two independent clauses. The answer is C.",
+     "pick": "C"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium question: extra information",
+   "beats": [
+    {
+     "say": "Medium question. Extra information inside a sentence is set off by matching marks. If it opens with a comma, it must close with a comma.",
+     "card": {
+      "text": "Open with a comma, close with a comma",
+      "sub": "Matching marks"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the sentence",
+   "text": "The town's oldest building, a stone mill constructed in 1782 ______ still uses its original water wheel to grind grain for local bakeries.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The core sentence is, the town's oldest building still uses its original water wheel. That's the main idea.",
+     "underline": "still uses its original water wheel"
+    },
+    {
+     "say": "A stone mill constructed in seventeen eighty-two, is extra information. It opened with a comma after building, so it must close with a comma.",
+     "highlight": "a stone mill constructed in 1782"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which punctuation fits?",
+   "question": "Which choice completes the text so that it conforms to the conventions of Standard English?",
+   "options": {
+    "A": "1782;",
+    "B": "1782",
+    "C": "1782—",
+    "D": "1782,"
+   },
+   "beats": [
+    {
+     "say": "Choice A uses a semicolon. A semicolon would cut the subject off from its verb, so it can't work.",
+     "eliminate": "A",
+     "why": "splits subject and verb"
+    },
+    {
+     "say": "Choice B uses no mark. Then the extra information is left open on one side, and the pair is unbalanced.",
+     "eliminate": "B",
+     "why": "no closing mark"
+    },
+    {
+     "say": "Choice C uses a dash. A dash doesn't match the opening comma, so the pair is mismatched.",
+     "eliminate": "C",
+     "why": "mismatched pair"
+    },
+    {
+     "say": "Choice D closes the pair with a comma, so the extra information has matching marks. The answer is D.",
+     "pick": "D"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Find the boundary, and ask whether each side is an independent clause. Two independent clauses need a period or a semicolon.",
+     "item": "Is each side independent?"
+    },
+    {
+     "say": "Extra information needs matching marks. In the next video, we work through a hard question and the common traps.",
+     "item": "Next: a hard question and traps"
+    }
+   ]
+  }
+ ]
 }

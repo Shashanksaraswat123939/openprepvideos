@@ -1,46 +1,171 @@
 {
-  "id": "m-adv-nonlin-eq_v2",
-  "skill": "m-adv-nonlin-eq",
-  "part": 2,
-  "title": "Nonlinear Equations and Systems, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Advanced Math",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we solved a quadratic by factoring, and we saw that the discriminant counts the real solutions.", "card": {"text": "Discriminant counts the solutions"}},
-      {"say": "In this video, we solve a radical equation and check for a false solution, and then find a constant using the discriminant.", "card": {"text": "Today: radicals, then the discriminant"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. Solve the radical equation, the square root of x plus seven equals x minus five. Squaring both sides is the usual first step, but it can create a false solution.", "card": {"text": "sqrt(x + 7) = x − 5", "sub": "Solve and check"}}
-    ]},
-    {"type": "steps", "title": "Medium: square both sides", "start": "sqrt(x + 7) = x − 5", "beats": [
-      {"say": "Our plan is to square both sides to remove the radical, solve the quadratic, and then check every answer in the original equation."},
-      {"say": "Square both sides. The left side becomes x plus seven. The right side becomes x minus five, squared, which we must expand carefully.", "op": "square both sides", "result": "x + 7 = (x − 5)^2"},
-      {"say": "Expand the square. x minus five, squared, is x squared minus ten x plus twenty-five.", "op": "expand", "result": "x + 7 = x^2 − 10x + 25"},
-      {"say": "Move everything to one side. Subtract x and seven from both sides, so the left side becomes zero.", "op": "move all terms to one side", "result": "0 = x^2 − 11x + 18"},
-      {"say": "Factor. We need two numbers that multiply to eighteen and add to negative eleven. Those are negative two and negative nine.", "op": "factor", "result": "0 = (x − 2)(x − 9)"}
-    ]},
-    {"type": "check", "title": "Check both candidates", "beats": [
-      {"say": "The candidates are x equals two and x equals nine. Check x equals two. The square root of nine is three, but two minus five is negative three. They do not match, so two is extraneous.", "lines": ["x = 2: sqrt(9) = 3, but 2 − 5 = −3"], "verdict": "x = 2 does not work."},
-      {"say": "Now check x equals nine. The square root of sixteen is four, and nine minus five is four. They match. So the only solution is x equals nine.", "lines": ["x = 9: sqrt(16) = 4 and 9 − 5 = 4"], "verdict": "Only x = 9 works."}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. For what positive value of k does x squared minus k x plus sixteen equal zero have exactly one real solution?", "card": {"text": "x^2 − kx + 16 = 0", "sub": "Exactly one solution. Find k > 0."}},
-      {"say": "Exactly one real solution means the discriminant is zero. Here a is one, b is negative k, and c is sixteen. So we set b squared minus four a c equal to zero.", "card": {"text": "Exactly one solution: discriminant = 0"}}
-    ]},
-    {"type": "steps", "title": "Hard: set the discriminant to zero", "start": "(−k)^2 − 4(1)(16) = 0", "beats": [
-      {"say": "Substitute a equals one, b equals negative k, and c equals sixteen. Notice that b is squared, so the negative sign disappears."},
-      {"say": "Negative k, squared, is k squared. Four times one times sixteen is sixty-four.", "op": "simplify", "result": "k^2 − 64 = 0"},
-      {"say": "Add sixty-four to both sides, so that k squared stands alone on the left side of the equation.", "op": "+ 64 on both sides", "result": "k^2 = 64"},
-      {"say": "Take the square root of both sides. Remember that there are two roots, positive eight and negative eight.", "op": "take the square root", "result": "k = ±8"},
-      {"say": "The question asks for the positive value of k. So k equals eight.", "op": "choose the positive value", "result": "k = 8", "final": true}
-    ]},
-    {"type": "check", "title": "Check the answer", "beats": [
-      {"say": "Check by substituting k equals eight. The equation becomes x squared minus eight x plus sixteen, which is x minus four, squared. That is zero only at x equals four, so there is exactly one solution.", "lines": ["x^2 − 8x + 16 = (x − 4)^2"], "verdict": "Zero only at x = 4. One solution."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. After squaring both sides of a radical equation, always check every candidate in the original equation.", "item": "Check radical solutions"},
-      {"say": "Exactly one solution means a discriminant of zero. Remember that b is squared, so its sign does not matter.", "item": "One solution: discriminant is zero"},
-      {"say": "Read the question for which value it wants, such as the positive one. In the next video, we look at common traps and the fast way with Desmos.", "item": "Answer the value that was asked"}
-    ]}
-  ]
+ "id": "m-adv-nonlin-eq_v2",
+ "skill": "m-adv-nonlin-eq",
+ "part": 2,
+ "title": "Nonlinear Equations and Systems, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Advanced Math",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we solved a quadratic by factoring, and we saw that the discriminant counts the real solutions.",
+     "card": {
+      "text": "Discriminant counts the solutions"
+     }
+    },
+    {
+     "say": "In this video, we solve a radical equation and check for a false solution, and then find a constant using the discriminant.",
+     "card": {
+      "text": "Today: radicals, then the discriminant"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. Solve the radical equation, the square root of x plus seven equals x minus five. Squaring both sides is the usual first step, but it can create a false solution.",
+     "card": {
+      "text": "sqrt(x + 7) = x − 5",
+      "sub": "Solve and check"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: square both sides",
+   "start": "sqrt(x + 7) = x − 5",
+   "beats": [
+    {
+     "say": "Our plan is to square both sides to remove the radical, solve the quadratic, and then check every answer in the original equation."
+    },
+    {
+     "say": "Square both sides. The left side becomes x plus seven. The right side becomes x minus five, squared, which we must expand carefully.",
+     "op": "square both sides",
+     "result": "x + 7 = (x − 5)^2"
+    },
+    {
+     "say": "Expand the square. x minus five, squared, is x squared minus ten x plus twenty-five.",
+     "op": "expand",
+     "result": "x + 7 = x^2 − 10x + 25"
+    },
+    {
+     "say": "Move everything to one side. Subtract x and seven from both sides, so the left side becomes zero.",
+     "op": "move all terms to one side",
+     "result": "0 = x^2 − 11x + 18"
+    },
+    {
+     "say": "Factor. We need two numbers that multiply to eighteen and add to negative eleven. Those are negative two and negative nine.",
+     "op": "factor",
+     "result": "0 = (x − 2)(x − 9)"
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check both candidates",
+   "beats": [
+    {
+     "say": "The candidates are x equals two and x equals nine. Check x equals two. The square root of nine is three, but two minus five is negative three. They don't match, so two is extraneous.",
+     "lines": [
+      "x = 2: sqrt(9) = 3, but 2 − 5 = −3"
+     ],
+     "verdict": "x = 2 does not work."
+    },
+    {
+     "say": "Now check x equals nine. The square root of sixteen is four, and nine minus five is four. They match. So the only solution is x equals nine.",
+     "lines": [
+      "x = 9: sqrt(16) = 4 and 9 − 5 = 4"
+     ],
+     "verdict": "Only x = 9 works."
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. For what positive value of k does x squared minus k x plus sixteen equal zero have exactly one real solution?",
+     "card": {
+      "text": "x^2 − kx + 16 = 0",
+      "sub": "Exactly one solution. Find k > 0."
+     }
+    },
+    {
+     "say": "Exactly one real solution means the discriminant is zero. Here a is one, b is negative k, and c is sixteen. So we set b squared minus four a c equal to zero.",
+     "card": {
+      "text": "Exactly one solution: discriminant = 0"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: set the discriminant to zero",
+   "start": "(−k)^2 − 4(1)(16) = 0",
+   "beats": [
+    {
+     "say": "Substitute a equals one, b equals negative k, and c equals sixteen. Notice that b is squared, so the negative sign disappears."
+    },
+    {
+     "say": "Negative k, squared, is k squared. Four times one times sixteen is sixty-four.",
+     "op": "simplify",
+     "result": "k^2 − 64 = 0"
+    },
+    {
+     "say": "Add sixty-four to both sides, so that k squared stands alone on the left side of the equation.",
+     "op": "+ 64 on both sides",
+     "result": "k^2 = 64"
+    },
+    {
+     "say": "Take the square root of both sides. Remember that there are two roots, positive eight and negative eight.",
+     "op": "take the square root",
+     "result": "k = ±8"
+    },
+    {
+     "say": "The question asks for the positive value of k. So k equals eight.",
+     "op": "choose the positive value",
+     "result": "k = 8",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check the answer",
+   "beats": [
+    {
+     "say": "Check by substituting k equals eight. The equation becomes x squared minus eight x plus sixteen, which is x minus four, squared. That's zero only at x equals four, so there's exactly one solution.",
+     "lines": [
+      "x^2 − 8x + 16 = (x − 4)^2"
+     ],
+     "verdict": "Zero only at x = 4. One solution."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. After squaring both sides of a radical equation, always check every candidate in the original equation.",
+     "item": "Check radical solutions"
+    },
+    {
+     "say": "Exactly one solution means a discriminant of zero. Remember that b is squared, so its sign doesn't matter.",
+     "item": "One solution: discriminant is zero"
+    },
+    {
+     "say": "Read the question for which value it wants, such as the positive one. In the next video, we look at common traps and the fast way with Desmos.",
+     "item": "Answer the value that was asked"
+    }
+   ]
+  }
+ ]
 }

@@ -1,49 +1,210 @@
 {
-  "id": "m-psda-prob_v2",
-  "skill": "m-psda-prob",
-  "part": 2,
-  "title": "Probability and Conditional Probability, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we computed a simple probability as favorable outcomes over total outcomes, and we used the complement for not.", "card": {"text": "Favorable ÷ total"}},
-      {"say": "In this video, we find the probability of two draws without replacement, and then a conditional probability from a two-way table.", "card": {"text": "Today: two draws, then given that"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. A box has five red tiles and seven white tiles. Two tiles are drawn one after another, without putting the first one back. What is the probability that both are red?", "card": {"text": "5 red, 7 white", "sub": "Two draws, no replacement. P(both red)?"}}
-    ]},
-    {"type": "figure", "title": "Medium: the first draw", "kind": "tree", "data": {"branches": [{"label": "Red", "p": "5/12"}, {"label": "White", "p": "7/12"}]}, "beats": [
-      {"say": "On the first draw, there are twelve tiles. Five are red and seven are white. So the probability of drawing red first is five twelfths.", "show": ["branches"]}
-    ]},
-    {"type": "cards", "title": "Medium: the second draw", "beats": [
-      {"say": "Now suppose the first tile was red, and was not put back. Only four red tiles remain, and only eleven tiles remain in total. So the second probability is four elevenths.", "card": {"text": "P(red second) = frac(4,11)", "sub": "4 red left out of 11 tiles"}}
-    ]},
-    {"type": "steps", "title": "Medium: multiply", "start": "frac(5,12) × frac(4,11)", "beats": [
-      {"say": "For the first and then the second, we multiply the two probabilities. The numerators multiply to twenty, and the denominators multiply to one hundred thirty-two."},
-      {"say": "Five times four is twenty, and twelve times eleven is one hundred thirty-two. So the probability is twenty over one hundred thirty-two.", "op": "multiply", "result": "frac(20,132)"},
-      {"say": "Divide the top and bottom by four. Twenty over one hundred thirty-two reduces to five over thirty-three.", "op": "reduce", "result": "frac(5,33)", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. A store surveyed customers about where they shop. If a customer who shops online is chosen at random, what is the probability that the customer is under thirty?", "card": {"text": "A customer who shops online is chosen", "sub": "P(under 30)?"}}
-    ]},
-    {"type": "figure", "title": "Hard: the survey table", "kind": "two_way_table", "data": {"rows": ["Under 30", "30 or older"], "cols": ["Online", "In store"], "cells": [[48, 32], [27, 63]]}, "beats": [
-      {"say": "Here are the survey counts. Forty-eight customers under thirty shop online, and thirty-two under thirty shop in the store.", "show": []},
-      {"say": "The totals show that seventy-five customers shop online, ninety-five shop in the store, and there are one hundred seventy customers in all.", "show": ["totals"]},
-      {"say": "The words who shops online tell us the given group. So we only look at the Online column, and the denominator is that column's total.", "show": ["cell:0,0"]}
-    ]},
-    {"type": "steps", "title": "Hard: the conditional probability", "start": "frac(48,75)", "beats": [
-      {"say": "The numerator is the number who are under thirty and shop online, which is forty-eight. The denominator is everyone who shops online, which is seventy-five."},
-      {"say": "Forty-eight and seventy-five can both be divided by three. Forty-eight divided by three is sixteen, and seventy-five divided by three is twenty-five.", "op": "reduce", "result": "frac(16,25)"},
-      {"say": "Sixteen divided by twenty-five is zero point six four. So the probability is sixty-four percent.", "op": "divide", "result": "0.64", "final": true}
-    ]},
-    {"type": "compare", "title": "Same cell, different denominator", "beats": [
-      {"say": "Compare this with a different question. The probability that a customer under thirty shops online uses a different group, the Under thirty row, with a total of eighty.", "wrong": "P(under 30 | online) = frac(48,80)", "wrong_why": "80 is the under-30 total"},
-      {"say": "For under thirty, given that the customer shops online, the denominator is the online total, seventy-five. The cell is the same, but the denominator is different.", "right": "P(under 30 | online) = frac(48,75)", "right_why": "Given online: the online total"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Without replacement, both the numerator and the denominator of the second fraction go down by one.", "item": "Without replacement: both go down by one"},
-      {"say": "For given that, name the denominator first. It is the total of the given group, not the grand total.", "item": "Given that: the group's total"},
-      {"say": "In the next video, we look at common traps and the fast way.", "item": "Next: traps and the fast way"}
-    ]}
-  ]
+ "id": "m-psda-prob_v2",
+ "skill": "m-psda-prob",
+ "part": 2,
+ "title": "Probability and Conditional Probability, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we computed a simple probability as favorable outcomes over total outcomes, and we used the complement for not.",
+     "card": {
+      "text": "Favorable ÷ total"
+     }
+    },
+    {
+     "say": "In this video, we find the probability of two draws without replacement, and then a conditional probability from a two-way table.",
+     "card": {
+      "text": "Today: two draws, then given that"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. A box has five red tiles and seven white tiles. Two tiles are drawn one after another, without putting the first one back. What's the probability that both are red?",
+     "card": {
+      "text": "5 red, 7 white",
+      "sub": "Two draws, no replacement. P(both red)?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "figure",
+   "title": "Medium: the first draw",
+   "kind": "tree",
+   "data": {
+    "branches": [
+     {
+      "label": "Red",
+      "p": "5/12"
+     },
+     {
+      "label": "White",
+      "p": "7/12"
+     }
+    ]
+   },
+   "beats": [
+    {
+     "say": "On the first draw, there are twelve tiles. Five are red and seven are white. So the probability of drawing red first is five twelfths.",
+     "show": [
+      "branches"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium: the second draw",
+   "beats": [
+    {
+     "say": "Now suppose the first tile was red, and wasn't put back. Only four red tiles remain, and only eleven tiles remain in total. So the second probability is four elevenths.",
+     "card": {
+      "text": "P(red second) = frac(4,11)",
+      "sub": "4 red left out of 11 tiles"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: multiply",
+   "start": "frac(5,12) × frac(4,11)",
+   "beats": [
+    {
+     "say": "For the first and then the second, we multiply the two probabilities. The numerators multiply to twenty, and the denominators multiply to one hundred thirty-two."
+    },
+    {
+     "say": "Five times four is twenty, and twelve times eleven is one hundred thirty-two. So the probability is twenty over one hundred thirty-two.",
+     "op": "multiply",
+     "result": "frac(20,132)"
+    },
+    {
+     "say": "Divide the top and bottom by four. Twenty over one hundred thirty-two reduces to five over thirty-three.",
+     "op": "reduce",
+     "result": "frac(5,33)",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. A store surveyed customers about where they shop. If a customer who shops online is chosen at random, what's the probability that the customer is under thirty?",
+     "card": {
+      "text": "A customer who shops online is chosen",
+      "sub": "P(under 30)?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "figure",
+   "title": "Hard: the survey table",
+   "kind": "two_way_table",
+   "data": {
+    "rows": [
+     "Under 30",
+     "30 or older"
+    ],
+    "cols": [
+     "Online",
+     "In store"
+    ],
+    "cells": [
+     [
+      48,
+      32
+     ],
+     [
+      27,
+      63
+     ]
+    ]
+   },
+   "beats": [
+    {
+     "say": "Here are the survey counts. Forty-eight customers under thirty shop online, and thirty-two under thirty shop in the store.",
+     "show": []
+    },
+    {
+     "say": "The totals show that seventy-five customers shop online, ninety-five shop in the store, and there are one hundred seventy customers in all.",
+     "show": [
+      "totals"
+     ]
+    },
+    {
+     "say": "The words who shops online tell us the given group. So we only look at the Online column, and the denominator is that column's total.",
+     "show": [
+      "cell:0,0"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: the conditional probability",
+   "start": "frac(48,75)",
+   "beats": [
+    {
+     "say": "The numerator is the number who are under thirty and shop online, which is forty-eight. The denominator is everyone who shops online, which is seventy-five."
+    },
+    {
+     "say": "Forty-eight and seventy-five can both be divided by three. Forty-eight divided by three is sixteen, and seventy-five divided by three is twenty-five.",
+     "op": "reduce",
+     "result": "frac(16,25)"
+    },
+    {
+     "say": "Sixteen divided by twenty-five is zero point six four. So the probability is sixty-four percent.",
+     "op": "divide",
+     "result": "0.64",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Same cell, different denominator",
+   "beats": [
+    {
+     "say": "Compare this with a different question. The probability that a customer under thirty shops online uses a different group, the Under thirty row, with a total of eighty.",
+     "wrong": "P(under 30 | online) = frac(48,80)",
+     "wrong_why": "80 is the under-30 total"
+    },
+    {
+     "say": "For under thirty, given that the customer shops online, the denominator is the online total, seventy-five. The cell is the same, but the denominator is different.",
+     "right": "P(under 30 | online) = frac(48,75)",
+     "right_why": "Given online: the online total"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Without replacement, both the numerator and the denominator of the second fraction go down by one.",
+     "item": "Without replacement: both go down by one"
+    },
+    {
+     "say": "For given that, name the denominator first. It's the total of the given group, not the grand total.",
+     "item": "Given that: the group's total"
+    },
+    {
+     "say": "In the next video, we look at common traps and the fast way.",
+     "item": "Next: traps and the fast way"
+    }
+   ]
+  }
+ ]
 }

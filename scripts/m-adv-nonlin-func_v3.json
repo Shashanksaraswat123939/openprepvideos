@@ -1,71 +1,279 @@
 {
-  "id": "m-adv-nonlin-func_v3",
-  "skill": "m-adv-nonlin-func",
-  "part": 3,
-  "title": "Nonlinear Functions, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Advanced Math",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with nonlinear functions, and then use Desmos to find a vertex and zeros, and to find when an exponential reaches a value.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: percent as the factor", "beats": [
-      {"say": "Trap one. A machine loses twenty percent of its value each year. Students use the percent itself as the factor, instead of what is left after the loss.", "wrong": "V(t) = 45000(0.2)^t", "wrong_why": "0.2 is the loss, not what remains"},
-      {"say": "Losing twenty percent leaves eighty percent, so the factor is zero point eight. Likewise, a three percent increase has a factor of one point zero three.", "right": "V(t) = 45000(0.8)^t", "right_why": "Decay factor: 1 − 0.20"}
-    ]},
-    {"type": "compare", "title": "Trap 2: the sign in vertex form", "beats": [
-      {"say": "Trap two. In vertex form, the number inside the parentheses has the opposite sign to the x coordinate of the vertex. Students read it as it appears.", "wrong": "a(x + 3)^2 − 7: vertex (3, −7)", "wrong_why": "The inside sign is reversed"},
-      {"say": "The factor x plus three is x minus negative three. So h is negative three, and the vertex is negative three comma negative seven.", "right": "a(x + 3)^2 − 7: vertex (−3, −7)", "right_why": "x + 3 means h = −3"}
-    ]},
-    {"type": "compare", "title": "Trap 3: squaring a negative", "beats": [
-      {"say": "Trap three. For f of x equals two x squared, find f of negative two. Without parentheses, students square only the two and keep the negative sign outside.", "wrong": "f(−2) = 2(−2)^2 = −8", "wrong_why": "(−2)^2 is positive 4"},
-      {"say": "Negative two, squared, is positive four, because a negative times a negative is positive. Then two times four is eight.", "right": "f(−2) = 2(4) = 8", "right_why": "Square the negative input"}
-    ]},
-    {"type": "compare", "title": "Trap 4: vertex or zero", "beats": [
-      {"say": "Trap four. The vertex is the turning point of the parabola, and the zeros are where it crosses the x axis. A question about zeros is not asking for the vertex.", "wrong": "zeros: x = 3, the vertex", "wrong_why": "The vertex is not a zero here"},
-      {"say": "For negative x squared plus six x minus five, the zeros are one and five, and the vertex is at three comma four.", "right": "zeros: x = 1 and x = 5", "right_why": "Where the graph crosses the x-axis"}
-    ]},
-    {"type": "compare", "title": "Trap 5: the time unit", "beats": [
-      {"say": "Trap five. If a quantity doubles every five hours, the exponent is t divided by five. Students multiply by five instead, which makes the quantity double five times as fast.", "wrong": "doubles every 5 hours: 2^(5t)", "wrong_why": "Exponent should divide by 5"},
-      {"say": "After five hours, t over five is one, so the quantity doubles once. That is the correct pace.", "right": "doubles every 5 hours: 2^(t/5)", "right_why": "t divided by the doubling time"}
-    ]},
-    {"type": "cards", "title": "The fast way: Desmos", "beats": [
-      {"say": "Desmos is strong on this skill. Graph the function and click the grey dots, and the vertex, the zeros, and the y-intercept are all marked for you.", "card": {"text": "y = −x^2 + 6x − 5", "sub": "Vertex and zeros"}}
-    ]},
-    {"type": "desmos", "title": "Vertex and zeros", "beats": [
-      {"say": "Open a fresh graph, and type the function from our easy example.", "actions": ["hold: 2"]},
-      {"say": "Type y equals negative x, the caret key and a two, the right arrow, then plus six x minus five.", "actions": ["type: y=-x^2>+6x-5"]},
-      {"say": "Click the top of the parabola, and then click its grey dot. Desmos shows three comma four, the vertex.", "actions": ["bounds: left=-2 right=8 bottom=-8 top=6", "click: 3,4"]},
-      {"say": "Now click the two grey dots on the x axis. The zeros are x equals one and x equals five.", "actions": ["click: 1,0", "click: 5,0", "hold: 2"]}
-    ]},
-    {"type": "cards", "title": "When does it reach a value?", "beats": [
-      {"say": "Desmos also tells us when an exponential reaches a value. For the machine, graph the value function and the line y equals twenty thousand, and find where they meet.", "card": {"text": "45000(0.8)^x = 20000", "sub": "When does the value reach 20,000?"}}
-    ]},
-    {"type": "desmos", "title": "Exponential meets a value", "beats": [
-      {"say": "We graph the exponential decay and the horizontal line, and click where they cross.", "actions": ["hold: 2"]},
-      {"say": "Type y equals forty-five thousand times zero point eight, then the caret key and an x. Press the right arrow after the exponent.", "actions": ["type: y=45000(0.8)^x>"]},
-      {"say": "Type y equals twenty thousand. This horizontal line is the value we want the machine to fall below.", "actions": ["type: y=20000"]},
-      {"say": "Click the crossing point. The x value is about three point six three. So the value reaches twenty thousand partway through the fourth year, which is why the answer is four whole years.", "actions": ["bounds: left=-1 right=8 bottom=-5000 top=50000", "click: 3.634,20000"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. Find the vertex of f of x equals x squared minus four x minus five. Pause the video, try it, and then watch the solution.", "card": {"text": "f(x) = x^2 − 4x − 5", "sub": "Pause and try it first"}}
-    ]},
-    {"type": "steps", "title": "Practice: x coordinate", "start": "x = −frac(−4,2(1))", "beats": [
-      {"say": "The x coordinate of the vertex is negative b over two a. Here b is negative four and a is one."},
-      {"say": "Two times one is two. Negative four over two is negative two, and the minus sign in front makes it positive two.", "op": "simplify", "result": "x = 2", "final": true}
-    ]},
-    {"type": "steps", "title": "Practice: y coordinate", "start": "f(2) = 2^2 − 4(2) − 5", "beats": [
-      {"say": "To find the y coordinate, evaluate the function at x equals two."},
-      {"say": "Two squared is four, and four times two is eight, so the first two terms are four and negative eight.", "op": "simplify each term", "result": "f(2) = 4 − 8 − 5"},
-      {"say": "Four minus eight minus five is negative nine. So the vertex is two comma negative nine, and it is a minimum, because a is positive.", "op": "add", "result": "f(2) = −9", "final": true}
-    ]},
-    {"type": "check", "title": "Check with the zeros", "beats": [
-      {"say": "Check with the zeros. The function factors as x minus five, times x plus one, so the zeros are five and negative one. Halfway between them is two, which matches the vertex.", "lines": ["zeros: x = 5 and x = −1", "frac(5 + (−1),2) = 2"], "verdict": "The vertex is (2, −9)."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Use the remaining fraction as the factor for decay, reverse the sign inside vertex form, and square negative inputs in parentheses.", "item": "Factor, vertex sign, parentheses"},
-      {"say": "The vertex is the turning point, and zeros are x-intercepts. For doubling times, divide t by the doubling time.", "item": "Vertex is not a zero; divide by d"},
-      {"say": "Use Desmos for vertices, zeros, and when an exponential reaches a value. In the next unit, we study Problem-Solving and Data Analysis, starting with ratios and rates.", "item": "Desmos: vertex, zeros, intersections"}
-    ]}
-  ]
+ "id": "m-adv-nonlin-func_v3",
+ "skill": "m-adv-nonlin-func",
+ "part": 3,
+ "title": "Nonlinear Functions, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Advanced Math",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with nonlinear functions, and then use Desmos to find a vertex and zeros, and to find when an exponential reaches a value.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: percent as the factor",
+   "beats": [
+    {
+     "say": "Trap one. A machine loses twenty percent of its value each year. Students use the percent itself as the factor, instead of what's left after the loss.",
+     "wrong": "V(t) = 45000(0.2)^t",
+     "wrong_why": "0.2 is the loss, not what remains"
+    },
+    {
+     "say": "Losing twenty percent leaves eighty percent, so the factor is zero point eight. Likewise, a three percent increase has a factor of one point zero three.",
+     "right": "V(t) = 45000(0.8)^t",
+     "right_why": "Decay factor: 1 − 0.20"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: the sign in vertex form",
+   "beats": [
+    {
+     "say": "Trap two. In vertex form, the number inside the parentheses has the opposite sign to the x coordinate of the vertex. Students read it as it appears.",
+     "wrong": "a(x + 3)^2 − 7: vertex (3, −7)",
+     "wrong_why": "The inside sign is reversed"
+    },
+    {
+     "say": "The factor x plus three is x minus negative three. So h is negative three, and the vertex is negative three comma negative seven.",
+     "right": "a(x + 3)^2 − 7: vertex (−3, −7)",
+     "right_why": "x + 3 means h = −3"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: squaring a negative",
+   "beats": [
+    {
+     "say": "Trap three. For f of x equals two x squared, find f of negative two. Without parentheses, students square only the two and keep the negative sign outside.",
+     "wrong": "f(−2) = 2(−2)^2 = −8",
+     "wrong_why": "(−2)^2 is positive 4"
+    },
+    {
+     "say": "Negative two, squared, is positive four, because a negative times a negative is positive. Then two times four is eight.",
+     "right": "f(−2) = 2(4) = 8",
+     "right_why": "Square the negative input"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: vertex or zero",
+   "beats": [
+    {
+     "say": "Trap four. The vertex is the turning point of the parabola, and the zeros are where it crosses the x axis. A question about zeros isn't asking for the vertex.",
+     "wrong": "zeros: x = 3, the vertex",
+     "wrong_why": "The vertex is not a zero here"
+    },
+    {
+     "say": "For negative x squared plus six x minus five, the zeros are one and five, and the vertex is at three comma four.",
+     "right": "zeros: x = 1 and x = 5",
+     "right_why": "Where the graph crosses the x-axis"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: the time unit",
+   "beats": [
+    {
+     "say": "Trap five. If a quantity doubles every five hours, the exponent is t divided by five. Students multiply by five instead, which makes the quantity double five times as fast.",
+     "wrong": "doubles every 5 hours: 2^(5t)",
+     "wrong_why": "Exponent should divide by 5"
+    },
+    {
+     "say": "After five hours, t over five is one, so the quantity doubles once. That's the correct pace.",
+     "right": "doubles every 5 hours: 2^(t/5)",
+     "right_why": "t divided by the doubling time"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: Desmos",
+   "beats": [
+    {
+     "say": "Desmos is strong on this skill. Graph the function and click the grey dots, and the vertex, the zeros, and the y-intercept are all marked for you.",
+     "card": {
+      "text": "y = −x^2 + 6x − 5",
+      "sub": "Vertex and zeros"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Vertex and zeros",
+   "beats": [
+    {
+     "say": "Open a fresh graph, and type the function from our easy example.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals negative x, the caret key and a two, the right arrow, then plus six x minus five.",
+     "actions": [
+      "type: y=-x^2>+6x-5"
+     ]
+    },
+    {
+     "say": "Click the top of the parabola, and then click its grey dot. Desmos shows three comma four, the vertex.",
+     "actions": [
+      "bounds: left=-2 right=8 bottom=-8 top=6",
+      "click: 3,4"
+     ]
+    },
+    {
+     "say": "Now click the two grey dots on the x axis. The zeros are x equals one and x equals five.",
+     "actions": [
+      "click: 1,0",
+      "click: 5,0",
+      "hold: 2"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "When does it reach a value?",
+   "beats": [
+    {
+     "say": "Desmos also tells us when an exponential reaches a value. For the machine, graph the value function and the line y equals twenty thousand, and find where they meet.",
+     "card": {
+      "text": "45000(0.8)^x = 20000",
+      "sub": "When does the value reach 20,000?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Exponential meets a value",
+   "beats": [
+    {
+     "say": "We graph the exponential decay and the horizontal line, and click where they cross.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals forty-five thousand times zero point eight, then the caret key and an x. Press the right arrow after the exponent.",
+     "actions": [
+      "type: y=45000(0.8)^x>"
+     ]
+    },
+    {
+     "say": "Type y equals twenty thousand. This horizontal line is the value we want the machine to fall below.",
+     "actions": [
+      "type: y=20000"
+     ]
+    },
+    {
+     "say": "Click the crossing point. The x value is about three point six three. So the value reaches twenty thousand partway through the fourth year, which is why the answer is four whole years.",
+     "actions": [
+      "bounds: left=-1 right=8 bottom=-5000 top=50000",
+      "click: 3.634,20000"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. Find the vertex of f of x equals x squared minus four x minus five. Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "f(x) = x^2 − 4x − 5",
+      "sub": "Pause and try it first"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: x coordinate",
+   "start": "x = −frac(−4,2(1))",
+   "beats": [
+    {
+     "say": "The x coordinate of the vertex is negative b over two a. Here b is negative four and a is one."
+    },
+    {
+     "say": "Two times one is two. Negative four over two is negative two, and the minus sign in front makes it positive two.",
+     "op": "simplify",
+     "result": "x = 2",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: y coordinate",
+   "start": "f(2) = 2^2 − 4(2) − 5",
+   "beats": [
+    {
+     "say": "To find the y coordinate, evaluate the function at x equals two."
+    },
+    {
+     "say": "Two squared is four, and four times two is eight, so the first two terms are four and negative eight.",
+     "op": "simplify each term",
+     "result": "f(2) = 4 − 8 − 5"
+    },
+    {
+     "say": "Four minus eight minus five is negative nine. So the vertex is two comma negative nine, and it's a minimum, because a is positive.",
+     "op": "add",
+     "result": "f(2) = −9",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check with the zeros",
+   "beats": [
+    {
+     "say": "Check with the zeros. The function factors as x minus five, times x plus one, so the zeros are five and negative one. Halfway between them is two, which matches the vertex.",
+     "lines": [
+      "zeros: x = 5 and x = −1",
+      "frac(5 + (−1),2) = 2"
+     ],
+     "verdict": "The vertex is (2, −9)."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Use the remaining fraction as the factor for decay, reverse the sign inside vertex form, and square negative inputs in parentheses.",
+     "item": "Factor, vertex sign, parentheses"
+    },
+    {
+     "say": "The vertex is the turning point, and zeros are x-intercepts. For doubling times, divide t by the doubling time.",
+     "item": "Vertex is not a zero; divide by d"
+    },
+    {
+     "say": "Use Desmos for vertices, zeros, and when an exponential reaches a value. In the next unit, we study Problem-Solving and Data Analysis, starting with ratios and rates.",
+     "item": "Desmos: vertex, zeros, intersections"
+    }
+   ]
+  }
+ ]
 }

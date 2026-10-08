@@ -1,51 +1,195 @@
 {
-  "id": "m-psda-prob_v1",
-  "skill": "m-psda-prob",
-  "part": 1,
-  "title": "Probability and Conditional Probability, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "Probability", "beats": [
-      {"say": "Probability measures how likely an event is, as a number from zero, which means impossible, to one, which means certain.", "card": {"text": "0 = impossible, 1 = certain"}},
-      {"say": "The SAT tests simple probability from counts, two-way tables, conditional probability, which uses the words given that, and compound events such as two spins or at least one success.", "card": {"text": "Counts, tables, given that, compound"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "When outcomes are equally likely, probability is a fraction. The numerator is the number of favorable outcomes, and the denominator is the total number of outcomes.", "item": "Favorable over total"},
-      {"say": "The words given that shrink the group you choose from. The denominator becomes the size of the given group, not the grand total.", "item": "Given that: a smaller denominator"},
-      {"say": "In a two-way table, always identify the denominator first. It may be the whole table, one row, or one column.", "item": "Name the denominator first"},
-      {"say": "For independent events, such as spins, coin flips, or draws with replacement, multiply the probabilities. Without replacement, the second probability changes because one item is gone.", "item": "Independent events: multiply"},
-      {"say": "The phrase at least one is usually easiest as one minus the probability of none.", "item": "At least one: 1 − P(none)"}
-    ]},
-    {"type": "cards", "title": "Two core formulas", "beats": [
-      {"say": "The probability of an event A is the number of favorable outcomes divided by the number of total outcomes. The probability that A does not happen is one minus the probability that it does.", "card": {"text": "P(not A) = 1 − P(A)", "sub": "P(A) = favorable ÷ total"}},
-      {"say": "A conditional probability, written P of A given B, is the number of outcomes in both A and B, divided by the number of outcomes in B.", "card": {"text": "P(A | B) = frac(both,in B)"}}
-    ]},
-    {"type": "table", "title": "Rules for compound events", "columns": ["Situation", "Rule"], "rows": [["independent A and B", "P(A) × P(B)"], ["at least one", "1 − P(none)"], ["two draws without replacement", "a/n × (a−1)/(n−1)"]], "beats": [
-      {"say": "For independent events, the probability that both happen is the product of the two probabilities.", "reveal_row": 0},
-      {"say": "For at least one, find the probability of none, and subtract it from one. It is faster and safer than counting each case.", "reveal_row": 1},
-      {"say": "For two draws without replacement, the second fraction has one fewer favorable item, and one fewer item in total.", "reveal_row": 2}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. A jar has six lemon, nine cherry, and five grape candies. One candy is chosen at random. What is the probability that it is not cherry?", "card": {"text": "6 lemon, 9 cherry, 5 grape", "sub": "P(not cherry)?"}}
-    ]},
-    {"type": "steps", "title": "Easy: the total", "start": "6 + 9 + 5", "beats": [
-      {"say": "First find the total number of candies. This will be the denominator, because every candy is equally likely to be chosen."},
-      {"say": "Six plus nine plus five is twenty. So there are twenty candies in the jar altogether.", "op": "add", "result": "20", "final": true}
-    ]},
-    {"type": "steps", "title": "Easy: the favorable outcomes", "start": "6 + 5", "beats": [
-      {"say": "Next count the candies that are not cherry. Those are the lemon candies and the grape candies."},
-      {"say": "Six lemon plus five grape is eleven candies that are not cherry. This is the numerator.", "op": "add", "result": "11", "final": true}
-    ]},
-    {"type": "cards", "title": "Easy: the probability", "beats": [
-      {"say": "The probability is the favorable outcomes over the total outcomes. Eleven out of twenty.", "card": {"text": "P(not cherry) = frac(11,20)"}}
-    ]},
-    {"type": "steps", "title": "Check with the complement", "start": "1 − frac(9,20)", "beats": [
-      {"say": "As a check, find the probability of cherry, which is nine out of twenty, and subtract it from one."},
-      {"say": "One is twenty over twenty, so twenty over twenty minus nine over twenty is eleven over twenty. This matches our first answer.", "op": "subtract", "result": "frac(11,20)", "final": true}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Probability is favorable outcomes over total outcomes, and the probability of not A is one minus the probability of A.", "item": "Favorable ÷ total; P(not A) = 1 − P(A)"},
-      {"say": "For a conditional probability, the denominator is the given group. In the next video, we work through a medium problem and a hard problem.", "item": "Given that: shrink the denominator"}
-    ]}
-  ]
+ "id": "m-psda-prob_v1",
+ "skill": "m-psda-prob",
+ "part": 1,
+ "title": "Probability and Conditional Probability, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Probability",
+   "beats": [
+    {
+     "say": "Probability measures how likely an event is, as a number from zero, which means impossible, to one, which means certain.",
+     "card": {
+      "text": "0 = impossible, 1 = certain"
+     }
+    },
+    {
+     "say": "The SAT tests simple probability from counts, two-way tables, conditional probability, which uses the words given that, and compound events such as two spins or at least one success.",
+     "card": {
+      "text": "Counts, tables, given that, compound"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "When outcomes are equally likely, probability is a fraction. The numerator is the number of favorable outcomes, and the denominator is the total number of outcomes.",
+     "item": "Favorable over total"
+    },
+    {
+     "say": "The words given that shrink the group you choose from. The denominator becomes the size of the given group, not the grand total.",
+     "item": "Given that: a smaller denominator"
+    },
+    {
+     "say": "In a two-way table, always identify the denominator first. It may be the whole table, one row, or one column.",
+     "item": "Name the denominator first"
+    },
+    {
+     "say": "For independent events, such as spins, coin flips, or draws with replacement, multiply the probabilities. Without replacement, the second probability changes because one item is gone.",
+     "item": "Independent events: multiply"
+    },
+    {
+     "say": "The phrase at least one is usually easiest as one minus the probability of none.",
+     "item": "At least one: 1 − P(none)"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Two core formulas",
+   "beats": [
+    {
+     "say": "The probability of an event A is the number of favorable outcomes divided by the number of total outcomes. The probability that A doesn't happen is one minus the probability that it does.",
+     "card": {
+      "text": "P(not A) = 1 − P(A)",
+      "sub": "P(A) = favorable ÷ total"
+     }
+    },
+    {
+     "say": "A conditional probability, written P of A given B, is the number of outcomes in both A and B, divided by the number of outcomes in B.",
+     "card": {
+      "text": "P(A | B) = frac(both,in B)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Rules for compound events",
+   "columns": [
+    "Situation",
+    "Rule"
+   ],
+   "rows": [
+    [
+     "independent A and B",
+     "P(A) × P(B)"
+    ],
+    [
+     "at least one",
+     "1 − P(none)"
+    ],
+    [
+     "two draws without replacement",
+     "a/n × (a−1)/(n−1)"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "For independent events, the probability that both happen is the product of the two probabilities.",
+     "reveal_row": 0
+    },
+    {
+     "say": "For at least one, find the probability of none, and subtract it from one. It's faster and safer than counting each case.",
+     "reveal_row": 1
+    },
+    {
+     "say": "For two draws without replacement, the second fraction has one fewer favorable item, and one fewer item in total.",
+     "reveal_row": 2
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. A jar has six lemon, nine cherry, and five grape candies. One candy is chosen at random. What's the probability that it isn't cherry?",
+     "card": {
+      "text": "6 lemon, 9 cherry, 5 grape",
+      "sub": "P(not cherry)?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: the total",
+   "start": "6 + 9 + 5",
+   "beats": [
+    {
+     "say": "First find the total number of candies. This will be the denominator, because every candy is equally likely to be chosen."
+    },
+    {
+     "say": "Six plus nine plus five is twenty. So there are twenty candies in the jar altogether.",
+     "op": "add",
+     "result": "20",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: the favorable outcomes",
+   "start": "6 + 5",
+   "beats": [
+    {
+     "say": "Next count the candies that aren't cherry. Those are the lemon candies and the grape candies."
+    },
+    {
+     "say": "Six lemon plus five grape is eleven candies that aren't cherry. This is the numerator.",
+     "op": "add",
+     "result": "11",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy: the probability",
+   "beats": [
+    {
+     "say": "The probability is the favorable outcomes over the total outcomes. Eleven out of twenty.",
+     "card": {
+      "text": "P(not cherry) = frac(11,20)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Check with the complement",
+   "start": "1 − frac(9,20)",
+   "beats": [
+    {
+     "say": "As a check, find the probability of cherry, which is nine out of twenty, and subtract it from one."
+    },
+    {
+     "say": "One is twenty over twenty, so twenty over twenty minus nine over twenty is eleven over twenty. This matches our first answer.",
+     "op": "subtract",
+     "result": "frac(11,20)",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Probability is favorable outcomes over total outcomes, and the probability of not A is one minus the probability of A.",
+     "item": "Favorable ÷ total; P(not A) = 1 − P(A)"
+    },
+    {
+     "say": "For a conditional probability, the denominator is the given group. In the next video, we work through a medium problem and a hard problem.",
+     "item": "Given that: shrink the denominator"
+    }
+   ]
+  }
+ ]
 }

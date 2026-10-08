@@ -1,58 +1,213 @@
 {
-  "id": "m-alg-linfunc_v2",
-  "skill": "m-alg-linfunc",
-  "part": 2,
-  "title": "Linear Functions, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Algebra",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we saw that a linear function f of x equals m x plus b has slope m and y-intercept b, and that slope is rise over run.", "card": {"text": "f(x) = mx + b"}},
-      {"say": "In this video, we find the equation of a line from two points, and then use a real-world model where we also explain what the numbers mean.", "card": {"text": "Today: two points, then a model"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. A line passes through the points two comma five and six comma seventeen. Find the equation of the line.", "card": {"text": "(2, 5) and (6, 17)", "sub": "Find the equation"}}
-    ]},
-    {"type": "steps", "title": "Medium: find the slope", "start": "m = frac(17 − 5,6 − 2)", "beats": [
-      {"say": "First find the slope. The change in y is seventeen minus five, and the change in x is six minus two. Both subtractions use the second point first, so the order matches."},
-      {"say": "Seventeen minus five is twelve, and six minus two is four. So the slope is twelve over four.", "op": "subtract", "result": "m = frac(12,4)"},
-      {"say": "Twelve divided by four is three. So the slope is three, which means y goes up three every time x goes up one.", "op": "divide", "result": "m = 3", "final": true}
-    ]},
-    {"type": "steps", "title": "Medium: find the intercept", "start": "5 = 3(2) + b", "beats": [
-      {"say": "Next find b. We know the line has the form y equals three x plus b, and it passes through two comma five, so we substitute x equals two and y equals five."},
-      {"say": "Multiply three times two to get six. The equation becomes five equals six plus b.", "op": "multiply", "result": "5 = 6 + b"},
-      {"say": "Subtract six from both sides. Five minus six is negative one, so b equals negative one.", "op": "− 6 on both sides", "result": "b = −1", "final": true}
-    ]},
-    {"type": "check", "title": "Check with the other point", "beats": [
-      {"say": "The equation is y equals three x minus one. Check it with the other point, six comma seventeen. Three times six is eighteen, and eighteen minus one is seventeen. It matches.", "lines": ["3(6) − 1 = 17"], "verdict": "y = 3x − 1 passes through both points."}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. A climbing gym's monthly cost C, in dollars, is a linear function of the number of sessions n. Three sessions cost forty-seven dollars, and eight sessions cost seventy-two dollars.", "card": {"text": "C(3) = 47 and C(8) = 72", "sub": "Find C(12) and explain the numbers"}},
-      {"say": "We need the cost of twelve sessions, and we also need to explain what the slope and the intercept mean in this situation. Let us build the model step by step.", "card": {"text": "Find the model C(n) = mn + b"}}
-    ]},
-    {"type": "steps", "title": "Hard: the rate of change", "start": "m = frac(72 − 47,8 − 3)", "beats": [
-      {"say": "The slope is the change in cost divided by the change in sessions. Cost goes from forty-seven to seventy-two, and sessions go from three to eight."},
-      {"say": "Seventy-two minus forty-seven is twenty-five, and eight minus three is five. So the slope is twenty-five over five.", "op": "subtract", "result": "m = frac(25,5)"},
-      {"say": "Twenty-five divided by five is five. So the slope is five, which means each extra session adds five dollars to the cost.", "op": "divide", "result": "m = 5", "final": true}
-    ]},
-    {"type": "steps", "title": "Hard: the starting fee", "start": "47 = 5(3) + b", "beats": [
-      {"say": "Now find the intercept. We know C of three is forty-seven, so we substitute n equals three and C equals forty-seven into the form five n plus b."},
-      {"say": "Five times three is fifteen, so the equation becomes forty-seven equals fifteen plus b.", "op": "multiply", "result": "47 = 15 + b"},
-      {"say": "Subtract fifteen from both sides. Forty-seven minus fifteen is thirty-two, so b equals thirty-two.", "op": "− 15 on both sides", "result": "b = 32", "final": true}
-    ]},
-    {"type": "steps", "title": "Hard: use the model", "start": "C(12) = 5(12) + 32", "beats": [
-      {"say": "The model is C of n equals five n plus thirty-two. To find the cost of twelve sessions, we substitute n equals twelve."},
-      {"say": "Five times twelve is sixty, so the cost is sixty plus thirty-two.", "op": "multiply", "result": "C(12) = 60 + 32"},
-      {"say": "Sixty plus thirty-two is ninety-two. So twelve sessions cost ninety-two dollars in total, which answers the first part of the question.", "op": "add", "result": "C(12) = 92", "final": true}
-    ]},
-    {"type": "list", "title": "What the numbers mean", "beats": [
-      {"say": "The slope, five, is the rate of change. It means the gym charges five dollars for each additional session.", "item": "Slope 5: five dollars per session"},
-      {"say": "The intercept, thirty-two, is the cost when the number of sessions is zero. It is a monthly base fee that a member pays even without climbing.", "item": "Intercept 32: monthly base fee"},
-      {"say": "As a final check, C of eight should be seventy-two. Five times eight is forty, plus thirty-two is seventy-two. The model matches the given data.", "item": "Check: C(8) = 72"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. To write a line from two points, find the slope first, then substitute one point to find the intercept.", "item": "Slope first, then the intercept"},
-      {"say": "In a model, the slope is the rate and the intercept is the starting amount. Always say what each number means in the situation.", "item": "Slope is rate, intercept is start"},
-      {"say": "Check the model on the other data point. In the next video, we look at common traps and the fast way with Desmos.", "item": "Check with the other point"}
-    ]}
-  ]
+ "id": "m-alg-linfunc_v2",
+ "skill": "m-alg-linfunc",
+ "part": 2,
+ "title": "Linear Functions, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Algebra",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we saw that a linear function f of x equals m x plus b has slope m and y-intercept b, and that slope is rise over run.",
+     "card": {
+      "text": "f(x) = mx + b"
+     }
+    },
+    {
+     "say": "In this video, we find the equation of a line from two points, and then use a real-world model where we also explain what the numbers mean.",
+     "card": {
+      "text": "Today: two points, then a model"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. A line passes through the points two comma five and six comma seventeen. Find the equation of the line.",
+     "card": {
+      "text": "(2, 5) and (6, 17)",
+      "sub": "Find the equation"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: find the slope",
+   "start": "m = frac(17 − 5,6 − 2)",
+   "beats": [
+    {
+     "say": "First find the slope. The change in y is seventeen minus five, and the change in x is six minus two. Both subtractions use the second point first, so the order matches."
+    },
+    {
+     "say": "Seventeen minus five is twelve, and six minus two is four. So the slope is twelve over four.",
+     "op": "subtract",
+     "result": "m = frac(12,4)"
+    },
+    {
+     "say": "Twelve divided by four is three. So the slope is three, which means y goes up three every time x goes up one.",
+     "op": "divide",
+     "result": "m = 3",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: find the intercept",
+   "start": "5 = 3(2) + b",
+   "beats": [
+    {
+     "say": "Next find b. We know the line has the form y equals three x plus b, and it passes through two comma five, so we substitute x equals two and y equals five."
+    },
+    {
+     "say": "Multiply three times two to get six. The equation becomes five equals six plus b.",
+     "op": "multiply",
+     "result": "5 = 6 + b"
+    },
+    {
+     "say": "Subtract six from both sides. Five minus six is negative one, so b equals negative one.",
+     "op": "− 6 on both sides",
+     "result": "b = −1",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check with the other point",
+   "beats": [
+    {
+     "say": "The equation is y equals three x minus one. Check it with the other point, six comma seventeen. Three times six is eighteen, and eighteen minus one is seventeen. It matches.",
+     "lines": [
+      "3(6) − 1 = 17"
+     ],
+     "verdict": "y = 3x − 1 passes through both points."
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. A climbing gym's monthly cost C, in dollars, is a linear function of the number of sessions n. Three sessions cost forty-seven dollars, and eight sessions cost seventy-two dollars.",
+     "card": {
+      "text": "C(3) = 47 and C(8) = 72",
+      "sub": "Find C(12) and explain the numbers"
+     }
+    },
+    {
+     "say": "We need the cost of twelve sessions, and we also need to explain what the slope and the intercept mean in this situation. Let's build the model step by step.",
+     "card": {
+      "text": "Find the model C(n) = mn + b"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: the rate of change",
+   "start": "m = frac(72 − 47,8 − 3)",
+   "beats": [
+    {
+     "say": "The slope is the change in cost divided by the change in sessions. Cost goes from forty-seven to seventy-two, and sessions go from three to eight."
+    },
+    {
+     "say": "Seventy-two minus forty-seven is twenty-five, and eight minus three is five. So the slope is twenty-five over five.",
+     "op": "subtract",
+     "result": "m = frac(25,5)"
+    },
+    {
+     "say": "Twenty-five divided by five is five. So the slope is five, which means each extra session adds five dollars to the cost.",
+     "op": "divide",
+     "result": "m = 5",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: the starting fee",
+   "start": "47 = 5(3) + b",
+   "beats": [
+    {
+     "say": "Now find the intercept. We know C of three is forty-seven, so we substitute n equals three and C equals forty-seven into the form five n plus b."
+    },
+    {
+     "say": "Five times three is fifteen, so the equation becomes forty-seven equals fifteen plus b.",
+     "op": "multiply",
+     "result": "47 = 15 + b"
+    },
+    {
+     "say": "Subtract fifteen from both sides. Forty-seven minus fifteen is thirty-two, so b equals thirty-two.",
+     "op": "− 15 on both sides",
+     "result": "b = 32",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: use the model",
+   "start": "C(12) = 5(12) + 32",
+   "beats": [
+    {
+     "say": "The model is C of n equals five n plus thirty-two. To find the cost of twelve sessions, we substitute n equals twelve."
+    },
+    {
+     "say": "Five times twelve is sixty, so the cost is sixty plus thirty-two.",
+     "op": "multiply",
+     "result": "C(12) = 60 + 32"
+    },
+    {
+     "say": "Sixty plus thirty-two is ninety-two. So twelve sessions cost ninety-two dollars in total, which answers the first part of the question.",
+     "op": "add",
+     "result": "C(12) = 92",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "What the numbers mean",
+   "beats": [
+    {
+     "say": "The slope, five, is the rate of change. It means the gym charges five dollars for each additional session.",
+     "item": "Slope 5: five dollars per session"
+    },
+    {
+     "say": "The intercept, thirty-two, is the cost when the number of sessions is zero. It's a monthly base fee that a member pays even without climbing.",
+     "item": "Intercept 32: monthly base fee"
+    },
+    {
+     "say": "As a final check, C of eight should be seventy-two. Five times eight is forty, plus thirty-two is seventy-two. The model matches the given data.",
+     "item": "Check: C(8) = 72"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. To write a line from two points, find the slope first, then substitute one point to find the intercept.",
+     "item": "Slope first, then the intercept"
+    },
+    {
+     "say": "In a model, the slope is the rate and the intercept is the starting amount. Always say what each number means in the situation.",
+     "item": "Slope is rate, intercept is start"
+    },
+    {
+     "say": "Check the model on the other data point. In the next video, we look at common traps and the fast way with Desmos.",
+     "item": "Check with the other point"
+    }
+   ]
+  }
+ ]
 }

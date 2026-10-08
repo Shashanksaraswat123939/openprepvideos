@@ -1,49 +1,192 @@
 {
-  "id": "m-psda-ratios_v1",
-  "skill": "m-psda-ratios",
-  "part": 1,
-  "title": "Ratios, Rates, Proportions and Units, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "Ratios, rates, proportions", "beats": [
-      {"say": "A ratio compares two quantities. A rate compares quantities with different units, such as miles per hour or dollars per pound. A proportion says that two ratios are equal.", "card": {"text": "Ratio, rate, proportion"}},
-      {"say": "The SAT tests setting up proportions, working with rates, converting units through several steps, reading map scales, and combining rates when two things work together.", "card": {"text": "Set up, convert, scale, combine"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "A proportion, a over b equals c over d, only works if both ratios compare the same things in the same order. If flour is on top on the left, flour must be on top on the right.", "item": "Same things, same order"},
-      {"say": "A unit rate is the amount for one unit. It turns most rate problems into a single multiplication.", "item": "Unit rate: the amount for one"},
-      {"say": "In a ratio of five to three, the actual quantities are five k and three k for some number k. The total is eight k.", "item": "Ratio 5 : 3 means 5k and 3k"},
-      {"say": "Unit conversion means multiplying by fractions equal to one, such as sixty minutes over one hour. Arrange each fraction so that the unwanted unit cancels.", "item": "Convert with fractions equal to one"},
-      {"say": "When two machines or workers act together, their rates add. Their times do not add.", "item": "Rates add; times do not"}
-    ]},
-    {"type": "table", "title": "Methods at a glance", "columns": ["Situation", "Method"], "rows": [["4 cups for every 3 cups", "4/3 = x/9, then cross-multiply"], ["Scale: 1 cm = 1.5 km", "multiply the map distance by 1.5"], ["Density", "mass ÷ volume"], ["Working together", "add the rates"]], "beats": [
-      {"say": "For a ratio such as four cups for every three cups, write a proportion with an unknown, and cross-multiply.", "reveal_row": 0},
-      {"say": "For a map scale, multiply the distance on the map by the real distance that one unit represents.", "reveal_row": 1},
-      {"say": "Density is mass divided by volume. It is an example of a rate with two different units.", "reveal_row": 2},
-      {"say": "When working together, add the rates, such as jobs per hour, and then find the time from the combined rate.", "reveal_row": 3}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. Five notebooks cost eight dollars and seventy-five cents. At the same price per notebook, how much do twelve notebooks cost?", "card": {"text": "5 notebooks: $8.75", "sub": "Cost of 12 notebooks?"}},
-      {"say": "Our plan is to find the unit rate, the price of one notebook, and then multiply by twelve.", "card": {"text": "Find the price of one notebook"}}
-    ]},
-    {"type": "steps", "title": "Easy: the unit rate", "start": "frac(8.75,5)", "beats": [
-      {"say": "Divide the total cost by the number of notebooks. Eight dollars and seventy-five cents divided by five gives the price of one notebook."},
-      {"say": "Eight point seven five divided by five is one point seven five. So each notebook costs one dollar and seventy-five cents.", "op": "divide", "result": "1.75", "final": true}
-    ]},
-    {"type": "steps", "title": "Easy: multiply by twelve", "start": "12 × 1.75", "beats": [
-      {"say": "Now multiply the price of one notebook, the unit rate, by the twelve notebooks that we want to buy."},
-      {"say": "Twelve times one point seven five is twenty-one. So twelve notebooks cost twenty-one dollars.", "op": "multiply", "result": "21", "final": true}
-    ]},
-    {"type": "steps", "title": "Check with a proportion", "start": "frac(8.75,5) = frac(x,12)", "beats": [
-      {"say": "As a check, set up a proportion. Dollars are on top and notebooks are on the bottom on both sides, so the order matches."},
-      {"say": "Cross-multiply, which means multiplying diagonally. Five times x equals eight point seven five times twelve.", "op": "cross-multiply", "result": "5x = 8.75 × 12"},
-      {"say": "Eight point seven five times twelve is one hundred five. So five x equals one hundred five.", "op": "multiply", "result": "5x = 105"},
-      {"say": "Divide both sides by five. One hundred five divided by five is twenty-one. This matches our answer.", "op": "÷ 5 on both sides", "result": "x = 21", "final": true}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. A proportion needs the same quantities in the same order on both sides.", "item": "Same order on both sides"},
-      {"say": "A unit rate turns a rate problem into one multiplication. Write the units on every number.", "item": "Find the unit rate first"},
-      {"say": "Check with a proportion. In the next video, we work through a medium problem and a hard problem.", "item": "Check with a proportion"}
-    ]}
-  ]
+ "id": "m-psda-ratios_v1",
+ "skill": "m-psda-ratios",
+ "part": 1,
+ "title": "Ratios, Rates, Proportions and Units, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Ratios, rates, proportions",
+   "beats": [
+    {
+     "say": "A ratio compares two quantities. A rate compares quantities with different units, such as miles per hour or dollars per pound. A proportion says that two ratios are equal.",
+     "card": {
+      "text": "Ratio, rate, proportion"
+     }
+    },
+    {
+     "say": "The SAT tests setting up proportions, working with rates, converting units through several steps, reading map scales, and combining rates when two things work together.",
+     "card": {
+      "text": "Set up, convert, scale, combine"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "A proportion, a over b equals c over d, only works if both ratios compare the same things in the same order. If flour is on top on the left, flour must be on top on the right.",
+     "item": "Same things, same order"
+    },
+    {
+     "say": "A unit rate is the amount for one unit. It turns most rate problems into a single multiplication.",
+     "item": "Unit rate: the amount for one"
+    },
+    {
+     "say": "In a ratio of five to three, the actual quantities are five k and three k for some number k. The total is eight k.",
+     "item": "Ratio 5 : 3 means 5k and 3k"
+    },
+    {
+     "say": "Unit conversion means multiplying by fractions equal to one, such as sixty minutes over one hour. Arrange each fraction so that the unwanted unit cancels.",
+     "item": "Convert with fractions equal to one"
+    },
+    {
+     "say": "When two machines or workers act together, their rates add. Their times don't add.",
+     "item": "Rates add; times do not"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Methods at a glance",
+   "columns": [
+    "Situation",
+    "Method"
+   ],
+   "rows": [
+    [
+     "4 cups for every 3 cups",
+     "4/3 = x/9, then cross-multiply"
+    ],
+    [
+     "Scale: 1 cm = 1.5 km",
+     "multiply the map distance by 1.5"
+    ],
+    [
+     "Density",
+     "mass ÷ volume"
+    ],
+    [
+     "Working together",
+     "add the rates"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "For a ratio such as four cups for every three cups, write a proportion with an unknown, and cross-multiply.",
+     "reveal_row": 0
+    },
+    {
+     "say": "For a map scale, multiply the distance on the map by the real distance that one unit represents.",
+     "reveal_row": 1
+    },
+    {
+     "say": "Density is mass divided by volume. It's an example of a rate with two different units.",
+     "reveal_row": 2
+    },
+    {
+     "say": "When working together, add the rates, such as jobs per hour, and then find the time from the combined rate.",
+     "reveal_row": 3
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. Five notebooks cost eight dollars and seventy-five cents. At the same price per notebook, how much do twelve notebooks cost?",
+     "card": {
+      "text": "5 notebooks: $8.75",
+      "sub": "Cost of 12 notebooks?"
+     }
+    },
+    {
+     "say": "Our plan is to find the unit rate, the price of one notebook, and then multiply by twelve.",
+     "card": {
+      "text": "Find the price of one notebook"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: the unit rate",
+   "start": "frac(8.75,5)",
+   "beats": [
+    {
+     "say": "Divide the total cost by the number of notebooks. Eight dollars and seventy-five cents divided by five gives the price of one notebook."
+    },
+    {
+     "say": "Eight point seven five divided by five is one point seven five. So each notebook costs one dollar and seventy-five cents.",
+     "op": "divide",
+     "result": "1.75",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: multiply by twelve",
+   "start": "12 × 1.75",
+   "beats": [
+    {
+     "say": "Now multiply the price of one notebook, the unit rate, by the twelve notebooks that we want to buy."
+    },
+    {
+     "say": "Twelve times one point seven five is twenty-one. So twelve notebooks cost twenty-one dollars.",
+     "op": "multiply",
+     "result": "21",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Check with a proportion",
+   "start": "frac(8.75,5) = frac(x,12)",
+   "beats": [
+    {
+     "say": "As a check, set up a proportion. Dollars are on top and notebooks are on the bottom on both sides, so the order matches."
+    },
+    {
+     "say": "Cross-multiply, which means multiplying diagonally. Five times x equals eight point seven five times twelve.",
+     "op": "cross-multiply",
+     "result": "5x = 8.75 × 12"
+    },
+    {
+     "say": "Eight point seven five times twelve is one hundred five. So five x equals one hundred five.",
+     "op": "multiply",
+     "result": "5x = 105"
+    },
+    {
+     "say": "Divide both sides by five. One hundred five divided by five is twenty-one. This matches our answer.",
+     "op": "÷ 5 on both sides",
+     "result": "x = 21",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. A proportion needs the same quantities in the same order on both sides.",
+     "item": "Same order on both sides"
+    },
+    {
+     "say": "A unit rate turns a rate problem into one multiplication. Write the units on every number.",
+     "item": "Find the unit rate first"
+    },
+    {
+     "say": "Check with a proportion. In the next video, we work through a medium problem and a hard problem.",
+     "item": "Check with a proportion"
+    }
+   ]
+  }
+ ]
 }

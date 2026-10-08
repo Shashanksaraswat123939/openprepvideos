@@ -1,69 +1,274 @@
 {
-  "id": "m-alg-ineq_v3",
-  "skill": "m-alg-ineq",
-  "part": 3,
-  "title": "Linear Inequalities, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Algebra",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with inequalities, and then use Desmos to test points in a system and to check a one-variable inequality.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: forgetting to flip", "beats": [
-      {"say": "Trap one. Dividing both sides of negative six x is at most eighteen by negative six must flip the sign. Students divide correctly but keep the old sign.", "wrong": "−6x ≤ 18 gives x ≤ −3", "wrong_why": "The sign was not flipped"},
-      {"say": "Dividing by a negative number flips the inequality. So the correct result is x is greater than or equal to negative three.", "right": "−6x ≤ 18 gives x ≥ −3", "right_why": "Divide by a negative: flip"}
-    ]},
-    {"type": "compare", "title": "Trap 2: flipping by mistake", "beats": [
-      {"say": "Trap two. Only multiplying or dividing by a negative number flips the sign. Some students flip it whenever they see a minus sign anywhere, or when dividing by a positive number.", "wrong": "x/2 > 3 gives x < 6", "wrong_why": "2 is positive: no flip"},
-      {"say": "Multiplying both sides by two, which is positive, keeps the sign the same. So x is greater than six.", "right": "x/2 > 3 gives x > 6", "right_why": "Positive number: no flip"}
-    ]},
-    {"type": "compare", "title": "Trap 3: rounding the wrong way", "beats": [
-      {"say": "Trap three. If b is at most thirty-four point four boxes, students round to the nearest whole number and get thirty-five. But thirty-five boxes would exceed the limit.", "wrong": "b ≤ 34.4, so b = 35", "wrong_why": "35 is more than 34.4"},
-      {"say": "The greatest whole number that is still at most thirty-four point four is thirty-four. For greatest, round down, and for least, round up.", "right": "b ≤ 34.4, so b = 34", "right_why": "Greatest: round down"}
-    ]},
-    {"type": "compare", "title": "Trap 4: using one inequality", "beats": [
-      {"say": "Trap four. In a system, a point must satisfy every inequality. A student who solves only the first inequality might say a equals seven is the greatest value, and stop.", "wrong": "a ≤ 7, so a = 7", "wrong_why": "The second inequality was ignored"},
-      {"say": "The second inequality gives a less than six as well. Both must hold, so the greatest integer is five.", "right": "a ≤ 7 and a < 6, so a = 5", "right_why": "Satisfy both conditions"}
-    ]},
-    {"type": "compare", "title": "Trap 5: strict or inclusive", "beats": [
-      {"say": "Trap five. At least ten means x can equal ten, so the boundary is included. Some students turn it into a strict inequality.", "wrong": "at least 10 means x > 10", "wrong_why": "The boundary is included"},
-      {"say": "At least ten means greater than or equal to ten. A strict sign is for words like more than or exceeds.", "right": "at least 10 means x ≥ 10", "right_why": "At least includes the boundary"}
-    ]},
-    {"type": "cards", "title": "The fast way: Desmos", "beats": [
-      {"say": "For a one-variable inequality, algebra is fastest, since it takes two steps and a sign check. Desmos shines for systems of inequalities in two variables.", "card": {"text": "Use Desmos for systems"}},
-      {"say": "Our system is y at least x minus three, and y less than negative two x plus sixteen. We want to know which of two points are solutions.", "card": {"text": "y ≥ x − 3  and  y < −2x + 16", "sub": "Test (5, 4) and (6, 4)"}}
-    ]},
-    {"type": "desmos", "title": "Test points in a system", "beats": [
-      {"say": "Open a fresh graph. We will type each inequality, and then plot each point we want to test.", "actions": ["hold: 2"]},
-      {"say": "Type the first inequality as x minus three is at most y, which is the same as y is at least x minus three. Desmos shades the region above a solid line.", "actions": ["type: x-3<=y"]},
-      {"say": "Now type y is less than negative two x plus sixteen. Desmos shades the region below a dashed line.", "actions": ["type: y<-2x+16", "bounds: left=-6 right=14 bottom=-6 top=20"]},
-      {"say": "Where the shaded regions overlap is the solution region. Plot the point five comma four. It lands inside the overlap, so it is a solution.", "actions": ["type: (5,4)"]},
-      {"say": "Now plot the point six comma four. It lands exactly on the dashed boundary, which is not included, so six comma four is not a solution.", "actions": ["type: (6,4)", "hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Check a single inequality", "beats": [
-      {"say": "Desmos can also check a one-variable inequality. For five minus three x less than seventeen, graph each side as its own curve, and look for where the first is below the second.", "card": {"text": "y = 5 − 3x  and  y = 17", "sub": "Where is the first line below?"}}
-    ]},
-    {"type": "desmos", "title": "One variable, two curves", "beats": [
-      {"say": "We type the left side as one line, and the right side as another line, and then look at where they cross.", "actions": ["hold: 2"]},
-      {"say": "Type y equals five minus three x. This is a line sloping downward.", "actions": ["type: y=5-3x"]},
-      {"say": "Now type y equals seventeen. This is a horizontal line, which represents the right side of the inequality.", "actions": ["type: y=17"]},
-      {"say": "Click the crossing point. It is at negative four comma seventeen. To the right of negative four, the sloping line is below seventeen, so x greater than negative four is the solution.", "actions": ["bounds: left=-10 right=6 bottom=-6 top=30", "click: -4,17"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. Solve seven minus two x is at least fifteen. Pause the video, try it, and then watch the solution.", "card": {"text": "7 − 2x ≥ 15", "sub": "Pause and try it first"}}
-    ]},
-    {"type": "steps", "title": "Practice: solve", "start": "7 − 2x ≥ 15", "beats": [
-      {"say": "The coefficient of x is negative, so we expect a flip in the last step."},
-      {"say": "Subtract seven from both sides. Fifteen minus seven is eight, and the sign does not change.", "op": "− 7 on both sides", "result": "−2x ≥ 8"},
-      {"say": "Divide both sides by negative two, and flip the sign. Eight divided by negative two is negative four. So x is at most negative four.", "op": "÷ (−2) and flip the sign", "result": "x ≤ −4", "final": true}
-    ]},
-    {"type": "check", "title": "Check with test values", "beats": [
-      {"say": "Test a value in the range, x equals negative five. Seven plus ten is seventeen, which is at least fifteen. True. Test a value outside the range, x equals zero. Seven is not at least fifteen. False.", "lines": ["x = −5: 7 + 10 = 17 ≥ 15, true", "x = 0: 7 ≥ 15, false"], "verdict": "x ≤ −4 is correct."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Flip the sign only when you multiply or divide by a negative number, never otherwise.", "item": "Flip only for a negative"},
-      {"say": "Round down for greatest, round up for least, and satisfy every inequality in a system. At least includes the boundary.", "item": "Round correctly, satisfy all, include boundary"},
-      {"say": "Use Desmos to shade systems and test points. In the next unit, we study Advanced Math, starting with equivalent expressions.", "item": "Desmos shades systems and tests points"}
-    ]}
-  ]
+ "id": "m-alg-ineq_v3",
+ "skill": "m-alg-ineq",
+ "part": 3,
+ "title": "Linear Inequalities, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Algebra",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with inequalities, and then use Desmos to test points in a system and to check a one-variable inequality.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: forgetting to flip",
+   "beats": [
+    {
+     "say": "Trap one. Dividing both sides of negative six x is at most eighteen by negative six must flip the sign. Students divide correctly but keep the old sign.",
+     "wrong": "−6x ≤ 18 gives x ≤ −3",
+     "wrong_why": "The sign was not flipped"
+    },
+    {
+     "say": "Dividing by a negative number flips the inequality. So the correct result is x is greater than or equal to negative three.",
+     "right": "−6x ≤ 18 gives x ≥ −3",
+     "right_why": "Divide by a negative: flip"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: flipping by mistake",
+   "beats": [
+    {
+     "say": "Trap two. Only multiplying or dividing by a negative number flips the sign. Some students flip it whenever they see a minus sign anywhere, or when dividing by a positive number.",
+     "wrong": "x/2 > 3 gives x < 6",
+     "wrong_why": "2 is positive: no flip"
+    },
+    {
+     "say": "Multiplying both sides by two, which is positive, keeps the sign the same. So x is greater than six.",
+     "right": "x/2 > 3 gives x > 6",
+     "right_why": "Positive number: no flip"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: rounding the wrong way",
+   "beats": [
+    {
+     "say": "Trap three. If b is at most thirty-four point four boxes, students round to the nearest whole number and get thirty-five. But thirty-five boxes would exceed the limit.",
+     "wrong": "b ≤ 34.4, so b = 35",
+     "wrong_why": "35 is more than 34.4"
+    },
+    {
+     "say": "The greatest whole number that's still at most thirty-four point four is thirty-four. For greatest, round down, and for least, round up.",
+     "right": "b ≤ 34.4, so b = 34",
+     "right_why": "Greatest: round down"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: using one inequality",
+   "beats": [
+    {
+     "say": "Trap four. In a system, a point must satisfy every inequality. A student who solves only the first inequality might say a equals seven is the greatest value, and stop.",
+     "wrong": "a ≤ 7, so a = 7",
+     "wrong_why": "The second inequality was ignored"
+    },
+    {
+     "say": "The second inequality gives a less than six as well. Both must hold, so the greatest integer is five.",
+     "right": "a ≤ 7 and a < 6, so a = 5",
+     "right_why": "Satisfy both conditions"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: strict or inclusive",
+   "beats": [
+    {
+     "say": "Trap five. At least ten means x can equal ten, so the boundary is included. Some students turn it into a strict inequality.",
+     "wrong": "at least 10 means x > 10",
+     "wrong_why": "The boundary is included"
+    },
+    {
+     "say": "At least ten means greater than or equal to ten. A strict sign is for words like more than or exceeds.",
+     "right": "at least 10 means x ≥ 10",
+     "right_why": "At least includes the boundary"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: Desmos",
+   "beats": [
+    {
+     "say": "For a one-variable inequality, algebra is fastest, since it takes two steps and a sign check. Desmos shines for systems of inequalities in two variables.",
+     "card": {
+      "text": "Use Desmos for systems"
+     }
+    },
+    {
+     "say": "Our system is y at least x minus three, and y less than negative two x plus sixteen. We want to know which of two points are solutions.",
+     "card": {
+      "text": "y ≥ x − 3  and  y < −2x + 16",
+      "sub": "Test (5, 4) and (6, 4)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Test points in a system",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We'll type each inequality, and then plot each point we want to test.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type the first inequality as x minus three is at most y, which is the same as y is at least x minus three. Desmos shades the region above a solid line.",
+     "actions": [
+      "type: x-3<=y"
+     ]
+    },
+    {
+     "say": "Now type y is less than negative two x plus sixteen. Desmos shades the region below a dashed line.",
+     "actions": [
+      "type: y<-2x+16",
+      "bounds: left=-6 right=14 bottom=-6 top=20"
+     ]
+    },
+    {
+     "say": "Where the shaded regions overlap is the solution region. Plot the point five comma four. It lands inside the overlap, so it's a solution.",
+     "actions": [
+      "type: (5,4)"
+     ]
+    },
+    {
+     "say": "Now plot the point six comma four. It lands exactly on the dashed boundary, which isn't included, so six comma four isn't a solution.",
+     "actions": [
+      "type: (6,4)",
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Check a single inequality",
+   "beats": [
+    {
+     "say": "Desmos can also check a one-variable inequality. For five minus three x less than seventeen, graph each side as its own curve, and look for where the first is below the second.",
+     "card": {
+      "text": "y = 5 − 3x  and  y = 17",
+      "sub": "Where is the first line below?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "One variable, two curves",
+   "beats": [
+    {
+     "say": "We type the left side as one line, and the right side as another line, and then look at where they cross.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type y equals five minus three x. This is a line sloping downward.",
+     "actions": [
+      "type: y=5-3x"
+     ]
+    },
+    {
+     "say": "Now type y equals seventeen. This is a horizontal line, which represents the right side of the inequality.",
+     "actions": [
+      "type: y=17"
+     ]
+    },
+    {
+     "say": "Click the crossing point. It's at negative four comma seventeen. To the right of negative four, the sloping line is below seventeen, so x greater than negative four is the solution.",
+     "actions": [
+      "bounds: left=-10 right=6 bottom=-6 top=30",
+      "click: -4,17"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. Solve seven minus two x is at least fifteen. Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "7 − 2x ≥ 15",
+      "sub": "Pause and try it first"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: solve",
+   "start": "7 − 2x ≥ 15",
+   "beats": [
+    {
+     "say": "The coefficient of x is negative, so we expect a flip in the last step."
+    },
+    {
+     "say": "Subtract seven from both sides. Fifteen minus seven is eight, and the sign doesn't change.",
+     "op": "− 7 on both sides",
+     "result": "−2x ≥ 8"
+    },
+    {
+     "say": "Divide both sides by negative two, and flip the sign. Eight divided by negative two is negative four. So x is at most negative four.",
+     "op": "÷ (−2) and flip the sign",
+     "result": "x ≤ −4",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check with test values",
+   "beats": [
+    {
+     "say": "Test a value in the range, x equals negative five. Seven plus ten is seventeen, which is at least fifteen. True. Test a value outside the range, x equals zero. Seven isn't at least fifteen. False.",
+     "lines": [
+      "x = −5: 7 + 10 = 17 ≥ 15, true",
+      "x = 0: 7 ≥ 15, false"
+     ],
+     "verdict": "x ≤ −4 is correct."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Flip the sign only when you multiply or divide by a negative number, never otherwise.",
+     "item": "Flip only for a negative"
+    },
+    {
+     "say": "Round down for greatest, round up for least, and satisfy every inequality in a system. At least includes the boundary.",
+     "item": "Round correctly, satisfy all, include boundary"
+    },
+    {
+     "say": "Use Desmos to shade systems and test points. In the next unit, we study Advanced Math, starting with equivalent expressions.",
+     "item": "Desmos shades systems and tests points"
+    }
+   ]
+  }
+ ]
 }

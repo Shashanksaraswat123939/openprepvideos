@@ -1,51 +1,201 @@
 {
-  "id": "m-psda-inference_v2",
-  "skill": "m-psda-inference",
-  "part": 2,
-  "title": "Inference and Margin of Error, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we scaled a sample proportion up to a population estimate, and we saw that an interval is the estimate plus or minus the margin of error.", "card": {"text": "Estimate ± margin of error"}},
-      {"say": "In this video, we estimate a count and its complement, and then read two intervals from different towns to decide what can be concluded.", "card": {"text": "Today: counts, then intervals"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. A school has twenty-five hundred students. In a random sample of four hundred students, sixty said they prefer a morning start time. Estimate how many students at the school prefer a morning start, and how many do not.", "card": {"text": "Sample: 60 of 400 prefer mornings", "sub": "School: 2,500 students. Prefer, and do not prefer?"}}
-    ]},
-    {"type": "steps", "title": "Medium: estimate the count", "start": "frac(60,400) × 2500", "beats": [
-      {"say": "Find the sample proportion, sixty out of four hundred, and multiply it by the number of students at the school."},
-      {"say": "Sixty divided by four hundred is zero point one five. So fifteen percent of the sample prefers a morning start.", "op": "simplify the fraction", "result": "0.15 × 2500"},
-      {"say": "Zero point one five times twenty-five hundred is three hundred seventy-five. So we estimate that about three hundred seventy-five students prefer a morning start.", "op": "multiply", "result": "375", "final": true}
-    ]},
-    {"type": "steps", "title": "Medium: the complement", "start": "2500 − 375", "beats": [
-      {"say": "To find how many students do not prefer a morning start, use the complement. Subtract the estimate from the total number of students."},
-      {"say": "Twenty-five hundred minus three hundred seventy-five is twenty-one hundred twenty-five. So about twenty-one hundred twenty-five students do not prefer it.", "op": "subtract", "result": "2125", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. In Town A, a random survey found plausible values for the percent owning an electric bike from forty-one point two to forty-six point eight. Town B's survey estimated forty-nine percent, with a margin of error of two points. What can be concluded?", "card": {"text": "Town A: 41.2% to 46.8%", "sub": "Town B: 49%, margin of error 2 points"}}
-    ]},
-    {"type": "steps", "title": "Hard: Town A's estimate", "start": "frac(41.2 + 46.8,2)", "beats": [
-      {"say": "Town A's estimate is the midpoint of its interval, which is the average of the two endpoints."},
-      {"say": "Forty-one point two plus forty-six point eight is eighty-eight. We divide that by two.", "op": "add the endpoints", "result": "frac(88,2)"},
-      {"say": "Eighty-eight divided by two is forty-four. So Town A's estimate is forty-four percent.", "op": "divide", "result": "44", "final": true}
-    ]},
-    {"type": "steps", "title": "Hard: Town A's margin of error", "start": "frac(46.8 − 41.2,2)", "beats": [
-      {"say": "The margin of error is half the width of the interval, so we subtract the lower endpoint from the upper one, and divide by two."},
-      {"say": "Forty-six point eight minus forty-one point two is five point six. We divide that by two.", "op": "subtract the endpoints", "result": "frac(5.6,2)"},
-      {"say": "Five point six divided by two is two point eight. So Town A's margin of error is two point eight percentage points.", "op": "divide", "result": "2.8", "final": true}
-    ]},
-    {"type": "table", "title": "Hard: compare the intervals", "columns": ["Town", "Interval"], "rows": [["A", "41.2% to 46.8%"], ["B", "47% to 51%"]], "beats": [
-      {"say": "Town B's interval is its estimate plus or minus its margin. Forty-nine minus two is forty-seven, and forty-nine plus two is fifty-one.", "reveal_row": 1},
-      {"say": "Now compare. Town A's interval tops out at forty-six point eight, and Town B's interval starts at forty-seven. The two intervals do not overlap.", "reveal_row": 0, "highlight": [0, 1]}
-    ]},
-    {"type": "cards", "title": "Hard: the conclusion", "beats": [
-      {"say": "Because the intervals do not overlap, there is convincing evidence that a greater percent of households in Town B own an electric bike.", "card": {"text": "Town B is convincingly greater"}},
-      {"say": "If Town B's margin of error had been three points, its interval would start at forty-six, which overlaps Town A's interval. Then no clear conclusion could be drawn.", "card": {"text": "A 3-point margin would overlap", "sub": "No clear conclusion"}}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. To estimate a count, multiply the sample proportion by the population. For the complement, subtract from the total.", "item": "Estimate, then subtract for the complement"},
-      {"say": "From an interval, the estimate is the midpoint, and the margin of error is half the width.", "item": "Midpoint and half the width"},
-      {"say": "Non-overlapping intervals give convincing evidence of a difference. In the next video, we look at common traps and the fast way.", "item": "No overlap: convincing difference"}
-    ]}
-  ]
+ "id": "m-psda-inference_v2",
+ "skill": "m-psda-inference",
+ "part": 2,
+ "title": "Inference and Margin of Error, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we scaled a sample proportion up to a population estimate, and we saw that an interval is the estimate plus or minus the margin of error.",
+     "card": {
+      "text": "Estimate ± margin of error"
+     }
+    },
+    {
+     "say": "In this video, we estimate a count and its complement, and then read two intervals from different towns to decide what can be concluded.",
+     "card": {
+      "text": "Today: counts, then intervals"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. A school has twenty-five hundred students. In a random sample of four hundred students, sixty said they prefer a morning start time. Estimate how many students at the school prefer a morning start, and how many don't.",
+     "card": {
+      "text": "Sample: 60 of 400 prefer mornings",
+      "sub": "School: 2,500 students. Prefer, and do not prefer?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: estimate the count",
+   "start": "frac(60,400) × 2500",
+   "beats": [
+    {
+     "say": "Find the sample proportion, sixty out of four hundred, and multiply it by the number of students at the school."
+    },
+    {
+     "say": "Sixty divided by four hundred is zero point one five. So fifteen percent of the sample prefers a morning start.",
+     "op": "simplify the fraction",
+     "result": "0.15 × 2500"
+    },
+    {
+     "say": "Zero point one five times twenty-five hundred is three hundred seventy-five. So we estimate that about three hundred seventy-five students prefer a morning start.",
+     "op": "multiply",
+     "result": "375",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: the complement",
+   "start": "2500 − 375",
+   "beats": [
+    {
+     "say": "To find how many students don't prefer a morning start, use the complement. Subtract the estimate from the total number of students."
+    },
+    {
+     "say": "Twenty-five hundred minus three hundred seventy-five is twenty-one hundred twenty-five. So about twenty-one hundred twenty-five students don't prefer it.",
+     "op": "subtract",
+     "result": "2125",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. In Town A, a random survey found plausible values for the percent owning an electric bike from forty-one point two to forty-six point eight. Town B's survey estimated forty-nine percent, with a margin of error of two points. What can be concluded?",
+     "card": {
+      "text": "Town A: 41.2% to 46.8%",
+      "sub": "Town B: 49%, margin of error 2 points"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: Town A's estimate",
+   "start": "frac(41.2 + 46.8,2)",
+   "beats": [
+    {
+     "say": "Town A's estimate is the midpoint of its interval, which is the average of the two endpoints."
+    },
+    {
+     "say": "Forty-one point two plus forty-six point eight is eighty-eight. We divide that by two.",
+     "op": "add the endpoints",
+     "result": "frac(88,2)"
+    },
+    {
+     "say": "Eighty-eight divided by two is forty-four. So Town A's estimate is forty-four percent.",
+     "op": "divide",
+     "result": "44",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: Town A's margin of error",
+   "start": "frac(46.8 − 41.2,2)",
+   "beats": [
+    {
+     "say": "The margin of error is half the width of the interval, so we subtract the lower endpoint from the upper one, and divide by two."
+    },
+    {
+     "say": "Forty-six point eight minus forty-one point two is five point six. We divide that by two.",
+     "op": "subtract the endpoints",
+     "result": "frac(5.6,2)"
+    },
+    {
+     "say": "Five point six divided by two is two point eight. So Town A's margin of error is two point eight percentage points.",
+     "op": "divide",
+     "result": "2.8",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Hard: compare the intervals",
+   "columns": [
+    "Town",
+    "Interval"
+   ],
+   "rows": [
+    [
+     "A",
+     "41.2% to 46.8%"
+    ],
+    [
+     "B",
+     "47% to 51%"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Town B's interval is its estimate plus or minus its margin. Forty-nine minus two is forty-seven, and forty-nine plus two is fifty-one.",
+     "reveal_row": 1
+    },
+    {
+     "say": "Now compare. Town A's interval tops out at forty-six point eight, and Town B's interval starts at forty-seven. The two intervals don't overlap.",
+     "reveal_row": 0,
+     "highlight": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard: the conclusion",
+   "beats": [
+    {
+     "say": "Because the intervals don't overlap, there's convincing evidence that a greater percent of households in Town B own an electric bike.",
+     "card": {
+      "text": "Town B is convincingly greater"
+     }
+    },
+    {
+     "say": "If Town B's margin of error had been three points, its interval would start at forty-six, which overlaps Town A's interval. Then no clear conclusion could be drawn.",
+     "card": {
+      "text": "A 3-point margin would overlap",
+      "sub": "No clear conclusion"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. To estimate a count, multiply the sample proportion by the population. For the complement, subtract from the total.",
+     "item": "Estimate, then subtract for the complement"
+    },
+    {
+     "say": "From an interval, the estimate is the midpoint, and the margin of error is half the width.",
+     "item": "Midpoint and half the width"
+    },
+    {
+     "say": "Non-overlapping intervals give convincing evidence of a difference. In the next video, we look at common traps and the fast way.",
+     "item": "No overlap: convincing difference"
+    }
+   ]
+  }
+ ]
 }

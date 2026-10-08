@@ -1,47 +1,187 @@
 {
-  "id": "m-adv-equiv_v1",
-  "skill": "m-adv-equiv",
-  "part": 1,
-  "title": "Equivalent Expressions, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Advanced Math",
-  "scenes": [
-    {"type": "cards", "title": "Equivalent expressions", "beats": [
-      {"say": "Two expressions are equivalent if they give the same value for every allowed x. They may look different, but they describe exactly the same quantity.", "card": {"text": "Same value for every x"}},
-      {"say": "This skill is about rewriting. You expand products, factor polynomials, simplify with exponent rules, and reshape fractions that contain polynomials.", "card": {"text": "Expand, factor, simplify, reshape"}},
-      {"say": "Most questions show one expression and ask which answer choice equals it, or ask for a constant that makes two forms match.", "card": {"text": "Which choice is equal?"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "Expanding means multiplying every term in one factor by every term in the other, and then combining like terms.", "item": "Expand: every term times every term"},
-      {"say": "Factoring is expanding in reverse. For a x squared plus b x plus c, find two numbers that multiply to a times c and add to b, and then split the middle term.", "item": "Factor: reverse the expansion"},
-      {"say": "If two polynomials are equal for all x, their matching coefficients are equal. This lets you solve for unknown constants.", "item": "Equal for all x: match coefficients"},
-      {"say": "Radicals are fractional exponents. The n-th root of x to the m equals x to the m over n. Convert first, then use the exponent rules.", "item": "Radicals are fractional exponents"},
-      {"say": "To simplify a fraction of polynomials, factor the top and the bottom, and cancel common factors. Never cancel individual terms.", "item": "Cancel factors, never terms"}
-    ]},
-    {"type": "table", "title": "Exponent rules", "columns": ["Rule", "Example"], "rows": [["x^a × x^b = x^(a+b)", "x^2 × x^5 = x^7"], ["x^a ÷ x^b = x^(a−b)", "x^6 ÷ x^2 = x^4"], ["(x^a)^b = x^(ab)", "(3x^2)^3 = 27x^6"], ["x^(−a) = 1/x^a", "x^(−2) = 1/x^2"]], "beats": [
-      {"say": "Here are the four exponent rules you need. When you multiply powers with the same base, you add the exponents. So x squared times x to the fifth is x to the seventh.", "reveal_row": 0},
-      {"say": "When you divide powers with the same base, you subtract the exponents. So x to the sixth divided by x squared is x to the fourth.", "reveal_row": 1},
-      {"say": "When you raise a power to a power, you multiply the exponents, and the coefficient is raised to that power too. So three x squared, cubed, is twenty-seven x to the sixth.", "reveal_row": 2},
-      {"say": "A negative exponent means a reciprocal. So x to the negative two is one over x squared.", "reveal_row": 3}
-    ]},
-    {"type": "cards", "title": "Special products", "beats": [
-      {"say": "Three special products appear again and again. A plus b, squared, equals a squared plus two a b plus b squared. The middle term is easy to forget.", "card": {"text": "(a + b)^2 = a^2 + 2ab + b^2"}},
-      {"say": "A minus b, squared, equals a squared minus two a b plus b squared. And a squared minus b squared factors as a plus b times a minus b.", "card": {"text": "a^2 − b^2 = (a + b)(a − b)"}}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. Write two x minus three, times four x plus one, minus five x, in the form a x squared plus b x plus c. We expand first, and then combine like terms.", "card": {"text": "(2x − 3)(4x + 1) − 5x", "sub": "Write as ax^2 + bx + c"}}
-    ]},
-    {"type": "steps", "title": "Easy: expand and combine", "start": "(2x − 3)(4x + 1) − 5x", "beats": [
-      {"say": "Multiply every term in the first factor by every term in the second. That gives four products. Then we keep the minus five x at the end."},
-      {"say": "Two x times four x is eight x squared. Two x times one is two x. Negative three times four x is negative twelve x. Negative three times one is negative three.", "op": "expand all four products", "result": "8x^2 + 2x − 12x − 3 − 5x"},
-      {"say": "Now combine the x terms. Two x minus twelve x minus five x is negative fifteen x. The x squared term and the constant stay the same.", "op": "combine like terms", "result": "8x^2 − 15x − 3", "final": true}
-    ]},
-    {"type": "check", "title": "Check with x = 1", "beats": [
-      {"say": "Check with x equal to one. The original is negative one times five, minus five, which is negative ten. The answer is eight minus fifteen minus three, which is also negative ten.", "lines": ["(2 − 3)(4 + 1) − 5 = −10", "8 − 15 − 3 = −10"], "verdict": "Both expressions equal −10."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Equivalent expressions have the same value for every x. Expand by multiplying every term by every term.", "item": "Expand every term by every term"},
-      {"say": "Use the exponent rules: add when multiplying, subtract when dividing, multiply when raising a power to a power.", "item": "Know the four exponent rules"},
-      {"say": "Check with a test value. In the next video, we work through a medium problem and a hard problem.", "item": "Check with a test value"}
-    ]}
-  ]
+ "id": "m-adv-equiv_v1",
+ "skill": "m-adv-equiv",
+ "part": 1,
+ "title": "Equivalent Expressions, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Advanced Math",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Equivalent expressions",
+   "beats": [
+    {
+     "say": "Two expressions are equivalent if they give the same value for every allowed x. They may look different, but they describe exactly the same quantity.",
+     "card": {
+      "text": "Same value for every x"
+     }
+    },
+    {
+     "say": "This skill is about rewriting. You expand products, factor polynomials, simplify with exponent rules, and reshape fractions that contain polynomials.",
+     "card": {
+      "text": "Expand, factor, simplify, reshape"
+     }
+    },
+    {
+     "say": "Most questions show one expression and ask which answer choice equals it, or ask for a constant that makes two forms match.",
+     "card": {
+      "text": "Which choice is equal?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "Expanding means multiplying every term in one factor by every term in the other, and then combining like terms.",
+     "item": "Expand: every term times every term"
+    },
+    {
+     "say": "Factoring is expanding in reverse. For a x squared plus b x plus c, find two numbers that multiply to a times c and add to b, and then split the middle term.",
+     "item": "Factor: reverse the expansion"
+    },
+    {
+     "say": "If two polynomials are equal for all x, their matching coefficients are equal. This lets you solve for unknown constants.",
+     "item": "Equal for all x: match coefficients"
+    },
+    {
+     "say": "Radicals are fractional exponents. The n-th root of x to the m equals x to the m over n. Convert first, then use the exponent rules.",
+     "item": "Radicals are fractional exponents"
+    },
+    {
+     "say": "To simplify a fraction of polynomials, factor the top and the bottom, and cancel common factors. Never cancel individual terms.",
+     "item": "Cancel factors, never terms"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Exponent rules",
+   "columns": [
+    "Rule",
+    "Example"
+   ],
+   "rows": [
+    [
+     "x^a × x^b = x^(a+b)",
+     "x^2 × x^5 = x^7"
+    ],
+    [
+     "x^a ÷ x^b = x^(a−b)",
+     "x^6 ÷ x^2 = x^4"
+    ],
+    [
+     "(x^a)^b = x^(ab)",
+     "(3x^2)^3 = 27x^6"
+    ],
+    [
+     "x^(−a) = 1/x^a",
+     "x^(−2) = 1/x^2"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Here are the four exponent rules you need. When you multiply powers with the same base, you add the exponents. So x squared times x to the fifth is x to the seventh.",
+     "reveal_row": 0
+    },
+    {
+     "say": "When you divide powers with the same base, you subtract the exponents. So x to the sixth divided by x squared is x to the fourth.",
+     "reveal_row": 1
+    },
+    {
+     "say": "When you raise a power to a power, you multiply the exponents, and the coefficient is raised to that power too. So three x squared, cubed, is twenty-seven x to the sixth.",
+     "reveal_row": 2
+    },
+    {
+     "say": "A negative exponent means a reciprocal. So x to the negative two is one over x squared.",
+     "reveal_row": 3
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Special products",
+   "beats": [
+    {
+     "say": "Three special products appear again and again. A plus b, squared, equals a squared plus two a b plus b squared. The middle term is easy to forget.",
+     "card": {
+      "text": "(a + b)^2 = a^2 + 2ab + b^2"
+     }
+    },
+    {
+     "say": "A minus b, squared, equals a squared minus two a b plus b squared. And a squared minus b squared factors as a plus b times a minus b.",
+     "card": {
+      "text": "a^2 − b^2 = (a + b)(a − b)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. Write two x minus three, times four x plus one, minus five x, in the form a x squared plus b x plus c. We expand first, and then combine like terms.",
+     "card": {
+      "text": "(2x − 3)(4x + 1) − 5x",
+      "sub": "Write as ax^2 + bx + c"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: expand and combine",
+   "start": "(2x − 3)(4x + 1) − 5x",
+   "beats": [
+    {
+     "say": "Multiply every term in the first factor by every term in the second. That gives four products. Then we keep the minus five x at the end."
+    },
+    {
+     "say": "Two x times four x is eight x squared. Two x times one is two x. Negative three times four x is negative twelve x. Negative three times one is negative three.",
+     "op": "expand all four products",
+     "result": "8x^2 + 2x − 12x − 3 − 5x"
+    },
+    {
+     "say": "Now combine the x terms. Two x minus twelve x minus five x is negative fifteen x. The x squared term and the constant stay the same.",
+     "op": "combine like terms",
+     "result": "8x^2 − 15x − 3",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check with x = 1",
+   "beats": [
+    {
+     "say": "Check with x equal to one. The original is negative one times five, minus five, which is negative ten. The answer is eight minus fifteen minus three, which is also negative ten.",
+     "lines": [
+      "(2 − 3)(4 + 1) − 5 = −10",
+      "8 − 15 − 3 = −10"
+     ],
+     "verdict": "Both expressions equal −10."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Equivalent expressions have the same value for every x. Expand by multiplying every term by every term.",
+     "item": "Expand every term by every term"
+    },
+    {
+     "say": "Use the exponent rules: add when multiplying, subtract when dividing, multiply when raising a power to a power.",
+     "item": "Know the four exponent rules"
+    },
+    {
+     "say": "Check with a test value. In the next video, we work through a medium problem and a hard problem.",
+     "item": "Check with a test value"
+    }
+   ]
+  }
+ ]
 }

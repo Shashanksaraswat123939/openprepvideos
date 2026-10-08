@@ -1,42 +1,152 @@
 {
-  "id": "m-geo-lines_v2",
-  "skill": "m-geo-lines",
-  "part": 2,
-  "title": "Lines, Angles, and Triangles, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Geometry and Trigonometry",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we used the angle sum of a triangle, and the angle pairs that parallel lines create.", "card": {"text": "Triangle angles sum to 180°"}},
-      {"say": "In this video, we use an isosceles triangle, and then similar triangles, where corresponding sides are proportional.", "card": {"text": "Today: isosceles, then similar triangles"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. An isosceles triangle has a vertex angle of forty degrees, between its two equal sides. What is the measure of each base angle?", "card": {"text": "Isosceles, vertex angle 40°", "sub": "Find each base angle"}},
-      {"say": "In an isosceles triangle, the angles opposite the equal sides are equal. The two base angles are opposite the two equal sides, so they match each other.", "card": {"text": "The two base angles are equal"}}
-    ]},
-    {"type": "steps", "title": "Medium: the base angles", "start": "frac(180 − 40,2)", "beats": [
-      {"say": "The three angles add to one hundred eighty. So the two base angles together make one hundred eighty minus forty. We then split that equally."},
-      {"say": "One hundred eighty minus forty is one hundred forty. This is the total of the two base angles.", "op": "subtract", "result": "frac(140,2)"},
-      {"say": "One hundred forty divided by two is seventy. So each base angle measures seventy degrees.", "op": "divide", "result": "70", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. In triangle P Q R, point S is on P Q and point T is on P R, with S T parallel to Q R. If P S is six, S Q is four, and S T is nine, what is Q R?", "card": {"text": "ST ∥ QR", "sub": "PS = 6, SQ = 4, ST = 9. Find QR."}}
-    ]},
-    {"type": "cards", "title": "Hard: why the triangles are similar", "beats": [
-      {"say": "Because S T is parallel to Q R, corresponding angles match. Both triangles share the angle at P, so triangle P S T is similar to triangle P Q R.", "card": {"text": "△PST ~ △PQR", "sub": "Two angles match"}},
-      {"say": "Now match the sides from the shared vertex P. The side P S corresponds to the whole side P Q, not to the piece S Q. And P Q is six plus four, which is ten.", "card": {"text": "PS matches PQ = 6 + 4 = 10"}}
-    ]},
-    {"type": "steps", "title": "Hard: set up the ratio", "start": "frac(9,x) = frac(6,10)", "beats": [
-      {"say": "Let x be Q R. The small triangle's side S T corresponds to the large triangle's side Q R, and P S corresponds to P Q. So nine over x equals six over ten."},
-      {"say": "Cross-multiply, which means multiplying diagonally. Six times x equals nine times ten, which is ninety.", "op": "cross-multiply", "result": "6x = 90"},
-      {"say": "Divide both sides by six. Ninety divided by six is fifteen. So Q R is fifteen.", "op": "÷ 6 on both sides", "result": "x = 15", "final": true}
-    ]},
-    {"type": "check", "title": "Check the scale factor", "beats": [
-      {"say": "Check with the scale factor. The large triangle's side P Q is ten, and the small triangle's side P S is six, so the scale factor is ten over six, which is five thirds. Nine times five thirds is fifteen.", "lines": ["frac(10,6) = frac(5,3)", "9 × frac(5,3) = 15"], "verdict": "QR = 15."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. In an isosceles triangle, subtract the known angle from one hundred eighty, and split the rest between the two equal angles.", "item": "Isosceles: split what is left"},
-      {"say": "A segment parallel to one side cuts off a similar triangle. Match the sides from the shared vertex, using the whole side, not the piece.", "item": "Similar triangles: use the whole side"},
-      {"say": "In the next video, we look at common traps and the fast way.", "item": "Next: traps and the fast way"}
-    ]}
-  ]
+ "id": "m-geo-lines_v2",
+ "skill": "m-geo-lines",
+ "part": 2,
+ "title": "Lines, Angles, and Triangles, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Geometry and Trigonometry",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we used the angle sum of a triangle, and the angle pairs that parallel lines create.",
+     "card": {
+      "text": "Triangle angles sum to 180°"
+     }
+    },
+    {
+     "say": "In this video, we use an isosceles triangle, and then similar triangles, where corresponding sides are proportional.",
+     "card": {
+      "text": "Today: isosceles, then similar triangles"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. An isosceles triangle has a vertex angle of forty degrees, between its two equal sides. What's the measure of each base angle?",
+     "card": {
+      "text": "Isosceles, vertex angle 40°",
+      "sub": "Find each base angle"
+     }
+    },
+    {
+     "say": "In an isosceles triangle, the angles opposite the equal sides are equal. The two base angles are opposite the two equal sides, so they match each other.",
+     "card": {
+      "text": "The two base angles are equal"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: the base angles",
+   "start": "frac(180 − 40,2)",
+   "beats": [
+    {
+     "say": "The three angles add to one hundred eighty. So the two base angles together make one hundred eighty minus forty. We then split that equally."
+    },
+    {
+     "say": "One hundred eighty minus forty is one hundred forty. This is the total of the two base angles.",
+     "op": "subtract",
+     "result": "frac(140,2)"
+    },
+    {
+     "say": "One hundred forty divided by two is seventy. So each base angle measures seventy degrees.",
+     "op": "divide",
+     "result": "70",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. In triangle P Q R, point S is on P Q and point T is on P R, with S T parallel to Q R. If P S is six, S Q is four, and S T is nine, what's Q R?",
+     "card": {
+      "text": "ST ∥ QR",
+      "sub": "PS = 6, SQ = 4, ST = 9. Find QR."
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard: why the triangles are similar",
+   "beats": [
+    {
+     "say": "Because S T is parallel to Q R, corresponding angles match. Both triangles share the angle at P, so triangle P S T is similar to triangle P Q R.",
+     "card": {
+      "text": "△PST ~ △PQR",
+      "sub": "Two angles match"
+     }
+    },
+    {
+     "say": "Now match the sides from the shared vertex P. The side P S corresponds to the whole side P Q, not to the piece S Q. And P Q is six plus four, which is ten.",
+     "card": {
+      "text": "PS matches PQ = 6 + 4 = 10"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Hard: set up the ratio",
+   "start": "frac(9,x) = frac(6,10)",
+   "beats": [
+    {
+     "say": "Let x be Q R. The small triangle's side S T corresponds to the large triangle's side Q R, and P S corresponds to P Q. So nine over x equals six over ten."
+    },
+    {
+     "say": "Cross-multiply, which means multiplying diagonally. Six times x equals nine times ten, which is ninety.",
+     "op": "cross-multiply",
+     "result": "6x = 90"
+    },
+    {
+     "say": "Divide both sides by six. Ninety divided by six is fifteen. So Q R is fifteen.",
+     "op": "÷ 6 on both sides",
+     "result": "x = 15",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check the scale factor",
+   "beats": [
+    {
+     "say": "Check with the scale factor. The large triangle's side P Q is ten, and the small triangle's side P S is six, so the scale factor is ten over six, which is five thirds. Nine times five thirds is fifteen.",
+     "lines": [
+      "frac(10,6) = frac(5,3)",
+      "9 × frac(5,3) = 15"
+     ],
+     "verdict": "QR = 15."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. In an isosceles triangle, subtract the known angle from one hundred eighty, and split the rest between the two equal angles.",
+     "item": "Isosceles: split what is left"
+    },
+    {
+     "say": "A segment parallel to one side cuts off a similar triangle. Match the sides from the shared vertex, using the whole side, not the piece.",
+     "item": "Similar triangles: use the whole side"
+    },
+    {
+     "say": "In the next video, we look at common traps and the fast way.",
+     "item": "Next: traps and the fast way"
+    }
+   ]
+  }
+ ]
 }

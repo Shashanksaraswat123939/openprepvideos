@@ -3,7 +3,7 @@
 #   python render.py scripts/<id>.json --check    validate only
 import os, sys, re, json, math, hashlib, asyncio, shutil
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont, ImageChops, ImageOps
+from PIL import Image, ImageDraw, ImageFont
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "cache"); os.makedirs(CACHE, exist_ok=True)
@@ -128,125 +128,100 @@ class Ctx:
         if p1 > 0: s.d.line([(x, y), (x + size * p1, y + size * p1)], fill=col, width=wd)
         if p2 > 0: s.d.line([(x + size, y), (x + size - size * p2, y + size * p2)], fill=col, width=wd)
 
-ZONE_Y, ZONE_H = 124, 452   # content zone, between the title and the caption
-ZC = ZONE_Y + ZONE_H / 2
+ZONE_Y, ZONE_H = 112, 520   # content zone
 def fitF(txt, size, maxw, bold=True):
     while size > 22 and math_w(txt, F(size, bold)) > maxw: size -= 2
     return F(size, bold)
 
-def panel(c, x0, y0, x1, y1, al=1.0, fill=PAN, outline=G3, width=3, r=26):
-    c.d.rounded_rectangle([x0, y0, x1, y1], r, fill=mix(fill, al) if fill else None, outline=mix(outline, al) if outline else None, width=width)
-
-def _nvis(c, ids):
-    vis = [i for i in ids if c.started(i)]
-    return max(len(vis) - 1 + (c.a(vis[-1], 0, .45) if vis else 0), 1.0)
-
 # ---------------------------------------------------------------- scene renderers
 def r_cards(c, sc):
-    cards = [(i, b["card"]) for i, b in enumerate(sc["beats"]) if "card" in b]; gap = 30
-    base = [160 if cd.get("sub") else 124 for _, cd in cards]
-    k = min(1.0, (ZONE_H - 6) / (sum(base) + gap * (len(cards) - 1))); hs = [h * k for h in base]; gap *= k
-    nv = min(_nvis(c, [i for i, _ in cards]), len(hs)); kk = int(nv + 1e-9); fr = nv - kk
-    used = sum(hs[:kk]) + gap * (kk - 1) + ((hs[kk] + gap) * fr if kk < len(hs) else 0)
-    y = ZC - used / 2; last = max([i for i, _ in cards if c.started(i)] or [-1])
+    cards = [(i, b["card"]) for i, b in enumerate(sc["beats"]) if "card" in b]; hs = [138 if cd.get("sub") else 104 for _, cd in cards]; gap = 26
+    vis = [k for k, (i, _) in enumerate(cards) if c.started(i)]; nv = len(vis) - 1 + (c.a(cards[vis[-1]][0], 0, .45) if vis else 0); nv = max(nv, 0); kk = int(nv); fr = nv - kk
+    used = sum(hs[:kk + 1]) + gap * kk + ((hs[min(kk + 1, len(hs) - 1)] + gap) * fr if kk + 1 < len(hs) else 0)
+    y = ZONE_Y + (ZONE_H - used) / 2; last = max([i for i, _ in cards if c.started(i)] or [-1])
     for (i, cd), h in zip(cards, hs):
         if c.started(i):
-            p = min(1, c.pop(i, 0, .45)); al = c.a(i, 0, .35); w = 1080 * (.92 + .08 * p); yy = y + (1 - p) * 22; cur = i == last
-            panel(c, 640 - w / 2, yy, 640 + w / 2, yy + h, al, PAN, INK if cur else G3, 4 if cur else 3)
-            c.d.rounded_rectangle([640 - w / 2 + 16, yy + 18, 640 - w / 2 + 25, yy + h - 18], 4, fill=mix(INK if cur else G3, al))
-            ft = fitF(cd["text"], int(62 * k), 900)
+            p = min(1, c.pop(i, 0, .45)); w = 920 * p; yy = y + (1 - p) * 14; al = c.a(i, 0, .35)
+            c.d.rounded_rectangle([640 - w / 2, yy, 640 + w / 2, yy + h], 24, fill=mix(PAN, al), outline=mix(INK if i == last else G3, al), width=3)
             if cd.get("sub"):
-                top = yy + h * .16; draw_math(c.d, 640, top, cd["text"], ft, INK, al); c.text(640, top + ft.size * 1.38, cd["sub"], fitF(cd["sub"], int(32 * k), 900, False), G1, al)
-            else: draw_math(c.d, 640, yy + (h - ft.size * 1.3) / 2, cd["text"], ft, INK, al)
+                draw_math(c.d, 640, yy + 14, cd["text"], fitF(cd["text"], 44, 860), INK, al); c.text(640, yy + 82, cd["sub"], fitF(cd["sub"], 26, 860, False), G1, al)
+            else: draw_math(c.d, 640, yy + 24, cd["text"], fitF(cd["text"], 46, 860), INK, al)
         y += h + gap
 
 def r_list(c, sc):
-    items = [(i, b["item"]) for i, b in enumerate(sc["beats"]) if "item" in b]; n = len(items); gap = 22
-    h = min(110, (ZONE_H - 6 - gap * (n - 1)) / n); fs = int(min(44, h * .46))
-    nv = min(_nvis(c, [i for i, _ in items]), n); used = nv * (h + gap) - gap; y = ZC - used / 2; last = max([i for i, _ in items if c.started(i)] or [-1])
-    for k, (i, txt) in enumerate(items):
+    items = [(i, b["item"]) for i, b in enumerate(sc["beats"]) if "item" in b]; h, gap = 92, 20; vis = [k for k, (i, _) in enumerate(items) if c.started(i)]; nv = max(len(vis) - 1 + (c.a(items[vis[-1]][0], 0, .45) if vis else 0), 0); used = (nv + 1) * h + nv * gap; y = ZONE_Y + (ZONE_H - used) / 2
+    last = max([i for i, _ in items if c.started(i)] or [-1])
+    for n, (i, txt) in enumerate(items):
         if c.started(i):
-            p = min(1, c.pop(i, 0, .45)); al = c.a(i, 0, .35); yy = y + (1 - p) * 22; cur = i == last
-            panel(c, 110, yy, 1170, yy + h, al, PAN, INK if cur else G3, 4 if cur else 3, h * .28)
-            d = h * .6; c.d.ellipse([110 + h * .22, yy + (h - d) / 2, 110 + h * .22 + d, yy + (h + d) / 2], fill=mix(INK, al))
-            c.text(110 + h * .22 + d / 2, yy + (h - d) / 2 + d * .16, str(k + 1), F(d * .55), BG, 1)
-            ft = fitF(txt, fs, 800, False); c.text(690, yy + (h - ft.size * 1.3) / 2, txt, ft, INK, al)
+            p = min(1, c.pop(i, 0, .45)); al = c.a(i, 0, .35); yy = y + (1 - p) * 14
+            c.d.rounded_rectangle([140, yy, 1140, yy + h], 22, fill=mix(PAN, al), outline=mix(INK if i == last else G3, al), width=3)
+            c.d.ellipse([172, yy + 22, 220, yy + 70], fill=mix(INK, al)); c.text(196, yy + 26, str(n + 1), F(28), BG, 1)
+            c.text(680, yy + 22, txt, F(34, False), INK, al)
         y += h + gap
 
 def r_steps(c, sc):
     lines = [(0, sc["start"], None)] + [(i, b["result"], b) for i, b in enumerate(sc["beats"]) if "result" in b]; n = len(lines)
-    slot = min(138, (ZONE_H - 4) / n); fs0 = int(min(80, (slot - (36 if n > 1 else 0)) / 1.25))
-    wid = max(lines, key=lambda l: math_w(l[1], F(fs0)))[1]; f = fitF(wid, fs0, 980); fs = f.size
-    y0 = ZC - n * slot / 2 + (slot - fs * 1.25) / 2
-    newest = max(j for j, (i2, _, _) in enumerate(lines) if c.started(i2) and (j == 0 or c.since(i2) > .9))
+    slot = min(124, ZONE_H / n); fs = int(min(60, slot * (.42 if n > 3 else .5))); f = fitF(max(lines, key=lambda l: math_w(l[1], F(fs)))[1], fs, 1120); fs = f.size; y0 = ZONE_Y + (ZONE_H - n * slot) / 2 + (slot - fs * 1.25) / 2
     for k, (i, txt, b) in enumerate(lines):
         appear = c.a(i, .9 if k else 0, .5) if k else c.a(0, 0, .6); yy = y0 + k * slot + (1 - appear) * 18
         if appear <= 0.01: continue
+        newest = max(j for j, (i2, _, _) in enumerate(lines) if c.started(i2) and (j == 0 or c.since(i2) > .9)) if True else 0
         col = INK if k == newest else G1
-        if k == newest and n > 1 and not (b and b.get('final')): panel(c, 150, yy - 8, 1130, yy + fs * 1.2, appear, PAN, None, 0, 22)
         strikes = []
         if k + 1 < n:
             nb = lines[k + 1][2]; ni = lines[k + 1][0]
             if nb and nb.get("strike") and c.started(ni): strikes = [(t, c.a(ni, .15, .5)) for t in nb["strike"]]
         draw_math(c.d, 640, yy, txt, f, col, appear, strikes)
         if b and b.get("op"):
-            c.chip(640, y0 + k * slot - (slot - fs * 1.25) / 2 - 2, b["op"], c.a(i, .1, .4), int(max(16, min(26, (slot - fs * 1.25) * .5))))
+            gy = y0 + k * slot - (slot - fs * 1.25) / 2 + fs * .05
+            c.chip(640, y0 + k * slot - (slot - fs * 1.25) / 2 - 2, b["op"], c.a(i, .1, .4), int(max(16, min(24, (slot - fs * 1.25) * .62))))
         if b and b.get("note"): c.text(640, y0 + k * slot + fs * 1.18, b["note"], F(max(15, fs * .34), False), G2, appear)
         if b and b.get("final") and appear > .9:
             w = math_w(txt, f) + 44; p = min(1, c.pop(i, 1.2, .5)); c.d.rounded_rectangle([640 - w / 2 * p, yy - 8, 640 + w / 2 * p, yy + fs * 1.3 + 4], 16, outline=INK, width=5)
 
 def r_check(c, sc):
     rows = [(i, ln) for i, b in enumerate(sc["beats"]) for ln in b.get("lines", [])]; verdicts = [(i, b["verdict"]) for i, b in enumerate(sc["beats"]) if "verdict" in b]
+    n = len(rows); h = 96; top = ZONE_Y + (ZONE_H - (n * h + 100)) / 2
     if not rows: return
-    n = len(rows); h = min(108, (ZONE_H - 150) / n); top = ZC - (n * h + 96) / 2
-    panel(c, 140, top - 24, 1140, top + n * h + 96, 1, PAN, G3, 3, 30)
+    c.d.rounded_rectangle([190, top - 20, 1090, top + n * h + 100], 28, fill=PAN, outline=G3, width=3)
     for k, (i, ln) in enumerate(rows):
         if not c.started(i): continue
-        al = c.a(i, k * .01, .4); ft = fitF(ln, int(min(56, h * .56)), 700); draw_math(c.d, 545, top + k * h + (h - ft.size * 1.25) / 2, ln, ft, INK, al); c.tick(955, top + k * h + (h - 56) / 2, 56, c.a(i, 1.0 + k * .6, .45), 8)
+        al = c.a(i, k * .01, .4); draw_math(c.d, 590, top + k * h + 8, ln, fitF(ln, 46, 740), INK, al); c.tick(960, top + k * h + 10, 52, c.a(i, 1.0 + k * .6, .45), 8)
     for i, v in verdicts:
-        if c.started(i): c.chip(640, top + n * h + 52, v, c.a(i, 2.0 + n * .4, .5), 32)
+        if c.started(i): c.text(640, top + n * h + 6, v, F(34), INK, c.a(i, 2.0 + n * .4, .5))
 
 def r_compare(c, sc):
-    wr = [(i, b) for i, b in enumerate(sc["beats"]) if "wrong" in b]; rt = [(i, b) for i, b in enumerate(sc["beats"]) if "right" in b]
-    texts = [b["wrong"] for _, b in wr] + [b["right"] for _, b in rt] + ["x"]; f = fitF(max(texts, key=lambda t: math_w(t, F(58))), 58, 780)
-    ph, gap = 184, 34; top = ZC - (2 * ph + gap) / 2
+    wr = [(i, b) for i, b in enumerate(sc["beats"]) if "wrong" in b]; rt = [(i, b) for i, b in enumerate(sc["beats"]) if "right" in b]; f = fitF(max([b['wrong'] for _, b in wr] + [b['right'] for _, b in rt] + ['x'], key=lambda t: math_w(t, F(60))), 60, 900)
     if wr and c.started(wr[0][0]):
-        i, b = wr[0]; al = c.a(i, 0, .5); y = top + (1 - c.pop(i, 0, .5)) * 20
-        panel(c, 120, y, 1160, y + ph, al, PAN, G3, 3)
-        c.text(160, y + 18, "COMMON MISTAKE", F(20), G2, al, "l"); draw_math(c.d, 590, y + 52, b["wrong"], f, G1, al)
-        cx_, cy_ = 1085, y + ph / 2; c.d.ellipse([cx_ - 38, cy_ - 38, cx_ + 38, cy_ + 38], outline=mix(G1, al), width=5); c.cross(cx_ - 17, cy_ - 17, 34, c.a(i, .8, .5), 8, G1)
-        if b.get("wrong_why"): c.text(590, y + ph - 56, b["wrong_why"], F(28, False), G2, c.a(i, 1.0))
+        i, b = wr[0]; al = c.a(i, 0, .5); draw_math(c.d, 640, 190, b["wrong"], f, G1, al); c.cross(640 + math_w(b["wrong"], f) / 2 + 40, 210, 50, c.a(i, .8, .5), 8, G1)
+        if b.get("wrong_why"): c.text(640, 285, b["wrong_why"], F(28, False), G2, c.a(i, 1.0))
     if rt and c.started(rt[0][0]):
-        i, b = rt[0]; al = c.a(i, 0, .5); y = top + ph + gap + (1 - c.pop(i, 0, .5)) * 20
-        panel(c, 120, y, 1160, y + ph, al, INK, INK, 3)
-        if al > .55:
-            c.d.text((160, y + 18), "DO THIS", font=F(20), fill=G3); draw_math(c.d, 590, y + 52, b["right"], f, BG, 1)
-            cx_, cy_ = 1085, y + ph / 2; c.d.ellipse([cx_ - 38, cy_ - 38, cx_ + 38, cy_ + 38], fill=BG); c.tick(cx_ - 26, cy_ - 30, 56, c.a(i, .8, .5), 8)
-            if b.get("right_why"): c.d.text((590 - tw(b["right_why"], F(28, False)) / 2, y + ph - 56), b["right_why"], font=F(28, False), fill=G3)
+        i, b = rt[0]; al = c.a(i, 0, .5); draw_math(c.d, 640, 400, b["right"], f, INK, al); c.tick(640 + math_w(b["right"], f) / 2 + 40, 405, 60, c.a(i, .8, .5), 9)
+        if b.get("right_why"): c.text(640, 495, b["right_why"], F(28, False), INK, c.a(i, 1.0))
+    if wr and c.started(wr[0][0]): c.d.line([(260, 345), (1020, 345)], fill=G3, width=2)
 
 def r_table(c, sc):
-    cols, rows = sc["columns"], sc["rows"]; fs0 = 34
+    cols, rows = sc["columns"], sc["rows"]; fs0 = 30
     while True:
         f = F(fs0, False); fb = F(fs0)
-        cw = [max([tw(cols[j], fb)] + [math_w(r[j], f) for r in rows]) + 76 for j in range(len(cols))]
-        if sum(cw) <= 1120 or fs0 <= 20: break
+        cw = [max([tw(cols[j], fb)] + [math_w(r[j], f) for r in rows]) + 64 for j in range(len(cols))]
+        if sum(cw) <= 1100 or fs0 <= 20: break
         fs0 -= 2
-    rh = min(84, (ZONE_H - 20) / (len(rows) + 1)); total_w = sum(cw); x0 = 640 - total_w / 2
-    top = ZC - (len(rows) + 1) * rh / 2; vis = -1; hl = None
+    rh = 66; rh = 66; total_w = sum(cw); x0 = 640 - total_w / 2
+    top = ZONE_Y + (ZONE_H - (len(rows) + 1) * rh) / 2; vis = -1; hl = None
     for i, b in enumerate(sc["beats"]):
         if c.started(i):
             if "reveal_row" in b: vis = max(vis, b["reveal_row"])
             if "highlight" in b: hl = (i, b["highlight"])
-    c.d.rounded_rectangle([x0, top, x0 + total_w, top + rh], 14, fill=INK)
+    c.d.rounded_rectangle([x0, top, x0 + total_w, top + rh], 8, fill=INK)
     x = x0
-    for j, col in enumerate(cols): c.text(x + cw[j] / 2, top + (rh - fs0 * 1.3) / 2, col, fb, BG); x += cw[j]
+    for j, col in enumerate(cols): c.text(x + cw[j] / 2, top + 14, col, fb, BG); x += cw[j]
     for r, row in enumerate(rows):
         yy = top + (r + 1) * rh
         c.d.rectangle([x0, yy, x0 + total_w, yy + rh], fill=PAN if r % 2 == 0 else BG, outline=G3)
         if r <= vis:
             x = x0
-            for j, cell in enumerate(row): draw_math(c.d, x + cw[j] / 2, yy + (rh - fs0 * 1.3) / 2, cell, f, INK, 1); x += cw[j]
-            if r == vis: c.d.rectangle([x0, yy, x0 + 8, yy + rh], fill=INK)
+            for j, cell in enumerate(row): draw_math(c.d, x + cw[j] / 2, yy + 14, cell, f, INK, 1); x += cw[j]
     if hl:
         r, cc = hl[1]; yy = top + (r + 1) * rh; xx = x0 + sum(cw[:cc]); a = c.a(hl[0], 0, .3)
         c.d.rectangle([xx, yy, xx + cw[cc], yy + rh], outline=mix(INK, a), width=6)
@@ -501,22 +476,10 @@ def fig_parallel_lines(c, sc):
             base = 1 if k <= 4 else 5; ix, iy = (x1_, ya) if k <= 4 else (x2_, yb_); ox, oy = offs[k - base + 1]; d.ellipse([ix + ox + 6, iy + oy - 8, ix + ox + 84, iy + oy + 40], outline=mix(INK, a), width=4)
 
 FIGS = {"balance": fig_balance, "number_line": fig_number_line, "bar_model": fig_bar_model, "rectangle": fig_rectangle, "right_triangle": fig_right_triangle, "dot_plot": fig_dot_plot, "histogram": fig_histogram, "box_plot": fig_box_plot, "scatter": fig_scatter, "two_way_table": fig_two_way_table, "tree": fig_tree, "triangle": fig_triangle, "circle": fig_circle, "parallel_lines": fig_parallel_lines}
-_figbox = {}
-def _fig_draw(sc, fn, t, bt, bd):
-    im2 = Image.new("RGB", (W, H), BG); fn(Ctx(im2, t, bt, bd), sc); return im2
 def r_figure(c, sc):
     fn = FIGS.get(sc["kind"])
-    if not fn: c.text(640, 330, f"[figure: {sc['kind']}: not built yet]", F(32), G2); return
-    key = id(sc)
-    if key not in _figbox:
-        blank = Image.new("RGB", (W, H), BG); box = None
-        for tt in [0] + [c.bt[i] + 1.2 for i in range(len(c.bt))] + [1e6]:
-            bb = ImageChops.difference(_fig_draw(sc, fn, tt, c.bt, c.bd), blank).getbbox()
-            if bb: box = bb if box is None else (min(box[0], bb[0]), min(box[1], bb[1]), max(box[2], bb[2]), max(box[3], bb[3]))
-        _figbox[key] = box or (0, 0, W, H)
-    x0, y0, x1, y1 = _figbox[key]; pad = 36; x0, y0, x1, y1 = max(0, x0 - pad), max(0, y0 - pad), min(W, x1 + pad), min(H, y1 + pad)
-    cut = _fig_draw(sc, fn, c.t, c.bt, c.bd).crop((x0, y0, x1, y1)); w, h = cut.size; k = min(1060 / w, (ZONE_H - 10) / h, 1.55)
-    cut = cut.resize((max(1, int(w * k)), max(1, int(h * k))), Image.LANCZOS); c.im.paste(cut, (int(640 - cut.width / 2), int(ZC - cut.height / 2)))
+    if fn: fn(c, sc)
+    else: c.text(640, 330, f"[figure: {sc['kind']}: not built yet]", F(32), G2)
 
 # ---- reading and writing
 def text_layout(text, f, maxw, cx, y):
@@ -533,13 +496,9 @@ def text_layout(text, f, maxw, cx, y):
     return out, yy
 
 def r_passage(c, sc):
-    text = sc["text"]
-    for fs in (36, 34, 32, 30, 28, 26, 24):
-        f = F(fs, False); words, yend = text_layout(text, f, 920, 640, 0)
-        if yend <= 330: break
-    hh = yend; top = ZC - hh / 2 - 14; words = [(w, at, x, y + top, ww) for w, at, x, y, ww in words]
-    panel(c, 110, top - 44, 1170, top + hh + 34, 1, PAN, G3, 3, 28)
-    c.d.text((138, top - 52), "“", font=F(110), fill=G3)
+    f = F(30, False); text = sc["text"]; words, yend = text_layout(text, f, 860, 640, 0); hh = yend + 10
+    top = ZONE_Y + (ZONE_H - hh) / 2 - 10; words = [(w, at, x, y + top, ww) for w, at, x, y, ww in words]
+    c.d.rounded_rectangle([130, top - 34, 1150, top + hh + 24], 24, fill=PAN, outline=G3, width=3)
     hl, ul = [], []
     for i, b in enumerate(sc["beats"]):
         if c.started(i):
@@ -550,30 +509,30 @@ def r_passage(c, sc):
         if inh > 0: c.d.rectangle([x - 4, y + 2, x + ww + 4, y + f.size * 1.35], fill=mix(INK, inh))
         c.d.text((x, y), w, font=f, fill=BG if inh > .5 else INK)
         if inu > 0: c.d.line([(x, y + f.size * 1.3), (x + ww * inu, y + f.size * 1.3)], fill=INK, width=4)
-    if sc.get("source"): c.text(640, top + hh + 46, sc["source"].upper(), F(20), G2)
+    if sc.get("source"): c.text(640, top + hh + 34, sc["source"], F(20, False), G2)
 
 def r_choices(c, sc):
-    q = sc["question"]; fq = F(32); ql = wrap(q, fq, 1020); opts = sc["options"]; n = len(opts)
-    qh = len(ql) * 44; h = min(92, (ZONE_H - qh - 26) / n); y = ZC - (qh + 26 + n * h) / 2
-    for ln in ql: c.text(640, y, ln, fq, INK); y += 44
-    y += 26; fo = F(30 if h >= 80 else 26, False); st = {k: None for k in opts}; pick = None; point = None
+    q = sc["question"]; fq = F(30); ql = wrap(q, fq, 960); y = ZONE_Y + 4
+    for ln in ql: c.text(640, y, ln, fq, INK); y += 42
+    y += 14; opts = sc["options"]; fo = F(28, False); st = {k: None for k in opts}; pick = None; point = None
     for i, b in enumerate(sc["beats"]):
         if not c.started(i): continue
         if "eliminate" in b: st[b["eliminate"]] = (i, b.get("why", ""))
         if "pick" in b: pick = (i, b["pick"])
         if "point" in b: point = (i, b["point"])
+    h = 84
     for k, txt in opts.items():
-        e = st[k]; isp = pick and pick[1] == k; al = 1 - .6 * c.a(e[0], 0, .5) if e else 1; rh = h - 14
+        e = st[k]; isp = pick and pick[1] == k; al = 1 - .6 * c.a(e[0], 0, .5) if e else 1
         fill = INK if (isp and c.a(pick[0], 0, .4) > .5) else PAN; tc = BG if fill == INK else INK
-        c.d.rounded_rectangle([140, y, 1140, y + rh], 20, fill=fill if isp else mix(PAN, al), outline=mix(INK if (point and point[1] == k) else G3, al), width=4 if point and point[1] == k else 3)
-        d = rh * .62; c.d.ellipse([140 + 20, y + (rh - d) / 2, 140 + 20 + d, y + (rh + d) / 2], outline=mix(tc if isp else INK, al), width=3); c.text(140 + 20 + d / 2, y + (rh - d) / 2 + d * .17, k, F(d * .5), tc if isp else mix(INK, al))
-        lines = wrap(txt, fo, 620); ty = y + rh / 2 - len(lines) * fo.size * .62
-        for ln in lines: c.text(560, ty, ln, fo, tc if isp else mix(INK, al)); ty += fo.size * 1.24
+        c.d.rounded_rectangle([160, y, 1120, y + h - 12], 18, fill=fill if isp else mix(PAN, al), outline=mix(INK if (point and point[1] == k) else G3, al), width=4 if point and point[1] == k else 3)
+        c.d.ellipse([184, y + 12, 232, y + 60], outline=mix(tc if isp else INK, al), width=3); c.text(208, y + 15, k, F(26), tc if isp else mix(INK, al))
+        lines = wrap(txt, fo, 620); ty = y + (h - 12) / 2 - len(lines) * 17
+        for ln in lines: c.text(560, ty, ln, fo, tc if isp else mix(INK, al)); ty += 34
         if e:
-            p = c.a(e[0], .2, .5); wd = tw(lines[0], fo); c.d.line([(560 - wd / 2, y + rh / 2), (560 - wd / 2 + wd * p, y + rh / 2)], fill=G1, width=4)
+            p = c.a(e[0], .2, .5); wd = tw(lines[0], fo); c.d.line([(560 - wd / 2, y + (h - 12) / 2), (560 - wd / 2 + wd * p, y + (h - 12) / 2)], fill=G1, width=4)
             if e[1]:
-                wl = wrap(e[1], F(21, False), 210); wy = y + rh / 2 - len(wl) * 14
-                for ln in wl: c.text(1010, wy, ln, F(21, False), G1, c.a(e[0], .6, .4)); wy += 28
+                wl = wrap(e[1], F(20, False), 210); wy = y + (h - 12) / 2 - len(wl) * 13
+                for ln in wl: c.text(1000, wy, ln, F(20, False), G1, c.a(e[0], .6, .4)); wy += 26
         y += h
 
 # ---- desmos (real recordings)
@@ -640,8 +599,8 @@ def r_desmos(c, sc):
     p = min(1.0, c.since(b) / max(0.5, c.bd[b] * .8)); fr = lo + int(p * (hi - lo)); key = (d, fr)
     if key not in _dc:
         if len(_dc) > 8: _dc.pop(next(iter(_dc)))
-        _dc[key] = Image.open(os.path.join(d, f"{fr:04d}.jpg")).convert("RGB").resize((960, 541), Image.LANCZOS)
-    c.d.rounded_rectangle([150, 126, 1130, 681 - 8], 16, fill=G3); c.im.paste(_dc[key], (160, 132))
+        _dc[key] = Image.open(os.path.join(d, f"{fr:04d}.jpg")).convert("RGB").resize((957, 540), Image.LANCZOS)
+    c.d.rounded_rectangle([151, 102, 1129, 654], 14, fill=G3); c.im.paste(_dc[key], (161, 108))
 
 RENDER = {"cards": r_cards, "list": r_list, "steps": r_steps, "check": r_check, "compare": r_compare, "table": r_table, "figure": r_figure, "desmos": r_desmos, "passage": r_passage, "choices": r_choices}
 
@@ -751,76 +710,13 @@ def build_plan(js):
         plan.append({"sc": sc, "bt": bt, "bd": bd, "t0": t0, "len": acc + .5, "paths": paths[k - len(bt):k]}); t0 += acc + .5
     return plan, t0
 
-DARK_TYPES = {"cards", "list"}
-KIND_LABEL = {"cards": "CONCEPT", "list": "KEY IDEAS", "table": "AT A GLANCE", "figure": "DIAGRAM", "desmos": "IN DESMOS", "passage": "READ THE TEXT", "choices": "QUESTION", "steps": "WORKED SOLUTION", "check": "CHECK", "compare": "COMMON MISTAKE"}
-def scene_tag(sc):
-    t = sc.get("title", "").lower()
-    m = re.match(r"(easy|medium|hard)\b", t)
-    if m: return m.group(1).upper(), {"easy": 1, "medium": 2, "hard": 3}[m.group(1)]
-    m = re.match(r"trap (\d+)", t)
-    if m: return "TRAP " + m.group(1), 0
-    if t.startswith("practice"): return "PRACTICE", 0
-    if "recap" in t: return "RECAP", 0
-    return KIND_LABEL.get(sc["type"], ""), 0
-
-_grid = None
-def bg_grid():
-    global _grid
-    if _grid is None:
-        im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
-        for x in range(24, W, 32):
-            for y in range(24, H, 32): d.ellipse([x - 1.5, y - 1.5, x + 1.5, y + 1.5], fill=(226, 226, 226))
-        _grid = im
-    return _grid.copy()
-
-def draw_header(c, sc, lt):
-    label, lvl = scene_tag(sc); a = min(1, lt / .4 + .001); d = c.d
-    if label:
-        f = F(20); w = tw(label, f) + 40 + (58 if lvl else 0); x0 = 640 - w / 2
-        d.rounded_rectangle([x0, 16, x0 + w, 52], 18, fill=mix(INK, a)); d.text((x0 + 20, 21), label, font=f, fill=BG)
-        if lvl:
-            for k in range(3): d.rounded_rectangle([x0 + 20 + tw(label, f) + 12 + k * 14, 28 + (2 - k) * 2, x0 + 20 + tw(label, f) + 22 + k * 14, 44], 2, fill=BG if k < lvl else G1)
-    c.text(640, 60, sc.get("title", ""), fitF(sc.get("title", ""), 42, 1100), INK, a)
-    ww = 90 + 150 * ease(lt / .7); d.line([(640 - ww / 2, 119), (640 + ww / 2, 119)], fill=INK, width=4)
-
-def draw_caption(c, sc):
-    b = c.cur(); say = sc["beats"][b]["say"]; dur = max(1.0, c.bd[b] - .6); tt = c.since(b) / dur
-    sents = re.split(r"(?<=[.?!])\s+", say.strip()); lens = [max(1, len(s)) for s in sents]; tot = sum(lens); acc = 0; cur = len(sents) - 1
-    for k, l in enumerate(lens):
-        if tt < (acc + l) / tot: cur = k; break
-        acc += l
-    frac = min(1, max(0, (tt - acc / tot) / (lens[cur] / tot))); words = sents[cur].split()
-    for fs in (30, 27, 24):
-        f = F(fs, False); lines, curl = [], ""
-        for w in words:
-            t2 = (curl + " " + w).strip()
-            if tw(t2, f) <= 1040: curl = t2
-            else: lines.append(curl); curl = w
-        lines.append(curl)
-        if len(lines) <= 2 or fs == 24: break
-    lh = f.size * 1.35; hgt = len(lines) * lh + 26; y0 = 590 + (86 - hgt) / 2
-    c.d.rounded_rectangle([110, y0, 1170, y0 + hgt], 22, fill=PAN)
-    spoken = int(frac * len(words) * 1.12) + 1; n = 0; y = y0 + 13
-    for ln in lines:
-        x = 640 - tw(ln, f) / 2
-        for w in ln.split(" "):
-            c.d.text((x, y), w, font=f, fill=INK if n < spoken else G2); x += tw(w + " ", f); n += 1
-        y += lh
-
 def frame(t, plan, total, label):
-    s = next((p for p in plan if p["t0"] <= t < p["t0"] + p["len"]), plan[-1]); lt = t - s["t0"]; sc = s["sc"]
-    im = bg_grid(); c = Ctx(im, lt, s["bt"], s["bd"]); d = c.d
-    draw_header(c, sc, lt)
-    RENDER[sc["type"]](c, sc)
-    if sc["type"] != "desmos": draw_caption(c, sc)
-    c.text(640, 686, f"OpenPrep  ·  {label}", F(17, False), G2)
-    x = 40; gap = 4; usable = W - 80
-    for p in plan:
-        w = usable * p["len"] / total - gap; fillw = max(0, min(1, (t - p["t0"]) / p["len"])) * w
-        d.rounded_rectangle([x, 708, x + w, 714], 3, fill=(220, 220, 220));
-        if fillw > 1: d.rounded_rectangle([x, 708, x + fillw, 714], 3, fill=INK)
-        x += w + gap
-    if sc["type"] in DARK_TYPES: im = ImageOps.invert(im)
+    im = Image.new("RGB", (W, H), BG); d = ImageDraw.Draw(im)
+    s = next((p for p in plan if p["t0"] <= t < p["t0"] + p["len"]), plan[-1]); lt = t - s["t0"]; c = Ctx(im, lt, s["bt"], s["bd"])
+    c.text(640, 34, s["sc"].get("title", ""), F(40), INK, min(1, lt / .4 + .001))
+    d.line([(520, 92), (760, 92)], fill=G3, width=2)
+    RENDER[s["sc"]["type"]](c, s["sc"])
+    d.rectangle([0, H - 8, int(W * min(1, t / total)), H], fill=INK); c.text(640, H - 44, f"OpenPrep  ·  {label}", F(20, False), G2)
     return np.array(im)
 
 def main():

@@ -1,46 +1,212 @@
 {
-  "id": "m-psda-twovar_v1",
-  "skill": "m-psda-twovar",
-  "part": 1,
-  "title": "Two-Variable Data, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "Two-variable data", "beats": [
-      {"say": "Two-variable data pairs each x value with a y value. It is usually shown as a scatterplot, which plots one point for each pair, or as a table.", "card": {"text": "Each x is paired with a y"}},
-      {"say": "The SAT asks you to describe the association, use a line of best fit to make predictions, and interpret the slope and the intercept in context.", "card": {"text": "Describe, predict, interpret"}},
-      {"say": "It also asks you to compute residuals, and to decide whether a linear model or an exponential model fits the data better.", "card": {"text": "Residuals, linear versus exponential"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "Direction. If the points rise from left to right, the association is positive. If they fall, the association is negative.", "item": "Direction: positive or negative"},
-      {"say": "Strength. If the points are close to a line, the association is strong. If they form a loose cloud, it is weak.", "item": "Strength: close to a line, or loose"},
-      {"say": "A line of best fit gives predicted values, not exact ones. To predict y, you put the x value into the equation of the line.", "item": "A line predicts; it does not promise"},
-      {"say": "The slope is the predicted change in y for each increase of one in x. The y-intercept is the predicted y when x is zero, which may not make sense in context.", "item": "Slope: change in y per one unit of x"},
-      {"say": "A residual is the actual value minus the predicted value. A positive residual means the point lies above the line.", "item": "Residual = actual − predicted"}
-    ]},
-    {"type": "table", "title": "Linear or exponential?", "columns": ["Model", "Pattern in a table", "Equation"], "rows": [["linear", "add the same amount each step", "y = mx + b"], ["exponential", "multiply by the same factor each step", "y = a·b^x"]], "beats": [
-      {"say": "Linear data changes by a constant difference. Each time x goes up by one, y goes up or down by the same amount, so the equation is y equals m x plus b.", "reveal_row": 0},
-      {"say": "Exponential data changes by a constant ratio. Each time x goes up by one, y is multiplied by the same factor, so the equation is y equals a times b to the x.", "reveal_row": 1}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. A café finds that the line of best fit for hot-drink sales y against the outdoor temperature x is y equals negative two point five x plus one hundred forty. Predict sales at thirty degrees, and interpret the slope.", "card": {"text": "y = −2.5x + 140", "sub": "Predict at x = 30. Interpret the slope."}}
-    ]},
-    {"type": "figure", "title": "The data and the line", "kind": "scatter", "data": {"points": [[10, 115], [15, 105], [20, 92], [25, 78], [30, 66], [35, 52]], "line": {"slope": -2.5, "intercept": 140}}, "beats": [
-      {"say": "Each point is one day, with the temperature on the horizontal axis and the number of hot drinks sold on the vertical axis. The points fall from left to right.", "show": ["points"]},
-      {"say": "The line of best fit passes close to the points. It slopes downward, so the association is negative: warmer days have lower hot-drink sales.", "show": ["line"]}
-    ]},
-    {"type": "steps", "title": "Easy: predict at 30 degrees", "start": "y = −2.5(30) + 140", "beats": [
-      {"say": "To predict, substitute the temperature, thirty, for x in the equation of the line. Keep the parentheses around thirty, and multiply first."},
-      {"say": "Negative two point five times thirty is negative seventy-five. So the equation becomes negative seventy-five plus one hundred forty.", "op": "multiply", "result": "y = −75 + 140"},
-      {"say": "Negative seventy-five plus one hundred forty is sixty-five. So the predicted sales are sixty-five drinks on a thirty-degree day.", "op": "add", "result": "y = 65", "final": true}
-    ]},
-    {"type": "cards", "title": "Easy: interpret the slope", "beats": [
-      {"say": "The slope is negative two point five. It is the predicted change in sales for each one-degree increase in temperature. So for each additional degree, predicted sales decrease by two and a half drinks.", "card": {"text": "Slope −2.5", "sub": "Each +1 degree: 2.5 fewer drinks predicted"}},
-      {"say": "Notice the word predicted. The line gives an estimate based on the data, and real sales on any given day will vary around it.", "card": {"text": "A prediction, not a certainty"}}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Direction tells you positive or negative, and strength tells you how close the points are to a line.", "item": "Direction and strength"},
-      {"say": "To predict, substitute x into the line. The slope is the predicted change in y per one unit of x.", "item": "Predict by substituting"},
-      {"say": "A residual is actual minus predicted. In the next video, we work through a medium problem and a hard problem.", "item": "Residual = actual − predicted"}
-    ]}
-  ]
+ "id": "m-psda-twovar_v1",
+ "skill": "m-psda-twovar",
+ "part": 1,
+ "title": "Two-Variable Data, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Two-variable data",
+   "beats": [
+    {
+     "say": "Two-variable data pairs each x value with a y value. It's usually shown as a scatterplot, which plots one point for each pair, or as a table.",
+     "card": {
+      "text": "Each x is paired with a y"
+     }
+    },
+    {
+     "say": "The SAT asks you to describe the association, use a line of best fit to make predictions, and interpret the slope and the intercept in context.",
+     "card": {
+      "text": "Describe, predict, interpret"
+     }
+    },
+    {
+     "say": "It also asks you to compute residuals, and to decide whether a linear model or an exponential model fits the data better.",
+     "card": {
+      "text": "Residuals, linear versus exponential"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "Direction. If the points rise from left to right, the association is positive. If they fall, the association is negative.",
+     "item": "Direction: positive or negative"
+    },
+    {
+     "say": "Strength. If the points are close to a line, the association is strong. If they form a loose cloud, it's weak.",
+     "item": "Strength: close to a line, or loose"
+    },
+    {
+     "say": "A line of best fit gives predicted values, not exact ones. To predict y, you put the x value into the equation of the line.",
+     "item": "A line predicts; it does not promise"
+    },
+    {
+     "say": "The slope is the predicted change in y for each increase of one in x. The y-intercept is the predicted y when x is zero, which may not make sense in context.",
+     "item": "Slope: change in y per one unit of x"
+    },
+    {
+     "say": "A residual is the actual value minus the predicted value. A positive residual means the point lies above the line.",
+     "item": "Residual = actual − predicted"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Linear or exponential?",
+   "columns": [
+    "Model",
+    "Pattern in a table",
+    "Equation"
+   ],
+   "rows": [
+    [
+     "linear",
+     "add the same amount each step",
+     "y = mx + b"
+    ],
+    [
+     "exponential",
+     "multiply by the same factor each step",
+     "y = a·b^x"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Linear data changes by a constant difference. Each time x goes up by one, y goes up or down by the same amount, so the equation is y equals m x plus b.",
+     "reveal_row": 0
+    },
+    {
+     "say": "Exponential data changes by a constant ratio. Each time x goes up by one, y is multiplied by the same factor, so the equation is y equals a times b to the x.",
+     "reveal_row": 1
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. A café finds that the line of best fit for hot-drink sales y against the outdoor temperature x is y equals negative two point five x plus one hundred forty. Predict sales at thirty degrees, and interpret the slope.",
+     "card": {
+      "text": "y = −2.5x + 140",
+      "sub": "Predict at x = 30. Interpret the slope."
+     }
+    }
+   ]
+  },
+  {
+   "type": "figure",
+   "title": "The data and the line",
+   "kind": "scatter",
+   "data": {
+    "points": [
+     [
+      10,
+      115
+     ],
+     [
+      15,
+      105
+     ],
+     [
+      20,
+      92
+     ],
+     [
+      25,
+      78
+     ],
+     [
+      30,
+      66
+     ],
+     [
+      35,
+      52
+     ]
+    ],
+    "line": {
+     "slope": -2.5,
+     "intercept": 140
+    }
+   },
+   "beats": [
+    {
+     "say": "Each point is one day, with the temperature on the horizontal axis and the number of hot drinks sold on the vertical axis. The points fall from left to right.",
+     "show": [
+      "points"
+     ]
+    },
+    {
+     "say": "The line of best fit passes close to the points. It slopes downward, so the association is negative: warmer days have lower hot-drink sales.",
+     "show": [
+      "line"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: predict at 30 degrees",
+   "start": "y = −2.5(30) + 140",
+   "beats": [
+    {
+     "say": "To predict, substitute the temperature, thirty, for x in the equation of the line. Keep the parentheses around thirty, and multiply first."
+    },
+    {
+     "say": "Negative two point five times thirty is negative seventy-five. So the equation becomes negative seventy-five plus one hundred forty.",
+     "op": "multiply",
+     "result": "y = −75 + 140"
+    },
+    {
+     "say": "Negative seventy-five plus one hundred forty is sixty-five. So the predicted sales are sixty-five drinks on a thirty-degree day.",
+     "op": "add",
+     "result": "y = 65",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy: interpret the slope",
+   "beats": [
+    {
+     "say": "The slope is negative two point five. It's the predicted change in sales for each one-degree increase in temperature. So for each additional degree, predicted sales decrease by two and a half drinks.",
+     "card": {
+      "text": "Slope −2.5",
+      "sub": "Each +1 degree: 2.5 fewer drinks predicted"
+     }
+    },
+    {
+     "say": "Notice the word predicted. The line gives an estimate based on the data, and real sales on any given day will vary around it.",
+     "card": {
+      "text": "A prediction, not a certainty"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Direction tells you positive or negative, and strength tells you how close the points are to a line.",
+     "item": "Direction and strength"
+    },
+    {
+     "say": "To predict, substitute x into the line. The slope is the predicted change in y per one unit of x.",
+     "item": "Predict by substituting"
+    },
+    {
+     "say": "A residual is actual minus predicted. In the next video, we work through a medium problem and a hard problem.",
+     "item": "Residual = actual − predicted"
+    }
+   ]
+  }
+ ]
 }

@@ -1,57 +1,208 @@
 {
-  "id": "rw-ii-central_v2",
-  "skill": "rw-ii-central",
-  "part": 2,
-  "title": "Central Ideas and Details, Part 2: A Hard Question and Common Traps",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "list", "title": "Recap of the method", "beats": [
-      {"say": "In part one, we learned a four-step method. Read the question first, and then read the text once, noticing any turn word.", "item": "Read the question; notice turn words"},
-      {"say": "For a main idea, summarize the text in about ten words before reading the choices. Then eliminate answers that are too narrow, too broad, distorted, or off-topic.", "item": "Summarize, then eliminate"},
-      {"say": "In this video, we apply the method to a harder literary passage, and then look at the traps that catch students most often.", "item": "Today: a hard question and traps"}
-    ]},
-    {"type": "cards", "title": "Hard question: a literary text", "beats": [
-      {"say": "Hard question. This is a literary passage, so the main idea is usually about a character: what the character feels, wants, or realizes. Look at what the character does, and what the narrator lingers on.", "card": {"text": "Literary: look at the character", "sub": "What does she do? What does she feel?"}},
-      {"say": "Also read the introductory line before the passage. It often tells you who the character is, and what situation she is in.", "card": {"text": "Read the intro line"}}
-    ]},
-    {"type": "passage", "title": "Read the text", "text": "The following text is from a story. Lena has trained for years for a regional chess final. Lena had rehearsed every opening a thousand times, and yet when her opponent slid a pawn forward, she felt the old fear creep back. She glanced at the clock, then at her father in the audience, who gave a small nod. Lena exhaled, picked up her rook, and played the move she had practiced since she was nine.", "source": "original text", "beats": [
-      {"say": "The introductory line tells us that Lena has trained for years. So we expect the story to be about how she handles the pressure of the final.", "underline": "trained for years"},
-      {"say": "In the middle, she feels the old fear creep back, even though she has prepared. This is the problem in the story.", "highlight": "the old fear creep back"},
-      {"say": "Then she looks at her father, who nods, and she exhales and plays the move she had practiced. This is how she handles the problem. Our summary is, Lena feels nervous but steadies herself and trusts her practice.", "highlight": "exhaled"}
-    ]},
-    {"type": "choices", "title": "Which choice best states the main idea?", "question": "Which choice best states the main idea of the text?", "options": {"A": "Lena feels nervous but steadies herself and trusts her preparation.", "B": "Lena's father wants her to quit chess.", "C": "Lena's opponent is a much stronger player than she expected.", "D": "Lena has never practiced the move she plays."}, "beats": [
-      {"say": "Choice B says her father wants her to quit. But he gives her a small nod, which suggests support, so this contradicts the text.", "eliminate": "B", "why": "contradicts the text"},
-      {"say": "Choice C says her opponent is much stronger than she expected. The text never compares the two players, so this is not supported.", "eliminate": "C", "why": "not stated"},
-      {"say": "Choice D says she has never practiced the move. The text says the opposite, that she practiced it since she was nine.", "eliminate": "D", "why": "contradicts the text"},
-      {"say": "Choice A covers both halves of the text: the fear at the start, and the steady, trusting move at the end. The answer is A.", "pick": "A"}
-    ]},
-    {"type": "cards", "title": "Common traps", "beats": [
-      {"say": "Now the traps. Each one is a way that a careful reader can still choose a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: a true detail", "beats": [
-      {"say": "Trap one. A choice can be true, and still be the wrong answer, because it is only a detail. Glancing at the clock is true, but it is evidence, not the main idea.", "wrong": "Lena glanced at the clock", "wrong_why": "True, but only one detail"},
-      {"say": "The main idea must cover the whole text. Here, it is how Lena steadies herself and trusts her practice.", "right": "Lena steadies herself, trusts practice", "right_why": "Covers the whole text"}
-    ]},
-    {"type": "compare", "title": "Trap 2: stopping at sentence one", "beats": [
-      {"say": "Trap two. Many informational texts open with a view that the author then corrects. In the watering text, the first sentence is the common belief.", "wrong": "main idea: daily watering is best", "wrong_why": "That is the view being corrected"},
-      {"say": "The correction, after the word however, is the point. Deep watering twice a week produced stronger roots.", "right": "main idea: deep watering works better", "right_why": "The point comes after however"}
-    ]},
-    {"type": "compare", "title": "Trap 3: outside knowledge", "beats": [
-      {"say": "Trap three. A choice might be true in real life, but the text does not say it. Students choose it because it sounds right.", "wrong": "true in real life, so it is correct", "wrong_why": "The text must say it"},
-      {"say": "Every answer must be supported by the text. If you cannot point to a line, the choice is wrong, even if it is true.", "right": "I can point to the line", "right_why": "Supported by the text"}
-    ]},
-    {"type": "compare", "title": "Trap 4: extreme words", "beats": [
-      {"say": "Trap four. Words such as always, never, only, and proves are red flags. A choice with extreme language is wrong unless the text is just as strong.", "wrong": "always, never, only, proves", "wrong_why": "Extreme words need extreme support"},
-      {"say": "Correct answers usually use cautious, plain language that matches the text, such as can, may, or often.", "right": "can, may, often, some", "right_why": "Matches modest evidence"}
-    ]},
-    {"type": "compare", "title": "Trap 5: skipping the intro line", "beats": [
-      {"say": "Trap five. On literary passages, students skip the line before the passage. That line often names the character and the situation.", "wrong": "skip the line before the story", "wrong_why": "It sets up the situation"},
-      {"say": "Read it every time. In our passage, it told us Lena had trained for years, which made her nervousness easier to understand.", "right": "read it: it names the character", "right_why": "It gives context"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. The main idea covers the whole text, so a true detail is usually the wrong answer. The point of an informational text often comes after a turn word.", "item": "Whole text; the point follows the turn"},
-      {"say": "Choose only what the text supports, avoid extreme words, and read the introductory line on literary passages.", "item": "Supported, modest, intro line read"},
-      {"say": "In the next topic, we study command of evidence, which asks which quotation or data best supports a claim.", "item": "Next: command of evidence"}
-    ]}
-  ]
+ "id": "rw-ii-central_v2",
+ "skill": "rw-ii-central",
+ "part": 2,
+ "title": "Central Ideas and Details, Part 2: A Hard Question and Common Traps",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "list",
+   "title": "Recap of the method",
+   "beats": [
+    {
+     "say": "In part one, we learned a four-step method. Read the question first, and then read the text once, noticing any turn word.",
+     "item": "Read the question; notice turn words"
+    },
+    {
+     "say": "For a main idea, summarize the text in about ten words before reading the choices. Then eliminate answers that are too narrow, too broad, distorted, or off-topic.",
+     "item": "Summarize, then eliminate"
+    },
+    {
+     "say": "In this video, we apply the method to a harder literary passage, and then look at the traps that catch students most often.",
+     "item": "Today: a hard question and traps"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard question: a literary text",
+   "beats": [
+    {
+     "say": "Hard question. This is a literary passage, so the main idea is usually about a character: what the character feels, wants, or realizes. Look at what the character does, and what the narrator lingers on.",
+     "card": {
+      "text": "Literary: look at the character",
+      "sub": "What does she do? What does she feel?"
+     }
+    },
+    {
+     "say": "Also read the introductory line before the passage. It often tells you who the character is, and what situation she is in.",
+     "card": {
+      "text": "Read the intro line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Read the text",
+   "text": "The following text is from a story. Lena has trained for years for a regional chess final. Lena had rehearsed every opening a thousand times, and yet when her opponent slid a pawn forward, she felt the old fear creep back. She glanced at the clock, then at her father in the audience, who gave a small nod. Lena exhaled, picked up her rook, and played the move she had practiced since she was nine.",
+   "source": "original text",
+   "beats": [
+    {
+     "say": "The introductory line tells us that Lena has trained for years. So we expect the story to be about how she handles the pressure of the final.",
+     "underline": "trained for years"
+    },
+    {
+     "say": "In the middle, she feels the old fear creep back, even though she has prepared. This is the problem in the story.",
+     "highlight": "the old fear creep back"
+    },
+    {
+     "say": "Then she looks at her father, who nods, and she exhales and plays the move she had practiced. This is how she handles the problem. Our summary is, Lena feels nervous but steadies herself and trusts her practice.",
+     "highlight": "exhaled"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "Which choice best states the main idea?",
+   "question": "Which choice best states the main idea of the text?",
+   "options": {
+    "A": "Lena feels nervous but steadies herself and trusts her preparation.",
+    "B": "Lena's father wants her to quit chess.",
+    "C": "Lena's opponent is a much stronger player than she expected.",
+    "D": "Lena has never practiced the move she plays."
+   },
+   "beats": [
+    {
+     "say": "Choice B says her father wants her to quit. But he gives her a small nod, which suggests support, so this contradicts the text.",
+     "eliminate": "B",
+     "why": "contradicts the text"
+    },
+    {
+     "say": "Choice C says her opponent is much stronger than she expected. The text never compares the two players, so this isn't supported.",
+     "eliminate": "C",
+     "why": "not stated"
+    },
+    {
+     "say": "Choice D says she has never practiced the move. The text says the opposite, that she practiced it since she was nine.",
+     "eliminate": "D",
+     "why": "contradicts the text"
+    },
+    {
+     "say": "Choice A covers both halves of the text: the fear at the start, and the steady, trusting move at the end. The answer is A.",
+     "pick": "A"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Common traps",
+   "beats": [
+    {
+     "say": "Now the traps. Each one is a way that a careful reader can still choose a wrong answer. We'll see the trap, and then the habit that avoids it.",
+     "card": {
+      "text": "Five common traps"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: a true detail",
+   "beats": [
+    {
+     "say": "Trap one. A choice can be true, and still be the wrong answer, because it's only a detail. Glancing at the clock is true, but it's evidence, not the main idea.",
+     "wrong": "Lena glanced at the clock",
+     "wrong_why": "True, but only one detail"
+    },
+    {
+     "say": "The main idea must cover the whole text. Here, it's how Lena steadies herself and trusts her practice.",
+     "right": "Lena steadies herself, trusts practice",
+     "right_why": "Covers the whole text"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: stopping at sentence one",
+   "beats": [
+    {
+     "say": "Trap two. Many informational texts open with a view that the author then corrects. In the watering text, the first sentence is the common belief.",
+     "wrong": "main idea: daily watering is best",
+     "wrong_why": "That is the view being corrected"
+    },
+    {
+     "say": "The correction, after the word however, is the point. Deep watering twice a week produced stronger roots.",
+     "right": "main idea: deep watering works better",
+     "right_why": "The point comes after however"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: outside knowledge",
+   "beats": [
+    {
+     "say": "Trap three. A choice might be true in real life, but the text doesn't say it. Students choose it because it sounds right.",
+     "wrong": "true in real life, so it is correct",
+     "wrong_why": "The text must say it"
+    },
+    {
+     "say": "Every answer must be supported by the text. If you can't point to a line, the choice is wrong, even if it's true.",
+     "right": "I can point to the line",
+     "right_why": "Supported by the text"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: extreme words",
+   "beats": [
+    {
+     "say": "Trap four. Words such as always, never, only, and proves are red flags. A choice with extreme language is wrong unless the text is just as strong.",
+     "wrong": "always, never, only, proves",
+     "wrong_why": "Extreme words need extreme support"
+    },
+    {
+     "say": "Correct answers usually use cautious, plain language that matches the text, such as can, may, or often.",
+     "right": "can, may, often, some",
+     "right_why": "Matches modest evidence"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: skipping the intro line",
+   "beats": [
+    {
+     "say": "Trap five. On literary passages, students skip the line before the passage. That line often names the character and the situation.",
+     "wrong": "skip the line before the story",
+     "wrong_why": "It sets up the situation"
+    },
+    {
+     "say": "Read it every time. In our passage, it told us Lena had trained for years, which made her nervousness easier to understand.",
+     "right": "read it: it names the character",
+     "right_why": "It gives context"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. The main idea covers the whole text, so a true detail is usually the wrong answer. The point of an informational text often comes after a turn word.",
+     "item": "Whole text; the point follows the turn"
+    },
+    {
+     "say": "Choose only what the text supports, avoid extreme words, and read the introductory line on literary passages.",
+     "item": "Supported, modest, intro line read"
+    },
+    {
+     "say": "In the next topic, we study command of evidence, which asks which quotation or data best supports a claim.",
+     "item": "Next: command of evidence"
+    }
+   ]
+  }
+ ]
 }

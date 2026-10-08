@@ -1,45 +1,188 @@
 {
-  "id": "m-adv-nonlin-func_v2",
-  "skill": "m-adv-nonlin-func",
-  "part": 2,
-  "title": "Nonlinear Functions, Part 2: Medium and Hard Problems",
-  "section_label": "Math · Advanced Math",
-  "scenes": [
-    {"type": "cards", "title": "Recap of part one", "beats": [
-      {"say": "In part one, we evaluated a quadratic and found its vertex, and we saw the factors for exponential growth and decay.", "card": {"text": "Growth 1 + r, decay 1 − r"}},
-      {"say": "In this video, we work with a doubling model, and then build and use a decay model from a real situation.", "card": {"text": "Today: doubling, then decay"}}
-    ]},
-    {"type": "cards", "title": "Medium example", "beats": [
-      {"say": "Medium example. A culture starts with two hundred bacteria, and the number doubles every three hours. The function is B of t equals two hundred times two to the t over three. Find B of nine.", "card": {"text": "B(t) = 200 × 2^(t/3)", "sub": "Find B(9)"}}
-    ]},
-    {"type": "steps", "title": "Medium: a doubling model", "start": "B(9) = 200 × 2^(9/3)", "beats": [
-      {"say": "The exponent is t over three, because the culture doubles every three hours. Replace t with nine."},
-      {"say": "Nine divided by three is three. This means that nine hours is exactly three doubling periods.", "op": "simplify the exponent", "result": "B(9) = 200 × 2^3"},
-      {"say": "Two cubed is eight. So the culture is multiplied by eight over nine hours.", "op": "evaluate the power", "result": "B(9) = 200 × 8"},
-      {"say": "Two hundred times eight is sixteen hundred. So there are sixteen hundred bacteria after nine hours.", "op": "multiply", "result": "B(9) = 1600", "final": true}
-    ]},
-    {"type": "cards", "title": "Hard example", "beats": [
-      {"say": "Hard example. A machine is bought for forty-five thousand dollars, and loses twenty percent of its value each year. Write a function for its value after t years, and find the first whole number of years after which the value is below twenty thousand dollars.", "card": {"text": "$45,000, loses 20% per year", "sub": "Write V(t). First year below $20,000?"}}
-    ]},
-    {"type": "cards", "title": "Hard: build the model", "beats": [
-      {"say": "Losing twenty percent each year means keeping eighty percent. So the factor is zero point eight, not zero point two. The starting value is forty-five thousand.", "card": {"text": "V(t) = 45000(0.8)^t", "sub": "Factor = 1 − 0.20 = 0.8"}}
-    ]},
-    {"type": "table", "title": "Hard: year by year", "columns": ["Year t", "Value V(t)"], "rows": [["1", "$36,000"], ["2", "$28,800"], ["3", "$23,040"], ["4", "$18,432"]], "beats": [
-      {"say": "Now compute the value year by year. In year one, we multiply forty-five thousand by zero point eight, and get thirty-six thousand dollars.", "reveal_row": 0},
-      {"say": "In year two, we multiply thirty-six thousand by zero point eight, and get twenty-eight thousand eight hundred dollars.", "reveal_row": 1},
-      {"say": "In year three, the value is twenty-three thousand forty dollars. That is still above twenty thousand, so three years is not enough.", "reveal_row": 2, "highlight": [2, 1]},
-      {"say": "In year four, the value is eighteen thousand four hundred thirty-two dollars, which is below twenty thousand.", "reveal_row": 3, "highlight": [3, 1]}
-    ]},
-    {"type": "cards", "title": "The answer", "beats": [
-      {"say": "So the value first drops below twenty thousand dollars after four years. Remember that the question asks for a whole number of years, and year three was still too high.", "card": {"text": "4 years", "sub": "V(3) = 23,040 is still above 20,000"}}
-    ]},
-    {"type": "cards", "title": "Reading vertex form", "beats": [
-      {"say": "One more skill. In vertex form, f of x equals a times x minus h, squared, plus k, the vertex is h comma k. For two times x plus three, squared, minus seven, h is negative three, and k is negative seven.", "card": {"text": "f(x) = 2(x + 3)^2 − 7", "sub": "Vertex (−3, −7), a minimum"}}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. In a doubling model, the exponent is t divided by the doubling time, not t times it.", "item": "Doubling: the exponent is t over d"},
-      {"say": "A twenty percent decrease means a factor of zero point eight. Compute year by year, and answer in whole years.", "item": "Decay by 20% means factor 0.8"},
-      {"say": "In vertex form, the sign inside the parentheses is reversed. In the next video, we look at common traps and the fast way with Desmos.", "item": "Vertex form: reverse the inside sign"}
-    ]}
-  ]
+ "id": "m-adv-nonlin-func_v2",
+ "skill": "m-adv-nonlin-func",
+ "part": 2,
+ "title": "Nonlinear Functions, Part 2: Medium and Hard Problems",
+ "section_label": "Math · Advanced Math",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Recap of part one",
+   "beats": [
+    {
+     "say": "In part one, we evaluated a quadratic and found its vertex, and we saw the factors for exponential growth and decay.",
+     "card": {
+      "text": "Growth 1 + r, decay 1 − r"
+     }
+    },
+    {
+     "say": "In this video, we work with a doubling model, and then build and use a decay model from a real situation.",
+     "card": {
+      "text": "Today: doubling, then decay"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Medium example",
+   "beats": [
+    {
+     "say": "Medium example. A culture starts with two hundred bacteria, and the number doubles every three hours. The function is B of t equals two hundred times two to the t over three. Find B of nine.",
+     "card": {
+      "text": "B(t) = 200 × 2^(t/3)",
+      "sub": "Find B(9)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Medium: a doubling model",
+   "start": "B(9) = 200 × 2^(9/3)",
+   "beats": [
+    {
+     "say": "The exponent is t over three, because the culture doubles every three hours. Replace t with nine."
+    },
+    {
+     "say": "Nine divided by three is three. This means that nine hours is exactly three doubling periods.",
+     "op": "simplify the exponent",
+     "result": "B(9) = 200 × 2^3"
+    },
+    {
+     "say": "Two cubed is eight. So the culture is multiplied by eight over nine hours.",
+     "op": "evaluate the power",
+     "result": "B(9) = 200 × 8"
+    },
+    {
+     "say": "Two hundred times eight is sixteen hundred. So there are sixteen hundred bacteria after nine hours.",
+     "op": "multiply",
+     "result": "B(9) = 1600",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard example",
+   "beats": [
+    {
+     "say": "Hard example. A machine is bought for forty-five thousand dollars, and loses twenty percent of its value each year. Write a function for its value after t years, and find the first whole number of years after which the value is below twenty thousand dollars.",
+     "card": {
+      "text": "$45,000, loses 20% per year",
+      "sub": "Write V(t). First year below $20,000?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard: build the model",
+   "beats": [
+    {
+     "say": "Losing twenty percent each year means keeping eighty percent. So the factor is zero point eight, not zero point two. The starting value is forty-five thousand.",
+     "card": {
+      "text": "V(t) = 45000(0.8)^t",
+      "sub": "Factor = 1 − 0.20 = 0.8"
+     }
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Hard: year by year",
+   "columns": [
+    "Year t",
+    "Value V(t)"
+   ],
+   "rows": [
+    [
+     "1",
+     "$36,000"
+    ],
+    [
+     "2",
+     "$28,800"
+    ],
+    [
+     "3",
+     "$23,040"
+    ],
+    [
+     "4",
+     "$18,432"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "Now compute the value year by year. In year one, we multiply forty-five thousand by zero point eight, and get thirty-six thousand dollars.",
+     "reveal_row": 0
+    },
+    {
+     "say": "In year two, we multiply thirty-six thousand by zero point eight, and get twenty-eight thousand eight hundred dollars.",
+     "reveal_row": 1
+    },
+    {
+     "say": "In year three, the value is twenty-three thousand forty dollars. That's still above twenty thousand, so three years isn't enough.",
+     "reveal_row": 2,
+     "highlight": [
+      2,
+      1
+     ]
+    },
+    {
+     "say": "In year four, the value is eighteen thousand four hundred thirty-two dollars, which is below twenty thousand.",
+     "reveal_row": 3,
+     "highlight": [
+      3,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The answer",
+   "beats": [
+    {
+     "say": "So the value first drops below twenty thousand dollars after four years. Remember that the question asks for a whole number of years, and year three was still too high.",
+     "card": {
+      "text": "4 years",
+      "sub": "V(3) = 23,040 is still above 20,000"
+     }
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Reading vertex form",
+   "beats": [
+    {
+     "say": "One more skill. In vertex form, f of x equals a times x minus h, squared, plus k, the vertex is h comma k. For two times x plus three, squared, minus seven, h is negative three, and k is negative seven.",
+     "card": {
+      "text": "f(x) = 2(x + 3)^2 − 7",
+      "sub": "Vertex (−3, −7), a minimum"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. In a doubling model, the exponent is t divided by the doubling time, not t times it.",
+     "item": "Doubling: the exponent is t over d"
+    },
+    {
+     "say": "A twenty percent decrease means a factor of zero point eight. Compute year by year, and answer in whole years.",
+     "item": "Decay by 20% means factor 0.8"
+    },
+    {
+     "say": "In vertex form, the sign inside the parentheses is reversed. In the next video, we look at common traps and the fast way with Desmos.",
+     "item": "Vertex form: reverse the inside sign"
+    }
+   ]
+  }
+ ]
 }

@@ -1,56 +1,229 @@
 {
-  "id": "m-alg-systems_v1",
-  "skill": "m-alg-systems",
-  "part": 1,
-  "title": "Systems of Two Linear Equations, Part 1: The Idea and an Easy Problem",
-  "section_label": "Math · Algebra",
-  "scenes": [
-    {"type": "cards", "title": "Systems of equations", "beats": [
-      {"say": "A system of two linear equations is a pair of equations that must be true at the same time. Its solution is the point where the two lines cross.", "card": {"text": "Two equations, true together"}},
-      {"say": "The SAT asks you to solve systems, to build them from word problems with two unknowns and two facts, and to decide when a system has no solution or infinitely many.", "card": {"text": "Solve, build, count solutions"}}
-    ]},
-    {"type": "list", "title": "Key ideas", "beats": [
-      {"say": "Substitution works best when one equation already says y equals something, or x equals something. You replace that variable in the other equation.", "item": "Substitution: one equation is solved for a variable"},
-      {"say": "Elimination works best when the coefficients line up. You add or subtract the equations so that one variable cancels. If needed, multiply an equation first.", "item": "Elimination: cancel a variable"},
-      {"say": "A word problem with a count and a total usually gives one how-many equation and one how-much equation, such as a plus c equals one hundred fifty, and twelve a plus seven c equals fourteen hundred.", "item": "Count equation plus money equation"},
-      {"say": "If a question asks for x plus y, or three x minus y, look for a way to get that quantity directly by adding or subtracting the equations.", "item": "Look for the asked expression directly"},
-      {"say": "Two lines meet once, never because they are parallel, or everywhere because they are the same line.", "item": "One solution, none, or infinitely many"}
-    ]},
-    {"type": "table", "title": "How many solutions?", "columns": ["Condition", "Solutions", "Graph"], "rows": [["different slopes", "exactly one", "lines cross"], ["same slope, different intercept", "none", "parallel lines"], ["same slope and same intercept", "infinitely many", "the same line"]], "beats": [
-      {"say": "This table shows the three possibilities. If the slopes are different, the lines cross at exactly one point, and the system has exactly one solution.", "reveal_row": 0},
-      {"say": "If the slopes are the same but the intercepts are different, the lines are parallel. They never meet, so the system has no solution.", "reveal_row": 1},
-      {"say": "If both the slopes and the intercepts match, the two equations describe the same line. Every point on it is a solution, so there are infinitely many solutions.", "reveal_row": 2}
-    ]},
-    {"type": "cards", "title": "Substitution in a small example", "beats": [
-      {"say": "Here is substitution in a tiny example. The system is y equals two x, and x plus y equals nine. The first equation already tells us what y is.", "card": {"text": "y = 2x and x + y = 9", "sub": "Solve by substitution"}}
-    ]},
-    {"type": "steps", "title": "Substitution", "start": "x + 2x = 9", "beats": [
-      {"say": "Replace y in the second equation with two x. That gives x plus two x equals nine, which has only one variable."},
-      {"say": "Combine the like terms. x plus two x is three x, so three x equals nine.", "op": "combine like terms", "result": "3x = 9"},
-      {"say": "Divide both sides by three. So x equals three, and then y equals two times three, which is six.", "op": "÷ 3 on both sides", "result": "x = 3", "final": true}
-    ]},
-    {"type": "cards", "title": "Easy example", "beats": [
-      {"say": "Easy example. Solve the system four x plus three y equals twenty-six, and two x minus three y equals four. Look at the y terms before choosing a method.", "card": {"text": "4x + 3y = 26  and  2x − 3y = 4", "sub": "Solve the system"}},
-      {"say": "The y terms are three y and negative three y. They are opposites, so adding the two equations will make the y terms cancel. That makes elimination the best choice.", "card": {"text": "Opposite y terms: add the equations"}}
-    ]},
-    {"type": "steps", "title": "Easy: eliminate y", "start": "(4x + 3y) + (2x − 3y) = 26 + 4", "beats": [
-      {"say": "Add the left sides together, and add the right sides together. Every term is added, including the constants on the right."},
-      {"say": "On the left, three y plus negative three y is zero, and four x plus two x is six x. On the right, twenty-six plus four is thirty.", "op": "the y terms cancel", "strike": ["3y", "− 3y"], "result": "6x = 30"},
-      {"say": "Divide both sides by six. Thirty divided by six is five. So x equals five.", "op": "÷ 6 on both sides", "result": "x = 5", "final": true}
-    ]},
-    {"type": "steps", "title": "Easy: find y", "start": "4(5) + 3y = 26", "beats": [
-      {"say": "Now substitute x equals five into the first equation, to find y."},
-      {"say": "Four times five is twenty, so the equation becomes twenty plus three y equals twenty-six.", "op": "multiply", "result": "20 + 3y = 26"},
-      {"say": "Subtract twenty from both sides. Twenty-six minus twenty is six, so three y equals six.", "op": "− 20 on both sides", "result": "3y = 6"},
-      {"say": "Divide both sides by three. So y equals two, and the solution is the point five comma two.", "op": "÷ 3 on both sides", "result": "y = 2", "final": true}
-    ]},
-    {"type": "check", "title": "Check in the other equation", "beats": [
-      {"say": "Check in the second equation, which we have not used for y. Two times five is ten, and three times two is six. Ten minus six is four, which matches.", "lines": ["2(5) − 3(2) = 10 − 6", "10 − 6 = 4"], "verdict": "The solution (5, 2) is correct."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. The solution of a system is the point where the lines cross. Use substitution when a variable is already isolated.", "item": "Solution is the crossing point"},
-      {"say": "Use elimination when the coefficients line up. Add or subtract every term, then substitute back to find the second variable.", "item": "Elimination: add or subtract every term"},
-      {"say": "Always check in the other equation. In the next video, we work through a medium problem and a hard problem.", "item": "Check in the other equation"}
-    ]}
-  ]
+ "id": "m-alg-systems_v1",
+ "skill": "m-alg-systems",
+ "part": 1,
+ "title": "Systems of Two Linear Equations, Part 1: The Idea and an Easy Problem",
+ "section_label": "Math · Algebra",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "Systems of equations",
+   "beats": [
+    {
+     "say": "A system of two linear equations is a pair of equations that must be true at the same time. Its solution is the point where the two lines cross.",
+     "card": {
+      "text": "Two equations, true together"
+     }
+    },
+    {
+     "say": "The SAT asks you to solve systems, to build them from word problems with two unknowns and two facts, and to decide when a system has no solution or infinitely many.",
+     "card": {
+      "text": "Solve, build, count solutions"
+     }
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Key ideas",
+   "beats": [
+    {
+     "say": "Substitution works best when one equation already says y equals something, or x equals something. You replace that variable in the other equation.",
+     "item": "Substitution: one equation is solved for a variable"
+    },
+    {
+     "say": "Elimination works best when the coefficients line up. You add or subtract the equations so that one variable cancels. If needed, multiply an equation first.",
+     "item": "Elimination: cancel a variable"
+    },
+    {
+     "say": "A word problem with a count and a total usually gives one how-many equation and one how-much equation, such as a plus c equals one hundred fifty, and twelve a plus seven c equals fourteen hundred.",
+     "item": "Count equation plus money equation"
+    },
+    {
+     "say": "If a question asks for x plus y, or three x minus y, look for a way to get that quantity directly by adding or subtracting the equations.",
+     "item": "Look for the asked expression directly"
+    },
+    {
+     "say": "Two lines meet once, never because they're parallel, or everywhere because they're the same line.",
+     "item": "One solution, none, or infinitely many"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "How many solutions?",
+   "columns": [
+    "Condition",
+    "Solutions",
+    "Graph"
+   ],
+   "rows": [
+    [
+     "different slopes",
+     "exactly one",
+     "lines cross"
+    ],
+    [
+     "same slope, different intercept",
+     "none",
+     "parallel lines"
+    ],
+    [
+     "same slope and same intercept",
+     "infinitely many",
+     "the same line"
+    ]
+   ],
+   "beats": [
+    {
+     "say": "This table shows the three possibilities. If the slopes are different, the lines cross at exactly one point, and the system has exactly one solution.",
+     "reveal_row": 0
+    },
+    {
+     "say": "If the slopes are the same but the intercepts are different, the lines are parallel. They never meet, so the system has no solution.",
+     "reveal_row": 1
+    },
+    {
+     "say": "If both the slopes and the intercepts match, the two equations describe the same line. Every point on it's a solution, so there are infinitely many solutions.",
+     "reveal_row": 2
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Substitution in a small example",
+   "beats": [
+    {
+     "say": "Here's substitution in a tiny example. The system is y equals two x, and x plus y equals nine. The first equation already tells us what y is.",
+     "card": {
+      "text": "y = 2x and x + y = 9",
+      "sub": "Solve by substitution"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Substitution",
+   "start": "x + 2x = 9",
+   "beats": [
+    {
+     "say": "Replace y in the second equation with two x. That gives x plus two x equals nine, which has only one variable."
+    },
+    {
+     "say": "Combine the like terms. x plus two x is three x, so three x equals nine.",
+     "op": "combine like terms",
+     "result": "3x = 9"
+    },
+    {
+     "say": "Divide both sides by three. So x equals three, and then y equals two times three, which is six.",
+     "op": "÷ 3 on both sides",
+     "result": "x = 3",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Easy example",
+   "beats": [
+    {
+     "say": "Easy example. Solve the system four x plus three y equals twenty-six, and two x minus three y equals four. Look at the y terms before choosing a method.",
+     "card": {
+      "text": "4x + 3y = 26  and  2x − 3y = 4",
+      "sub": "Solve the system"
+     }
+    },
+    {
+     "say": "The y terms are three y and negative three y. They're opposites, so adding the two equations will make the y terms cancel. That makes elimination the best choice.",
+     "card": {
+      "text": "Opposite y terms: add the equations"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: eliminate y",
+   "start": "(4x + 3y) + (2x − 3y) = 26 + 4",
+   "beats": [
+    {
+     "say": "Add the left sides together, and add the right sides together. Every term is added, including the constants on the right."
+    },
+    {
+     "say": "On the left, three y plus negative three y is zero, and four x plus two x is six x. On the right, twenty-six plus four is thirty.",
+     "op": "the y terms cancel",
+     "strike": [
+      "3y",
+      "− 3y"
+     ],
+     "result": "6x = 30"
+    },
+    {
+     "say": "Divide both sides by six. Thirty divided by six is five. So x equals five.",
+     "op": "÷ 6 on both sides",
+     "result": "x = 5",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Easy: find y",
+   "start": "4(5) + 3y = 26",
+   "beats": [
+    {
+     "say": "Now substitute x equals five into the first equation, to find y."
+    },
+    {
+     "say": "Four times five is twenty, so the equation becomes twenty plus three y equals twenty-six.",
+     "op": "multiply",
+     "result": "20 + 3y = 26"
+    },
+    {
+     "say": "Subtract twenty from both sides. Twenty-six minus twenty is six, so three y equals six.",
+     "op": "− 20 on both sides",
+     "result": "3y = 6"
+    },
+    {
+     "say": "Divide both sides by three. So y equals two, and the solution is the point five comma two.",
+     "op": "÷ 3 on both sides",
+     "result": "y = 2",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check in the other equation",
+   "beats": [
+    {
+     "say": "Check in the second equation, which we haven't used for y. Two times five is ten, and three times two is six. Ten minus six is four, which matches.",
+     "lines": [
+      "2(5) − 3(2) = 10 − 6",
+      "10 − 6 = 4"
+     ],
+     "verdict": "The solution (5, 2) is correct."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. The solution of a system is the point where the lines cross. Use substitution when a variable is already isolated.",
+     "item": "Solution is the crossing point"
+    },
+    {
+     "say": "Use elimination when the coefficients line up. Add or subtract every term, then substitute back to find the second variable.",
+     "item": "Elimination: add or subtract every term"
+    },
+    {
+     "say": "Always check in the other equation. In the next video, we work through a medium problem and a hard problem.",
+     "item": "Check in the other equation"
+    }
+   ]
+  }
+ ]
 }

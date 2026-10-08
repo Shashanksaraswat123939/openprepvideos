@@ -1,57 +1,215 @@
 {
-  "id": "m-geo-circles_v3",
-  "skill": "m-geo-circles",
-  "part": 3,
-  "title": "Circles, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Geometry and Trigonometry",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with circles, and then use Desmos to find the center of a circle from its equation, and to test whether a point lies on it.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: forgetting the square root", "beats": [
-      {"say": "Trap one. In x minus three, squared, plus y plus one, squared, equals sixty-four, the right side is r squared, not r.", "wrong": "(x − 3)^2 + (y + 1)^2 = 64: r = 64", "wrong_why": "64 is r squared"},
-      {"say": "Take the square root. The radius is the square root of sixty-four, which is eight.", "right": "r = sqrt(64) = 8", "right_why": "The right side is r²"}
-    ]},
-    {"type": "compare", "title": "Trap 2: the sign of the center", "beats": [
-      {"say": "Trap two. In x plus five, squared, the center has the opposite sign of the number in the parentheses. Students read the sign as written.", "wrong": "(x + 5)^2: center x = 5", "wrong_why": "The sign is reversed"},
-      {"say": "The factor x plus five is x minus negative five. So the x coordinate of the center is negative five.", "right": "(x + 5)^2: center x = −5", "right_why": "Opposite sign"}
-    ]},
-    {"type": "compare", "title": "Trap 3: both sides", "beats": [
-      {"say": "Trap three. When you complete the squares, the amounts you add must also be added to the right side. Students add them only on the left.", "wrong": "(x + 5)^2 + (y − 2)^2 = 7", "wrong_why": "25 and 4 were not added to 7"},
-      {"say": "Add twenty-five and four to both sides. Seven plus twenty-five plus four is thirty-six, so the right side is thirty-six.", "right": "(x + 5)^2 + (y − 2)^2 = 36", "right_why": "7 + 25 + 4 = 36"}
-    ]},
-    {"type": "compare", "title": "Trap 4: diameter in the area", "beats": [
-      {"say": "Trap four. A circle with a diameter of fourteen has a radius of seven. Students put the diameter into pi r squared.", "wrong": "d = 14: A = π(14)^2 = 196π", "wrong_why": "14 is the diameter"},
-      {"say": "Halve the diameter first. With a radius of seven, the area is pi times seven squared, which is forty-nine pi.", "right": "r = 7: A = π(7)^2 = 49π", "right_why": "Use the radius"}
-    ]},
-    {"type": "compare", "title": "Trap 5: inscribed or central", "beats": [
-      {"say": "Trap five. An inscribed angle intercepting an arc of one hundred forty degrees is not one hundred forty degrees. Students treat it as a central angle.", "wrong": "inscribed angle on a 140° arc: 140°", "wrong_why": "Only a central angle equals its arc"},
-      {"say": "An inscribed angle is half of its intercepted arc. So it measures seventy degrees.", "right": "inscribed angle on a 140° arc: 70°", "right_why": "Half the arc"}
-    ]},
-    {"type": "cards", "title": "The fast way: Desmos", "beats": [
-      {"say": "Desmos graphs circle equations in any form, expanded or not. You can type the equation exactly as given, and read the center and the radius from the grid.", "card": {"text": "Type the equation as given"}},
-      {"say": "For arcs and sectors, skip Desmos. Write the fraction of the circle, multiply, and keep answers in terms of pi.", "card": {"text": "Arcs and sectors: no Desmos"}}
-    ]},
-    {"type": "desmos", "title": "Graph an expanded circle", "beats": [
-      {"say": "Open a fresh graph. We will type the circle from the hard example exactly as it was given, without completing the square.", "actions": ["hold: 2"]},
-      {"say": "Type x squared plus y squared plus ten x minus four y equals seven. Press the right arrow after each exponent.", "actions": ["type: x^2>+y^2>+10x-4y=7", "bounds: left=-14 right=6 bottom=-8 top=10"]},
-      {"say": "Desmos draws the circle. The leftmost and rightmost points are a diameter apart, so the center is exactly halfway between them.", "actions": ["hold: 3"]},
-      {"say": "Now plot the center we found, negative five comma two. The point sits in the middle of the circle.", "actions": ["type: (-5,2)"]},
-      {"say": "To test a point, type it. The point one comma two sits exactly on the circle, six units to the right of the center, which confirms the radius of six.", "actions": ["type: (1,2)", "hold: 3"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. A circle has a radius of twelve. Find the length of the arc cut off by a central angle of one hundred fifty degrees. Pause the video, try it, and then watch the solution.", "card": {"text": "r = 12, central angle 150°", "sub": "Find the arc length"}}
-    ]},
-    {"type": "steps", "title": "Practice: the arc length", "start": "frac(150,360) × 2π(12)", "beats": [
-      {"say": "The arc is a fraction of the circumference. The fraction is one hundred fifty over three hundred sixty, which reduces to five twelfths. The circumference is two pi times twelve."},
-      {"say": "One hundred fifty over three hundred sixty reduces to five twelfths, and two pi times twelve is twenty-four pi.", "op": "simplify", "result": "frac(5,12) × 24π"},
-      {"say": "Five twelfths of twenty-four is ten. So the arc length is ten pi.", "op": "multiply", "result": "10π", "final": true}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. The right side of a circle equation is r squared, and the center has the opposite signs of the parentheses.", "item": "Right side is r²; center has opposite signs"},
-      {"say": "Add completed squares to both sides, use the radius and not the diameter, and halve an intercepted arc for an inscribed angle.", "item": "Both sides; radius; half the arc"},
-      {"say": "That completes the Math topics. Next, we begin the Reading and Writing topics, starting with central ideas and details.", "item": "Next: Reading and Writing"}
-    ]}
-  ]
+ "id": "m-geo-circles_v3",
+ "skill": "m-geo-circles",
+ "part": 3,
+ "title": "Circles, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Geometry and Trigonometry",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with circles, and then use Desmos to find the center of a circle from its equation, and to test whether a point lies on it.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: forgetting the square root",
+   "beats": [
+    {
+     "say": "Trap one. In x minus three, squared, plus y plus one, squared, equals sixty-four, the right side is r squared, not r.",
+     "wrong": "(x − 3)^2 + (y + 1)^2 = 64: r = 64",
+     "wrong_why": "64 is r squared"
+    },
+    {
+     "say": "Take the square root. The radius is the square root of sixty-four, which is eight.",
+     "right": "r = sqrt(64) = 8",
+     "right_why": "The right side is r²"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: the sign of the center",
+   "beats": [
+    {
+     "say": "Trap two. In x plus five, squared, the center has the opposite sign of the number in the parentheses. Students read the sign as written.",
+     "wrong": "(x + 5)^2: center x = 5",
+     "wrong_why": "The sign is reversed"
+    },
+    {
+     "say": "The factor x plus five is x minus negative five. So the x coordinate of the center is negative five.",
+     "right": "(x + 5)^2: center x = −5",
+     "right_why": "Opposite sign"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: both sides",
+   "beats": [
+    {
+     "say": "Trap three. When you complete the squares, the amounts you add must also be added to the right side. Students add them only on the left.",
+     "wrong": "(x + 5)^2 + (y − 2)^2 = 7",
+     "wrong_why": "25 and 4 were not added to 7"
+    },
+    {
+     "say": "Add twenty-five and four to both sides. Seven plus twenty-five plus four is thirty-six, so the right side is thirty-six.",
+     "right": "(x + 5)^2 + (y − 2)^2 = 36",
+     "right_why": "7 + 25 + 4 = 36"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: diameter in the area",
+   "beats": [
+    {
+     "say": "Trap four. A circle with a diameter of fourteen has a radius of seven. Students put the diameter into pi r squared.",
+     "wrong": "d = 14: A = π(14)^2 = 196π",
+     "wrong_why": "14 is the diameter"
+    },
+    {
+     "say": "Halve the diameter first. With a radius of seven, the area is pi times seven squared, which is forty-nine pi.",
+     "right": "r = 7: A = π(7)^2 = 49π",
+     "right_why": "Use the radius"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: inscribed or central",
+   "beats": [
+    {
+     "say": "Trap five. An inscribed angle intercepting an arc of one hundred forty degrees isn't one hundred forty degrees. Students treat it as a central angle.",
+     "wrong": "inscribed angle on a 140° arc: 140°",
+     "wrong_why": "Only a central angle equals its arc"
+    },
+    {
+     "say": "An inscribed angle is half of its intercepted arc. So it measures seventy degrees.",
+     "right": "inscribed angle on a 140° arc: 70°",
+     "right_why": "Half the arc"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: Desmos",
+   "beats": [
+    {
+     "say": "Desmos graphs circle equations in any form, expanded or not. You can type the equation exactly as given, and read the center and the radius from the grid.",
+     "card": {
+      "text": "Type the equation as given"
+     }
+    },
+    {
+     "say": "For arcs and sectors, skip Desmos. Write the fraction of the circle, multiply, and keep answers in terms of pi.",
+     "card": {
+      "text": "Arcs and sectors: no Desmos"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Graph an expanded circle",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We'll type the circle from the hard example exactly as it was given, without completing the square.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type x squared plus y squared plus ten x minus four y equals seven. Press the right arrow after each exponent.",
+     "actions": [
+      "type: x^2>+y^2>+10x-4y=7",
+      "bounds: left=-14 right=6 bottom=-8 top=10"
+     ]
+    },
+    {
+     "say": "Desmos draws the circle. The leftmost and rightmost points are a diameter apart, so the center is exactly halfway between them.",
+     "actions": [
+      "hold: 3"
+     ]
+    },
+    {
+     "say": "Now plot the center we found, negative five comma two. The point sits in the middle of the circle.",
+     "actions": [
+      "type: (-5,2)"
+     ]
+    },
+    {
+     "say": "To test a point, type it. The point one comma two sits exactly on the circle, six units to the right of the center, which confirms the radius of six.",
+     "actions": [
+      "type: (1,2)",
+      "hold: 3"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. A circle has a radius of twelve. Find the length of the arc cut off by a central angle of one hundred fifty degrees. Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "r = 12, central angle 150°",
+      "sub": "Find the arc length"
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: the arc length",
+   "start": "frac(150,360) × 2π(12)",
+   "beats": [
+    {
+     "say": "The arc is a fraction of the circumference. The fraction is one hundred fifty over three hundred sixty, which reduces to five twelfths. The circumference is two pi times twelve."
+    },
+    {
+     "say": "One hundred fifty over three hundred sixty reduces to five twelfths, and two pi times twelve is twenty-four pi.",
+     "op": "simplify",
+     "result": "frac(5,12) × 24π"
+    },
+    {
+     "say": "Five twelfths of twenty-four is ten. So the arc length is ten pi.",
+     "op": "multiply",
+     "result": "10π",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. The right side of a circle equation is r squared, and the center has the opposite signs of the parentheses.",
+     "item": "Right side is r²; center has opposite signs"
+    },
+    {
+     "say": "Add completed squares to both sides, use the radius and not the diameter, and halve an intercepted arc for an inscribed angle.",
+     "item": "Both sides; radius; half the arc"
+    },
+    {
+     "say": "That completes the Math topics. Next, we begin the Reading and Writing topics, starting with central ideas and details.",
+     "item": "Next: Reading and Writing"
+    }
+   ]
+  }
+ ]
 }

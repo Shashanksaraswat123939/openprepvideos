@@ -1,64 +1,244 @@
 {
-  "id": "m-psda-onevar_v3",
-  "skill": "m-psda-onevar",
-  "part": 3,
-  "title": "One-Variable Data, Part 3: Traps and the Fast Way",
-  "section_label": "Math · Problem-Solving and Data Analysis",
-  "scenes": [
-    {"type": "cards", "title": "This video's goal", "beats": [
-      {"say": "In this video, we look at five mistakes students make with one-variable data, and then use Desmos to compute the mean of a frequency table in one line.", "card": {"text": "Five traps, then Desmos"}},
-      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: the values column", "beats": [
-      {"say": "Trap one. In a frequency table, students average the values column, and ignore how often each value occurs.", "wrong": "frac(0 + 1 + 2 + 3 + 4,5) = 2", "wrong_why": "The frequencies were ignored"},
-      {"say": "Each value must be weighted by its frequency. The total is thirty books over twenty students, so the mean is one point five.", "right": "frac(30,20) = 1.5", "right_why": "Weight each value by its frequency"}
-    ]},
-    {"type": "compare", "title": "Trap 2: forgetting to sort", "beats": [
-      {"say": "Trap two. The median is the middle of the sorted list. A student who takes the middle of the list as it was given gets the wrong value.", "wrong": "8, 3, 5, 12, 9: median is 5", "wrong_why": "The list was not sorted"},
-      {"say": "Sort first. The list becomes three, five, eight, nine, twelve, and the middle value is eight.", "right": "3, 5, 8, 9, 12: median is 8", "right_why": "Sort, then find the middle"}
-    ]},
-    {"type": "compare", "title": "Trap 3: averaging two averages", "beats": [
-      {"say": "Trap three. When two groups have different sizes, the combined mean is not the midpoint of their means.", "wrong": "frac(70 + 80,2) = 75", "wrong_why": "Group sizes were ignored"},
-      {"say": "Use totals. Twelve times seventy plus eighteen times eighty is twenty-two hundred eighty, divided by thirty, which is seventy-six.", "right": "frac(840 + 1440,30) = 76", "right_why": "Add totals, divide by the count"}
-    ]},
-    {"type": "compare", "title": "Trap 4: extreme values and the median", "beats": [
-      {"say": "Trap four. Making the largest value even larger does not change the median of a list with an odd number of values.", "wrong": "raise the max: the median rises", "wrong_why": "The median ignores extremes"},
-      {"say": "The median stays the same, but the range and the standard deviation both increase, since the data is more spread out.", "right": "median same; range and SD grow", "right_why": "Spread increases"}
-    ]},
-    {"type": "compare", "title": "Trap 5: spread versus center", "beats": [
-      {"say": "Trap five. The lists forty, forty-five, fifty, fifty-five, sixty, and forty-eight through fifty-two, have the same mean and the same median. Students assume they must have the same spread.", "wrong": "same mean, so same spread", "wrong_why": "Center and spread differ"},
-      {"say": "The first list is much more spread out, so its standard deviation is much larger. Mean and median describe the center, and the standard deviation describes the spread.", "right": "40 to 60 has the larger SD", "right_why": "Values are farther from 50"}
-    ]},
-    {"type": "cards", "title": "The fast way: Desmos", "beats": [
-      {"say": "Desmos does list statistics in one line. For a frequency table, type the values and the frequencies as two lists, then compute the weighted mean.", "card": {"text": "Two lists: values and frequencies"}},
-      {"say": "Our example is the books table. The values are zero to four, and the frequencies are four, seven, five, three, and one.", "card": {"text": "V = [0,1,2,3,4]   F = [4,7,5,3,1]", "sub": "mean = total(V·F) ÷ total(F)"}}
-    ]},
-    {"type": "desmos", "title": "Mean of a frequency table", "beats": [
-      {"say": "Open a fresh graph. We will store the values in a list named V, and the frequencies in a list named F.", "actions": ["hold: 2"]},
-      {"say": "Type V equals the list of values, zero, one, two, three, four, inside square brackets.", "actions": ["type: V=[0,1,2,3,4]"]},
-      {"say": "Now type F equals the list of frequencies, four, seven, five, three, one.", "actions": ["type: F=[4,7,5,3,1]"]},
-      {"say": "Type total of V times F, over total of F. Multiplying two lists multiplies them entry by entry, which weights each value by its frequency.", "actions": ["type: total(V*F)/total(F)"]},
-      {"say": "Desmos reports one point five, which matches our answer by hand. The fast method gave the weighted mean in one line.", "actions": ["hold: 4"]}
-    ]},
-    {"type": "cards", "title": "Practice problem", "beats": [
-      {"say": "Now a practice problem. Six numbers have a mean of fifteen. Five of them are twelve, eighteen, fourteen, sixteen, and ten. What is the sixth number? Pause the video, try it, and then watch the solution.", "card": {"text": "6 numbers, mean 15", "sub": "Five are 12, 18, 14, 16, 10. Find the sixth."}}
-    ]},
-    {"type": "steps", "title": "Practice: the total", "start": "6 × 15", "beats": [
-      {"say": "When a mean is known, think in totals. Six numbers with a mean of fifteen have a total of six times fifteen."},
-      {"say": "Six times fifteen is ninety. So the six numbers must add up to ninety.", "op": "multiply", "result": "90", "final": true}
-    ]},
-    {"type": "steps", "title": "Practice: the missing number", "start": "90 − (12 + 18 + 14 + 16 + 10)", "beats": [
-      {"say": "The five known numbers add up to seventy. The missing number is the total, ninety, minus the sum of the known numbers."},
-      {"say": "Twelve plus eighteen plus fourteen plus sixteen plus ten is seventy, so the known numbers add up to seventy.", "op": "add the known numbers", "result": "90 − 70"},
-      {"say": "Ninety minus seventy is twenty. So the sixth number must be twenty, to make the total ninety.", "op": "subtract", "result": "20", "final": true}
-    ]},
-    {"type": "check", "title": "Check the mean", "beats": [
-      {"say": "Check by adding the sixth number. Seventy plus twenty is ninety, and ninety divided by six is fifteen. That is the mean we were given.", "lines": ["70 + 20 = 90", "90 ÷ 6 = 15"], "verdict": "The sixth number is 20."}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Weight a frequency table by its frequencies, sort before finding the median, and combine groups with totals.", "item": "Weight, sort, and use totals"},
-      {"say": "Extreme values move the mean and the spread, but not the median. Mean and median describe the center, not the spread.", "item": "Center and spread are different"},
-      {"say": "Use Desmos for lists and weighted means. In the next topic, we study two-variable data.", "item": "Desmos computes list statistics"}
-    ]}
-  ]
+ "id": "m-psda-onevar_v3",
+ "skill": "m-psda-onevar",
+ "part": 3,
+ "title": "One-Variable Data, Part 3: Traps and the Fast Way",
+ "section_label": "Math · Problem-Solving and Data Analysis",
+ "scenes": [
+  {
+   "type": "cards",
+   "title": "This video's goal",
+   "beats": [
+    {
+     "say": "In this video, we look at five mistakes students make with one-variable data, and then use Desmos to compute the mean of a frequency table in one line.",
+     "card": {
+      "text": "Five traps, then Desmos"
+     }
+    },
+    {
+     "say": "Each trap is shown as a wrong line first, then the right line, with the reason it's so tempting.",
+     "card": {
+      "text": "Wrong line, then right line"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: the values column",
+   "beats": [
+    {
+     "say": "Trap one. In a frequency table, students average the values column, and ignore how often each value occurs.",
+     "wrong": "frac(0 + 1 + 2 + 3 + 4,5) = 2",
+     "wrong_why": "The frequencies were ignored"
+    },
+    {
+     "say": "Each value must be weighted by its frequency. The total is thirty books over twenty students, so the mean is one point five.",
+     "right": "frac(30,20) = 1.5",
+     "right_why": "Weight each value by its frequency"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: forgetting to sort",
+   "beats": [
+    {
+     "say": "Trap two. The median is the middle of the sorted list. A student who takes the middle of the list as it was given gets the wrong value.",
+     "wrong": "8, 3, 5, 12, 9: median is 5",
+     "wrong_why": "The list was not sorted"
+    },
+    {
+     "say": "Sort first. The list becomes three, five, eight, nine, twelve, and the middle value is eight.",
+     "right": "3, 5, 8, 9, 12: median is 8",
+     "right_why": "Sort, then find the middle"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: averaging two averages",
+   "beats": [
+    {
+     "say": "Trap three. When two groups have different sizes, the combined mean isn't the midpoint of their means.",
+     "wrong": "frac(70 + 80,2) = 75",
+     "wrong_why": "Group sizes were ignored"
+    },
+    {
+     "say": "Use totals. Twelve times seventy plus eighteen times eighty is twenty-two hundred eighty, divided by thirty, which is seventy-six.",
+     "right": "frac(840 + 1440,30) = 76",
+     "right_why": "Add totals, divide by the count"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: extreme values and the median",
+   "beats": [
+    {
+     "say": "Trap four. Making the largest value even larger doesn't change the median of a list with an odd number of values.",
+     "wrong": "raise the max: the median rises",
+     "wrong_why": "The median ignores extremes"
+    },
+    {
+     "say": "The median stays the same, but the range and the standard deviation both increase, since the data is more spread out.",
+     "right": "median same; range and SD grow",
+     "right_why": "Spread increases"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: spread versus center",
+   "beats": [
+    {
+     "say": "Trap five. The lists forty, forty-five, fifty, fifty-five, sixty, and forty-eight through fifty-two, have the same mean and the same median. Students assume they must have the same spread.",
+     "wrong": "same mean, so same spread",
+     "wrong_why": "Center and spread differ"
+    },
+    {
+     "say": "The first list is much more spread out, so its standard deviation is much larger. Mean and median describe the center, and the standard deviation describes the spread.",
+     "right": "40 to 60 has the larger SD",
+     "right_why": "Values are farther from 50"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "The fast way: Desmos",
+   "beats": [
+    {
+     "say": "Desmos does list statistics in one line. For a frequency table, type the values and the frequencies as two lists, then compute the weighted mean.",
+     "card": {
+      "text": "Two lists: values and frequencies"
+     }
+    },
+    {
+     "say": "Our example is the books table. The values are zero to four, and the frequencies are four, seven, five, three, and one.",
+     "card": {
+      "text": "V = [0,1,2,3,4]   F = [4,7,5,3,1]",
+      "sub": "mean = total(V·F) ÷ total(F)"
+     }
+    }
+   ]
+  },
+  {
+   "type": "desmos",
+   "title": "Mean of a frequency table",
+   "beats": [
+    {
+     "say": "Open a fresh graph. We'll store the values in a list named V, and the frequencies in a list named F.",
+     "actions": [
+      "hold: 2"
+     ]
+    },
+    {
+     "say": "Type V equals the list of values, zero, one, two, three, four, inside square brackets.",
+     "actions": [
+      "type: V=[0,1,2,3,4]"
+     ]
+    },
+    {
+     "say": "Now type F equals the list of frequencies, four, seven, five, three, one.",
+     "actions": [
+      "type: F=[4,7,5,3,1]"
+     ]
+    },
+    {
+     "say": "Type total of V times F, over total of F. Multiplying two lists multiplies them entry by entry, which weights each value by its frequency.",
+     "actions": [
+      "type: total(V*F)/total(F)"
+     ]
+    },
+    {
+     "say": "Desmos reports one point five, which matches our answer by hand. The fast method gave the weighted mean in one line.",
+     "actions": [
+      "hold: 4"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Practice problem",
+   "beats": [
+    {
+     "say": "Now a practice problem. Six numbers have a mean of fifteen. Five of them are twelve, eighteen, fourteen, sixteen, and ten. What's the sixth number? Pause the video, try it, and then watch the solution.",
+     "card": {
+      "text": "6 numbers, mean 15",
+      "sub": "Five are 12, 18, 14, 16, 10. Find the sixth."
+     }
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: the total",
+   "start": "6 × 15",
+   "beats": [
+    {
+     "say": "When a mean is known, think in totals. Six numbers with a mean of fifteen have a total of six times fifteen."
+    },
+    {
+     "say": "Six times fifteen is ninety. So the six numbers must add up to ninety.",
+     "op": "multiply",
+     "result": "90",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Practice: the missing number",
+   "start": "90 − (12 + 18 + 14 + 16 + 10)",
+   "beats": [
+    {
+     "say": "The five known numbers add up to seventy. The missing number is the total, ninety, minus the sum of the known numbers."
+    },
+    {
+     "say": "Twelve plus eighteen plus fourteen plus sixteen plus ten is seventy, so the known numbers add up to seventy.",
+     "op": "add the known numbers",
+     "result": "90 − 70"
+    },
+    {
+     "say": "Ninety minus seventy is twenty. So the sixth number must be twenty, to make the total ninety.",
+     "op": "subtract",
+     "result": "20",
+     "final": true
+    }
+   ]
+  },
+  {
+   "type": "check",
+   "title": "Check the mean",
+   "beats": [
+    {
+     "say": "Check by adding the sixth number. Seventy plus twenty is ninety, and ninety divided by six is fifteen. That's the mean we were given.",
+     "lines": [
+      "70 + 20 = 90",
+      "90 ÷ 6 = 15"
+     ],
+     "verdict": "The sixth number is 20."
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Weight a frequency table by its frequencies, sort before finding the median, and combine groups with totals.",
+     "item": "Weight, sort, and use totals"
+    },
+    {
+     "say": "Extreme values move the mean and the spread, but not the median. Mean and median describe the center, not the spread.",
+     "item": "Center and spread are different"
+    },
+    {
+     "say": "Use Desmos for lists and weighted means. In the next topic, we study two-variable data.",
+     "item": "Desmos computes list statistics"
+    }
+   ]
+  }
+ ]
 }

@@ -1,58 +1,212 @@
 {
-  "id": "rw-cs-crosstext_v2",
-  "skill": "rw-cs-crosstext",
-  "part": 2,
-  "title": "Cross-Text Connections, Part 2: A Hard Question and Traps",
-  "section_label": "Reading and Writing",
-  "scenes": [
-    {"type": "list", "title": "Recap of the method", "beats": [
-      {"say": "In part one, we summarized each text in a few words, and named how Text two relates to Text one.", "item": "Summarize; name the relationship"},
-      {"say": "We also learned that a both-agree answer must fit both texts, and that the strength of the language must match.", "item": "Fit both; match the strength"},
-      {"say": "In this video, we work through a hard question about limiting the scope of a claim, and then the common traps.", "item": "Today: a hard question and traps"}
-    ]},
-    {"type": "cards", "title": "Hard question: limiting the scope", "beats": [
-      {"say": "Hard question. Text two may accept the evidence in Text one, and still limit the conclusion. It says the conclusion may not apply everywhere.", "card": {"text": "Accept the data, limit the conclusion", "sub": "True here, not everywhere"}},
-      {"say": "So pin down exactly what in Text one is being answered. Is it the evidence, the conclusion, or the recommendation?", "card": {"text": "Evidence, conclusion, or advice?"}}
-    ]},
-    {"type": "passage", "title": "Text 1", "text": "In a six-month trial, employees at a software company who switched to a four-day workweek completed as many projects as before and reported less stress. Some economists conclude that a four-day week would benefit workplaces generally.", "source": "Text 1", "beats": [
-      {"say": "The trial is the evidence. The conclusion is that a four-day week would benefit workplaces generally.", "underline": "benefit workplaces generally"}
-    ]},
-    {"type": "passage", "title": "Text 2", "text": "Trials of shorter workweeks have mostly involved office jobs in which output depends on focused individual work. In settings such as hospitals or factories, where staff must cover fixed shifts, reducing hours can create staffing gaps that cancel out any gains.", "source": "Text 2", "beats": [
-      {"say": "Text two does not attack the trial. It says the trials involved office jobs, and that shift-based workplaces are different.", "underline": "hospitals or factories"},
-      {"say": "So Text two limits the scope of the conclusion. Our connection is, true for offices, but it may not apply to every workplace.", "highlight": "cancel out any gains"}
-    ]},
-    {"type": "choices", "title": "How would Text 2 respond?", "question": "How would the author of Text two most likely respond to the economists' conclusion in Text one?", "options": {"A": "By rejecting it, since the trial's results were probably exaggerated.", "B": "By cautioning that the conclusion may not apply to every type of workplace.", "C": "By agreeing that hospitals and factories should adopt a four-day week.", "D": "By arguing that office workers experience more stress than factory workers."}, "beats": [
-      {"say": "Choice A rejects the conclusion because the results were exaggerated. Text two never questions the results of the trial.", "eliminate": "A", "why": "too extreme"},
-      {"say": "Choice C says hospitals and factories should adopt the four-day week. That is the opposite of Text two's concern.", "eliminate": "C", "why": "opposite"},
-      {"say": "Choice D compares stress between office and factory workers. Stress levels across jobs are never compared.", "eliminate": "D", "why": "not in the texts"},
-      {"say": "Choice B captures the limit on scope. Text two cautions that the conclusion may not apply everywhere. The answer is B.", "pick": "B"}
-    ]},
-    {"type": "cards", "title": "Common traps", "beats": [
-      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
-    ]},
-    {"type": "compare", "title": "Trap 1: too extreme", "beats": [
-      {"say": "Trap one. Text two usually qualifies the claim, and does not destroy it. A choice that says reject entirely goes too far.", "wrong": "Text 2 rejects the claim", "wrong_why": "Text 2 only limits it"},
-      {"say": "Match the strength of Text two's language. A cautious text calls for a cautious answer.", "right": "Text 2 cautions about its scope", "right_why": "Same strength"}
-    ]},
-    {"type": "compare", "title": "Trap 2: the wrong perspective", "beats": [
-      {"say": "Trap two. Students answer from the viewpoint of Text one, when the question asks about Text two.", "wrong": "answer as the author of Text 1", "wrong_why": "Wrong author"},
-      {"say": "Read the question first, and underline which author is responding. Use only that text.", "right": "answer as the author of Text 2", "right_why": "Right author"}
-    ]},
-    {"type": "compare", "title": "Trap 3: same topic, different view", "beats": [
-      {"say": "Trap three. Two texts about the same subject do not hold the same opinion. Sharing a topic is not agreeing.", "wrong": "both discuss libraries, so agree", "wrong_why": "Topic is not opinion"},
-      {"say": "Compare what each author concludes, and not what each author talks about.", "right": "compare the conclusions", "right_why": "Viewpoints, not topics"}
-    ]},
-    {"type": "compare", "title": "Trap 4: the wrong target", "beats": [
-      {"say": "Trap four. Text two may accept the data in Text one, and still question its conclusion. A choice that attacks the data targets the wrong part.", "wrong": "Text 2 doubts the trial's data", "wrong_why": "It accepts the data"},
-      {"say": "Decide what is being answered, the evidence or the conclusion. Then choose the answer that targets it.", "right": "Text 2 questions the conclusion", "right_why": "Right target"}
-    ]},
-    {"type": "compare", "title": "Trap 5: one-text details", "beats": [
-      {"say": "Trap five. In a both-agree question, a detail that appears in only one text cannot be the answer.", "wrong": "a detail only Text 2 mentions", "wrong_why": "Text 1 never says it"},
-      {"say": "Test each choice against both texts. If either text does not support it, cross it out.", "right": "a point both texts support", "right_why": "Fits both"}
-    ]},
-    {"type": "list", "title": "Quick recap", "beats": [
-      {"say": "To recap. Answer from the right author, match the strength of the language, and target the right part of Text one.", "item": "Right author, strength, target"},
-      {"say": "For a both-agree question, test the choice against both texts. In the next topic, we study transitions.", "item": "Next: transitions"}
-    ]}
-  ]
+ "id": "rw-cs-crosstext_v2",
+ "skill": "rw-cs-crosstext",
+ "part": 2,
+ "title": "Cross-Text Connections, Part 2: A Hard Question and Traps",
+ "section_label": "Reading and Writing",
+ "scenes": [
+  {
+   "type": "list",
+   "title": "Recap of the method",
+   "beats": [
+    {
+     "say": "In part one, we summarized each text in a few words, and named how Text two relates to Text one.",
+     "item": "Summarize; name the relationship"
+    },
+    {
+     "say": "We also learned that a both-agree answer must fit both texts, and that the strength of the language must match.",
+     "item": "Fit both; match the strength"
+    },
+    {
+     "say": "In this video, we work through a hard question about limiting the scope of a claim, and then the common traps.",
+     "item": "Today: a hard question and traps"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Hard question: limiting the scope",
+   "beats": [
+    {
+     "say": "Hard question. Text two may accept the evidence in Text one, and still limit the conclusion. It says the conclusion may not apply everywhere.",
+     "card": {
+      "text": "Accept the data, limit the conclusion",
+      "sub": "True here, not everywhere"
+     }
+    },
+    {
+     "say": "So pin down exactly what in Text one is being answered. Is it the evidence, the conclusion, or the recommendation?",
+     "card": {
+      "text": "Evidence, conclusion, or advice?"
+     }
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Text 1",
+   "text": "In a six-month trial, employees at a software company who switched to a four-day workweek completed as many projects as before and reported less stress. Some economists conclude that a four-day week would benefit workplaces generally.",
+   "source": "Text 1",
+   "beats": [
+    {
+     "say": "The trial is the evidence. The conclusion is that a four-day week would benefit workplaces generally.",
+     "underline": "benefit workplaces generally"
+    }
+   ]
+  },
+  {
+   "type": "passage",
+   "title": "Text 2",
+   "text": "Trials of shorter workweeks have mostly involved office jobs in which output depends on focused individual work. In settings such as hospitals or factories, where staff must cover fixed shifts, reducing hours can create staffing gaps that cancel out any gains.",
+   "source": "Text 2",
+   "beats": [
+    {
+     "say": "Text two doesn't attack the trial. It says the trials involved office jobs, and that shift-based workplaces are different.",
+     "underline": "hospitals or factories"
+    },
+    {
+     "say": "So Text two limits the scope of the conclusion. Our connection is, true for offices, but it may not apply to every workplace.",
+     "highlight": "cancel out any gains"
+    }
+   ]
+  },
+  {
+   "type": "choices",
+   "title": "How would Text 2 respond?",
+   "question": "How would the author of Text two most likely respond to the economists' conclusion in Text one?",
+   "options": {
+    "A": "By rejecting it, since the trial's results were probably exaggerated.",
+    "B": "By cautioning that the conclusion may not apply to every type of workplace.",
+    "C": "By agreeing that hospitals and factories should adopt a four-day week.",
+    "D": "By arguing that office workers experience more stress than factory workers."
+   },
+   "beats": [
+    {
+     "say": "Choice A rejects the conclusion because the results were exaggerated. Text two never questions the results of the trial.",
+     "eliminate": "A",
+     "why": "too extreme"
+    },
+    {
+     "say": "Choice C says hospitals and factories should adopt the four-day week. That's the opposite of Text two's concern.",
+     "eliminate": "C",
+     "why": "opposite"
+    },
+    {
+     "say": "Choice D compares stress between office and factory workers. Stress levels across jobs are never compared.",
+     "eliminate": "D",
+     "why": "not in the texts"
+    },
+    {
+     "say": "Choice B captures the limit on scope. Text two cautions that the conclusion may not apply everywhere. The answer is B.",
+     "pick": "B"
+    }
+   ]
+  },
+  {
+   "type": "cards",
+   "title": "Common traps",
+   "beats": [
+    {
+     "say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We'll see the trap, and then the habit that avoids it.",
+     "card": {
+      "text": "Five common traps"
+     }
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 1: too extreme",
+   "beats": [
+    {
+     "say": "Trap one. Text two usually qualifies the claim, and doesn't destroy it. A choice that says reject entirely goes too far.",
+     "wrong": "Text 2 rejects the claim",
+     "wrong_why": "Text 2 only limits it"
+    },
+    {
+     "say": "Match the strength of Text two's language. A cautious text calls for a cautious answer.",
+     "right": "Text 2 cautions about its scope",
+     "right_why": "Same strength"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 2: the wrong perspective",
+   "beats": [
+    {
+     "say": "Trap two. Students answer from the viewpoint of Text one, when the question asks about Text two.",
+     "wrong": "answer as the author of Text 1",
+     "wrong_why": "Wrong author"
+    },
+    {
+     "say": "Read the question first, and underline which author is responding. Use only that text.",
+     "right": "answer as the author of Text 2",
+     "right_why": "Right author"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 3: same topic, different view",
+   "beats": [
+    {
+     "say": "Trap three. Two texts about the same subject don't hold the same opinion. Sharing a topic isn't agreeing.",
+     "wrong": "both discuss libraries, so agree",
+     "wrong_why": "Topic is not opinion"
+    },
+    {
+     "say": "Compare what each author concludes, and not what each author talks about.",
+     "right": "compare the conclusions",
+     "right_why": "Viewpoints, not topics"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 4: the wrong target",
+   "beats": [
+    {
+     "say": "Trap four. Text two may accept the data in Text one, and still question its conclusion. A choice that attacks the data targets the wrong part.",
+     "wrong": "Text 2 doubts the trial's data",
+     "wrong_why": "It accepts the data"
+    },
+    {
+     "say": "Decide what's being answered, the evidence or the conclusion. Then choose the answer that targets it.",
+     "right": "Text 2 questions the conclusion",
+     "right_why": "Right target"
+    }
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Trap 5: one-text details",
+   "beats": [
+    {
+     "say": "Trap five. In a both-agree question, a detail that appears in only one text can't be the answer.",
+     "wrong": "a detail only Text 2 mentions",
+     "wrong_why": "Text 1 never says it"
+    },
+    {
+     "say": "Test each choice against both texts. If either text doesn't support it, cross it out.",
+     "right": "a point both texts support",
+     "right_why": "Fits both"
+    }
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Quick recap",
+   "beats": [
+    {
+     "say": "To recap. Answer from the right author, match the strength of the language, and target the right part of Text one.",
+     "item": "Right author, strength, target"
+    },
+    {
+     "say": "For a both-agree question, test the choice against both texts. In the next topic, we study transitions.",
+     "item": "Next: transitions"
+    }
+   ]
+  }
+ ]
 }
