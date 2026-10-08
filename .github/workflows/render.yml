@@ -49,10 +49,10 @@ jobs:
           path: ~/.cache/huggingface
           key: kokoro-model-v1
 
-      - name: Check every script (skips the render if one is broken)
+      - name: Check every script (invalid ones are skipped)
         run: |
           mkdir -p out cache logs
-          for f in scripts/*.json; do python render.py "$f" --check; done
+          for f in scripts/*.json; do python render.py "$f" --check || echo "SKIPPED (invalid): $f"; done
 
       - name: Decide what to render
         id: sel

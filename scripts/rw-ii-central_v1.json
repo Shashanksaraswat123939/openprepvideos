@@ -1,0 +1,58 @@
+{
+  "id": "rw-ii-central_v1",
+  "skill": "rw-ii-central",
+  "part": 1,
+  "title": "Central Ideas and Details, Part 1: The Method and Two Questions",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "cards", "title": "Central ideas and details", "beats": [
+      {"say": "Central ideas and details questions ask what a short text is mostly about, or what it says about one specific point.", "card": {"text": "What is the text mostly about?"}},
+      {"say": "There are two kinds. A main idea question asks which choice best states the main idea of the text. A detail question asks what the text says about one thing.", "card": {"text": "Main idea, or detail", "sub": "Two kinds of question"}},
+      {"say": "The passages can be informational, such as science, history, or the arts, or literary, which is a short excerpt from a story.", "card": {"text": "Informational or literary texts"}}
+    ]},
+    {"type": "list", "title": "The method", "beats": [
+      {"say": "Step one. Read the question first, so you know whether it asks for the main idea or for a detail.", "item": "Read the question first"},
+      {"say": "Step two. Read the text once, and notice any turn word, such as however, but, or yet. The turn usually leads to the real point.", "item": "Notice turn words"},
+      {"say": "Step three. For a main idea, say a ten-word summary in your head before you read the choices. For a detail, find the exact line.", "item": "Summarize in about ten words"},
+      {"say": "Step four. Eliminate choices that are too narrow, too broad, or unsupported. Between two survivors, pick the one you can prove line by line.", "item": "Eliminate, then prove the answer"}
+    ]},
+    {"type": "table", "title": "Four kinds of wrong answer", "columns": ["Wrong answer", "What it looks like", "Test"], "rows": [["too narrow", "true, but covers one sentence", "Does it cover the whole text?"], ["too broad", "claims about all or most", "Does the text go that far?"], ["distorted", "the text's words, wrong relationship", "Does the relationship match?"], ["off-topic", "reasonable, never mentioned", "Can you point to the line?"]], "beats": [
+      {"say": "A too narrow answer is true, but it only covers one sentence. Test it by asking whether it covers the whole text.", "reveal_row": 0},
+      {"say": "A too broad answer makes claims about all or most things, or about a bigger topic. Test it by asking whether the text really goes that far.", "reveal_row": 1},
+      {"say": "A distorted answer uses the words of the text, but changes the relationship between the ideas, such as the cause or the comparison.", "reveal_row": 2},
+      {"say": "An off-topic answer sounds reasonable, but the text never mentions it. Test it by asking whether you can point to the line.", "reveal_row": 3}
+    ]},
+    {"type": "cards", "title": "Easy question: main idea", "beats": [
+      {"say": "Easy question. We will read a short informational text, and then answer a main idea question. Remember to look for a turn word, and to summarize before reading the choices.", "card": {"text": "Main idea question", "sub": "Look for the turn word"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "Many gardeners believe that watering plants every day keeps them healthy. However, researchers at one agricultural college found that tomato plants watered deeply twice a week grew stronger roots than plants watered daily. The deeper roots helped the plants survive dry weeks.", "source": "original text", "beats": [
+      {"say": "The text begins with a common belief, that daily watering keeps plants healthy. Notice that this is a view that the author is about to correct."},
+      {"say": "The word however is the turn. The real point comes after it: deep watering twice a week grew stronger roots than daily watering.", "highlight": "However"},
+      {"say": "The last sentence adds support. The deeper roots helped the plants survive dry weeks. Our ten-word summary is, deep watering twice weekly beats daily watering for tomatoes.", "underline": "grew stronger roots"}
+    ]},
+    {"type": "choices", "title": "Which choice best states the main idea?", "question": "Which choice best states the main idea of the text?", "options": {"A": "Gardeners should stop watering tomato plants entirely.", "B": "Deep, less frequent watering can produce stronger tomato plants than daily watering.", "C": "Tomato plants grow best in dry weather.", "D": "Agricultural colleges teach gardeners how to grow tomatoes."}, "beats": [
+      {"say": "Compare each choice with our summary. Choice A says gardeners should stop watering entirely. The text only compares two watering schedules, so this is too extreme.", "eliminate": "A", "why": "too extreme"},
+      {"say": "Choice C says tomatoes grow best in dry weather. The text only says deeper roots helped plants survive dry weeks, so this distorts the relationship.", "eliminate": "C", "why": "distorted"},
+      {"say": "Choice D is about what agricultural colleges teach. The text never says that, so it is off-topic.", "eliminate": "D", "why": "off-topic"},
+      {"say": "Choice B matches our summary, and it matches the contrast set up by however. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Medium question: a detail", "beats": [
+      {"say": "Medium question. This time the question asks for a detail. For a detail, the answer must be directly stated in the text, or be a very close paraphrase. If you have to guess, it is wrong.", "card": {"text": "Detail question", "sub": "Find the exact line"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "When the lights went out during the storm, Priya did not panic. She found a flashlight in the kitchen drawer, then walked down the hall to check on her younger brother, who was asleep. Only after she had made sure he was safe did she begin to look for candles.", "source": "original text", "beats": [
+      {"say": "The question will ask what Priya did, so we read for her actions in order. First she stays calm, and finds a flashlight.", "underline": "did not panic"},
+      {"say": "Next she checks on her younger brother, and only after that does she look for candles. The words only after tell us the order.", "highlight": "Only after"}
+    ]},
+    {"type": "choices", "title": "According to the text: Priya", "question": "According to the text, what did Priya do after the lights went out?", "options": {"A": "She woke her brother and led him outside.", "B": "She checked on her brother before looking for candles.", "C": "She panicked and called her parents.", "D": "She finished her homework by candlelight."}, "beats": [
+      {"say": "Choice A says she woke her brother and led him outside. The text says he was asleep, and never says she took him outside, so this is not stated.", "eliminate": "A", "why": "not stated"},
+      {"say": "Choice C contradicts the text, because the text says she did not panic.", "eliminate": "C", "why": "contradicts the text"},
+      {"say": "Choice D mentions homework, which the text never mentions, so it is off-topic.", "eliminate": "D", "why": "off-topic"},
+      {"say": "Choice B is directly stated. She checked on her brother, and only after that did she begin to look for candles. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Read the question first, notice the turn word, and summarize the text in about ten words before reading the choices.", "item": "Question, turn word, ten-word summary"},
+      {"say": "Eliminate answers that are too narrow, too broad, distorted, or off-topic. For a detail, the answer must be directly stated.", "item": "Eliminate by type; details are stated"},
+      {"say": "In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
+    ]}
+  ]
+}
