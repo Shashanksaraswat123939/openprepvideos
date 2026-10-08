@@ -5,9 +5,10 @@ name: Render OpenPrep videos
 on:
   workflow_dispatch:
     inputs:
-      shards:
-        description: "Number of parallel jobs"
-        default: "4"
+      only:
+        description: "Test: render only this video id (for example about-the-sat_v1). Leave empty to render everything."
+        required: false
+        default: ""
 
 jobs:
   render:
@@ -52,7 +53,7 @@ jobs:
           for f in scripts/*.json; do python render.py "$f" --check; done
 
       - name: Render this shard
-        run: python worker.py --once --shard ${{ matrix.shard }}/4
+        run: python worker.py --once --shard ${{ matrix.shard }}/4 ${{ inputs.only != '' && format('--only {0}', inputs.only) || '' }}
 
       - name: Logs
         if: always()

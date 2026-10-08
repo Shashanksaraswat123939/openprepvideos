@@ -3,6 +3,7 @@
 import json, os, subprocess, sys, time
 HERE = os.path.dirname(os.path.abspath(__file__)); os.chdir(HERE)
 items = json.load(open("manifest.json", encoding="utf-8")); os.makedirs("logs", exist_ok=True)
+if "--only" in sys.argv: items = [it for it in items if it["id"] == sys.argv[sys.argv.index("--only") + 1]]
 SHARD, SHARDS = 0, 1
 if "--shard" in sys.argv: SHARD, SHARDS = [int(v) for v in sys.argv[sys.argv.index("--shard") + 1].split("/")]
 def log(m):
