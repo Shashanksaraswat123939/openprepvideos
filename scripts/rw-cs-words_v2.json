@@ -1,0 +1,57 @@
+{
+  "id": "rw-cs-words_v2",
+  "skill": "rw-cs-words",
+  "part": 2,
+  "title": "Words in Context, Part 2: A Hard Question and Common Traps",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "list", "title": "Recap of the method", "beats": [
+      {"say": "In part one, we learned to cover the choices, find the clue, and put our own word in the blank first.", "item": "Cover, find the clue, predict"},
+      {"say": "We saw that contrast words flip the meaning, and that a restatement defines the blank.", "item": "Contrast flips; restatement defines"},
+      {"say": "In this video, we work through a hard question with a distracting last sentence, and then the common traps.", "item": "Today: a hard question and traps"}
+    ]},
+    {"type": "cards", "title": "Hard question: tone and degree", "beats": [
+      {"say": "Hard question. Two choices may point in the right direction, and only one fits the exact degree and tone. Also ask who is being described.", "card": {"text": "Direction, degree, tone", "sub": "And whose view is it?"}},
+      {"say": "Some texts add a last sentence about a different group of people. That sentence can distract you from the group that the blank describes.", "card": {"text": "Watch the last sentence"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "Early reviewers dismissed the composer's first symphony as ______, noting that nearly every melody seemed borrowed from works by more established composers. Only decades later did critics recognize the inventive ways she had rearranged those familiar themes.", "source": "original text", "beats": [
+      {"say": "The clue follows the comma. Nearly every melody seemed borrowed. Our own word for that is copied.", "underline": "borrowed from works"},
+      {"say": "The verb dismissed tells us the tone is negative. So the blank is a negative word about copying.", "highlight": "dismissed"},
+      {"say": "The last sentence describes critics decades later, not the early reviewers. That is the distraction, so we do not use it.", "underline": "Only decades later"}
+    ]},
+    {"type": "choices", "title": "Which word fits the blank?", "question": "Which choice completes the text with the most logical and precise word?", "options": {"A": "chaotic", "B": "imitative", "C": "incomplete", "D": "ambitious"}, "beats": [
+      {"say": "Choice A, chaotic, means disorderly. Borrowing melodies is not the same as disorder, so it does not fit the clue.", "eliminate": "A", "why": "not the clue"},
+      {"say": "Choice C, incomplete, means unfinished. Nothing in the text says the symphony was unfinished.", "eliminate": "C", "why": "no clue for it"},
+      {"say": "Choice D, ambitious, is a positive word. But the reviewers dismissed the work, which is a negative judgment, so the tone is wrong.", "eliminate": "D", "why": "wrong tone"},
+      {"say": "Choice B, imitative, means copying others. It fits the borrowed melodies and the negative tone. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Common traps", "beats": [
+      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: the smart-sounding word", "beats": [
+      {"say": "Trap one. Students pick the hardest word because it sounds impressive. Hard vocabulary is not automatically right.", "wrong": "pick the fanciest word", "wrong_why": "Sounding smart is not a clue"},
+      {"say": "Pick the word that matches your own prediction. Many correct answers are simple words.", "right": "pick the word that fits the clue", "right_why": "The clue decides"}
+    ]},
+    {"type": "compare", "title": "Trap 2: right direction, wrong degree", "beats": [
+      {"say": "Trap two. If the text says a change was small, a word like devastating points in the right direction but is far too strong.", "wrong": "small change: devastating", "wrong_why": "Too strong for the text"},
+      {"say": "Match the degree as well as the direction. A small change calls for a mild word.", "right": "small change: slight", "right_why": "Same degree"}
+    ]},
+    {"type": "compare", "title": "Trap 3: the wrong group", "beats": [
+      {"say": "Trap three. In a sentence like critics said one thing, but later scholars found another, the blank describes only one group.", "wrong": "use the later critics' opinion", "wrong_why": "The blank is about the early view"},
+      {"say": "Find the people the blank describes, and use only the clue about them.", "right": "use the early reviewers' clue", "right_why": "Right group"}
+    ]},
+    {"type": "compare", "title": "Trap 4: ignoring tone", "beats": [
+      {"say": "Trap four. If the sentence is disapproving, a positive word cannot fit, even if its meaning is close to the topic.", "wrong": "dismissed: ambitious", "wrong_why": "Positive word, negative tone"},
+      {"say": "Check whether each word is positive or negative, and match it to the tone of the sentence.", "right": "dismissed: imitative", "right_why": "Negative, like the verb"}
+    ]},
+    {"type": "compare", "title": "Trap 5: related but not precise", "beats": [
+      {"say": "Trap five. Two words can both relate to the topic, but only one fits the sentence structure. Withstand and resist both go with strong winds.", "wrong": "the tower will resist the wind", "wrong_why": "Related, but not exact"},
+      {"say": "Test each word in the sentence and ask if the full meaning is right. Read it back as a whole.", "right": "read the full sentence back", "right_why": "Precise fit"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Predict your own word, and check the direction, the degree, and the tone of every choice.", "item": "Direction, degree, tone"},
+      {"say": "Find the group the blank describes, and ignore distracting sentences about other people.", "item": "Right group; ignore distractions"},
+      {"say": "In the next topic, we study text structure and purpose, where you say what a text is doing.", "item": "Next: structure and purpose"}
+    ]}
+  ]
+}

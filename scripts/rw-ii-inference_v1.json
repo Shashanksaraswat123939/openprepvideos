@@ -1,0 +1,57 @@
+{
+  "id": "rw-ii-inference_v1",
+  "skill": "rw-ii-inference",
+  "part": 1,
+  "title": "Inferences, Part 1: The Method and Two Questions",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "cards", "title": "Inference questions", "beats": [
+      {"say": "Inference questions give you a short text that ends with a blank. They ask which choice most logically completes the text.", "card": {"text": "Which choice most logically completes the text?"}},
+      {"say": "The text lays out facts, a study, or an argument. Your job is to supply the conclusion that those facts lead to. No outside knowledge is needed.", "card": {"text": "Finish the reasoning", "sub": "Use only the text"}},
+      {"say": "The best answer follows directly from the information. It is the next step in the reasoning, not a leap.", "card": {"text": "The next step, not a leap"}}
+    ]},
+    {"type": "list", "title": "The method", "beats": [
+      {"say": "Step one. Read the text and find the claim, the evidence, and any turn word such as however.", "item": "Find the claim, evidence, and turns"},
+      {"say": "Step two. Read the words right before the blank. Words like therefore, suggests, because, and unless tell you what kind of conclusion is needed.", "item": "Read the words before the blank"},
+      {"say": "Step three. Cover the choices and predict the ending in your own words. Then match your prediction to a choice.", "item": "Predict the ending first"},
+      {"say": "Step four. Eliminate overreach and reversals first. Between two survivors, pick the one that accounts for every clue.", "item": "Eliminate, then check every clue"}
+    ]},
+    {"type": "table", "title": "Four kinds of wrong answer", "columns": ["Wrong answer", "Why it fails"], "rows": [["overreach", "goes beyond the evidence"], ["reversal", "flips cause and effect"], ["true-sounding fact", "not connected to the text"], ["different question", "about a side detail"]], "beats": [
+      {"say": "An overreach goes beyond the evidence. Strong words such as all, always, never, and proves are warning signs.", "reveal_row": 0},
+      {"say": "A reversal flips the cause and the effect, or flips the comparison between two things.", "reveal_row": 1},
+      {"say": "A true-sounding fact is plausible in real life, but nothing in the text connects to it.", "reveal_row": 2},
+      {"say": "A different question answer draws a conclusion about something that the text mentions only in passing.", "reveal_row": 3}
+    ]},
+    {"type": "cards", "title": "Easy question", "beats": [
+      {"say": "Easy question. A community center sees fewer people at evening classes. We look for the one change that explains it, and then predict the ending.", "card": {"text": "Predict before the choices", "sub": "What changed? Who was affected?"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "Staff at a community center found that attendance at evening classes dropped sharply after the town's only bus route stopped running after six in the evening. Attendance at morning and afternoon classes did not change. These results suggest that ______", "source": "original text", "beats": [
+      {"say": "Two facts matter. The bus stopped running in the evening, and only the evening classes lost students.", "underline": "stopped running after six"},
+      {"say": "Morning and afternoon classes did not change. That tells us interest in the classes did not drop, so the bus is the likely cause.", "highlight": "did not change"}
+    ]},
+    {"type": "choices", "title": "Which choice completes the text?", "question": "Which choice most logically completes the text?", "options": {"A": "residents have lost interest in the center's classes.", "B": "the lack of evening bus service may be keeping some residents from evening classes.", "C": "the center should cancel all of its evening classes.", "D": "morning classes are more popular than afternoon classes."}, "beats": [
+      {"say": "Choice A says residents lost interest. But daytime attendance is steady, so this contradicts the text.", "eliminate": "A", "why": "contradicted by daytime data"},
+      {"say": "Choice C is a recommendation. The text gives a result, not advice, so this is not a conclusion the data supports.", "eliminate": "C", "why": "a recommendation"},
+      {"say": "Choice D compares morning and afternoon classes. The text never makes that comparison.", "eliminate": "D", "why": "never compared"},
+      {"say": "Choice B links the only change, the bus, to the only affected classes, the evening ones. It also says may, which is modest. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Medium question: a puzzle", "beats": [
+      {"say": "Medium question. When a text presents a puzzle, an unexpected result, the correct ending usually explains the puzzle. Find the surprise first.", "card": {"text": "Find the surprise", "sub": "The answer explains it"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "Ecologists expected that planting more trees along a river would cool the water, and in most test sections the water did cool. In one section, however, the water grew warmer. The ecologists then noticed that the new trees in that section were planted on the south bank, but all of the old trees on the north bank had been removed that year. This suggests that ______", "source": "original text", "beats": [
+      {"say": "The surprise is that one section grew warmer, even though trees were planted there. We need an ending that explains it.", "underline": "grew warmer"},
+      {"say": "The clue is that old trees on the north bank were removed that year. So shade was lost in that section, even as new trees were added.", "highlight": "had been removed"}
+    ]},
+    {"type": "choices", "title": "Which choice completes the text?", "question": "Which choice most logically completes the text?", "options": {"A": "planting trees always warms rivers.", "B": "removing the old trees may have outweighed the cooling from the new trees in that section.", "C": "south banks are warmer than north banks in every river.", "D": "the ecologists measured the water temperature incorrectly."}, "beats": [
+      {"say": "Choice A says always. One section is not enough to prove that, and most sections cooled, so this is an overreach.", "eliminate": "A", "why": "overreach"},
+      {"say": "Choice C says every river. The text is about one river, so this goes beyond the evidence.", "eliminate": "C", "why": "overreach"},
+      {"say": "Choice D blames a mistake. Nothing in the text suggests the measurements were wrong, so it is an unsupported guess.", "eliminate": "D", "why": "unsupported"},
+      {"say": "Choice B uses the clue about the removed trees and explains the surprise, in a modest way. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Find the claim, the evidence, and the turn word. Predict the ending before you read the choices.", "item": "Find the clues; predict the ending"},
+      {"say": "Eliminate overreach and reversals first. If the text has a puzzle, the answer explains it.", "item": "Overreach out; explain the puzzle"},
+      {"say": "In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
+    ]}
+  ]
+}

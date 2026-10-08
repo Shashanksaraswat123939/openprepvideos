@@ -1,0 +1,57 @@
+{
+  "id": "rw-cs-words_v1",
+  "skill": "rw-cs-words",
+  "part": 1,
+  "title": "Words in Context, Part 1: The Method and Two Questions",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "cards", "title": "Words in context", "beats": [
+      {"say": "Words in context questions give you a sentence with a blank, and ask for the most logical and precise word or phrase to fill it.", "card": {"text": "The most logical and precise word"}},
+      {"say": "The words range from everyday words, such as reserved, to harder words, such as ephemeral. But the method is the same for all of them.", "card": {"text": "Easy words and hard words", "sub": "Same method"}},
+      {"say": "The key idea is that the text always contains a clue. Your job is to find the clue that tells you what the blank must mean.", "card": {"text": "Find the clue"}}
+    ]},
+    {"type": "list", "title": "The method", "beats": [
+      {"say": "Step one. Cover the choices, and read the whole text, including the part that comes after the blank.", "item": "Cover the choices; read it all"},
+      {"say": "Step two. Find the clue. It may be a contrast, a restatement, or a cause and effect.", "item": "Find the clue"},
+      {"say": "Step three. Put your own word in the blank first, even a rough word like quiet, or not lasting.", "item": "Predict your own word"},
+      {"say": "Step four. Eliminate choices of the wrong direction, positive or negative. Then pick the one that matches your word most precisely.", "item": "Wrong direction out; match precisely"}
+    ]},
+    {"type": "table", "title": "Clue words and what they mean", "columns": ["Clue", "The blank should"], "rows": [["colon, dash, that is", "match the explanation"], ["unlike, although, but", "be the opposite"], ["because, so, thus", "fit the cause or effect"], ["and, also, similarly", "match the nearby idea"]], "beats": [
+      {"say": "A colon, a dash, or the phrase that is, introduces an explanation. The blank should match the explanation that follows.", "reveal_row": 0},
+      {"say": "Words like unlike, although, and but signal a contrast. The blank should mean the opposite of the contrasted idea.", "reveal_row": 1},
+      {"say": "Words like because, so, and thus signal cause and effect. The blank must be logically connected to the cause or to the effect.", "reveal_row": 2},
+      {"say": "Words like and, also, and similarly signal agreement. The blank should match the tone of the nearby idea.", "reveal_row": 3}
+    ]},
+    {"type": "cards", "title": "Easy question: a contrast", "beats": [
+      {"say": "Easy question. The sentence begins with the word unlike. That is a contrast clue, so the blank will mean the opposite of the crowded market.", "card": {"text": "Contrast clue: unlike", "sub": "The blank is the opposite"}}
+    ]},
+    {"type": "passage", "title": "Read the sentence", "text": "Unlike the crowded downtown market, the farm stand on Route Nine was ______, with only a single table and a handwritten price list.", "source": "original text", "beats": [
+      {"say": "The market is crowded, and the word unlike tells us the farm stand is not. So the blank means not crowded, or small.", "highlight": "Unlike"},
+      {"say": "The last part confirms it. Only a single table, and a handwritten list. Our word is small and simple.", "underline": "only a single table"}
+    ]},
+    {"type": "choices", "title": "Which word fits the blank?", "question": "Which choice completes the text with the most logical and precise word?", "options": {"A": "bustling", "B": "modest", "C": "expensive", "D": "famous"}, "beats": [
+      {"say": "Choice A, bustling, means busy. That is the opposite of what we need, because the stand is not like the crowded market.", "eliminate": "A", "why": "opposite direction"},
+      {"say": "Choice C, expensive, has no support. The text never talks about prices being high.", "eliminate": "C", "why": "no clue for it"},
+      {"say": "Choice D, famous, has no support either. Nothing in the sentence is about fame.", "eliminate": "D", "why": "no clue for it"},
+      {"say": "Choice B, modest, means small and simple. It matches our word and the clue. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Medium question: a restatement", "beats": [
+      {"say": "Medium question. Here the clue is a restatement. After the blank, the text explains the word in other words. We use the explanation as our prediction.", "card": {"text": "Restatement clue", "sub": "The explanation defines the blank"}}
+    ]},
+    {"type": "passage", "title": "Read the sentence", "text": "The lake in the valley was ______ in the summer, appearing only after heavy rain and drying up within a few days.", "source": "original text", "beats": [
+      {"say": "The sentence explains how the lake behaves. It appears only after heavy rain, and it dries up within a few days.", "underline": "drying up within a few days"},
+      {"say": "So the blank means not lasting, or short-lived. That is our own word before we look at the choices.", "highlight": "appearing only after heavy rain"}
+    ]},
+    {"type": "choices", "title": "Which word fits the blank?", "question": "Which choice completes the text with the most logical and precise word?", "options": {"A": "permanent", "B": "temporary", "C": "enormous", "D": "polluted"}, "beats": [
+      {"say": "Choice A, permanent, means lasting forever. The lake dries up in days, so this is the opposite.", "eliminate": "A", "why": "opposite direction"},
+      {"say": "Choice C, enormous, is about size. The text gives no size, only how long the lake lasts.", "eliminate": "C", "why": "about size, not time"},
+      {"say": "Choice D, polluted, is about dirt. The text does not mention the water quality.", "eliminate": "D", "why": "not in the text"},
+      {"say": "Choice B, temporary, means not lasting. It matches our prediction exactly. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Cover the choices, find the clue, and put your own word in the blank first.", "item": "Clue, then your own word"},
+      {"say": "Contrast words flip the meaning, and a restatement defines the blank. Cross out the wrong direction first.", "item": "Contrast flips; restatement defines"},
+      {"say": "In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
+    ]}
+  ]
+}

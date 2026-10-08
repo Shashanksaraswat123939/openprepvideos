@@ -1,0 +1,57 @@
+{
+  "id": "rw-ii-inference_v2",
+  "skill": "rw-ii-inference",
+  "part": 2,
+  "title": "Inferences, Part 2: A Hard Question and Common Traps",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "list", "title": "Recap of the method", "beats": [
+      {"say": "In part one, we learned to find the claim, the evidence, and the turn word, and to predict the ending before reading the choices.", "item": "Find clues; predict the ending"},
+      {"say": "We also learned to cross out overreach and reversals, and to choose the answer that explains a puzzle.", "item": "Cross out overreach and reversal"},
+      {"say": "In this video, we work through a hard question with an argument that is partly wrong, and then the common traps.", "item": "Today: a hard question and traps"}
+    ]},
+    {"type": "cards", "title": "Hard question: some argue, however", "beats": [
+      {"say": "Hard question. Many hard texts say that some people argue one thing, and then use the word however to give problems with it. The answer usually goes with the however.", "card": {"text": "Some argue... however...", "sub": "Go with the however"}},
+      {"say": "Count the clues. A hard question often gives two or three, and the correct answer must account for all of them.", "card": {"text": "Use every clue"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "Historians found that dozens of manuscripts in a medieval monastery have notes in a local dialect in the margins, while the main text is in Latin. Because the monks were trained to write only in Latin, some historians argue that visitors wrote the notes. However, the monastery's records show that it rarely admitted visitors to the library, and several notes refer to daily chores at the monastery. Taken together, these details suggest that ______", "source": "original text", "beats": [
+      {"say": "The first claim is that visitors wrote the notes, because the monks only wrote Latin. This is the view that the text is about to challenge.", "underline": "visitors wrote the notes"},
+      {"say": "The word however gives two problems. Visitors were rarely admitted, and the notes mention daily chores at the monastery.", "highlight": "However"},
+      {"say": "Both clues point to people who lived at the monastery. So our prediction is, residents may have written the notes, despite their training.", "underline": "daily chores"}
+    ]},
+    {"type": "choices", "title": "Which choice completes the text?", "question": "Which choice most logically completes the text?", "options": {"A": "the manuscripts were first written in the local dialect.", "B": "visitors to the monastery wrote most of the notes.", "C": "some people who lived and worked at the monastery may have written in the dialect despite their training.", "D": "the monks could not read Latin well enough to read the manuscripts."}, "beats": [
+      {"say": "Choice B repeats the claim that the text just challenged. It ignores both problems that came after however.", "eliminate": "B", "why": "the view being challenged"},
+      {"say": "Choice A contradicts the text, because the main text is in Latin, and only the notes are in the dialect.", "eliminate": "A", "why": "contradicts the text"},
+      {"say": "Choice D is an overreach. Nothing suggests the monks could not read Latin, only that the notes are in another language.", "eliminate": "D", "why": "overreach"},
+      {"say": "Choice C explains both clues, rarely any visitors and notes about chores, and it stays modest by saying may. The answer is C.", "pick": "C"}
+    ]},
+    {"type": "cards", "title": "Common traps", "beats": [
+      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: the view being argued against", "beats": [
+      {"say": "Trap one. When a text says some argue, and then however, the first view is the one being challenged. Students still choose it.", "wrong": "finish with the some-argue view", "wrong_why": "The however undercuts it"},
+      {"say": "Follow the however. The ending should agree with the problems the text raises about the first view.", "right": "finish with the however point", "right_why": "Matches the turn"}
+    ]},
+    {"type": "compare", "title": "Trap 2: overreach", "beats": [
+      {"say": "Trap two. A short study cannot prove that something is always true. Words such as proves, all, and never need very strong support.", "wrong": "the study proves it for all rivers", "wrong_why": "One small study"},
+      {"say": "Choose cautious language such as may, likely, or suggests, which matches limited evidence.", "right": "it may be true for this river", "right_why": "Modest and supported"}
+    ]},
+    {"type": "compare", "title": "Trap 3: using only one clue", "beats": [
+      {"say": "Trap three. A choice can fit one detail, and ignore another. If the text gives two clues, the answer must explain both.", "wrong": "explains only the rare visitors", "wrong_why": "Ignores the chores clue"},
+      {"say": "After you pick an answer, test it against every clue in the text, one at a time.", "right": "explains visitors and chores", "right_why": "Accounts for all clues"}
+    ]},
+    {"type": "compare", "title": "Trap 4: outside knowledge", "beats": [
+      {"say": "Trap four. A fact that you learned in class may be true, and still not be an inference from this text.", "wrong": "I know that this is true in life", "wrong_why": "The text must say it"},
+      {"say": "Every conclusion must come from the words on the page. If you cannot point to the clue, cross it out.", "right": "I can point to the clue", "right_why": "Supported by the text"}
+    ]},
+    {"type": "compare", "title": "Trap 5: advice, not a conclusion", "beats": [
+      {"say": "Trap five. A choice that says what someone should do is usually wrong, because the text gave results, not a plan.", "wrong": "the city should cancel the program", "wrong_why": "The text gave no advice"},
+      {"say": "Choose the conclusion that the evidence supports, such as what the results suggest.", "right": "the results suggest a likely cause", "right_why": "A conclusion, not advice"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Go with the however, and use every clue the text gives. The correct answer is usually modest.", "item": "Follow the however; use every clue"},
+      {"say": "Avoid overreach, outside knowledge, and advice. Predict the ending, then match it to a choice.", "item": "No overreach, outside facts, or advice"},
+      {"say": "In the next topic, we study words in context, where you choose the word that best fits the meaning.", "item": "Next: words in context"}
+    ]}
+  ]
+}

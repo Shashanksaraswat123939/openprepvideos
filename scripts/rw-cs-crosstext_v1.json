@@ -1,0 +1,62 @@
+{
+  "id": "rw-cs-crosstext_v1",
+  "skill": "rw-cs-crosstext",
+  "part": 1,
+  "title": "Cross-Text Connections, Part 1: The Method and Two Questions",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "cards", "title": "Cross-text connections", "beats": [
+      {"say": "Cross-text questions give you two short texts on the same topic, called Text one and Text two. You compare their viewpoints, not just their facts.", "card": {"text": "Two texts, one topic", "sub": "Compare viewpoints"}},
+      {"say": "The question usually asks how the author of Text two would respond to Text one. Sometimes it asks what both authors would agree on.", "card": {"text": "How would Text 2 respond to Text 1?"}},
+      {"say": "Most often, Text one makes a claim, and Text two reacts to it. The reaction is rarely a total rejection.", "card": {"text": "Text 2 reacts to Text 1", "sub": "Rarely a total rejection"}}
+    ]},
+    {"type": "list", "title": "The method", "beats": [
+      {"say": "Step one. Read the question first, so you know which text is responding to which.", "item": "Who is responding to whom?"},
+      {"say": "Step two. Read Text one and write its main claim in a few words. Then read Text two the same way.", "item": "Summarize each text briefly"},
+      {"say": "Step three. Decide how Text two relates to Text one. Does it agree, qualify, limit the scope, add a cause, or reject?", "item": "Name the relationship"},
+      {"say": "Step four. Eliminate choices whose strength does not match. Most often, a choice says reject when Text two only qualifies.", "item": "Match the strength"}
+    ]},
+    {"type": "table", "title": "How Text 2 relates to Text 1", "columns": ["Relationship", "Typical answer"], "rows": [["qualifies", "the claim is incomplete"], ["limits scope", "may not apply everywhere"], ["offers another cause", "something else also explains it"], ["agrees and extends", "agrees, and adds more"], ["rejects (rare)", "disagrees, and says why"]], "beats": [
+      {"say": "Qualifies. Text two says the claim is true but incomplete, or that it overstates things.", "reveal_row": 0},
+      {"say": "Limits scope. Text two says the claim is true in some settings, but may not apply to all cases.", "reveal_row": 1},
+      {"say": "Offers another cause. Text two says another factor may also explain the result.", "reveal_row": 2},
+      {"say": "Agrees and extends. Text two builds on Text one and adds to it.", "reveal_row": 3},
+      {"say": "Rejects. This is rare. Text two says there is no evidence, or that the claim is contradicted.", "reveal_row": 4}
+    ]},
+    {"type": "cards", "title": "Easy question: another benefit", "beats": [
+      {"say": "Easy question. Text one makes a claim about the benefits of street trees. Text two reports a measurement. We ask what Text two adds.", "card": {"text": "What does Text 2 add?", "sub": "Agree, add, or reject?"}}
+    ]},
+    {"type": "passage", "title": "Text 1", "text": "City officials argue that planting street trees mainly benefits neighborhoods by making them more attractive to visitors.", "source": "Text 1", "beats": [
+      {"say": "The claim in Text one is that street trees mainly make a neighborhood attractive to visitors.", "underline": "mainly benefits"}
+    ]},
+    {"type": "passage", "title": "Text 2", "text": "A team of urban researchers measured summer temperatures on streets with and without trees. Tree-lined streets were up to four degrees cooler, reducing residents' use of air conditioning.", "source": "Text 2", "beats": [
+      {"say": "Text two measures something different. Tree-lined streets were cooler, and residents used less air conditioning.", "underline": "up to four degrees cooler"},
+      {"say": "So our connection is, Text two shows a cooling benefit that Text one ignores. It does not deny the attractiveness.", "highlight": "reducing residents' use"}
+    ]},
+    {"type": "choices", "title": "How would Text 2 respond?", "question": "How would the researchers in Text two most likely respond to the officials' argument in Text one?", "options": {"A": "By agreeing that attractiveness is the only benefit of street trees.", "B": "By suggesting that the argument overlooks another important benefit of street trees.", "C": "By arguing that street trees make neighborhoods less attractive.", "D": "By claiming that visitors prefer streets without trees."}, "beats": [
+      {"say": "Choice A says attractiveness is the only benefit. Text two shows a second benefit, so this contradicts it.", "eliminate": "A", "why": "contradicts Text 2"},
+      {"say": "Choice C says street trees make neighborhoods less attractive. Text two never talks about attractiveness, so there is no support.", "eliminate": "C", "why": "not in Text 2"},
+      {"say": "Choice D says visitors prefer streets without trees. Text two says nothing about visitors.", "eliminate": "D", "why": "not in Text 2"},
+      {"say": "Choice B adds a benefit without denying the point in Text one. That matches our connection. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Medium question: both would agree", "beats": [
+      {"say": "Medium question. Now a question about what both authors would agree on. The answer must fit both texts. A claim that only one text supports is wrong.", "card": {"text": "Fit both texts", "sub": "Not just one"}}
+    ]},
+    {"type": "passage", "title": "Text 1", "text": "A town library began offering free tutoring. Within a year, the number of students visiting the library after school had doubled, and the librarians credit the tutoring program for the increase.", "source": "Text 1", "beats": [
+      {"say": "Text one says that visits doubled after free tutoring began, and that the tutoring caused it.", "underline": "credit the tutoring program"}
+    ]},
+    {"type": "passage", "title": "Text 2", "text": "A second library offered free tutoring too, and its after-school visits also rose sharply. A survey there found that most of the new visitors said they came for the quiet study space, and then decided to try the tutoring.", "source": "Text 2", "beats": [
+      {"say": "Text two also saw visits rise after tutoring. But the survey says the quiet study space brought many of the new visitors.", "underline": "quiet study space"}
+    ]},
+    {"type": "choices", "title": "What would both authors agree on?", "question": "Based on the texts, with which statement would both authors most likely agree?", "options": {"A": "Free tutoring is the only reason students visit libraries.", "B": "Library visits by students rose after a library began offering tutoring.", "C": "Quiet study space is more valuable than tutoring.", "D": "Libraries should stop offering tutoring programs."}, "beats": [
+      {"say": "Choice A says tutoring is the only reason. Text two names the quiet study space, so this does not fit both.", "eliminate": "A", "why": "Text 2 disagrees"},
+      {"say": "Choice C says the study space is more valuable. Text one never mentions it, and neither text ranks the two.", "eliminate": "C", "why": "only one text mentions it"},
+      {"say": "Choice D is advice. Neither text suggests that the library should stop offering its tutoring program.", "eliminate": "D", "why": "neither text says it"},
+      {"say": "Choice B is supported by both texts, because visits rose after tutoring began in each library. It does not go beyond that. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Read the question first, summarize each text in a few words, and name how Text two relates to Text one.", "item": "Summarize; name the relationship"},
+      {"say": "For a both-agree question, the answer must fit both texts. In the next video, we work through a hard question and the common traps.", "item": "Next: a hard question and traps"}
+    ]}
+  ]
+}

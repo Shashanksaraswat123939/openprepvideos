@@ -1,0 +1,58 @@
+{
+  "id": "rw-cs-structure_v2",
+  "skill": "rw-cs-structure",
+  "part": 2,
+  "title": "Structure and Purpose, Part 2: A Hard Question and Traps",
+  "section_label": "Reading and Writing",
+  "scenes": [
+    {"type": "list", "title": "Recap of the method", "beats": [
+      {"say": "In part one, we learned to read the question first, and to label each sentence with a two-word job.", "item": "Read the question; label the jobs"},
+      {"say": "We matched purpose answers by their verb, and structure answers step by step, in order.", "item": "Verb for purpose; steps for structure"},
+      {"say": "In this video, we work through a hard sentence function question, and then the common traps.", "item": "Today: sentence function and traps"}
+    ]},
+    {"type": "cards", "title": "Hard question: sentence function", "beats": [
+      {"say": "Hard question. A sentence function question asks about the job of one sentence, in relation to the others. It does not ask about the purpose of the whole text.", "card": {"text": "One sentence, one job", "sub": "Relative to the other sentences"}},
+      {"say": "Count the sentences carefully, label every one, and then look at the sentence the question names.", "card": {"text": "Count, label, then answer"}}
+    ]},
+    {"type": "passage", "title": "Read the text", "text": "For decades, historians assumed that a coastal town's sudden growth in the 1850s was caused by the opening of its harbor. A recent study of tax records complicates this account. The records show that the town's population had already doubled in the five years before the harbor opened, largely because a nearby lumber mill had begun hiring workers. The harbor, the study's authors suggest, may have sped up growth that was already under way.", "source": "original text", "beats": [
+      {"say": "Sentence one is the old view. Historians assumed the harbor caused the growth.", "underline": "For decades, historians assumed"},
+      {"say": "Sentence two announces a challenge. The word complicates tells us the old view is about to be questioned.", "highlight": "complicates"},
+      {"say": "Sentence three is the evidence. The population had already doubled before the harbor opened, because of a lumber mill.", "underline": "had already doubled"},
+      {"say": "Sentence four is the revised conclusion. The harbor may have sped up growth that was already under way.", "underline": "may have sped up"}
+    ]},
+    {"type": "choices", "title": "What does sentence three do?", "question": "Which choice best describes the function of the third sentence in the overall structure of the text?", "options": {"A": "It states the long-held view that the rest of the text supports.", "B": "It provides evidence that complicates the historians' explanation.", "C": "It describes the effect the harbor had on the lumber mill.", "D": "It offers the study's final conclusion about the harbor."}, "beats": [
+      {"say": "Choice A says it states the old view. The old view is sentence one, and the text does not support it.", "eliminate": "A", "why": "that is sentence one"},
+      {"say": "Choice C says it describes the harbor's effect on the mill. The sentence says the mill drew workers, not that the harbor affected the mill.", "eliminate": "C", "why": "reverses the relationship"},
+      {"say": "Choice D says it is the final conclusion. The conclusion is sentence four, not sentence three.", "eliminate": "D", "why": "that is sentence four"},
+      {"say": "Choice B matches our label. Sentence three gives the data that backs up the word complicates. The answer is B.", "pick": "B"}
+    ]},
+    {"type": "cards", "title": "Common traps", "beats": [
+      {"say": "Now the traps. Each one is a way that a careful reader can still pick a wrong answer. We will see the trap, and then the habit that avoids it.", "card": {"text": "Five common traps"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: content, not purpose", "beats": [
+      {"say": "Trap one. A purpose answer that only names the topic is a content answer. To describe tax records tells what the text is about, not what the author does.", "wrong": "To describe tax records", "wrong_why": "A topic, not a purpose"},
+      {"say": "State what the author does with the topic. Here the author uses the records to challenge an old explanation.", "right": "To challenge an old explanation", "right_why": "What the author does"}
+    ]},
+    {"type": "compare", "title": "Trap 2: one wrong step", "beats": [
+      {"say": "Trap two. A structure answer can sound right and be wrong in one step, or in the order. One bad part is enough to eliminate it.", "wrong": "evidence, then claim, then example", "wrong_why": "Order does not match"},
+      {"say": "Check the steps against your labels, in the same order. If any step is off, cross the choice out.", "right": "claim, then example, then evidence", "right_why": "Matches every label"}
+    ]},
+    {"type": "compare", "title": "Trap 3: too strong a verb", "beats": [
+      {"say": "Trap three. If the author only explains or describes, a verb such as argue or criticize is too strong.", "wrong": "To criticize the historians", "wrong_why": "The tone is neutral"},
+      {"say": "Match the verb to the tone. A neutral text explains, describes, or presents.", "right": "To present new evidence", "right_why": "Neutral verb"}
+    ]},
+    {"type": "compare", "title": "Trap 4: sentence vs text", "beats": [
+      {"say": "Trap four. A sentence function question is about one sentence. Students answer with the purpose of the whole text.", "wrong": "the text's overall purpose", "wrong_why": "The question names one sentence"},
+      {"say": "Answer with the job of just that sentence, in relation to its neighbors.", "right": "the job of sentence three", "right_why": "Evidence for sentence two"}
+    ]},
+    {"type": "compare", "title": "Trap 5: plot, not meaning", "beats": [
+      {"say": "Trap five. For a story, a purpose answer that lists the actions is a plot answer. It says what happens, and not why the scene matters.", "wrong": "To show Lena moving a chess piece", "wrong_why": "A plot detail"},
+      {"say": "For a story, say what the scene reveals about a character or a relationship.", "right": "To show how Lena handles fear", "right_why": "Reveals the character"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. A purpose is what the author does, not the topic. A structure answer must match every step in order.", "item": "Purpose is what the author does"},
+      {"say": "Match the verb to the tone, answer for only the sentence asked about, and for a story say what the scene reveals.", "item": "Verb fits tone; one sentence; reveal"},
+      {"say": "In the next topic, we study cross-text connections, where you compare two short texts.", "item": "Next: cross-text connections"}
+    ]}
+  ]
+}
