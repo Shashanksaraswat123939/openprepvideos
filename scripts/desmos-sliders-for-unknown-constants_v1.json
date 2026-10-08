@@ -1,0 +1,47 @@
+{
+  "id": "desmos-sliders-for-unknown-constants_v1",
+  "skill": "desmos-sliders-for-unknown-constants",
+  "part": 1,
+  "title": "Desmos Basics: Sliders for Unknown Constants",
+  "section_label": "Desmos basics",
+  "scenes": [
+    {"type": "cards", "title": "Sliders", "beats": [
+      {"say": "When an equation contains an unknown constant, Desmos offers a slider for it. You drag the slider, and the graph changes while you watch.", "card": {"text": "A slider makes a constant adjustable"}},
+      {"say": "To add a slider yourself, type an equation that uses a new letter, such as k. Desmos creates the slider automatically, and you can click its ends to change its range.", "card": {"text": "New letter in an equation = new slider"}},
+      {"say": "We will work through three examples, from an easy one to a hard one, and you will see every key press.", "card": {"text": "Three examples: easy, medium, hard"}}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. The line y equals k x plus one passes through the point two comma seven. What is the value of k?", "card": {"text": "y = kx + 1 passes through (2, 7)", "sub": "Find k"}}
+    ]},
+    {"type": "desmos", "title": "Easy: a slope", "beats": [
+      {"say": "We will graph the line with a slider for k, plot the point, and slide k until the line passes through the point.", "actions": ["hold: 2"]},
+      {"say": "Type y equals k x plus one. Desmos notices the new letter k and creates a slider for it.", "actions": ["type: y=kx+1"]},
+      {"say": "Now type the point, two comma seven, as an ordered pair. It appears on the graph as a dot, and the line does not pass through it yet.", "actions": ["type: (2,7)", "bounds: left=-2 right=6 bottom=-2 top=12"]},
+      {"say": "Drag the slider upward. The line gets steeper, and when k reaches three, the line passes exactly through the point.", "actions": ["slider: k from 1 to 5 step 1"]},
+      {"say": "So k equals three. We can check with algebra: three times two plus one is seven, which is the y value of the point.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. For the equation y equals x squared plus k x plus nine, find the positive value of k for which the parabola touches the x axis at exactly one point.", "card": {"text": "y = x^2 + kx + 9", "sub": "Touches the x-axis once"}}
+    ]},
+    {"type": "desmos", "title": "Medium: one solution", "beats": [
+      {"say": "A parabola that just touches the x axis has exactly one solution. We will use a slider to find when that happens.", "actions": ["hold: 2"]},
+      {"say": "Type y equals x, the caret key and a two, the right arrow, then plus k x plus nine. Desmos creates a slider for k.", "actions": ["type: y=x^2>+kx+9"]},
+      {"say": "Now slide k downward from ten. At first, the parabola crosses the x axis twice. Watch for the moment it only touches the axis.", "actions": ["bounds: left=-12 right=4 bottom=-18 top=24", "slider: k from 10 to 0 step 1"]},
+      {"say": "At k equals six, the parabola touches the x axis at a single point. Below six, it floats above the axis and has no solutions at all.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. For the equation two x squared plus k x plus eight equals zero, what positive value of k gives exactly one real solution?", "card": {"text": "2x^2 + kx + 8 = 0", "sub": "Exactly one solution. Find k > 0."}}
+    ]},
+    {"type": "desmos", "title": "Hard: slider and check", "beats": [
+      {"say": "Exactly one real solution means the parabola y equals two x squared plus k x plus eight touches the x axis once. We graph it with a slider.", "actions": ["hold: 2"]},
+      {"say": "Type y equals two x, the caret key and a two, the right arrow, then plus k x plus eight.", "actions": ["type: y=2x^2>+kx+8"]},
+      {"say": "Slide k downward from twelve. The parabola moves from crossing the axis twice, to touching it once, to missing it entirely.", "actions": ["bounds: left=-8 right=4 bottom=-12 top=20", "slider: k from 12 to 0 step 1"]},
+      {"say": "The touch happens at k equals eight. We can confirm with the discriminant: k squared minus four times two times eight is k squared minus sixty-four, which is zero when k is eight.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Type an equation with a new letter, and Desmos adds a slider for it automatically.", "item": "A new letter creates a slider"},
+      {"say": "Slide until the graph does what the question describes, such as passing through a point, or touching the x axis once.", "item": "Slide until the graph matches the question"},
+      {"say": "If you have time, confirm with the discriminant or with algebra. In the next video, we solve any equation by graphing.", "item": "Confirm with algebra if time allows"}
+    ]}
+  ]
+}

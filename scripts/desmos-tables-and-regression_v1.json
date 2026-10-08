@@ -1,0 +1,46 @@
+{
+  "id": "desmos-tables-and-regression_v1",
+  "skill": "desmos-tables-and-regression",
+  "part": 1,
+  "title": "Desmos Basics: Tables and Regression",
+  "section_label": "Desmos basics",
+  "scenes": [
+    {"type": "cards", "title": "Tables and regression", "beats": [
+      {"say": "When a question gives you a table of values, Desmos can plot the points and find the equation that fits them. This is called a regression.", "card": {"text": "A table of values becomes a graph"}},
+      {"say": "You type a tilde sign to ask for a regression. Desmos then reports the best fitting constants, and you match them against the answer choices.", "card": {"text": "Type ~ to run a regression"}},
+      {"say": "We will work through three examples, from an easy one to a hard one, and you will see every step.", "card": {"text": "Three examples: easy, medium, hard"}}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. A table has the points one comma three, two comma five, and three comma seven. Plot them and describe the pattern.", "card": {"text": "(1,3)  (2,5)  (3,7)", "sub": "Plot the table"}}
+    ]},
+    {"type": "desmos", "title": "Easy: plot a table", "beats": [
+      {"say": "Open a fresh graph. We will create a table with two columns, one for x and one for y.", "actions": ["hold: 2"]},
+      {"say": "Desmos creates the table, and each row appears as a point on the graph.", "actions": ["table: x_1 1 2 3; y_1 3 5 7"]},
+      {"say": "Click a point to read it. The point two comma five is the middle one.", "actions": ["bounds: left=-1 right=6 bottom=-1 top=10", "click: 2,5"]},
+      {"say": "The three points fall on a straight line. The y values go up by two every time x goes up by one, so the slope is two.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. A table shows x equals one to five, and y equals three, five, seven, nine, eleven. Which linear equation models the data?", "card": {"text": "x: 1 to 5   y: 3, 5, 7, 9, 11", "sub": "Find the linear model"}}
+    ]},
+    {"type": "desmos", "title": "Medium: linear regression", "beats": [
+      {"say": "We will enter the table and then ask Desmos for a linear regression.", "actions": ["hold: 2"]},
+      {"say": "Create the table with x values one to five, and y values three, five, seven, nine, and eleven.", "actions": ["table: x_1 1 2 3 4 5; y_1 3 5 7 9 11"]},
+      {"say": "Type y sub one, a tilde, then m times x sub one plus b. Press the right arrow after each subscript to leave it.", "actions": ["type: y_1>~mx_1>+b"]},
+      {"say": "Desmos reports m equals two and b equals one. So the data fits y equals two x plus one exactly, and that is the model to pick.", "actions": ["hold: 4"]}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. A table shows x equals one to five, and y equals three, eight, fifteen, twenty-four, thirty-five. The growth is not constant. Find the quadratic model.", "card": {"text": "y: 3, 8, 15, 24, 35", "sub": "Find the quadratic model"}}
+    ]},
+    {"type": "desmos", "title": "Hard: quadratic regression", "beats": [
+      {"say": "The differences between the y values are five, seven, nine, and eleven, which keep growing. That tells us a quadratic model is more likely than a line.", "actions": ["hold: 2"]},
+      {"say": "Create the table with the five x values and the five y values.", "actions": ["table: x_1 1 2 3 4 5; y_1 3 8 15 24 35"]},
+      {"say": "For a quadratic regression, type y sub one, a tilde, then a x sub one squared plus b x sub one plus c. Use the right arrow after each subscript and exponent.", "actions": ["type: y_1>~ax_1>^2>+bx_1>+c"]},
+      {"say": "Desmos reports a equals one, b equals two, and c equals zero. So the model is y equals x squared plus two x. Check: when x is three, nine plus six is fifteen.", "actions": ["hold: 4"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Add a table, and Desmos plots every row as a point so you can see the pattern.", "item": "A table plots points"},
+      {"say": "Type a tilde to run a regression, using the form that matches the pattern: a line, or a quadratic.", "item": "Type ~ to fit an equation"},
+      {"say": "Match the reported constants to the answer choices. That completes the Desmos basics. Next, we begin the Math topics with linear equations in one variable.", "item": "Match the constants to the choices"}
+    ]}
+  ]
+}

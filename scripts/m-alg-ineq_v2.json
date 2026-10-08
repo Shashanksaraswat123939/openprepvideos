@@ -1,0 +1,59 @@
+{
+  "id": "m-alg-ineq_v2",
+  "skill": "m-alg-ineq",
+  "part": 2,
+  "title": "Linear Inequalities, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we solved an inequality like an equation, and we flipped the sign when we divided by a negative number.", "card": {"text": "Divide by a negative: flip the sign"}},
+      {"say": "In this video, we solve a word problem that needs rounding, a compound inequality, and then a hard problem with a system of inequalities.", "card": {"text": "Today: context, compound, system"}}
+    ]},
+    {"type": "cards", "title": "Medium example 1", "beats": [
+      {"say": "Medium example one. A car rental costs forty dollars plus sixty-five cents per mile. The budget is at most one hundred twenty dollars. What is the greatest whole number of miles that fits the budget?", "card": {"text": "40 + 0.65m ≤ 120", "sub": "Greatest whole number of miles"}}
+    ]},
+    {"type": "steps", "title": "Medium 1: solve and round", "start": "40 + 0.65m ≤ 120", "beats": [
+      {"say": "At most means less than or equal to. The fee is a constant, and the cost per mile multiplies m, so the inequality is forty plus zero point six five m is at most one hundred twenty."},
+      {"say": "Subtract forty from both sides. One hundred twenty minus forty is eighty.", "op": "− 40 on both sides", "result": "0.65m ≤ 80"},
+      {"say": "Divide both sides by zero point six five. Eighty divided by zero point six five is about one hundred twenty-three point zero seven. The sign stays the same, because we divided by a positive number.", "op": "÷ 0.65 on both sides", "result": "m ≤ 123.07"}
+    ]},
+    {"type": "cards", "title": "Round the right way", "beats": [
+      {"say": "The question asks for the greatest whole number of miles. Since m must be at most one hundred twenty-three point zero seven, we round down. One hundred twenty-four miles would cost too much.", "card": {"text": "m = 123 miles", "sub": "Greatest means round down"}}
+    ]},
+    {"type": "cards", "title": "Medium example 2", "beats": [
+      {"say": "Medium example two. Solve the compound inequality negative five is less than one minus three x, which is at most ten. We do each step to all three parts.", "card": {"text": "−5 < 1 − 3x ≤ 10", "sub": "Solve for x"}}
+    ]},
+    {"type": "steps", "title": "Medium 2: a compound inequality", "start": "−5 < 1 − 3x ≤ 10", "beats": [
+      {"say": "The x term is in the middle, so we work on all three parts at once, doing the same step to each."},
+      {"say": "Subtract one from all three parts. Negative five minus one is negative six, and ten minus one is nine.", "op": "− 1 on all three parts", "result": "−6 < −3x ≤ 9"},
+      {"say": "Divide all three parts by negative three. This flips both signs. Negative six divided by negative three is two, and nine divided by negative three is negative three.", "op": "÷ (−3) and flip both signs", "result": "2 > x ≥ −3"},
+      {"say": "Read the result from the smaller number up. x is at least negative three, and less than two.", "op": "rewrite in order", "result": "−3 ≤ x < 2", "final": true}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. The point a comma four is a solution to the system y is at least x minus three, and y is less than negative two x plus sixteen. If a is an integer, what is the greatest possible value of a?", "card": {"text": "y ≥ x − 3  and  y < −2x + 16", "sub": "(a, 4) is a solution. Greatest integer a?"}},
+      {"say": "The point must satisfy both inequalities. So we substitute y equals four into each one, solve for a, and then keep only the values that satisfy both.", "card": {"text": "Substitute y = 4 into each"}}
+    ]},
+    {"type": "steps", "title": "Hard: the first inequality", "start": "4 ≥ a − 3", "beats": [
+      {"say": "Substitute y equals four into the first inequality, to get four is at least a minus three."},
+      {"say": "Add three to both sides. Four plus three is seven. So seven is at least a, which means a is at most seven.", "op": "+ 3 on both sides", "result": "7 ≥ a"},
+      {"say": "Written with a first, that says a is less than or equal to seven, which is our first condition on a.", "op": "rewrite", "result": "a ≤ 7", "final": true}
+    ]},
+    {"type": "steps", "title": "Hard: the second inequality", "start": "4 < −2a + 16", "beats": [
+      {"say": "Now substitute y equals four into the second inequality. We get four is less than negative two a plus sixteen."},
+      {"say": "Subtract sixteen from both sides, to move the plain number away from the x term. Four minus sixteen is negative twelve.", "op": "− 16 on both sides", "result": "−12 < −2a"},
+      {"say": "Divide both sides by negative two, and flip the sign. Negative twelve divided by negative two is six, so six is greater than a.", "op": "÷ (−2) and flip the sign", "result": "6 > a"},
+      {"say": "Written with a first, that says a is less than six, which is our second condition on a.", "op": "rewrite", "result": "a < 6", "final": true}
+    ]},
+    {"type": "cards", "title": "Combine the conditions", "beats": [
+      {"say": "Both conditions must hold. a must be at most seven, and a must be less than six. The stricter condition wins, so a is less than six. The greatest integer less than six is five.", "card": {"text": "a ≤ 7 and a < 6, so a = 5", "sub": "The greatest integer"}}
+    ]},
+    {"type": "check", "title": "Check a equals five and six", "beats": [
+      {"say": "Check a equals five. In the first inequality, four is at least two, which is true, and in the second, four is less than six, which is true. Now check a equals six. Four is less than four is false, so six does not work.", "lines": ["a = 5: 4 ≥ 2 and 4 < 6, true", "a = 6: 4 < 4 is false"], "verdict": "The greatest value is a = 5."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. In context problems, round down for the greatest whole number, and round up for the least whole number.", "item": "Greatest rounds down, least rounds up"},
+      {"say": "In a compound inequality, do every step to all three parts, and flip both signs when you divide by a negative.", "item": "Compound: all three parts, flip both signs"},
+      {"say": "For a system, substitute and solve each inequality, then keep what satisfies both. In the next video, we look at common traps and the fast way with Desmos.", "item": "A system needs both conditions"}
+    ]}
+  ]
+}

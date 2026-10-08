@@ -1,0 +1,64 @@
+{
+  "id": "m-alg-linfunc_v3",
+  "skill": "m-alg-linfunc",
+  "part": 3,
+  "title": "Linear Functions, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes that students make with linear functions, then a fast way to find a line from two points using Desmos.", "card": {"text": "Five traps, then Desmos"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason that students fall for it.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: do not flip the slope", "beats": [
+      {"say": "Trap one. Slope is rise over run, the change in y over the change in x. A common mistake is to put the change in x on top.", "wrong": "m = frac(6 − 2,17 − 5)", "wrong_why": "Run over rise is upside down"},
+      {"say": "The change in y goes on top. For the points two comma five and six comma seventeen, that is seventeen minus five over six minus two, which is three.", "right": "m = frac(17 − 5,6 − 2)", "right_why": "Rise over run"}
+    ]},
+    {"type": "compare", "title": "Trap 2: keep the same order", "beats": [
+      {"say": "Trap two. If you start the top subtraction with the second point, you must start the bottom subtraction with the second point as well. Mixing the order flips the sign of the answer.", "wrong": "m = frac(17 − 5,2 − 6)", "wrong_why": "The order does not match"},
+      {"say": "Use the same order on top and on bottom. Seventeen minus five is twelve, and six minus two is four, so the slope is positive three, not negative three.", "right": "m = frac(17 − 5,6 − 2)", "right_why": "Same order top and bottom"}
+    ]},
+    {"type": "compare", "title": "Trap 3: input versus output", "beats": [
+      {"say": "Trap three. Suppose f of x equals two x plus one, and the question asks for what x does f of x equal four. Students plug four in as the input.", "wrong": "answer: f(4) = 2(4) + 1 = 9", "wrong_why": "That puts 4 in as the input"},
+      {"say": "Here four is the output, so we set two x plus one equal to four and solve. Two x equals three, so x equals one point five.", "right": "2x + 1 = 4, so x = 1.5", "right_why": "Set the output equal to 4"}
+    ]},
+    {"type": "compare", "title": "Trap 4: a negative rate", "beats": [
+      {"say": "Trap four. Consider D of t equals nine hundred minus twenty-five t, the number of liters left in a tank after t minutes. Answer choices often call the twenty-five an increase.", "wrong": "slope: +25 per minute", "wrong_why": "The tank is not filling"},
+      {"say": "The slope is negative twenty-five. The amount decreases by twenty-five liters every minute, and nine hundred is the starting amount.", "right": "slope: −25 per minute", "right_why": "The amount decreases"}
+    ]},
+    {"type": "compare", "title": "Trap 5: intercept is not the rate", "beats": [
+      {"say": "Trap five. In C of n equals thirty-two plus five n, students sometimes say the cost per session is thirty-two dollars, because it is the first number they see.", "wrong": "rate: $32 per session", "wrong_why": "32 is a one-time amount"},
+      {"say": "The number that multiplies n is the rate. Each session costs five dollars. The thirty-two is a one-time base fee.", "right": "rate: $5 per session", "right_why": "The number multiplying n"}
+    ]},
+    {"type": "cards", "title": "The fast way: Desmos", "beats": [
+      {"say": "For two clean points, the slope formula plus one substitution is faster than typing. Desmos helps when numbers are messy, or when the question gives a table.", "card": {"text": "Use Desmos for messy numbers"}},
+      {"say": "Our example is the gym again. Three sessions cost forty-seven dollars, and eight sessions cost seventy-two dollars. We want the equation of the line.", "card": {"text": "(3, 47) and (8, 72)", "sub": "Find the line with regression"}}
+    ]},
+    {"type": "desmos", "title": "Line from two points", "beats": [
+      {"say": "We will enter the two points in a table and ask Desmos for the line that fits them.", "actions": ["hold: 2"]},
+      {"say": "Create a table with x values three and eight, and y values forty-seven and seventy-two. Each row appears as a point.", "actions": ["table: x_1 3 8; y_1 47 72"]},
+      {"say": "Type y sub one, a tilde, then m times x sub one plus b. Use the right arrow after each subscript to leave it.", "actions": ["type: y_1>~mx_1>+b"]},
+      {"say": "Desmos reports m equals five and b equals thirty-two. So the line is y equals five x plus thirty-two, matching what we found by hand.", "actions": ["hold: 4"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. The function f of x equals four x minus nine. Find f of negative two, and find the value of x for which f of x equals fifteen. Pause and try it first.", "card": {"text": "f(x) = 4x − 9", "sub": "Find f(−2), and x when f(x) = 15"}}
+    ]},
+    {"type": "steps", "title": "Practice: evaluate f(−2)", "start": "f(−2) = 4(−2) − 9", "beats": [
+      {"say": "Substitute negative two for x. Notice that this asks for an output, because the input is given."},
+      {"say": "Four times negative two is negative eight. So the expression becomes negative eight minus nine.", "op": "multiply", "result": "f(−2) = −8 − 9"},
+      {"say": "Negative eight minus nine is negative seventeen. So f of negative two equals negative seventeen.", "op": "subtract", "result": "f(−2) = −17", "final": true}
+    ]},
+    {"type": "steps", "title": "Practice: solve f(x) = 15", "start": "4x − 9 = 15", "beats": [
+      {"say": "Now the output is given as fifteen, so we set the expression equal to fifteen and solve for the input."},
+      {"say": "Add nine to both sides, so the plain number leaves the left side. Fifteen plus nine is twenty-four.", "op": "+ 9 on both sides", "result": "4x = 24"},
+      {"say": "Divide both sides by four. Twenty-four divided by four is six. So x equals six.", "op": "÷ 4 on both sides", "result": "x = 6", "final": true}
+    ]},
+    {"type": "check", "title": "Check the answers", "beats": [
+      {"say": "Check both. Four times negative two minus nine is negative seventeen. And four times six minus nine is fifteen. Both answers are correct.", "lines": ["4(−2) − 9 = −17", "4(6) − 9 = 15"], "verdict": "Both answers check out."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Slope is rise over run, with the same order on top and bottom, and the number that multiplies the input is the rate.", "item": "Rise over run, same order"},
+      {"say": "Evaluate when the input is given, and solve when the output is given. A negative rate means the amount decreases.", "item": "Input versus output"},
+      {"say": "Use Desmos regression when numbers are messy. In the next topic, we study linear equations in two variables.", "item": "Desmos regression for messy data"}
+    ]}
+  ]
+}

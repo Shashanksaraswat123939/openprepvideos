@@ -1,0 +1,9 @@
+moviepy==1.0.3
+imageio-ffmpeg
+numpy
+pillow
+sympy
+playwright
+edge-tts
+soundfile
+kokoro>=0.9.4

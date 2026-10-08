@@ -1,0 +1,51 @@
+{
+  "id": "m-alg-ineq_v1",
+  "skill": "m-alg-ineq",
+  "part": 1,
+  "title": "Linear Inequalities, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "Linear inequalities", "beats": [
+      {"say": "A linear inequality is like a linear equation, but it uses a less than, greater than, at most, or at least sign instead of an equals sign.", "card": {"text": "<  >  ≤  ≥ instead of ="}},
+      {"say": "Its solution is a range of values, not a single number. For example, every number greater than negative four is a solution of x is greater than negative four.", "card": {"text": "A range of values, not one number"}},
+      {"say": "On the SAT, you will solve inequalities, translate words like at most into symbols, and work with systems of inequalities, whose solutions are shaded regions.", "card": {"text": "Solve, translate, and use systems"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "Solve an inequality exactly as you would solve an equation, with one extra rule. Multiplying or dividing both sides by a negative number flips the inequality sign.", "item": "Negative multiply or divide flips the sign"},
+      {"say": "A compound inequality, such as negative five less than one minus three x, which is at most ten, is solved by doing the same step to all three parts at once.", "item": "Compound: same step on all three parts"},
+      {"say": "In context, the answer is often a whole number. Greatest number of boxes means round down, and least number of trips means round up.", "item": "Greatest rounds down, least rounds up"},
+      {"say": "A point is a solution to a system of inequalities only if it satisfies every inequality in the system, not just one of them.", "item": "A system solution satisfies every inequality"},
+      {"say": "On a graph, y greater than m x plus b is the region above the line, and y less than m x plus b is below. A dashed line means the boundary is not included.", "item": "Above or below the line; dashed excludes"}
+    ]},
+    {"type": "table", "title": "Words and symbols", "columns": ["Words", "Symbol"], "rows": [["at least, no less than, minimum", "≥"], ["at most, no more than, maximum", "≤"], ["more than, exceeds", ">"], ["fewer than, below", "<"]], "beats": [
+      {"say": "Translating words correctly is half the battle. At least, no less than, and minimum all mean greater than or equal to.", "reveal_row": 0},
+      {"say": "At most, no more than, and maximum all mean less than or equal to.", "reveal_row": 1},
+      {"say": "More than, and exceeds, mean strictly greater than, so the boundary value is not included.", "reveal_row": 2},
+      {"say": "Fewer than, and below, mean strictly less than, so again the boundary value is not included.", "reveal_row": 3}
+    ]},
+    {"type": "cards", "title": "Why the sign flips", "beats": [
+      {"say": "Why does multiplying by a negative flip the sign? Start with the true statement two is less than five. Multiply both sides by negative one, and you get negative two and negative five.", "card": {"text": "2 < 5  becomes  −2 ? −5"}},
+      {"say": "But negative two is actually greater than negative five, because it is further to the right on the number line. So the sign must flip, to stay true.", "card": {"text": "−2 > −5", "sub": "The sign flips"}}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. Solve five minus three x is less than seventeen. The unknown has a negative coefficient, so watch for the flip.", "card": {"text": "5 − 3x < 17", "sub": "Solve for x"}}
+    ]},
+    {"type": "steps", "title": "Easy: solve the inequality", "start": "5 − 3x < 17", "beats": [
+      {"say": "Our plan is to isolate x. First move the plain number, and then divide by the coefficient of x, watching the sign."},
+      {"say": "Subtract five from both sides. Seventeen minus five is twelve. Subtracting never flips the sign.", "op": "− 5 on both sides", "strike": ["5"], "result": "−3x < 12"},
+      {"say": "Now divide both sides by negative three. This is the step that flips the sign. Twelve divided by negative three is negative four, so x is greater than negative four.", "op": "÷ (−3) and flip the sign", "result": "x > −4", "final": true}
+    ]},
+    {"type": "figure", "title": "The solution on a number line", "kind": "number_line", "data": {"min": -8, "max": 4, "step": 1}, "beats": [
+      {"say": "Let us picture the answer. The boundary value is negative four. We draw an open circle there, because the inequality is strict, and negative four itself is not a solution.", "point": {"at": -4, "style": "open"}},
+      {"say": "Every number greater than negative four is a solution, so we shade the number line to the right of the circle.", "ray": {"from": -4, "dir": "right", "style": "open"}, "label": "x > −4"}
+    ]},
+    {"type": "check", "title": "Check with test values", "beats": [
+      {"say": "Test a value inside the range, x equals zero. Five minus zero is five, which is less than seventeen. True. Now test a value outside, x equals negative five. Five plus fifteen is twenty, which is not less than seventeen. False.", "lines": ["x = 0: 5 < 17, true", "x = −5: 20 < 17, false"], "verdict": "x > −4 is correct."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. An inequality has a range of solutions. Solve it like an equation, but flip the sign when you multiply or divide by a negative number.", "item": "Flip the sign for a negative"},
+      {"say": "At least means greater than or equal to, at most means less than or equal to, and strict signs exclude the boundary.", "item": "Translate words carefully"},
+      {"say": "Check with one value inside the range and one outside. In the next video, we work through medium and hard problems.", "item": "Check one inside value and one outside"}
+    ]}
+  ]
+}

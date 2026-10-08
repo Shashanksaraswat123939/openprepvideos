@@ -1,0 +1,75 @@
+{
+  "id": "m-alg-systems_v3",
+  "skill": "m-alg-systems",
+  "part": 3,
+  "title": "Systems of Two Linear Equations, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes students make with systems of equations, and then use Desmos to solve a system and to find an unknown constant with a slider.", "card": {"text": "Five traps, then Desmos"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: answer what is asked", "beats": [
+      {"say": "Trap one. Suppose the solution is x equals five and y equals two, and the question asks for x plus y. Students stop after finding one variable, or report the wrong one.", "wrong": "answer: x = 5", "wrong_why": "That is not x + y"},
+      {"say": "Finish the job. The question asks for x plus y, which is five plus two. So the answer is seven.", "right": "answer: x + y = 7", "right_why": "Compute what was asked"}
+    ]},
+    {"type": "compare", "title": "Trap 2: subtract every term", "beats": [
+      {"say": "Trap two. When you subtract one equation from another, you subtract every term, including the signs. Students often forget to flip the sign of the second term in the parentheses.", "wrong": "(3x + y) − (3x − y) = y", "wrong_why": "The sign on −y did not flip"},
+      {"say": "Subtracting negative y is the same as adding y. So y plus y is two y. The x terms cancel, and the result is two y.", "right": "(3x + y) − (3x − y) = 2y", "right_why": "Subtracting −y adds y"}
+    ]},
+    {"type": "compare", "title": "Trap 3: none or infinitely many", "beats": [
+      {"say": "Trap three. Two lines with the same slope do not always give infinitely many solutions. Students see matching slopes and stop checking the constants.", "wrong": "same slope, so infinitely many", "wrong_why": "The constants were not checked"},
+      {"say": "Matching slopes with different constants give parallel lines, which means no solution. Infinitely many solutions need the constants to match too.", "right": "same slope, constants differ: none", "right_why": "Parallel lines never meet"}
+    ]}
+    ,
+    {"type": "compare", "title": "Trap 4: swapped totals", "beats": [
+      {"say": "Trap four. In a ticket problem, the count equation uses one as each coefficient and equals the number of tickets. The money equation uses the prices and equals the dollars. Students sometimes swap the two totals.", "wrong": "a + c = 1400 and 12a + 7c = 150", "wrong_why": "The totals are swapped"},
+      {"say": "The count of tickets, one hundred fifty, goes with the equation of ones. The total money, fourteen hundred, goes with the equation of prices.", "right": "a + c = 150 and 12a + 7c = 1400", "right_why": "Counts with counts, money with money"}
+    ]},
+    {"type": "compare", "title": "Trap 5: scale both sides", "beats": [
+      {"say": "Trap five. To make the c terms match, we multiply the first equation by seven. Students multiply only one side of the equation, which changes the equation and breaks the balance.", "wrong": "7(a + c) = 150", "wrong_why": "Only the left side was scaled"},
+      {"say": "Multiply both sides by seven. The right side becomes seven times one hundred fifty, which is one thousand fifty.", "right": "7(a + c) = 7(150) = 1050", "right_why": "Scale both sides"}
+    ]},
+    {"type": "cards", "title": "The fast way: Desmos", "beats": [
+      {"say": "Desmos is often fastest for systems, especially with decimals. You type both equations exactly as given, and click the crossing point.", "card": {"text": "Type both equations, click the crossing"}},
+      {"say": "Our example has decimals. Zero point five x plus zero point two five y equals four, and x minus y equals negative one. By hand, the decimals would slow us down.", "card": {"text": "0.5x + 0.25y = 4  and  x − y = −1", "sub": "Solve the system"}}
+    ]},
+    {"type": "desmos", "title": "Solve a system with Desmos", "beats": [
+      {"say": "Open a fresh graph. We will type both equations exactly as they are written.", "actions": ["hold: 2"]},
+      {"say": "Type zero point five x plus zero point two five y equals four. Desmos draws the line without any rearranging.", "actions": ["type: 0.5x+0.25y=4"]},
+      {"say": "Now type x minus y equals negative one. A second line appears.", "actions": ["type: x-y=-1"]},
+      {"say": "Click where the lines cross, and then click the grey dot. Desmos shows five comma six, so x is five and y is six.", "actions": ["bounds: left=-4 right=12 bottom=-4 top=14", "click: 5,6"]},
+      {"say": "Check in the first equation. Zero point five times five is two point five, and a quarter of six is one point five. Together that is four. If the question asked for x plus y, the answer would be eleven.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Desmos for unknown constants", "beats": [
+      {"say": "Desmos can also find constants. In the system six x minus nine y equals fifteen, and four x plus k y equals ten, we want the value of k that makes the lines the same line.", "card": {"text": "6x − 9y = 15 and 4x + ky = 10", "sub": "Find k for infinitely many solutions"}}
+    ]},
+    {"type": "desmos", "title": "A slider for k", "beats": [
+      {"say": "We graph both lines, and use a slider for k, then drag until one line lies exactly on top of the other.", "actions": ["hold: 2"]},
+      {"say": "Type six x minus nine y equals fifteen. Desmos draws the first line.", "actions": ["type: 6x-9y=15"]},
+      {"say": "Type four x plus k y equals ten. Desmos notices the new letter k and creates a slider for it.", "actions": ["type: 4x+ky=10"]},
+      {"say": "Drag the slider for k from zero down to negative ten. The second line rotates, and when k reaches negative six, it lands exactly on top of the first line.", "actions": ["bounds: left=-6 right=8 bottom=-6 top=6", "slider: k from 0 to -10 step 1"]},
+      {"say": "The two lines coincide at k equals negative six, which matches what we found by algebra. Overlapping lines mean infinitely many solutions.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. Solve x plus y equals ten, and three x minus y equals six. Pause the video, try it, and then watch the solution.", "card": {"text": "x + y = 10 and 3x − y = 6", "sub": "Pause and try it first"}}
+    ]},
+    {"type": "steps", "title": "Practice: eliminate y", "start": "(x + y) + (3x − y) = 10 + 6", "beats": [
+      {"say": "The y terms are y and negative y, which are opposites, so we add the equations. Every term is added, including the constants."},
+      {"say": "On the left, y plus negative y is zero, and x plus three x is four x. On the right, ten plus six is sixteen.", "op": "the y terms cancel", "result": "4x = 16"},
+      {"say": "Divide both sides by four. Sixteen divided by four is four. So x equals four.", "op": "÷ 4 on both sides", "result": "x = 4", "final": true}
+    ]},
+    {"type": "steps", "title": "Practice: find y", "start": "4 + y = 10", "beats": [
+      {"say": "Substitute x equals four into the first equation. That gives four plus y equals ten."},
+      {"say": "Subtract four from both sides. Ten minus four is six. So y equals six, and the solution is four comma six.", "op": "− 4 on both sides", "result": "y = 6", "final": true}
+    ]},
+    {"type": "check", "title": "Check in the other equation", "beats": [
+      {"say": "Check in the second equation. Three times four is twelve, and twelve minus six is six, which matches the right side.", "lines": ["3(4) − 6 = 12 − 6", "12 − 6 = 6"], "verdict": "The solution (4, 6) is correct."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Answer the quantity the question asks for, and subtract every term of an equation, with the signs.", "item": "Answer what is asked, subtract every term"},
+      {"say": "Matching slopes with different constants mean no solution. Scale both sides of an equation, and match totals to the right equations.", "item": "Scale both sides, match the totals"},
+      {"say": "Use Desmos to solve a system quickly, or a slider to find a constant. In the next topic, we study linear inequalities.", "item": "Desmos solves systems and finds constants"}
+    ]}
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "id": "m-psda-ratios_v3",
+  "skill": "m-psda-ratios",
+  "part": 3,
+  "title": "Ratios, Rates, Proportions and Units, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes students make with ratios and rates, and then use Desmos to compute a unit chain in one line, and to solve a ratio change problem.", "card": {"text": "Five traps, then Desmos"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: a flipped proportion", "beats": [
+      {"say": "Trap one. For four cups of flour for every three cups of sugar, with nine cups of sugar, a student writes the second ratio upside down.", "wrong": "frac(4,3) = frac(9,x)", "wrong_why": "Flour on top, then sugar on top"},
+      {"say": "Flour must be on top on both sides. So the proportion is four over three equals x over nine. Cross-multiplying gives x equals twelve.", "right": "frac(4,3) = frac(x,9)", "right_why": "Same order on both sides"}
+    ]},
+    {"type": "compare", "title": "Trap 2: converting backwards", "beats": [
+      {"say": "Trap two. Going from kilograms to grams should make the number bigger, because grams are smaller units. A student divides instead of multiplying.", "wrong": "3 kg = 3 ÷ 1000 = 0.003 g", "wrong_why": "The number got smaller"},
+      {"say": "One kilogram is one thousand grams, so multiply. Three kilograms is three thousand grams. Always ask whether your answer should be bigger or smaller.", "right": "3 kg = 3 × 1000 = 3000 g", "right_why": "Smaller unit: bigger number"}
+    ]},
+    {"type": "compare", "title": "Trap 3: adding times", "beats": [
+      {"say": "Trap three. One machine finishes a job in two hours, and another in three hours. Students add the times and say that together they take five hours.", "wrong": "together: 2 + 3 = 5 hours", "wrong_why": "Together must be faster"},
+      {"say": "Add the rates instead. One half plus one third is five sixths of a job per hour, so the job takes six fifths of an hour, which is one point two hours.", "right": "frac(1,2) + frac(1,3) = frac(5,6)", "right_why": "Rates add; time is 1.2 hours"}
+    ]},
+    {"type": "compare", "title": "Trap 4: parts and totals", "beats": [
+      {"say": "Trap four. In a ratio of seven to three with fifty items, students use the ratio numbers as the actual quantities.", "wrong": "7 : 3 with 50 items: 7 and 3", "wrong_why": "Those are ratio parts"},
+      {"say": "Seven plus three is ten parts, so each part is five items. The actual quantities are thirty-five and fifteen.", "right": "each part is 5: 35 and 15", "right_why": "50 ÷ 10 = 5 per part"}
+    ]},
+    {"type": "compare", "title": "Trap 5: the word per", "beats": [
+      {"say": "Trap five. Watch for phrases like per coat or round trip. A wall of twenty square meters with two coats of paint needs twice the paint.", "wrong": "2 coats: 20 m^2 of paint", "wrong_why": "The second coat was ignored"},
+      {"say": "Each coat covers twenty square meters, so two coats need forty square meters of paint.", "right": "2 coats: 40 m^2 of paint", "right_why": "Multiply by the number of coats"}
+    ]},
+    {"type": "cards", "title": "The fast way: Desmos", "beats": [
+      {"say": "For a chain of conversions, type the whole product into Desmos in one line. Desmos computes it without any rounding along the way.", "card": {"text": "Type the whole chain in one line"}},
+      {"say": "Our example is the leaky faucet. Six over fifteen, times sixty, times sixty, times twenty-four, divided by one thousand.", "card": {"text": "6/15 × 60 × 60 × 24 ÷ 1000"}}
+    ]},
+    {"type": "desmos", "title": "A unit chain in one line", "beats": [
+      {"say": "Open a fresh graph. We will type the whole chain into the first row.", "actions": ["hold: 2"]},
+      {"say": "Type six, a slash, and fifteen, then press the right arrow to leave the fraction. Then type times sixty times sixty times twenty-four, divided by one thousand.", "actions": ["type: 6/15>*60*60*24/1000"]},
+      {"say": "Desmos shows the answer right below the expression, thirty-four point five six. That is the number of liters per day, found with no rounding.", "actions": ["hold: 4"]}
+    ]},
+    {"type": "cards", "title": "A ratio change problem", "beats": [
+      {"say": "Desmos also helps with ratio change problems. The ratio of red to blue is seven to four. After adding six blue, the ratio becomes seven to five. How many red are there?", "card": {"text": "7k / (4k + 6) = 7/5", "sub": "Find k, then the red count 7k"}}
+    ]},
+    {"type": "desmos", "title": "Solve with two curves", "beats": [
+      {"say": "Let red be seven k and blue be four k. We graph the new ratio as a curve, and the target ratio as a line.", "actions": ["hold: 2"]},
+      {"say": "Type y equals seven x over four x plus six. This is the ratio after adding six blue, as a function of k, which we are calling x.", "actions": ["type: y=7x/4x+6"]},
+      {"say": "Now type y equals seven over five, which is the target ratio, one point four.", "actions": ["type: y=7/5"]},
+      {"say": "Click the crossing point. It is at x equals six, so k equals six. The red count is seven times six, which is forty-two.", "actions": ["bounds: left=-2 right=20 bottom=-1 top=3", "click: 6,1.4"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. A recipe uses three cups of flour for every two cups of sugar. With twelve cups of flour, how many cups of sugar are needed? Pause the video, try it, and then watch the solution.", "card": {"text": "3 flour : 2 sugar", "sub": "12 cups of flour. Sugar needed?"}}
+    ]},
+    {"type": "steps", "title": "Practice: the proportion", "start": "frac(3,2) = frac(12,x)", "beats": [
+      {"say": "Write a proportion with flour on top on both sides. Three over two equals twelve over x, where x is the cups of sugar."},
+      {"say": "Cross-multiply, which means multiplying diagonally. Three times x equals two times twelve, which is twenty-four.", "op": "cross-multiply", "result": "3x = 24"},
+      {"say": "Divide both sides by three. Twenty-four divided by three is eight. So eight cups of sugar are needed.", "op": "÷ 3 on both sides", "result": "x = 8", "final": true}
+    ]},
+    {"type": "check", "title": "Check the ratio", "beats": [
+      {"say": "Check that the ratio is preserved. Twelve cups of flour to eight cups of sugar simplifies to three to two, which matches the recipe.", "lines": ["frac(12,8) = frac(3,2)"], "verdict": "The ratio is preserved."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Keep the same order in a proportion, and ask whether a converted number should get bigger or smaller.", "item": "Same order; check bigger or smaller"},
+      {"say": "Add rates, not times, and turn ratio parts into actual amounts by finding the size of one part.", "item": "Add rates; find the value of one part"},
+      {"say": "Use Desmos to compute long chains in one line. In the next topic, we study percentages.", "item": "Desmos computes long chains"}
+    ]}
+  ]
+}

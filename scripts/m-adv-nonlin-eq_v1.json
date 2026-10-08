@@ -1,0 +1,46 @@
+{
+  "id": "m-adv-nonlin-eq_v1",
+  "skill": "m-adv-nonlin-eq",
+  "part": 1,
+  "title": "Nonlinear Equations and Systems, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Advanced Math",
+  "scenes": [
+    {"type": "cards", "title": "Nonlinear equations", "beats": [
+      {"say": "A nonlinear equation is one where the variable is squared, under a root, in a denominator, or otherwise not just multiplied by a number.", "card": {"text": "x is squared, rooted, or in a denominator"}},
+      {"say": "On the SAT, this mostly means quadratic equations with an x squared term, radical equations with a square root, and systems where a line meets a curve.", "card": {"text": "Quadratics, radicals, line meets curve"}},
+      {"say": "You will be asked for the solutions, for the number of solutions, or for a constant that makes something true.", "card": {"text": "Solutions, how many, or find the constant"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "A quadratic equation can have zero, one, or two real solutions. On a graph, these are the places where the parabola crosses the x axis.", "item": "Zero, one, or two real solutions"},
+      {"say": "If a product equals zero, at least one factor equals zero. That is why factoring works. If x minus a, times x minus b, equals zero, then x equals a or x equals b.", "item": "Zero product: one factor must be zero"},
+      {"say": "The discriminant, b squared minus four a c, tells you how many real solutions there are, without solving the equation.", "item": "The discriminant counts the solutions"},
+      {"say": "Squaring both sides can create extraneous solutions, which solve the squared equation but not the original one. Always check them.", "item": "Squaring can create false solutions"},
+      {"say": "To solve a line and a parabola together, set the two expressions equal. The number of intersection points equals the number of solutions.", "item": "Line and parabola: set them equal"}
+    ]},
+    {"type": "cards", "title": "The quadratic formula", "beats": [
+      {"say": "For a x squared plus b x plus c equals zero, the solutions are given by the quadratic formula. It always works, even when factoring is hard.", "card": {"text": "x = frac(−b ± sqrt(b^2 − 4ac),2a)", "sub": "The quadratic formula"}},
+      {"say": "The part under the square root, b squared minus four a c, is the discriminant. Its sign decides how many real solutions exist.", "card": {"text": "Discriminant = b^2 − 4ac"}}
+    ]},
+    {"type": "table", "title": "The discriminant", "columns": ["Discriminant", "Real solutions"], "rows": [["positive", "two"], ["zero", "exactly one"], ["negative", "none"]], "beats": [
+      {"say": "If the discriminant is positive, the square root is a real number, and the plus and minus give two different solutions.", "reveal_row": 0},
+      {"say": "If the discriminant is zero, the plus and minus give the same value, so there is exactly one solution, and the parabola just touches the x axis.", "reveal_row": 1},
+      {"say": "If the discriminant is negative, there is no real square root, so there are no real solutions, and the parabola never reaches the x axis.", "reveal_row": 2}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. Solve x squared minus x minus twelve equals zero. We will factor, because the numbers are clean.", "card": {"text": "x^2 − x − 12 = 0", "sub": "Solve for x"}}
+    ]},
+    {"type": "steps", "title": "Easy: factor and solve", "start": "x^2 − x − 12 = 0", "beats": [
+      {"say": "We look for two numbers that multiply to negative twelve and add to negative one. Those numbers are negative four and three, since negative four times three is negative twelve, and their sum is negative one."},
+      {"say": "Write the factors using those numbers. The quadratic becomes x minus four, times x plus three, equal to zero.", "op": "factor", "result": "(x − 4)(x + 3) = 0"},
+      {"say": "A product is zero only if one factor is zero. So either x minus four is zero, or x plus three is zero. That gives x equals four, or x equals negative three.", "op": "zero product property", "result": "x = 4 or x = −3", "final": true}
+    ]},
+    {"type": "check", "title": "Check both solutions", "beats": [
+      {"say": "Check x equals four. Sixteen minus four minus twelve is zero. Now check x equals negative three. Nine plus three minus twelve is also zero. Both solutions work.", "lines": ["4^2 − 4 − 12 = 0", "(−3)^2 + 3 − 12 = 0"], "verdict": "Both solutions check out."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. A quadratic can have zero, one, or two real solutions, which are the x-intercepts of its parabola.", "item": "Zero, one, or two real solutions"},
+      {"say": "Factor and set each factor to zero, or use the quadratic formula. The discriminant tells you how many solutions to expect.", "item": "Factor, or use the formula"},
+      {"say": "Always check your solutions. In the next video, we work through a medium problem and a hard problem.", "item": "Always check your solutions"}
+    ]}
+  ]
+}

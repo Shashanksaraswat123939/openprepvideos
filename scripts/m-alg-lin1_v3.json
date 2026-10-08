@@ -1,0 +1,62 @@
+{
+  "id": "m-alg-lin1_v3",
+  "skill": "m-alg-lin1",
+  "part": 3,
+  "title": "Linear Equations in One Variable, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at the five mistakes students make most often with linear equations, and then at a fast way to solve long equations using Desmos.", "card": {"text": "Five common traps, then Desmos"}},
+      {"say": "For each trap, we will see the wrong line first, and then the correct line, and we will explain why the mistake is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: distribute to every term", "beats": [
+      {"say": "Trap one. When you distribute, you must multiply every term inside the parentheses. A common mistake is to multiply only the first term and leave the second one alone.", "wrong": "4(x + 6) = 4x + 6", "wrong_why": "The 6 was left out"},
+      {"say": "The four has to multiply the six as well. Four times six is twenty-four, so the correct result is four x plus twenty-four.", "right": "4(x + 6) = 4x + 24", "right_why": "Multiply every term"}
+    ]},
+    {"type": "compare", "title": "Trap 2: watch the minus sign", "beats": [
+      {"say": "Trap two. A subtraction in front of parentheses flips the sign of every term inside. In ten minus two times the quantity x minus four, students often forget to flip the second term.", "wrong": "10 − 2(x − 4) = 10 − 2x − 8", "wrong_why": "The sign of the 8 did not flip"},
+      {"say": "Negative two times negative four is positive eight. So the correct result is ten minus two x plus eight.", "right": "10 − 2(x − 4) = 10 − 2x + 8", "right_why": "Negative times negative is positive"}
+    ]},
+    {"type": "compare", "title": "Trap 3: clear every fraction term", "beats": [
+      {"say": "Trap three. Consider x over three plus two equals five. When we multiply by three to clear the fraction, students often multiply only the fraction and forget the plain number two.", "wrong": "× 3 gives x + 2 = 15", "wrong_why": "Only two terms were multiplied"},
+      {"say": "Multiplying by three must be done to every term on both sides, including the two. Three times two is six, so the correct line is x plus six equals fifteen.", "right": "× 3 gives x + 6 = 15", "right_why": "Multiply every term"}
+    ]},
+    {"type": "compare", "title": "Trap 4: none or infinitely many", "beats": [
+      {"say": "Trap four. Take three x plus two equals three x plus seven. The x terms match, so students rush to say there are infinitely many solutions.", "wrong": "3x + 2 = 3x + 7: infinitely many", "wrong_why": "The constants are different"},
+      {"say": "Matching x terms with different constants gives two plus nothing equal to seven plus nothing, which is false. So there is no solution. Infinitely many solutions need the constants to match too.", "right": "3x + 2 = 3x + 7: no solution", "right_why": "2 = 7 is never true"}
+    ]},
+    {"type": "compare", "title": "Trap 5: answer the question asked", "beats": [
+      {"say": "Trap five. Suppose three x plus two equals seventeen, and the question asks for the value of two x minus one. Students solve for x and then stop.", "wrong": "answer: x = 5", "wrong_why": "That is not what was asked"},
+      {"say": "Solving gives x equals five, but the question wants two x minus one. Two times five minus one is nine, so the answer is nine.", "right": "answer: 2x − 1 = 9", "right_why": "Compute the asked quantity"}
+    ]},
+    {"type": "cards", "title": "The fast way: Desmos", "beats": [
+      {"say": "For one-step and two-step equations, algebra is faster than typing. Desmos earns its place when the equation is long, or has decimals or fractions on both sides.", "card": {"text": "Use Desmos for long equations"}},
+      {"say": "Our example is zero point four x plus one point five equals zero point one five x plus four. Doing this by hand means working with decimals, which is easy to get wrong.", "card": {"text": "0.4x + 1.5 = 0.15x + 4", "sub": "Solve for x"}}
+    ]},
+    {"type": "desmos", "title": "Solve by graphing both sides", "beats": [
+      {"say": "The method is simple. Graph the left side as one line, graph the right side as another line, and the x coordinate of the crossing is the solution.", "actions": ["hold: 2"]},
+      {"say": "Type y equals zero point four x plus one point five, the left side of the equation.", "actions": ["type: y=0.4x+1.5"]},
+      {"say": "Now type y equals zero point one five x plus four, the right side of the equation.", "actions": ["type: y=0.15x+4"]},
+      {"say": "Click where the lines cross, and then click the grey dot. Desmos shows ten comma five point five, so x equals ten.", "actions": ["bounds: left=-4 right=24 bottom=-2 top=12", "click: 10,5.5"]},
+      {"say": "If the two lines were parallel, there would be no solution. If Desmos drew one line on top of the other, there would be infinitely many solutions.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. Solve two times the quantity x minus three, plus five, equals three x minus four. Pause the video, try it yourself, and then watch the solution.", "card": {"text": "2(x − 3) + 5 = 3x − 4", "sub": "Pause and try it first"}}
+    ]},
+    {"type": "steps", "title": "Practice solution", "start": "2(x − 3) + 5 = 3x − 4", "beats": [
+      {"say": "Our plan is to distribute first, combine like terms, collect the x terms on one side, and then isolate x."},
+      {"say": "Distribute the two across the parentheses. Two times x is two x, and two times negative three is negative six.", "op": "distribute the 2", "result": "2x − 6 + 5 = 3x − 4"},
+      {"say": "Combine the plain numbers on the left. Negative six plus five is negative one.", "op": "combine like terms", "result": "2x − 1 = 3x − 4"},
+      {"say": "Subtract two x from both sides, so that only one x term remains.", "op": "− 2x on both sides", "result": "−1 = x − 4"},
+      {"say": "Add four to both sides. Negative one plus four is three, so x equals three.", "op": "+ 4 on both sides", "result": "3 = x", "final": true}
+    ]},
+    {"type": "check", "title": "Check the answer", "beats": [
+      {"say": "Check with x equal to three. On the left, two times zero plus five is five. On the right, three times three minus four is also five. Both sides match.", "lines": ["2(3 − 3) + 5 = 5", "3(3) − 4 = 5"], "verdict": "Both sides equal 5. Correct."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Distribute to every term, flip every sign after a minus, and multiply every term when clearing fractions.", "item": "Distribute and clear every term"},
+      {"say": "Matching x terms means none or infinitely many, depending on the constants. And always answer the quantity the question asks for.", "item": "Compare constants, answer what is asked"},
+      {"say": "Use Desmos for long equations with decimals or fractions. In the next topic, we study linear functions.", "item": "Desmos for long equations"}
+    ]}
+  ]
+}

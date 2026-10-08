@@ -1,0 +1,50 @@
+{
+  "id": "m-alg-systems_v2",
+  "skill": "m-alg-systems",
+  "part": 2,
+  "title": "Systems of Two Linear Equations, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we solved a system by elimination, and we saw that a system can have one solution, no solution, or infinitely many solutions.", "card": {"text": "One, none, or infinitely many"}},
+      {"say": "In this video, we build a system from a word problem, and then find constants that make a system have infinitely many solutions.", "card": {"text": "Today: word problem, infinite solutions"}}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. A school sold one hundred fifty tickets to a play. Adult tickets cost twelve dollars and child tickets cost seven dollars, and total sales were fourteen hundred dollars. How many adult tickets were sold?", "card": {"text": "a + c = 150 and 12a + 7c = 1400", "sub": "How many adult tickets?"}},
+      {"say": "The count equation uses one as each coefficient, because every ticket counts once. The money equation uses the prices. Now we solve the system by elimination.", "card": {"text": "Count equation, then money equation"}}
+    ]},
+    {"type": "steps", "title": "Medium: make the c terms match", "start": "7(a + c) = 7(150)", "beats": [
+      {"say": "The c terms are c and seven c, so they do not match yet. Multiply the whole first equation by seven, on both sides, so that both equations have seven c."},
+      {"say": "Distribute the seven on the left, and multiply on the right. Seven times one hundred fifty is one thousand fifty.", "op": "multiply both sides", "result": "7a + 7c = 1050"},
+      {"say": "Now subtract this new equation from the money equation. Seven c minus seven c is zero, and twelve a minus seven a is five a.", "op": "subtract the equations", "result": "(12a + 7c) − (7a + 7c) = 1400 − 1050"},
+      {"say": "Simplify. The c terms cancel, and fourteen hundred minus one thousand fifty is three hundred fifty.", "op": "simplify", "result": "5a = 350"},
+      {"say": "Divide both sides by five. Three hundred fifty divided by five is seventy. So seventy adult tickets were sold.", "op": "÷ 5 on both sides", "result": "a = 70", "final": true}
+    ]},
+    {"type": "check", "title": "Check both facts", "beats": [
+      {"say": "With seventy adult tickets, the count equation gives eighty child tickets. Check the money. Twelve times seventy is eight hundred forty, and seven times eighty is five hundred sixty. Together that is fourteen hundred.", "lines": ["70 + 80 = 150", "12(70) + 7(80) = 840 + 560", "840 + 560 = 1400"], "verdict": "Both facts are satisfied."}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. In the system six x minus nine y equals fifteen, and four x plus k y equals c, the letters k and c are constants. If the system has infinitely many solutions, what is k plus c?", "card": {"text": "6x − 9y = 15 and 4x + ky = c", "sub": "Infinitely many solutions. Find k + c."}},
+      {"say": "Infinitely many solutions means the two equations describe the same line. So the second equation must be a multiple of the first. We find the multiplier from the x terms.", "card": {"text": "Second equation = multiple of the first"}}
+    ]},
+    {"type": "steps", "title": "Hard: the multiplier", "start": "frac(4,6) = frac(2,3)", "beats": [
+      {"say": "The x coefficients are four in the second equation and six in the first. The multiplier is four over six, which simplifies to two thirds."},
+      {"say": "So every coefficient of the first equation, including the constant, must be multiplied by two thirds to give the second equation.", "op": "the multiplier is 2/3", "result": "6 × frac(2,3) = 4", "final": true}
+    ]},
+    {"type": "steps", "title": "Hard: find k and c", "start": "k = −9 × frac(2,3)", "beats": [
+      {"say": "Apply the multiplier to the y coefficient. Negative nine times two thirds is negative six. So k equals negative six."},
+      {"say": "The y coefficient of the second equation must be negative six, so that the whole equation is two thirds of the first one.", "op": "multiply", "result": "k = −6"},
+      {"say": "Now apply the multiplier to the constant. Fifteen times two thirds is ten, so c equals ten.", "op": "constant: 15 × 2/3", "result": "c = 15 × frac(2,3)"},
+      {"say": "Fifteen divided by three is five, and five times two is ten, so the constant of the second equation is ten.", "op": "multiply", "result": "c = 10"},
+      {"say": "Add them together. Negative six plus ten is four. So k plus c equals four.", "op": "add", "result": "k + c = 4", "final": true}
+    ]},
+    {"type": "check", "title": "Check the lines match", "beats": [
+      {"say": "Check that the second equation is really the same line. Multiplying the first equation by two thirds gives four x minus six y equals ten. With k equal to negative six and c equal to ten, that is exactly the second equation.", "lines": ["frac(2,3)(6x − 9y) = 4x − 6y", "frac(2,3)(15) = 10"], "verdict": "The second equation is 4x − 6y = 10."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. In a word problem, the count equation uses one as each coefficient, and the money equation uses the prices.", "item": "Count equation and money equation"},
+      {"say": "For elimination, multiply an entire equation, both sides, until one variable matches.", "item": "Scale the whole equation"},
+      {"say": "For infinitely many solutions, find the multiplier and apply it to every coefficient and the constant. In the next video, we look at common traps and the fast way with Desmos.", "item": "Infinite: one equation is a multiple"}
+    ]}
+  ]
+}

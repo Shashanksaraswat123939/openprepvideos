@@ -1,0 +1,76 @@
+{
+  "id": "m-adv-nonlin-eq_v3",
+  "skill": "m-adv-nonlin-eq",
+  "part": 3,
+  "title": "Nonlinear Equations and Systems, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Advanced Math",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes students make with nonlinear equations, and then use Desmos to find solutions, count the solutions of a system, and find a constant with a slider.", "card": {"text": "Five traps, then Desmos"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: the sign of a root", "beats": [
+      {"say": "Trap one. When you read solutions from factors, the sign flips. The factor x plus five equals zero when x is negative five. Students read the number as it appears.", "wrong": "(x + 5)(x − 2) = 0: x = 5 or 2", "wrong_why": "x + 5 = 0 gives −5"},
+      {"say": "Set each factor equal to zero and solve. x plus five equals zero gives x equals negative five, and x minus two equals zero gives x equals two.", "right": "x = −5 or x = 2", "right_why": "Solve each factor equal to 0"}
+    ]},
+    {"type": "compare", "title": "Trap 2: the negative root", "beats": [
+      {"say": "Trap two. The equation x squared equals twenty-five has two solutions. Students take the square root and forget the negative one.", "wrong": "x^2 = 25 gives x = 5", "wrong_why": "The negative root is missing"},
+      {"say": "Both five and negative five square to twenty-five. Unless the question restricts x to be positive, both are solutions.", "right": "x = 5 or x = −5", "right_why": "Two roots unless restricted"}
+    ]},
+    {"type": "compare", "title": "Trap 3: unchecked radicals", "beats": [
+      {"say": "Trap three. After squaring, the radical equation gave x equals two and x equals nine. Students report both without checking.", "wrong": "x = 2 and x = 9 both work", "wrong_why": "No check was done"},
+      {"say": "Substituting x equals two gives a square root of nine on the left, which is three, and negative three on the right. That fails. Only nine works.", "right": "only x = 9 works", "right_why": "x = 2 is extraneous"}
+    ]},
+    {"type": "compare", "title": "Trap 4: the quantity asked", "beats": [
+      {"say": "Trap four. In the hard problem, k squared equals sixty-four gives k equals plus or minus eight. The question asked for the positive value of k, but a student lists both.", "wrong": "k = ±8", "wrong_why": "Only the positive value was asked"},
+      {"say": "Always re-read the question before answering. It asked for the positive value of k, so the answer is eight.", "right": "k = 8", "right_why": "Re-read what is asked"}
+    ]},
+    {"type": "compare", "title": "Trap 5: the sign of b", "beats": [
+      {"say": "Trap five. For two x squared minus four x plus five, b is negative four, and c is five. Students sometimes add the product four a c instead of subtracting it.", "wrong": "b^2 − 4ac = 16 + 40 = 56", "wrong_why": "The 4ac term is subtracted"},
+      {"say": "The discriminant is b squared minus four a c. Sixteen minus forty is negative twenty-four, so there are no real solutions.", "right": "b^2 − 4ac = 16 − 40 = −24", "right_why": "Subtract 4ac"}
+    ]},
+    {"type": "cards", "title": "The fast way: Desmos", "beats": [
+      {"say": "Desmos is often the fastest route. To solve an equation, graph the expression equal to zero and click the x-intercepts. Let us try x squared minus x minus twelve.", "card": {"text": "y = x^2 − x − 12", "sub": "Click the x-intercepts"}}
+    ]},
+    {"type": "desmos", "title": "Solutions from x-intercepts", "beats": [
+      {"say": "We type the left side minus the right side, so the solutions become the places where the graph meets the x axis.", "actions": ["hold: 2"]},
+      {"say": "Type y equals x, the caret key and a two, the right arrow, then minus x minus twelve.", "actions": ["type: y=x^2>-x-12"]},
+      {"say": "Click the parabola, and then click the grey dot on the right. Desmos shows four comma zero.", "actions": ["bounds: left=-6 right=7 bottom=-16 top=10", "click: 4,0"]},
+      {"say": "Now click the grey dot on the left. Desmos shows negative three comma zero. So the solutions are four and negative three, matching our algebra.", "actions": ["click: -3,0", "hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Counting solutions of a system", "beats": [
+      {"say": "To count the solutions of a system with a line and a parabola, graph both and count the intersections. Our system is y equals x squared minus four, and y equals two x minus five.", "card": {"text": "y = x^2 − 4  and  y = 2x − 5", "sub": "How many solutions?"}}
+    ]},
+    {"type": "desmos", "title": "A line and a parabola", "beats": [
+      {"say": "We type each equation and look at how the two graphs meet.", "actions": ["hold: 2"]},
+      {"say": "Type y equals x squared minus four. Remember the right arrow after the exponent.", "actions": ["type: y=x^2>-4"]},
+      {"say": "Now type y equals two x minus five. The line seems to just touch the parabola.", "actions": ["type: y=2x-5"]},
+      {"say": "Click the meeting point. Desmos shows one comma negative three, and there is only one point. So the system has exactly one solution, because the line is tangent to the parabola.", "actions": ["bounds: left=-5 right=7 bottom=-8 top=10", "click: 1,-3"]}
+    ]},
+    {"type": "cards", "title": "A slider for the constant", "beats": [
+      {"say": "To find a constant, replace it with a slider. For x squared minus k x plus sixteen, we want the value of k where the parabola touches the x axis exactly once.", "card": {"text": "y = x^2 − kx + 16", "sub": "Slide k until it touches once"}}
+    ]},
+    {"type": "desmos", "title": "Find k with a slider", "beats": [
+      {"say": "We graph the parabola with k as a slider, and then drag until the graph does what the question describes.", "actions": ["hold: 2"]},
+      {"say": "Type y equals x, the caret key and a two, the right arrow, then minus k x plus sixteen. Desmos creates a slider for k.", "actions": ["type: y=x^2>-kx+16"]},
+      {"say": "Drag k downward from twelve. The parabola crosses the x axis twice, then touches it once, and then rises above it.", "actions": ["bounds: left=-2 right=12 bottom=-10 top=30", "slider: k from 12 to 0 step 1"]},
+      {"say": "The parabola touches the x axis exactly once when k equals eight. That matches the discriminant method, and the positive value is eight.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. Solve x squared plus two x minus fifteen equals zero. Pause the video, try it, and then watch the solution.", "card": {"text": "x^2 + 2x − 15 = 0", "sub": "Pause and try it first"}}
+    ]},
+    {"type": "steps", "title": "Practice: factor", "start": "x^2 + 2x − 15 = 0", "beats": [
+      {"say": "We need two numbers that multiply to negative fifteen and add to positive two. Those are five and negative three."},
+      {"say": "Write the factors using those numbers. x plus five, times x minus three, equals zero.", "op": "factor", "result": "(x + 5)(x − 3) = 0"},
+      {"say": "Set each factor to zero. x plus five equals zero gives negative five, and x minus three equals zero gives three.", "op": "zero product property", "result": "x = −5 or x = 3", "final": true}
+    ]},
+    {"type": "check", "title": "Check both solutions", "beats": [
+      {"say": "Check negative five. Twenty-five minus ten minus fifteen is zero. Check three. Nine plus six minus fifteen is zero. Both solutions work.", "lines": ["(−5)^2 + 2(−5) − 15 = 0", "3^2 + 2(3) − 15 = 0"], "verdict": "Both solutions check out."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Solve each factor for zero, remember the negative root, and check radical solutions.", "item": "Solve each factor, check radicals"},
+      {"say": "Read what the question asks, and subtract four a c in the discriminant.", "item": "Answer what is asked, subtract 4ac"},
+      {"say": "Use Desmos for x-intercepts, intersection counts, and sliders. In the next topic, we study nonlinear functions.", "item": "Desmos: intercepts, counts, sliders"}
+    ]}
+  ]
+}

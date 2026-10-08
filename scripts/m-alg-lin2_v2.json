@@ -1,0 +1,53 @@
+{
+  "id": "m-alg-lin2_v2",
+  "skill": "m-alg-lin2",
+  "part": 2,
+  "title": "Linear Equations in Two Variables, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we saw that points on a line satisfy its equation, and that intercepts come from setting one variable to zero.", "card": {"text": "Intercepts: set a variable to zero"}},
+      {"say": "In this video, we work with a story equation, and then write the equation of a perpendicular line.", "card": {"text": "Today: story equation, perpendicular line"}}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. A theater sells adult tickets for eight dollars and child tickets for five dollars, and the total sales are two hundred dollars. If fifteen adult tickets were sold, how many child tickets were sold?", "card": {"text": "8a + 5c = 200", "sub": "a = 15. Find c."}}
+    ]},
+    {"type": "steps", "title": "Medium: use the equation", "start": "8(15) + 5c = 200", "beats": [
+      {"say": "Each coefficient is a price per ticket, and the constant is the total. So we write eight a plus five c equals two hundred, and substitute fifteen for a."},
+      {"say": "Eight times fifteen is one hundred twenty, which is the money from adult tickets. The equation becomes one hundred twenty plus five c equals two hundred.", "op": "multiply", "result": "120 + 5c = 200"},
+      {"say": "Subtract one hundred twenty from both sides. Two hundred minus one hundred twenty is eighty, so five c equals eighty.", "op": "− 120 on both sides", "result": "5c = 80"},
+      {"say": "Divide both sides by five. Eighty divided by five is sixteen. So sixteen child tickets were sold.", "op": "÷ 5 on both sides", "result": "c = 16", "final": true}
+    ]},
+    {"type": "check", "title": "Check and interpret", "beats": [
+      {"say": "Check the total. Fifteen adult tickets bring in one hundred twenty dollars, and sixteen child tickets bring in eighty dollars. Together that is two hundred dollars, as required.", "lines": ["8(15) = 120", "5(16) = 80", "120 + 80 = 200"], "verdict": "The total is $200. Correct."}
+    ]},
+    {"type": "cards", "title": "What an intercept means", "beats": [
+      {"say": "An intercept in a story equation means all of one kind. If c is zero, then eight a equals two hundred, so a equals twenty-five. That is the case where only adult tickets were sold.", "card": {"text": "c = 0 gives a = 25", "sub": "All adult tickets"}}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. Line k is perpendicular to the graph of three x plus two y equals eight, and passes through the point six comma negative one. What is the y-intercept of line k?", "card": {"text": "k ⟂ 3x + 2y = 8", "sub": "Through (6, −1). Find the y-intercept."}},
+      {"say": "Our plan has three parts. Find the slope of the given line, flip and negate it for the perpendicular slope, and then use point-slope form with the given point.", "card": {"text": "Slope, perpendicular slope, point-slope"}}
+    ]},
+    {"type": "steps", "title": "Hard: slope of the given line", "start": "3x + 2y = 8", "beats": [
+      {"say": "First, get the given line into slope-intercept form, so we can read its slope. We want y alone."},
+      {"say": "Subtract three x from both sides, so that only the y term remains on the left.", "op": "− 3x on both sides", "result": "2y = −3x + 8"},
+      {"say": "Divide every term by two. The slope is negative three over two, and the y-intercept is four.", "op": "÷ 2 every term", "result": "y = −frac(3,2)x + 4", "final": true}
+    ]},
+    {"type": "cards", "title": "Perpendicular slope", "beats": [
+      {"say": "The perpendicular slope is the negative reciprocal. Flip negative three over two to get two over three, and change the sign, which makes it positive two thirds.", "card": {"text": "m = frac(2,3)", "sub": "Flip the fraction and change the sign"}}
+    ]},
+    {"type": "steps", "title": "Hard: point-slope form", "start": "y + 1 = frac(2,3)(x − 6)", "beats": [
+      {"say": "Point-slope form uses y minus y one equals m times x minus x one. With the point six comma negative one, y minus negative one is y plus one."},
+      {"say": "Distribute two thirds across the parentheses. Two thirds of x is two thirds x, and two thirds of six is four.", "op": "distribute frac(2,3)", "result": "y + 1 = frac(2,3)x − 4"},
+      {"say": "Subtract one from both sides to get y alone. Negative four minus one is negative five. So the y-intercept is negative five.", "op": "− 1 on both sides", "result": "y = frac(2,3)x − 5", "final": true}
+    ]},
+    {"type": "check", "title": "Check the line", "beats": [
+      {"say": "Check that the line passes through six comma negative one. Two thirds times six is four, and four minus five is negative one. It does pass through the point.", "lines": ["frac(2,3)(6) − 5 = −1"], "verdict": "The line passes through (6, −1)."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. In a story equation, each coefficient is a price, and an intercept means all of one kind.", "item": "Story equations: price times count"},
+      {"say": "For a perpendicular line, find the original slope, flip the fraction and change the sign, then use the given point.", "item": "Perpendicular: flip and negate"},
+      {"say": "Always check that the line passes through the given point. In the next video, we look at common traps and the fast way with Desmos.", "item": "Check the given point"}
+    ]}
+  ]
+}

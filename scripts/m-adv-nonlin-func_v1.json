@@ -1,0 +1,55 @@
+{
+  "id": "m-adv-nonlin-func_v1",
+  "skill": "m-adv-nonlin-func",
+  "part": 1,
+  "title": "Nonlinear Functions, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Advanced Math",
+  "scenes": [
+    {"type": "cards", "title": "Nonlinear functions", "beats": [
+      {"say": "Nonlinear functions are functions whose graphs are not straight lines. On the SAT, they are mostly quadratic functions, which make parabolas, and exponential functions, which grow or shrink by the same percent each period.", "card": {"text": "Graphs that are not straight lines"}},
+      {"say": "You may also see higher-degree polynomials, such as cubics. You will evaluate these functions, find vertices and zeros, and interpret the numbers in a model.", "card": {"text": "Evaluate, find vertex and zeros, interpret"}},
+      {"say": "Another common task is to choose the function that matches a description in words.", "card": {"text": "Match a function to a description"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "A quadratic can be written in three different forms, and each form shows something different. Choose the form that answers the question.", "item": "Three quadratic forms, three views"},
+      {"say": "The vertex of a parabola lies exactly halfway between its two zeros. This is useful when you know the zeros.", "item": "The vertex is halfway between the zeros"},
+      {"say": "An exponential function multiplies by the same factor over equal intervals. Growth of r percent per period means a factor of one plus r, and decay means one minus r.", "item": "Growth: 1 + r. Decay: 1 − r."},
+      {"say": "In f of t equals a times b to the t, the number a is the starting value, which is f of zero, and b is the factor per unit of t.", "item": "f(t) = a·b^t: start a, factor b"},
+      {"say": "For a polynomial p, if p of c equals zero, then c is an x-intercept, and x minus c is a factor.", "item": "Zero at c means (x − c) is a factor"}
+    ]},
+    {"type": "table", "title": "Three forms of a quadratic", "columns": ["Form", "Shows you"], "rows": [["f(x) = ax^2 + bx + c", "y-intercept c; vertex at x = −b/2a"], ["f(x) = a(x − h)^2 + k", "vertex (h, k)"], ["f(x) = a(x − p)(x − q)", "zeros p and q; vertex at x = (p + q)/2"]], "beats": [
+      {"say": "In standard form, the constant c is the y-intercept, and the vertex has an x coordinate of negative b over two a.", "reveal_row": 0},
+      {"say": "In vertex form, you can read the vertex h comma k directly. Notice the minus sign inside the parentheses, so x plus three means h is negative three.", "reveal_row": 1},
+      {"say": "In factored form, the zeros are p and q, and the vertex has an x coordinate halfway between them.", "reveal_row": 2}
+    ]},
+    {"type": "cards", "title": "Opening up or down", "beats": [
+      {"say": "If a is positive, the parabola opens upward, and the vertex is a minimum. If a is negative, it opens downward, and the vertex is a maximum.", "card": {"text": "a > 0: minimum.  a < 0: maximum."}},
+      {"say": "For exponential models, use a times one plus r to the t for percent growth, a times one minus r to the t for decay, and a times two to the t over d for doubling every d units.", "card": {"text": "A(1 + r)^t, A(1 − r)^t, A·2^(t/d)"}}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. For f of x equals negative x squared plus six x minus five, find f of negative one, and find the vertex of the graph.", "card": {"text": "f(x) = −x^2 + 6x − 5", "sub": "Find f(−1) and the vertex"}}
+    ]},
+    {"type": "steps", "title": "Easy: evaluate f(−1)", "start": "f(−1) = −(−1)^2 + 6(−1) − 5", "beats": [
+      {"say": "Replace x with negative one. Keep the parentheses around negative one, because the square applies to the negative number first, and the minus sign in front comes after."},
+      {"say": "Negative one, squared, is positive one, and the minus sign in front makes it negative one. Six times negative one is negative six.", "op": "simplify each term", "result": "f(−1) = −1 − 6 − 5"},
+      {"say": "Add the three negative numbers. Negative one, negative six, and negative five add up to negative twelve.", "op": "add", "result": "f(−1) = −12", "final": true}
+    ]},
+    {"type": "steps", "title": "Easy: the vertex", "start": "x = −frac(6,2(−1))", "beats": [
+      {"say": "The x coordinate of the vertex is negative b over two a. Here b is six, and a is negative one."},
+      {"say": "Two times negative one is negative two. Six over negative two is negative three, and the minus sign in front makes it positive three.", "op": "simplify", "result": "x = 3", "final": true}
+    ]},
+    {"type": "steps", "title": "Easy: the vertex height", "start": "f(3) = −(3)^2 + 6(3) − 5", "beats": [
+      {"say": "To find the y coordinate of the vertex, evaluate the function at x equals three."},
+      {"say": "Three squared is nine, with a minus sign in front. Six times three is eighteen.", "op": "simplify each term", "result": "f(3) = −9 + 18 − 5"},
+      {"say": "Negative nine plus eighteen minus five is four. So the vertex is three comma four, and since a is negative, it is a maximum.", "op": "add", "result": "f(3) = 4", "final": true}
+    ]},
+    {"type": "check", "title": "Check with factored form", "beats": [
+      {"say": "As a check, factor the function. It equals negative x minus one, times x minus five, so its zeros are one and five. Halfway between them is three, which matches the vertex.", "lines": ["f(x) = −(x − 1)(x − 5)", "zeros 1 and 5, halfway: x = 3"], "verdict": "The vertex is (3, 4)."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Pick the quadratic form that answers the question, and remember that the vertex is halfway between the zeros.", "item": "Pick the form that fits the question"},
+      {"say": "For exponentials, growth uses one plus r and decay uses one minus r, and a is the starting value.", "item": "Growth 1 + r, decay 1 − r"},
+      {"say": "Check the vertex using the zeros. In the next video, we work through a medium problem and a hard problem.", "item": "Check with the zeros"}
+    ]}
+  ]
+}

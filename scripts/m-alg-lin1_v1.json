@@ -1,0 +1,53 @@
+{
+  "id": "m-alg-lin1_v1",
+  "skill": "m-alg-lin1",
+  "part": 1,
+  "title": "Linear Equations in One Variable, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "Linear equations in one variable", "beats": [
+      {"say": "A linear equation in one variable has a single unknown number, usually called x. The unknown is never squared, never under a square root, and never in a denominator.", "card": {"text": "One unknown, never squared"}},
+      {"say": "You solve it by undoing operations, one at a time, until x stands alone on one side of the equals sign. The goal is always x equals a number.", "card": {"text": "Undo operations until x is alone"}},
+      {"say": "The SAT asks three kinds of questions about these equations. You may need to solve one, build one from a short story, or decide how many solutions it has.", "card": {"text": "Solve it, build it, count solutions"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "First, whatever you do to one side of the equation, you must do to the other side. That keeps both sides equal, and it is the reason every step in this video is allowed.", "item": "Do the same to both sides"},
+      {"say": "Second, distribute first. Multiply the number outside the parentheses by every term inside, then combine like terms on each side, then move all the x terms to one side.", "item": "Distribute, then combine like terms"},
+      {"say": "Third, clear fractions early. Multiply every term on both sides by the least common denominator. Decimals work the same way, by multiplying by ten or one hundred.", "item": "Clear fractions and decimals early"},
+      {"say": "Fourth, in a word problem, a one-time amount is a constant, and a per-unit amount multiplies the variable. A twenty dollar fee plus eight dollars per hour becomes twenty plus eight h.", "item": "Fee is constant, rate multiplies"}
+    ]},
+    {"type": "figure", "title": "Why the balance rule works", "kind": "balance", "data": {"left": ["x", "1", "1", "1"], "right": ["1", "1", "1", "1", "1", "1", "1"]}, "beats": [
+      {"say": "Picture an equation as a balance scale. On the left is x plus three small blocks, and on the right are seven small blocks. The scale is level, so both sides weigh the same."},
+      {"say": "If we take blocks away from only one side, the scale tips, and the two sides are no longer equal. So changing just one side of an equation is not allowed.", "tilt": "right"},
+      {"say": "But if we do the same thing to both sides, the scale stays level. That is the golden rule of solving equations.", "tilt": "none"},
+      {"say": "Let us take three blocks away from both sides. The left side has x alone, and the right side has four blocks.", "remove": [{"side": "both", "count": 3}]},
+      {"say": "The scale is still level, which tells us that x weighs the same as four blocks. In other words, x equals four."}
+    ]},
+    {"type": "steps", "title": "The same idea, in symbols", "start": "x + 3 = 7", "beats": [
+      {"say": "Here is that scale written as an equation, x plus three equals seven. We want x alone, so we need to get rid of the plus three."},
+      {"say": "Subtract three from both sides. On the left, the three cancels, leaving x. On the right, seven minus three is four.", "op": "− 3 on both sides", "strike": ["+ 3"], "result": "x = 4", "final": true}
+    ]},
+    {"type": "list", "title": "Rules to remember", "beats": [
+      {"say": "Distributing a negative flips every sign inside the parentheses. For example, negative two times the quantity x minus three equals negative two x plus six.", "item": "A negative outside flips every sign"},
+      {"say": "To clear fractions, multiply by the least common denominator. For x over four and x over six, multiply by twelve, because twelve is the smallest number both denominators divide into.", "item": "Multiply by the least common denominator"},
+      {"say": "After simplifying, every linear equation can be written as a x plus b equals c x plus d. Comparing the coefficients tells you how many solutions there are.", "item": "Every equation looks like ax + b = cx + d"}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Now an easy example. Solve seven x plus four equals three x plus twenty-four. There are x terms on both sides, so our plan is to collect them on one side first.", "card": {"text": "7x + 4 = 3x + 24", "sub": "Solve for x"}}
+    ]},
+    {"type": "steps", "title": "Easy example", "start": "7x + 4 = 3x + 24", "beats": [
+      {"say": "We have seven x on the left and three x on the right. Our plan has three steps: move the x terms together, move the plain numbers together, and then divide."},
+      {"say": "First, subtract three x from both sides. We do this because we want all the x terms on the left. Three x minus three x is zero, so that term disappears from the right.", "op": "− 3x on both sides", "strike": ["3x"], "result": "4x + 4 = 24"},
+      {"say": "Next, subtract four from both sides. This removes the plain number from the left, so only the x term remains there. Twenty-four minus four is twenty.", "op": "− 4 on both sides", "strike": ["+ 4"], "result": "4x = 20"},
+      {"say": "Finally, divide both sides by four. Four x divided by four is x, and twenty divided by four is five. So x equals five.", "op": "÷ 4 on both sides", "result": "x = 5", "final": true}
+    ]},
+    {"type": "check", "title": "Check the answer", "beats": [
+      {"say": "Always check by putting five back into the original equation. On the left, seven times five plus four is thirty-nine. On the right, three times five plus twenty-four is also thirty-nine.", "lines": ["7(5) + 4 = 39", "3(5) + 24 = 39"], "verdict": "Both sides equal 39. Correct."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. A linear equation in one variable has one unknown, and we solve it by undoing operations until x is alone.", "item": "Undo operations until x is alone"},
+      {"say": "Whatever we do to one side, we do to the other, and we always distribute first, collect the x terms, and then divide.", "item": "Same to both sides, distribute first"},
+      {"say": "Always check the answer by substituting. In the next video, we work through a medium problem and a hard problem.", "item": "Check by substituting"}
+    ]}
+  ]
+}

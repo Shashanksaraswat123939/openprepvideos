@@ -1,0 +1,71 @@
+{
+  "id": "m-alg-lin2_v3",
+  "skill": "m-alg-lin2",
+  "part": 3,
+  "title": "Linear Equations in Two Variables, Part 3: Traps and the Fast Way",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "This video's goal", "beats": [
+      {"say": "In this video, we look at five mistakes students make with equations in two variables, and then a fast way to find intercepts and test points with Desmos.", "card": {"text": "Five traps, then Desmos"}},
+      {"say": "Each trap is shown as a wrong line first, then the right line, with the reason it is so tempting.", "card": {"text": "Wrong line, then right line"}}
+    ]},
+    {"type": "compare", "title": "Trap 1: the sign of the slope", "beats": [
+      {"say": "Trap one. In standard form, the slope is negative A over B. For two x plus five y equals twenty, students often forget the minus sign.", "wrong": "slope = frac(2,5)", "wrong_why": "The minus sign is missing"},
+      {"say": "The slope is negative two over five. You can confirm by solving for y. Five y equals negative two x plus twenty, so y equals negative two fifths x plus four.", "right": "slope = −frac(2,5)", "right_why": "Slope is −A/B"}
+    ]},
+    {"type": "compare", "title": "Trap 2: half a reciprocal", "beats": [
+      {"say": "Trap two. The perpendicular slope to two fifths is not five halves. That only flips the fraction, and the sign stays the same.", "wrong": "perpendicular slope = frac(5,2)", "wrong_why": "The sign did not change"},
+      {"say": "A negative reciprocal needs both steps. Flip the fraction and change the sign, so the perpendicular slope is negative five halves. The two slopes multiply to negative one.", "right": "perpendicular slope = −frac(5,2)", "right_why": "Flip and change the sign"}
+    ]},
+    {"type": "compare", "title": "Trap 3: swapping intercepts", "beats": [
+      {"say": "Trap three. In four x minus three y equals twenty-four, setting x to zero gives negative three y equals twenty-four. Students sometimes report the x-intercept as the y-intercept.", "wrong": "y-intercept is 6", "wrong_why": "6 is the x-intercept"},
+      {"say": "The y-intercept comes from x equals zero, so y equals twenty-four divided by negative three, which is negative eight. The value six comes from setting y to zero.", "right": "y-intercept is −8", "right_why": "x = 0 gives y = −8"}
+    ]},
+    {"type": "compare", "title": "Trap 4: swapping x and y", "beats": [
+      {"say": "Trap four. The line three x plus k y equals twenty-one passes through the point three comma two. Students sometimes swap the coordinates when they substitute.", "wrong": "3(2) + 3k = 21, so k = 5", "wrong_why": "x and y were swapped"},
+      {"say": "In the point three comma two, x is three and y is two. So we substitute three for x and two for y, which gives nine plus two k equals twenty-one, and k equals six.", "right": "3(3) + 2k = 21, so k = 6", "right_why": "x = 3 and y = 2"}
+    ]},
+    {"type": "compare", "title": "Trap 5: the wrong axis", "beats": [
+      {"say": "Trap five. In eight a plus five c equals two hundred, suppose c is on the horizontal axis. The horizontal intercept is the value of c when a is zero, but students read the wrong one.", "wrong": "horizontal intercept: a = 25", "wrong_why": "That is the vertical intercept"},
+      {"say": "Set a to zero. Five c equals two hundred, so c equals forty. The horizontal intercept is the point where c equals forty.", "right": "horizontal intercept: c = 40", "right_why": "Axis variable when the other is 0"}
+    ]},
+    {"type": "cards", "title": "The fast way: Desmos", "beats": [
+      {"say": "Desmos graphs standard form directly, with no rearranging. You can click the grey dots on the axes to read the intercepts, and you can plot a point to see whether it sits on the line.", "card": {"text": "Graph standard form directly"}},
+      {"say": "Our first example is the line six x minus three y equals twelve. We want both of its intercepts.", "card": {"text": "6x − 3y = 12", "sub": "Find both intercepts"}}
+    ]},
+    {"type": "desmos", "title": "Intercepts with Desmos", "beats": [
+      {"say": "Open a fresh graph. We will type the equation exactly as it is written in standard form.", "actions": ["hold: 2"]},
+      {"say": "Type six x minus three y equals twelve. Desmos draws the line, and there is no need to rearrange the equation.", "actions": ["type: 6x-3y=12"]},
+      {"say": "Click the line, then click the grey dot where it meets the x axis. Desmos shows the point two comma zero, so the x-intercept is two.", "actions": ["bounds: left=-6 right=8 bottom=-8 top=6", "click: 2,0"]},
+      {"say": "Now click the grey dot on the y axis. Desmos shows zero comma negative four, so the y-intercept is negative four.", "actions": ["click: 0,-4"]},
+      {"say": "Both intercepts match our algebra from part one, and we found them without solving anything.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Desmos for story equations", "beats": [
+      {"say": "Desmos is also handy for story equations. For eight a plus five c equals two hundred, if fifteen adult tickets were sold, we can graph the equation and the line x equals fifteen.", "card": {"text": "8x + 5y = 200 and x = 15", "sub": "Find y"}}
+    ]},
+    {"type": "desmos", "title": "A story equation", "beats": [
+      {"say": "We use x for adult tickets and y for child tickets. First type the equation for the total sales.", "actions": ["type: 8x+5y=200"]},
+      {"say": "Now type x equals fifteen. That is a vertical line, showing the case of fifteen adult tickets.", "actions": ["type: x=15"]},
+      {"say": "Click where the two lines cross, and then click the grey dot. Desmos shows fifteen comma sixteen, so sixteen child tickets were sold.", "actions": ["bounds: left=-5 right=30 bottom=-10 top=50", "click: 15,16"]},
+      {"say": "That matches our answer from the previous video. The graph gave us the same result in two typed lines.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Practice problem", "beats": [
+      {"say": "Now a practice problem. Find the slope and both intercepts of two x plus five y equals twenty. Pause the video, try it, and then watch the solution.", "card": {"text": "2x + 5y = 20", "sub": "Pause and try it first"}}
+    ]},
+    {"type": "steps", "title": "Practice: the y-intercept", "start": "2(0) + 5y = 20", "beats": [
+      {"say": "Set x to zero to find where the line crosses the y axis."},
+      {"say": "Two times zero is zero, so the x term disappears and we are left with five y equals twenty.", "op": "x = 0", "result": "5y = 20"},
+      {"say": "Divide both sides by five. Twenty divided by five is four. So the y-intercept is four.", "op": "÷ 5 on both sides", "result": "y = 4", "final": true}
+    ]},
+    {"type": "steps", "title": "Practice: the x-intercept", "start": "2x + 5(0) = 20", "beats": [
+      {"say": "Set y to zero to find where the line crosses the x axis."},
+      {"say": "Five times zero is zero, so the y term disappears and we are left with two x equals twenty.", "op": "y = 0", "result": "2x = 20"},
+      {"say": "Divide both sides by two. Twenty divided by two is ten. So the x-intercept is ten. The slope is negative two over five, from negative A over B.", "op": "÷ 2 on both sides", "result": "x = 10", "final": true}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. The slope in standard form is negative A over B, and perpendicular slopes are negative reciprocals.", "item": "Slope −A/B, perpendicular needs two steps"},
+      {"say": "Set x to zero for the y-intercept, and set y to zero for the x-intercept. Substitute x and y carefully, in the right places.", "item": "Intercepts: zero out the other variable"},
+      {"say": "Desmos reads intercepts and story equations quickly. In the next topic, we study systems of two linear equations.", "item": "Desmos reads intercepts quickly"}
+    ]}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "id": "desmos-intersections-and-systems_v1",
+  "skill": "desmos-intersections-and-systems",
+  "part": 1,
+  "title": "Desmos Basics: Intersections and Systems",
+  "section_label": "Desmos basics",
+  "scenes": [
+    {"type": "cards", "title": "Intersections and systems", "beats": [
+      {"say": "The solution to a system of equations is the point where their graphs cross. Desmos finds that point for you with a single click.", "card": {"text": "Solution = where the graphs cross"}},
+      {"say": "You do not need to rearrange equations into y equals form. Desmos graphs equations written in almost any form.", "card": {"text": "No rearranging needed"}},
+      {"say": "We will work through three examples, from easy to hard, and each one ends by reading the crossing point.", "card": {"text": "Three examples: easy, medium, hard"}}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. Solve the system y equals x plus one, and y equals two x minus two.", "card": {"text": "y = x + 1  and  y = 2x − 2", "sub": "Find x and y"}}
+    ]},
+    {"type": "desmos", "title": "Easy: two lines", "beats": [
+      {"say": "Open Desmos on a fresh graph. Each equation of the system will go in its own row.", "actions": ["hold: 2"]},
+      {"say": "Type the first equation, y equals x plus one. Desmos draws the line immediately.", "actions": ["type: y=x+1"]},
+      {"say": "Now type the second equation, y equals two x minus two. A second line appears, with a different slope.", "actions": ["type: y=2x-2"]},
+      {"say": "The solution is where the two lines cross. Click the crossing point, and then click its grey dot, to see the coordinates three comma four.", "actions": ["bounds: left=-2 right=8 bottom=-4 top=10", "click: 3,4"]},
+      {"say": "So x equals three and y equals four. We can check by putting three into both equations, and each one gives four.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. This time the equations are not in y equals form. Solve three x plus two y equals twelve, and x minus y equals negative one.", "card": {"text": "3x + 2y = 12  and  x − y = −1", "sub": "Find x and y"}}
+    ]},
+    {"type": "desmos", "title": "Medium: any form", "beats": [
+      {"say": "On the SAT, systems usually come in standard form. In Desmos, that is not a problem, because we can type them exactly as they are written.", "actions": ["hold: 2"]},
+      {"say": "Type three x plus two y equals twelve. Desmos graphs the line without any rearranging.", "actions": ["type: 3x+2y=12"]},
+      {"say": "Now type x minus y equals negative one. Again, Desmos draws the second line directly.", "actions": ["type: x-y=-1"]},
+      {"say": "Click where the lines cross, and then click the grey dot. Desmos shows the point two comma three.", "actions": ["bounds: left=-4 right=8 bottom=-3 top=8", "click: 2,3"]},
+      {"say": "So x equals two and y equals three. Check: three times two plus two times three is twelve, and two minus three is negative one.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. For the system four x plus y equals nineteen, and x minus two y equals negative two, what is the value of three x minus y?", "card": {"text": "4x + y = 19  and  x − 2y = −2", "sub": "Find 3x − y"}}
+    ]},
+    {"type": "desmos", "title": "Hard: use the solution", "beats": [
+      {"say": "Notice that the question does not ask for x or y. It asks for three x minus y. So we first find the solution, and then compute.", "actions": ["hold: 2"]},
+      {"say": "Type the first equation, four x plus y equals nineteen. It is a steep line sloping downward.", "actions": ["type: 4x+y=19"]},
+      {"say": "Type the second equation, x minus two y equals negative two. It is a gentler line sloping upward.", "actions": ["type: x-2y=-2"]},
+      {"say": "Click the crossing point, and then its grey dot. Desmos shows the point four comma three, so x is four and y is three.", "actions": ["bounds: left=-4 right=10 bottom=-4 top=12", "click: 4,3"]},
+      {"say": "Now compute what the question asked. Three times four is twelve, and twelve minus three is nine. So the answer is nine, with no symbolic solving.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. The solution of a system is the point where the graphs cross, so graph both equations and click that point.", "item": "Graph both, click the crossing"},
+      {"say": "Parallel lines never cross, so a system with parallel lines has no solution. The same line twice means infinitely many solutions.", "item": "Parallel: none. Same line: infinite."},
+      {"say": "If the question asks for an expression like three x minus y, find x and y first, then compute. In the next video, we solve any equation by graphing.", "item": "Find the point, then compute"}
+    ]}
+  ]
+}

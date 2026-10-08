@@ -1,0 +1,56 @@
+{
+  "id": "m-alg-lin1_v2",
+  "skill": "m-alg-lin1",
+  "part": 2,
+  "title": "Linear Equations in One Variable, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we learned that a linear equation in one variable has a single unknown number. Our job is to undo operations until that unknown stands alone.", "card": {"text": "Goal: get x alone"}},
+      {"say": "The key rule is balance. Whatever we do to one side of the equation, we must do to the other side, so that both sides stay equal.", "card": {"text": "Do the same to both sides"}},
+      {"say": "In this video, we apply these ideas to two harder problems. First a medium one with fractions, then a hard one that looks like a real SAT question.", "card": {"text": "Today: medium and hard"}}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Here is a medium problem. x over four plus x over six equals ten. Fractions make the arithmetic messy, so our first move will be to remove them.", "card": {"text": "frac(x,4) + frac(x,6) = 10", "sub": "Find x"}}
+    ]},
+    {"type": "steps", "title": "Medium example", "start": "frac(x,4) + frac(x,6) = 10", "beats": [
+      {"say": "The denominators are four and six. The smallest number that both divide into evenly is twelve, called the least common denominator. Multiplying by twelve will clear both fractions."},
+      {"say": "Multiply every single term on both sides by twelve, including the ten. Twelve times x over four is three x. Twelve times x over six is two x. Twelve times ten is one hundred twenty.", "op": "× 12 on every term", "result": "3x + 2x = 120"},
+      {"say": "Now combine the like terms on the left. Three x plus two x is five x, so the equation becomes five x equals one hundred twenty.", "op": "combine like terms", "result": "5x = 120"},
+      {"say": "Divide both sides by five to get x alone. One hundred twenty divided by five is twenty-four. So x equals twenty-four.", "op": "÷ 5 on both sides", "result": "x = 24", "final": true}
+    ]},
+    {"type": "check", "title": "Check the answer", "beats": [
+      {"say": "Check by substituting twenty-four into the original equation. Twenty-four divided by four is six, and twenty-four divided by six is four. Six plus four is ten, which matches the right side.", "lines": ["24 ÷ 4 = 6", "24 ÷ 6 = 4", "6 + 4 = 10"], "verdict": "The left side equals 10."}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Now a hard problem, in the style of the SAT. One half times the quantity eight x minus six, plus k x, equals three minus two x. The number k is a constant, and the equation has no solution. Find k.", "card": {"text": "frac(1,2)(8x − 6) + kx = 3 − 2x", "sub": "No solution. Find k."}}
+    ]},
+    {"type": "steps", "title": "Hard example", "start": "frac(1,2)(8x − 6) + kx = 3 − 2x", "beats": [
+      {"say": "Before solving, we make a plan. We will simplify both sides into the form a x plus b equals c x plus d. Then we use what that form tells us about the number of solutions."},
+      {"say": "First distribute the one half to both terms inside the parentheses. One half of eight x is four x, and one half of negative six is negative three.", "op": "distribute the one half", "strike": ["frac(1,2)(8x − 6)"], "result": "4x − 3 + kx = 3 − 2x"},
+      {"say": "Next, group the two x terms on the left. Four x plus k x is the quantity four plus k, times x. Now both sides have the form a x plus b.", "op": "group the x terms", "result": "(4 + k)x − 3 = −2x + 3"},
+      {"say": "No solution means the x coefficients are equal while the constants are different. So we set four plus k equal to negative two, which is the coefficient on the right side.", "op": "no solution: slopes match", "result": "4 + k = −2"},
+      {"say": "Subtract four from both sides. Negative two minus four is negative six, so k equals negative six.", "op": "− 4 on both sides", "result": "k = −6", "final": true}
+    ]},
+    {"type": "check", "title": "Check the constants", "beats": [
+      {"say": "Always verify. With k equal to negative six, the equation becomes negative two x minus three equals negative two x plus three. The x terms cancel and leave negative three equals three, which is never true.", "lines": ["−2x − 3 = −2x + 3", "−3 = 3 is never true"], "verdict": "No solution, as required."}
+    ]},
+    {"type": "table", "title": "How many solutions?", "columns": ["After simplifying", "Solutions"], "rows": [["a ≠ c", "exactly one solution"], ["a = c and b ≠ d", "no solution"], ["a = c and b = d", "infinitely many solutions"]], "beats": [
+      {"say": "This table summarizes the rule we just used. After simplifying to a x plus b equals c x plus d, we compare the coefficients and constants. If a and c are different, there is exactly one solution.", "reveal_row": 0},
+      {"say": "If a equals c but b and d are different, both sides have the same slope but different intercepts, so they never meet. There is no solution. This is our problem.", "reveal_row": 1, "highlight": [1, 0]},
+      {"say": "If a equals c and b equals d, the two sides are identical. Every value of x works, so there are infinitely many solutions.", "reveal_row": 2}
+    ]},
+    {"type": "desmos", "title": "Find k with a slider", "beats": [
+      {"say": "Desmos gives us a way to see the answer. We will graph each side of the equation as its own line, and let a slider control the unknown constant k.", "actions": ["hold: 2"]},
+      {"say": "Type the left side as y equals one half times the quantity eight x minus six, plus k x. Desmos notices the new letter k and offers a slider for it.", "actions": ["type: y=1/2>(8x-6)+kx"]},
+      {"say": "Now type the right side as a second line, y equals three minus two x. Both sides of the equation are now graphed, and an intersection would be a solution.", "actions": ["type: y=3-2x"]},
+      {"say": "Drag the slider for k and watch the first line. As k decreases, the line rotates. When k reaches negative six, the lines become parallel. They never cross, which means no solution.", "actions": ["bounds: left=-8 right=8 bottom=-10 top=12", "slider: k from 1 to -6 step 0.5"]},
+      {"say": "Parallel lines that never meet confirm our algebra. The value of k that gives no solution is negative six.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. To clear fractions, multiply every term by the least common denominator. Remember to multiply the whole numbers too.", "item": "Clear fractions with the common denominator"},
+      {"say": "Distribute first, then group the x terms so the equation looks like a x plus b equals c x plus d.", "item": "Distribute, then group the x terms"},
+      {"say": "Compare the coefficients and constants to decide between one solution, no solution, or infinitely many. In the next video, we look at common traps and the fast way with Desmos.", "item": "Compare coefficients to count solutions"}
+    ]}
+  ]
+}

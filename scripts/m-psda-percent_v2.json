@@ -1,0 +1,203 @@
+{
+  "id": "m-psda-percent_v2",
+  "skill": "m-psda-percent",
+  "part": 2,
+  "title": "Percentages, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {
+      "type": "cards",
+      "title": "Recap of part one",
+      "beats": [
+        {
+          "say": "In part one, we found a percent of a number, and used multipliers for increases and decreases.",
+          "card": {
+            "text": "Think in multipliers"
+          }
+        },
+        {
+          "say": "In this video, we compute a percent change, undo a discount, and then solve a problem with two changes in a row.",
+          "card": {
+            "text": "Today: change, undo, successive"
+          }
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Medium example 1",
+      "beats": [
+        {
+          "say": "Medium example one. A price rises from eighty dollars to one hundred dollars. What is the percent increase?",
+          "card": {
+            "text": "$80 to $100",
+            "sub": "Percent increase?"
+          }
+        },
+        {
+          "say": "The key is the base. Percent change always divides by the original value, which here is eighty, and not by the new value of one hundred.",
+          "card": {
+            "text": "The base is the original value"
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Medium 1: percent change",
+      "start": "frac(100 − 80,80) × 100",
+      "beats": [
+        {
+          "say": "The change is the new value minus the old value, so one hundred minus eighty. We divide that by the old value, eighty, and then multiply by one hundred."
+        },
+        {
+          "say": "One hundred minus eighty is twenty. So the change is twenty out of eighty.",
+          "op": "subtract",
+          "result": "frac(20,80) × 100"
+        },
+        {
+          "say": "Twenty over eighty is zero point two five, which is one quarter, the fraction of the original that was added.",
+          "op": "divide",
+          "result": "0.25 × 100"
+        },
+        {
+          "say": "Multiply by one hundred to get a percent. The increase is twenty-five percent. Dividing by one hundred instead would give twenty percent, which is a common trap answer.",
+          "op": "× 100",
+          "result": "25",
+          "final": true
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Medium example 2",
+      "beats": [
+        {
+          "say": "Medium example two. After a fifteen percent discount, a jacket costs sixty-eight dollars. What was the original price?",
+          "card": {
+            "text": "$68 after a 15% discount",
+            "sub": "Original price?"
+          }
+        },
+        {
+          "say": "A fifteen percent discount multiplies the price by zero point eight five. To undo it, we divide by zero point eight five, rather than adding fifteen percent of sixty-eight.",
+          "card": {
+            "text": "Undo a change: divide"
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Medium 2: undo the discount",
+      "start": "68 ÷ 0.85",
+      "beats": [
+        {
+          "say": "The sale price is the original price times zero point eight five. So the original price is the sale price divided by zero point eight five."
+        },
+        {
+          "say": "Sixty-eight divided by zero point eight five is eighty. So the original price was eighty dollars.",
+          "op": "divide",
+          "result": "80",
+          "final": true
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Hard example",
+      "beats": [
+        {
+          "say": "Hard example. A store marks up the wholesale cost of a jacket by sixty percent. Later, it sells the jacket at twenty-five percent off the marked price, for fifty-four dollars. What was the wholesale cost?",
+          "card": {
+            "text": "Markup 60%, then 25% off, sells for $54",
+            "sub": "Wholesale cost?"
+          }
+        },
+        {
+          "say": "Successive changes multiply. The markup has a multiplier of one point six, and the discount has a multiplier of zero point seven five. We combine them, and then work backward.",
+          "card": {
+            "text": "Combine the multipliers, then divide"
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Hard: combine the multipliers",
+      "start": "1.60 × 0.75",
+      "beats": [
+        {
+          "say": "Multiply the two multipliers together. This single number tells us the final price as a multiple of the wholesale cost."
+        },
+        {
+          "say": "One point six times zero point seven five is one point two. So the sale price is one hundred twenty percent of the wholesale cost.",
+          "op": "multiply",
+          "result": "1.20",
+          "final": true
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Hard: work backward",
+      "start": "54 ÷ 1.20",
+      "beats": [
+        {
+          "say": "The sale price of fifty-four dollars is one point two times the wholesale cost. To undo that, divide by one point two."
+        },
+        {
+          "say": "Fifty-four divided by one point two is forty-five. So the wholesale cost was forty-five dollars.",
+          "op": "divide",
+          "result": "45",
+          "final": true
+        }
+      ]
+    },
+    {
+      "type": "check",
+      "title": "Check going forward",
+      "beats": [
+        {
+          "say": "Check by going forward. Forty-five times one point six is seventy-two, which is the marked price. Then seventy-two times zero point seven five is fifty-four, the sale price.",
+          "lines": [
+            "45 × 1.6 = 72",
+            "72 × 0.75 = 54"
+          ],
+          "verdict": "The wholesale cost was $45."
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Percent versus percentage points",
+      "beats": [
+        {
+          "say": "One more idea. Going from forty percent to fifty percent is a ten percentage point increase. But as a relative change, it is ten divided by forty, which is a twenty-five percent increase.",
+          "card": {
+            "text": "40% to 50%",
+            "sub": "10 percentage points = 25% relative"
+          }
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Quick recap",
+      "beats": [
+        {
+          "say": "To recap. For percent change, divide by the original value, not the new value.",
+          "item": "Percent change: divide by the original"
+        },
+        {
+          "say": "To undo a change, divide by its multiplier. For successive changes, multiply the multipliers together first.",
+          "item": "Undo: divide. Successive: multiply."
+        },
+        {
+          "say": "Check by going forward. In the next video, we look at common traps and the fast way with Desmos.",
+          "item": "Check by going forward"
+        }
+      ]
+    }
+  ]
+}

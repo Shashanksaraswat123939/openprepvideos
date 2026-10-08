@@ -1,0 +1,50 @@
+{
+  "id": "about-the-sat_v1",
+  "skill": "about-the-sat",
+  "part": 1,
+  "title": "How the SAT Is Built and Scored",
+  "section_label": "Getting started",
+  "scenes": [
+    {"type": "cards", "title": "What the SAT is", "beats": [
+      {"say": "The SAT is a standardized test that many colleges use when they make admissions decisions. You take it on a laptop or tablet, in an app called Bluebook, at a test center.", "card": {"text": "A college admissions test"}},
+      {"say": "The test has two sections. One is Reading and Writing, and the other is Math. Each section gets its own score, and colleges see both scores.", "card": {"text": "Two sections", "sub": "Reading and Writing, and Math"}},
+      {"say": "Each section is scored from two hundred to eight hundred. Added together, your total score falls anywhere from four hundred to sixteen hundred.", "card": {"text": "Total score: 400 to 1600"}}
+    ]},
+    {"type": "table", "title": "How the test is laid out", "columns": ["Section", "Modules", "Questions", "Time"], "rows": [["Reading and Writing", "2", "54 total", "32 min per module"], ["Math", "2", "44 total", "35 min per module"]], "beats": [
+      {"say": "Here is how the test is laid out. Reading and Writing has two modules, with twenty-seven questions in each, so fifty-four questions in total. Each module lasts thirty-two minutes.", "reveal_row": 0},
+      {"say": "Math also has two modules, with twenty-two questions in each, so forty-four in total. Each Math module lasts thirty-five minutes.", "reveal_row": 1},
+      {"say": "A ten minute break separates the two sections. Altogether, the test takes about two hours and fourteen minutes."}
+    ]},
+    {"type": "cards", "title": "Why the second module matters", "beats": [
+      {"say": "The SAT is adaptive by module. That means how you do on the first module of a section decides how hard the second module of that section will be.", "card": {"text": "First module decides the second"}},
+      {"say": "The harder second module is the only way to reach the top scores. So your answers in the first module matter twice: they count, and they shape what comes next.", "card": {"text": "Harder second module", "sub": "the path to the top scores"}},
+      {"say": "Inside a module, you are free to move back and forth, flag questions, and change your answers, right up until the time for that module runs out.", "card": {"text": "Flag, skip, and change answers"}}
+    ]},
+    {"type": "list", "title": "Reading and Writing questions", "beats": [
+      {"say": "Each Reading and Writing question has one short passage, sometimes two, or a table or chart, followed by a single question. These questions test four areas.", "item": "Information and Ideas"},
+      {"say": "The second area is Craft and Structure. These questions ask how words and paragraphs work inside a text.", "item": "Craft and Structure"},
+      {"say": "The third area is Expression of Ideas. These questions ask whether a text says what it wants to say in the best way.", "item": "Expression of Ideas"},
+      {"say": "The fourth area is Standard English Conventions, which covers punctuation, sentence structure, and grammar. The units in this course follow exactly these four areas.", "item": "Standard English Conventions"}
+    ]},
+    {"type": "list", "title": "Math questions", "beats": [
+      {"say": "Math is mostly multiple choice, but about one quarter of the questions ask you to type in your own answer. Math also has four areas. The first is Algebra.", "item": "Algebra"},
+      {"say": "The second area is Advanced Math, which includes quadratics, exponentials, and other nonlinear functions.", "item": "Advanced Math"},
+      {"say": "The third area is Problem-Solving and Data Analysis, which covers ratios, percentages, statistics, and probability.", "item": "Problem-Solving and Data Analysis"},
+      {"say": "The fourth area is Geometry and Trigonometry, which covers area, volume, angles, circles, and right triangles.", "item": "Geometry and Trigonometry"}
+    ]},
+    {"type": "cards", "title": "Tools on test day", "beats": [
+      {"say": "In the Math section, the test includes a built-in Desmos graphing calculator. This course teaches Desmos step by step, so you will be comfortable using it.", "card": {"text": "Desmos graphing calculator", "sub": "built into the Math section"}},
+      {"say": "You also get a reference sheet with common formulas, so you do not have to memorize every single one.", "card": {"text": "Formula reference sheet"}}
+    ]},
+    {"type": "list", "title": "Timing and answers", "beats": [
+      {"say": "There is no penalty for wrong answers, so never leave a question blank. If you are stuck, make your best guess, flag the question, and come back if time allows.", "item": "No penalty for wrong answers"},
+      {"say": "Do not get stuck. Five minutes on one hard question can cost you two easier questions later in the module. Guess, flag it, and move on.", "item": "Do not get stuck on one question"},
+      {"say": "Pace yourself. Reading and Writing gives you about seventy-one seconds per question, and Math gives you about ninety-five seconds per question.", "item": "Know your time per question"}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. The SAT has two sections, Reading and Writing and Math, each scored from two hundred to eight hundred, for a total from four hundred to sixteen hundred.", "item": "Two sections, 400 to 1600 total"},
+      {"say": "Each section has two modules, and your first module decides how hard the second one will be.", "item": "Module one shapes module two"},
+      {"say": "Never leave a question blank. Guess, flag, and keep moving. In the next video, we look at how to study with OpenPrep.", "item": "Guess, flag, keep moving"}
+    ]}
+  ]
+}

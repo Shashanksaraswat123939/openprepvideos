@@ -1,0 +1,51 @@
+{
+  "id": "m-psda-ratios_v2",
+  "skill": "m-psda-ratios",
+  "part": 2,
+  "title": "Ratios, Rates, Proportions and Units, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we used a unit rate and a proportion to scale a price. A proportion needs the same quantities in the same order.", "card": {"text": "Unit rate, then multiply"}},
+      {"say": "In this video, we split a total using a ratio, and then convert units through a long chain of conversion factors.", "card": {"text": "Today: ratio parts, unit chains"}}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. The ratio of red marbles to blue marbles is seven to three. There are fifty marbles in total. How many marbles are blue?", "card": {"text": "Red : blue = 7 : 3", "sub": "50 marbles in total. How many blue?"}},
+      {"say": "In a ratio of seven to three, the red marbles are seven k and the blue marbles are three k, for some number k. Together they make fifty.", "card": {"text": "Red = 7k, blue = 3k"}}
+    ]},
+    {"type": "steps", "title": "Medium: find k", "start": "7k + 3k = 50", "beats": [
+      {"say": "Add the two parts. Seven k plus three k equals fifty, because the parts together are the total."},
+      {"say": "Seven k plus three k is ten k, because we are adding the numbers in front of the same letter.", "op": "combine like terms", "result": "10k = 50"},
+      {"say": "Divide both sides by ten. Fifty divided by ten is five. So each part of the ratio is worth five marbles.", "op": "÷ 10 on both sides", "result": "k = 5", "final": true}
+    ]},
+    {"type": "list", "title": "Medium: the answer", "beats": [
+      {"say": "The red marbles are seven times five, which is thirty-five. Each part of the ratio is worth five marbles.", "item": "Red: 7 × 5 = 35"},
+      {"say": "The blue marbles are three times five, which is fifteen. So fifteen marbles are blue. Notice that the ratio parts are seven and three, but the actual numbers are thirty-five and fifteen.", "item": "Blue: 3 × 5 = 15"},
+      {"say": "Check the total. Thirty-five plus fifteen is fifty, which matches the problem.", "item": "Check: 35 + 15 = 50"}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. A leaky faucet drips six milliliters every fifteen seconds. How many liters does it waste in one day? One liter equals one thousand milliliters.", "card": {"text": "6 mL every 15 seconds", "sub": "Liters wasted in one day?"}},
+      {"say": "This is a unit conversion chain. We start with milliliters per second and multiply by conversion fractions until we reach liters per day.", "card": {"text": "Multiply by fractions equal to 1"}}
+    ]},
+    {"type": "list", "title": "Hard: the conversion factors", "beats": [
+      {"say": "First, there are sixty seconds in a minute. Multiplying by sixty seconds over one minute cancels the seconds, and gives us minutes.", "item": "60 seconds per minute"},
+      {"say": "Next, there are sixty minutes in an hour. This cancels the minutes and gives us hours.", "item": "60 minutes per hour"},
+      {"say": "Then, there are twenty-four hours in a day. This cancels the hours and gives us days.", "item": "24 hours per day"},
+      {"say": "Finally, one liter is one thousand milliliters. Multiplying by one liter over one thousand milliliters cancels milliliters and gives liters.", "item": "1 liter per 1,000 milliliters"}
+    ]},
+    {"type": "steps", "title": "Hard: compute the chain", "start": "frac(6,15) × 60 × 60 × 24 ÷ 1000", "beats": [
+      {"say": "Write the whole chain in one line. Six over fifteen is the drip rate in milliliters per second, and the remaining numbers convert the units."},
+      {"say": "Six divided by fifteen is zero point four. So the faucet wastes zero point four milliliters every second.", "op": "6 ÷ 15", "result": "0.4 × 60 × 60 × 24 ÷ 1000"},
+      {"say": "Sixty times sixty times twenty-four is eighty-six thousand four hundred, the number of seconds in a day. Multiplying by zero point four gives thirty-four thousand five hundred sixty milliliters per day.", "op": "convert seconds to a day", "result": "34560 ÷ 1000"},
+      {"say": "Divide by one thousand to convert milliliters to liters. Thirty-four thousand five hundred sixty divided by one thousand is thirty-four point five six.", "op": "convert mL to liters", "result": "34.56", "final": true}
+    ]},
+    {"type": "check", "title": "Check another way", "beats": [
+      {"say": "Check another way. A day has eighty-six thousand four hundred seconds, and zero point four times that is thirty-four thousand five hundred sixty milliliters. In liters, that is thirty-four point five six.", "lines": ["0.4 × 86400 = 34560 mL", "34560 ÷ 1000 = 34.56 L"], "verdict": "About 34.56 liters per day."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. In a ratio, the quantities are multiples of a common k, and the parts add to the total.", "item": "Ratio parts are multiples of k"},
+      {"say": "For unit conversions, write a chain of fractions equal to one, so that every unwanted unit cancels.", "item": "Chain fractions so units cancel"},
+      {"say": "Check by converting a different way. In the next video, we look at common traps and the fast way with Desmos.", "item": "Check a different way"}
+    ]}
+  ]
+}

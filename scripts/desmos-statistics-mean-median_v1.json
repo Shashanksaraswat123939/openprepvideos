@@ -1,0 +1,46 @@
+{
+  "id": "desmos-statistics-mean-median_v1",
+  "skill": "desmos-statistics-mean-median",
+  "part": 1,
+  "title": "Desmos Basics: Mean and Median",
+  "section_label": "Desmos basics",
+  "scenes": [
+    {"type": "cards", "title": "Mean and median", "beats": [
+      {"say": "Desmos can compute statistics for a list of numbers in a single line. You store the numbers in a list inside square brackets, and then ask for the mean or the median.", "card": {"text": "Store a list, then ask for statistics"}},
+      {"say": "The mean is the average. The median is the middle value when the list is in order. Other useful functions include min, max, total, and standard deviation.", "card": {"text": "mean(L), median(L), min(L), max(L)"}},
+      {"say": "We will work through three examples, from an easy one to a hard one, and you will see every key press.", "card": {"text": "Three examples: easy, medium, hard"}}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. Find the mean and the median of the data set one, two, three, four, ten.", "card": {"text": "1, 2, 3, 4, 10", "sub": "Find the mean and the median"}}
+    ]},
+    {"type": "desmos", "title": "Easy: one list", "beats": [
+      {"say": "Open a fresh graph. We will store the data in a list called L.", "actions": ["hold: 2"]},
+      {"say": "Type L equals, then an opening square bracket, then the numbers separated by commas. Desmos closes the bracket for you.", "actions": ["type: L=[1,2,3,4,10]"]},
+      {"say": "Now type mean of L. Desmos shows the answer instantly, right below the expression.", "actions": ["type: mean(L)"]},
+      {"say": "Type median of L. The mean is four, but the median is three, because the big value ten pulls the mean upward.", "actions": ["type: median(L)", "hold: 2"]}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. The data set is twelve, fifteen, fifteen, eighteen, twenty-one, and forty. Find the mean and the median.", "card": {"text": "12, 15, 15, 18, 21, 40", "sub": "Find the mean and the median"}}
+    ]},
+    {"type": "desmos", "title": "Medium: an outlier", "beats": [
+      {"say": "This data set has one value, forty, that is much larger than the rest. Values like that are called outliers.", "actions": ["hold: 2"]},
+      {"say": "Type L equals the list of six numbers, with commas between them.", "actions": ["type: L=[12,15,15,18,21,40]"]},
+      {"say": "Type mean of L. Desmos reports about twenty point one seven, which is higher than most of the values in the list.", "actions": ["type: mean(L)"]},
+      {"say": "Type median of L. Desmos reports sixteen point five. The mean is much higher than the median, because the outlier pulls it up.", "actions": ["type: median(L)", "hold: 2"]}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. If the value forty is removed from that data set, which changes more, the mean or the median, and by how much?", "card": {"text": "Remove 40. Which changes more?", "sub": "Mean or median"}}
+    ]},
+    {"type": "desmos", "title": "Hard: compare the change", "beats": [
+      {"say": "We already know the mean was about twenty point one seven and the median was sixteen point five. Now we compute both again without the outlier.", "actions": ["hold: 2"]},
+      {"say": "Type M equals the list with forty removed: twelve, fifteen, fifteen, eighteen, twenty-one.", "actions": ["type: M=[12,15,15,18,21]"]},
+      {"say": "Type mean of M. Desmos reports sixteen point two. The mean dropped by about four.", "actions": ["type: mean(M)"]},
+      {"say": "Type median of M. Desmos reports fifteen. The median dropped by only one and a half. So the mean changed much more than the median.", "actions": ["type: median(M)", "hold: 2"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Store the data in a list in square brackets, then type mean or median of the list.", "item": "Store data in a list"},
+      {"say": "An outlier pulls the mean toward it, but barely moves the median.", "item": "Outliers move the mean, not the median"},
+      {"say": "To see how a value affects a statistic, remove it and compute again. In the next video, we use tables and regression.", "item": "Remove a value and recompute"}
+    ]}
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "about-the-sat_v2",
+  "skill": "about-the-sat",
+  "part": 2,
+  "title": "How to Study With OpenPrep",
+  "section_label": "Getting started",
+  "scenes": [
+    {"type": "cards", "title": "Start from scratch", "beats": [
+      {"say": "OpenPrep gives you a free path through everything on the SAT. If you are new to the test, the Start from scratch page takes you through it in a sensible order, one topic at a time.", "card": {"text": "Start from scratch"}},
+      {"say": "The path begins with how the SAT works, then the Desmos calculator basics, then every Math topic, and finally every Reading and Writing topic.", "card": {"text": "Format, Desmos, Math, then Reading and Writing"}},
+      {"say": "You can work through the topics in order, or skip any topic you already know. Topics marked likely covered in school are only a guide, and every topic stays available.", "card": {"text": "Go in order, or skip what you know"}}
+    ]},
+    {"type": "list", "title": "How to use this course", "beats": [
+      {"say": "Step one. Start with a lesson or with practice. A diagnostic is optional if you want a starting-level check, and your practice answers also help personalize your plan.", "item": "Start with a lesson or practice"},
+      {"say": "Step two. Work through the units. For each skill, read the lesson, study the two worked examples, and then practice. Your level moves from not started to attempted, familiar, proficient, and finally mastered.", "item": "Work through the units"},
+      {"say": "Step three. Take the quizzes and unit tests. They mix skills together like the real test, and they raise your levels faster.", "item": "Take quizzes and unit tests"},
+      {"say": "Step four. When you have worked through the units, try the course challenge, which checks every skill at once.", "item": "Try the course challenge"},
+      {"say": "Step five. Take full practice tests on the Tests page, to build the pacing and stamina you need for the real test.", "item": "Take full practice tests"}
+    ]},
+    {"type": "cards", "title": "Your study plan", "beats": [
+      {"say": "Your study plan on the Home page already picks the skills that are worth the most points for you. You can follow it day by day.", "card": {"text": "The Home page study plan", "sub": "picks the skills worth the most points"}},
+      {"say": "Use the course whenever you want to go deeper on a topic. The plan tells you what to study first, and the course shows you how.", "card": {"text": "Plan: what to study. Course: how."}}
+    ]},
+    {"type": "cards", "title": "What every lesson contains", "beats": [
+      {"say": "Every lesson follows the same pattern. First, what the skill is. Then the key ideas and the rules, with worked examples that go from easy to hard.", "card": {"text": "Idea, rules, worked examples"}},
+      {"say": "After the examples come the common traps, which are the mistakes students make most often, and then the fast way to solve the problem, including when to use Desmos.", "card": {"text": "Common traps, then the fast way"}}
+    ]},
+    {"type": "cards", "title": "How to watch these videos", "beats": [
+      {"say": "Pause the video whenever a problem appears, and try it yourself before you watch the solution. Struggling for a minute is how the method sticks.", "card": {"text": "Pause and try it yourself"}},
+      {"say": "Then compare your steps with ours. Pay attention to the reason given for every step, and use the check at the end of each problem to see why the answer is right.", "card": {"text": "Then compare your steps"}}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Use the Start from scratch path in order, or skip the topics that you already know well.", "item": "Follow the Start from scratch path"},
+      {"say": "For each skill, read the lesson, watch the worked examples, and then practice, so your level keeps rising.", "item": "Lesson, examples, then practice"},
+      {"say": "Pause on every problem and try it yourself first. In the next video, we begin with the Desmos calculator basics, starting with graphing.", "item": "Pause and try each problem first"}
+    ]}
+  ]
+}

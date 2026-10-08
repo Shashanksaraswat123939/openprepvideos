@@ -1,0 +1,872 @@
+[
+ {
+  "id": "about-the-sat_v1",
+  "skill": "about-the-sat",
+  "part": 1,
+  "title": "How the SAT is built and scored",
+  "section_label": "Getting started",
+  "lesson": "C:\\Users\\Laptop\\op\\src\\app\\(app)\\course\\about-the-sat\\page.tsx",
+  "kind": "intro",
+  "next": "How to study with OpenPrep"
+ },
+ {
+  "id": "about-the-sat_v2",
+  "skill": "about-the-sat",
+  "part": 2,
+  "title": "How to study with OpenPrep",
+  "section_label": "Getting started",
+  "lesson": "C:\\Users\\Laptop\\op\\src\\app\\(app)\\course\\about-the-sat\\page.tsx",
+  "kind": "intro",
+  "next": "Graphing basics"
+ },
+ {
+  "id": "desmos-graphing-basics_v1",
+  "skill": "desmos-graphing-basics",
+  "part": 1,
+  "title": "Graphing basics",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\graphing-basics.md",
+  "kind": "desmos",
+  "next": "Inequalities"
+ },
+ {
+  "id": "desmos-inequalities_v1",
+  "skill": "desmos-inequalities",
+  "part": 1,
+  "title": "Inequalities",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\inequalities.md",
+  "kind": "desmos",
+  "next": "Intersections and systems"
+ },
+ {
+  "id": "desmos-intersections-and-systems_v1",
+  "skill": "desmos-intersections-and-systems",
+  "part": 1,
+  "title": "Intersections and systems",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\intersections-and-systems.md",
+  "kind": "desmos",
+  "next": "Vertex and roots of a quadratic"
+ },
+ {
+  "id": "desmos-quadratics-vertex-roots_v1",
+  "skill": "desmos-quadratics-vertex-roots",
+  "part": 1,
+  "title": "Vertex and roots of a quadratic",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\quadratics-vertex-roots.md",
+  "kind": "desmos",
+  "next": "Sliders for unknown constants"
+ },
+ {
+  "id": "desmos-sliders-for-unknown-constants_v1",
+  "skill": "desmos-sliders-for-unknown-constants",
+  "part": 1,
+  "title": "Sliders for unknown constants",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\sliders-for-unknown-constants.md",
+  "kind": "desmos",
+  "next": "Solving any equation by graphing"
+ },
+ {
+  "id": "desmos-solving-any-equation-by-graphing_v1",
+  "skill": "desmos-solving-any-equation-by-graphing",
+  "part": 1,
+  "title": "Solving any equation by graphing",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\solving-any-equation-by-graphing.md",
+  "kind": "desmos",
+  "next": "Mean and median"
+ },
+ {
+  "id": "desmos-statistics-mean-median_v1",
+  "skill": "desmos-statistics-mean-median",
+  "part": 1,
+  "title": "Mean and median",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\statistics-mean-median.md",
+  "kind": "desmos",
+  "next": "Tables and regression"
+ },
+ {
+  "id": "desmos-tables-and-regression_v1",
+  "skill": "desmos-tables-and-regression",
+  "part": 1,
+  "title": "Tables and regression",
+  "section_label": "Desmos basics",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\desmos\\tables-and-regression.md",
+  "kind": "desmos",
+  "next": "Linear Equations in One Variable"
+ },
+ {
+  "id": "m-alg-lin1_v1",
+  "skill": "m-alg-lin1",
+  "part": 1,
+  "title": "Linear Equations in One Variable",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-lin1.md",
+  "kind": "math",
+  "next": "Linear Equations in One Variable"
+ },
+ {
+  "id": "m-alg-lin1_v2",
+  "skill": "m-alg-lin1",
+  "part": 2,
+  "title": "Linear Equations in One Variable",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-lin1.md",
+  "kind": "math",
+  "next": "Linear Equations in One Variable"
+ },
+ {
+  "id": "m-alg-lin1_v3",
+  "skill": "m-alg-lin1",
+  "part": 3,
+  "title": "Linear Equations in One Variable",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-lin1.md",
+  "kind": "math",
+  "next": "Linear Functions"
+ },
+ {
+  "id": "m-alg-linfunc_v1",
+  "skill": "m-alg-linfunc",
+  "part": 1,
+  "title": "Linear Functions",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-linfunc.md",
+  "kind": "math",
+  "next": "Linear Functions"
+ },
+ {
+  "id": "m-alg-linfunc_v2",
+  "skill": "m-alg-linfunc",
+  "part": 2,
+  "title": "Linear Functions",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-linfunc.md",
+  "kind": "math",
+  "next": "Linear Functions"
+ },
+ {
+  "id": "m-alg-linfunc_v3",
+  "skill": "m-alg-linfunc",
+  "part": 3,
+  "title": "Linear Functions",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-linfunc.md",
+  "kind": "math",
+  "next": "Linear Equations in Two Variables"
+ },
+ {
+  "id": "m-alg-lin2_v1",
+  "skill": "m-alg-lin2",
+  "part": 1,
+  "title": "Linear Equations in Two Variables",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-lin2.md",
+  "kind": "math",
+  "next": "Linear Equations in Two Variables"
+ },
+ {
+  "id": "m-alg-lin2_v2",
+  "skill": "m-alg-lin2",
+  "part": 2,
+  "title": "Linear Equations in Two Variables",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-lin2.md",
+  "kind": "math",
+  "next": "Linear Equations in Two Variables"
+ },
+ {
+  "id": "m-alg-lin2_v3",
+  "skill": "m-alg-lin2",
+  "part": 3,
+  "title": "Linear Equations in Two Variables",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-lin2.md",
+  "kind": "math",
+  "next": "Systems of Two Linear Equations"
+ },
+ {
+  "id": "m-alg-systems_v1",
+  "skill": "m-alg-systems",
+  "part": 1,
+  "title": "Systems of Two Linear Equations",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-systems.md",
+  "kind": "math",
+  "next": "Systems of Two Linear Equations"
+ },
+ {
+  "id": "m-alg-systems_v2",
+  "skill": "m-alg-systems",
+  "part": 2,
+  "title": "Systems of Two Linear Equations",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-systems.md",
+  "kind": "math",
+  "next": "Systems of Two Linear Equations"
+ },
+ {
+  "id": "m-alg-systems_v3",
+  "skill": "m-alg-systems",
+  "part": 3,
+  "title": "Systems of Two Linear Equations",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-systems.md",
+  "kind": "math",
+  "next": "Linear Inequalities"
+ },
+ {
+  "id": "m-alg-ineq_v1",
+  "skill": "m-alg-ineq",
+  "part": 1,
+  "title": "Linear Inequalities",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-ineq.md",
+  "kind": "math",
+  "next": "Linear Inequalities"
+ },
+ {
+  "id": "m-alg-ineq_v2",
+  "skill": "m-alg-ineq",
+  "part": 2,
+  "title": "Linear Inequalities",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-ineq.md",
+  "kind": "math",
+  "next": "Linear Inequalities"
+ },
+ {
+  "id": "m-alg-ineq_v3",
+  "skill": "m-alg-ineq",
+  "part": 3,
+  "title": "Linear Inequalities",
+  "section_label": "Math · Algebra",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-alg-ineq.md",
+  "kind": "math",
+  "next": "Equivalent Expressions"
+ },
+ {
+  "id": "m-adv-equiv_v1",
+  "skill": "m-adv-equiv",
+  "part": 1,
+  "title": "Equivalent Expressions",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-equiv.md",
+  "kind": "math",
+  "next": "Equivalent Expressions"
+ },
+ {
+  "id": "m-adv-equiv_v2",
+  "skill": "m-adv-equiv",
+  "part": 2,
+  "title": "Equivalent Expressions",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-equiv.md",
+  "kind": "math",
+  "next": "Equivalent Expressions"
+ },
+ {
+  "id": "m-adv-equiv_v3",
+  "skill": "m-adv-equiv",
+  "part": 3,
+  "title": "Equivalent Expressions",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-equiv.md",
+  "kind": "math",
+  "next": "Nonlinear Equations and Systems"
+ },
+ {
+  "id": "m-adv-nonlin-eq_v1",
+  "skill": "m-adv-nonlin-eq",
+  "part": 1,
+  "title": "Nonlinear Equations and Systems",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-nonlin-eq.md",
+  "kind": "math",
+  "next": "Nonlinear Equations and Systems"
+ },
+ {
+  "id": "m-adv-nonlin-eq_v2",
+  "skill": "m-adv-nonlin-eq",
+  "part": 2,
+  "title": "Nonlinear Equations and Systems",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-nonlin-eq.md",
+  "kind": "math",
+  "next": "Nonlinear Equations and Systems"
+ },
+ {
+  "id": "m-adv-nonlin-eq_v3",
+  "skill": "m-adv-nonlin-eq",
+  "part": 3,
+  "title": "Nonlinear Equations and Systems",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-nonlin-eq.md",
+  "kind": "math",
+  "next": "Nonlinear Functions"
+ },
+ {
+  "id": "m-adv-nonlin-func_v1",
+  "skill": "m-adv-nonlin-func",
+  "part": 1,
+  "title": "Nonlinear Functions",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-nonlin-func.md",
+  "kind": "math",
+  "next": "Nonlinear Functions"
+ },
+ {
+  "id": "m-adv-nonlin-func_v2",
+  "skill": "m-adv-nonlin-func",
+  "part": 2,
+  "title": "Nonlinear Functions",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-nonlin-func.md",
+  "kind": "math",
+  "next": "Nonlinear Functions"
+ },
+ {
+  "id": "m-adv-nonlin-func_v3",
+  "skill": "m-adv-nonlin-func",
+  "part": 3,
+  "title": "Nonlinear Functions",
+  "section_label": "Math · Advanced Math",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-adv-nonlin-func.md",
+  "kind": "math",
+  "next": "Ratios, Rates, Proportions, Units"
+ },
+ {
+  "id": "m-psda-ratios_v1",
+  "skill": "m-psda-ratios",
+  "part": 1,
+  "title": "Ratios, Rates, Proportions, Units",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-ratios.md",
+  "kind": "math",
+  "next": "Ratios, Rates, Proportions, Units"
+ },
+ {
+  "id": "m-psda-ratios_v2",
+  "skill": "m-psda-ratios",
+  "part": 2,
+  "title": "Ratios, Rates, Proportions, Units",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-ratios.md",
+  "kind": "math",
+  "next": "Ratios, Rates, Proportions, Units"
+ },
+ {
+  "id": "m-psda-ratios_v3",
+  "skill": "m-psda-ratios",
+  "part": 3,
+  "title": "Ratios, Rates, Proportions, Units",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-ratios.md",
+  "kind": "math",
+  "next": "Percentages"
+ },
+ {
+  "id": "m-psda-percent_v1",
+  "skill": "m-psda-percent",
+  "part": 1,
+  "title": "Percentages",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-percent.md",
+  "kind": "math",
+  "next": "Percentages"
+ },
+ {
+  "id": "m-psda-percent_v2",
+  "skill": "m-psda-percent",
+  "part": 2,
+  "title": "Percentages",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-percent.md",
+  "kind": "math",
+  "next": "Percentages"
+ },
+ {
+  "id": "m-psda-percent_v3",
+  "skill": "m-psda-percent",
+  "part": 3,
+  "title": "Percentages",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-percent.md",
+  "kind": "math",
+  "next": "One-Variable Data"
+ },
+ {
+  "id": "m-psda-onevar_v1",
+  "skill": "m-psda-onevar",
+  "part": 1,
+  "title": "One-Variable Data",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-onevar.md",
+  "kind": "math",
+  "next": "One-Variable Data"
+ },
+ {
+  "id": "m-psda-onevar_v2",
+  "skill": "m-psda-onevar",
+  "part": 2,
+  "title": "One-Variable Data",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-onevar.md",
+  "kind": "math",
+  "next": "One-Variable Data"
+ },
+ {
+  "id": "m-psda-onevar_v3",
+  "skill": "m-psda-onevar",
+  "part": 3,
+  "title": "One-Variable Data",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-onevar.md",
+  "kind": "math",
+  "next": "Two-Variable Data"
+ },
+ {
+  "id": "m-psda-twovar_v1",
+  "skill": "m-psda-twovar",
+  "part": 1,
+  "title": "Two-Variable Data",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-twovar.md",
+  "kind": "math",
+  "next": "Two-Variable Data"
+ },
+ {
+  "id": "m-psda-twovar_v2",
+  "skill": "m-psda-twovar",
+  "part": 2,
+  "title": "Two-Variable Data",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-twovar.md",
+  "kind": "math",
+  "next": "Two-Variable Data"
+ },
+ {
+  "id": "m-psda-twovar_v3",
+  "skill": "m-psda-twovar",
+  "part": 3,
+  "title": "Two-Variable Data",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-twovar.md",
+  "kind": "math",
+  "next": "Probability and Conditional Probability"
+ },
+ {
+  "id": "m-psda-prob_v1",
+  "skill": "m-psda-prob",
+  "part": 1,
+  "title": "Probability and Conditional Probability",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-prob.md",
+  "kind": "math",
+  "next": "Probability and Conditional Probability"
+ },
+ {
+  "id": "m-psda-prob_v2",
+  "skill": "m-psda-prob",
+  "part": 2,
+  "title": "Probability and Conditional Probability",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-prob.md",
+  "kind": "math",
+  "next": "Probability and Conditional Probability"
+ },
+ {
+  "id": "m-psda-prob_v3",
+  "skill": "m-psda-prob",
+  "part": 3,
+  "title": "Probability and Conditional Probability",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-prob.md",
+  "kind": "math",
+  "next": "Inference from Sample Statistics, Margin of Error"
+ },
+ {
+  "id": "m-psda-inference_v1",
+  "skill": "m-psda-inference",
+  "part": 1,
+  "title": "Inference from Sample Statistics, Margin of Error",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-inference.md",
+  "kind": "math",
+  "next": "Inference from Sample Statistics, Margin of Error"
+ },
+ {
+  "id": "m-psda-inference_v2",
+  "skill": "m-psda-inference",
+  "part": 2,
+  "title": "Inference from Sample Statistics, Margin of Error",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-inference.md",
+  "kind": "math",
+  "next": "Inference from Sample Statistics, Margin of Error"
+ },
+ {
+  "id": "m-psda-inference_v3",
+  "skill": "m-psda-inference",
+  "part": 3,
+  "title": "Inference from Sample Statistics, Margin of Error",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-inference.md",
+  "kind": "math",
+  "next": "Evaluating Statistical Claims"
+ },
+ {
+  "id": "m-psda-claims_v1",
+  "skill": "m-psda-claims",
+  "part": 1,
+  "title": "Evaluating Statistical Claims",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-claims.md",
+  "kind": "math",
+  "next": "Evaluating Statistical Claims"
+ },
+ {
+  "id": "m-psda-claims_v2",
+  "skill": "m-psda-claims",
+  "part": 2,
+  "title": "Evaluating Statistical Claims",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-claims.md",
+  "kind": "math",
+  "next": "Evaluating Statistical Claims"
+ },
+ {
+  "id": "m-psda-claims_v3",
+  "skill": "m-psda-claims",
+  "part": 3,
+  "title": "Evaluating Statistical Claims",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-psda-claims.md",
+  "kind": "math",
+  "next": "Area and Volume"
+ },
+ {
+  "id": "m-geo-area_v1",
+  "skill": "m-geo-area",
+  "part": 1,
+  "title": "Area and Volume",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-area.md",
+  "kind": "math",
+  "next": "Area and Volume"
+ },
+ {
+  "id": "m-geo-area_v2",
+  "skill": "m-geo-area",
+  "part": 2,
+  "title": "Area and Volume",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-area.md",
+  "kind": "math",
+  "next": "Area and Volume"
+ },
+ {
+  "id": "m-geo-area_v3",
+  "skill": "m-geo-area",
+  "part": 3,
+  "title": "Area and Volume",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-area.md",
+  "kind": "math",
+  "next": "Lines, Angles, and Triangles"
+ },
+ {
+  "id": "m-geo-lines_v1",
+  "skill": "m-geo-lines",
+  "part": 1,
+  "title": "Lines, Angles, and Triangles",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-lines.md",
+  "kind": "math",
+  "next": "Lines, Angles, and Triangles"
+ },
+ {
+  "id": "m-geo-lines_v2",
+  "skill": "m-geo-lines",
+  "part": 2,
+  "title": "Lines, Angles, and Triangles",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-lines.md",
+  "kind": "math",
+  "next": "Lines, Angles, and Triangles"
+ },
+ {
+  "id": "m-geo-lines_v3",
+  "skill": "m-geo-lines",
+  "part": 3,
+  "title": "Lines, Angles, and Triangles",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-lines.md",
+  "kind": "math",
+  "next": "Right Triangles and Trigonometry"
+ },
+ {
+  "id": "m-geo-trig_v1",
+  "skill": "m-geo-trig",
+  "part": 1,
+  "title": "Right Triangles and Trigonometry",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-trig.md",
+  "kind": "math",
+  "next": "Right Triangles and Trigonometry"
+ },
+ {
+  "id": "m-geo-trig_v2",
+  "skill": "m-geo-trig",
+  "part": 2,
+  "title": "Right Triangles and Trigonometry",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-trig.md",
+  "kind": "math",
+  "next": "Right Triangles and Trigonometry"
+ },
+ {
+  "id": "m-geo-trig_v3",
+  "skill": "m-geo-trig",
+  "part": 3,
+  "title": "Right Triangles and Trigonometry",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-trig.md",
+  "kind": "math",
+  "next": "Circles"
+ },
+ {
+  "id": "m-geo-circles_v1",
+  "skill": "m-geo-circles",
+  "part": 1,
+  "title": "Circles",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-circles.md",
+  "kind": "math",
+  "next": "Circles"
+ },
+ {
+  "id": "m-geo-circles_v2",
+  "skill": "m-geo-circles",
+  "part": 2,
+  "title": "Circles",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-circles.md",
+  "kind": "math",
+  "next": "Circles"
+ },
+ {
+  "id": "m-geo-circles_v3",
+  "skill": "m-geo-circles",
+  "part": 3,
+  "title": "Circles",
+  "section_label": "Math · Geometry and Trigonometry",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\m-geo-circles.md",
+  "kind": "math",
+  "next": "Central Ideas and Details"
+ },
+ {
+  "id": "rw-ii-central_v1",
+  "skill": "rw-ii-central",
+  "part": 1,
+  "title": "Central Ideas and Details",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ii-central.md",
+  "kind": "rw",
+  "next": "Central Ideas and Details"
+ },
+ {
+  "id": "rw-ii-central_v2",
+  "skill": "rw-ii-central",
+  "part": 2,
+  "title": "Central Ideas and Details",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ii-central.md",
+  "kind": "rw",
+  "next": "Command of Evidence"
+ },
+ {
+  "id": "rw-ii-evidence_v1",
+  "skill": "rw-ii-evidence",
+  "part": 1,
+  "title": "Command of Evidence",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ii-evidence.md",
+  "kind": "rw",
+  "next": "Command of Evidence"
+ },
+ {
+  "id": "rw-ii-evidence_v2",
+  "skill": "rw-ii-evidence",
+  "part": 2,
+  "title": "Command of Evidence",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ii-evidence.md",
+  "kind": "rw",
+  "next": "Inferences"
+ },
+ {
+  "id": "rw-ii-inference_v1",
+  "skill": "rw-ii-inference",
+  "part": 1,
+  "title": "Inferences",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ii-inference.md",
+  "kind": "rw",
+  "next": "Inferences"
+ },
+ {
+  "id": "rw-ii-inference_v2",
+  "skill": "rw-ii-inference",
+  "part": 2,
+  "title": "Inferences",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ii-inference.md",
+  "kind": "rw",
+  "next": "Words in Context"
+ },
+ {
+  "id": "rw-cs-words_v1",
+  "skill": "rw-cs-words",
+  "part": 1,
+  "title": "Words in Context",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-cs-words.md",
+  "kind": "rw",
+  "next": "Words in Context"
+ },
+ {
+  "id": "rw-cs-words_v2",
+  "skill": "rw-cs-words",
+  "part": 2,
+  "title": "Words in Context",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-cs-words.md",
+  "kind": "rw",
+  "next": "Text Structure and Purpose"
+ },
+ {
+  "id": "rw-cs-structure_v1",
+  "skill": "rw-cs-structure",
+  "part": 1,
+  "title": "Text Structure and Purpose",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-cs-structure.md",
+  "kind": "rw",
+  "next": "Text Structure and Purpose"
+ },
+ {
+  "id": "rw-cs-structure_v2",
+  "skill": "rw-cs-structure",
+  "part": 2,
+  "title": "Text Structure and Purpose",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-cs-structure.md",
+  "kind": "rw",
+  "next": "Cross-Text Connections"
+ },
+ {
+  "id": "rw-cs-crosstext_v1",
+  "skill": "rw-cs-crosstext",
+  "part": 1,
+  "title": "Cross-Text Connections",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-cs-crosstext.md",
+  "kind": "rw",
+  "next": "Cross-Text Connections"
+ },
+ {
+  "id": "rw-cs-crosstext_v2",
+  "skill": "rw-cs-crosstext",
+  "part": 2,
+  "title": "Cross-Text Connections",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-cs-crosstext.md",
+  "kind": "rw",
+  "next": "Transitions"
+ },
+ {
+  "id": "rw-ei-transitions_v1",
+  "skill": "rw-ei-transitions",
+  "part": 1,
+  "title": "Transitions",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ei-transitions.md",
+  "kind": "rw",
+  "next": "Transitions"
+ },
+ {
+  "id": "rw-ei-transitions_v2",
+  "skill": "rw-ei-transitions",
+  "part": 2,
+  "title": "Transitions",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ei-transitions.md",
+  "kind": "rw",
+  "next": "Rhetorical Synthesis"
+ },
+ {
+  "id": "rw-ei-synthesis_v1",
+  "skill": "rw-ei-synthesis",
+  "part": 1,
+  "title": "Rhetorical Synthesis",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ei-synthesis.md",
+  "kind": "rw",
+  "next": "Rhetorical Synthesis"
+ },
+ {
+  "id": "rw-ei-synthesis_v2",
+  "skill": "rw-ei-synthesis",
+  "part": 2,
+  "title": "Rhetorical Synthesis",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-ei-synthesis.md",
+  "kind": "rw",
+  "next": "Boundaries (punctuation, sentence structure)"
+ },
+ {
+  "id": "rw-sec-boundaries_v1",
+  "skill": "rw-sec-boundaries",
+  "part": 1,
+  "title": "Boundaries (punctuation, sentence structure)",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-sec-boundaries.md",
+  "kind": "rw",
+  "next": "Boundaries (punctuation, sentence structure)"
+ },
+ {
+  "id": "rw-sec-boundaries_v2",
+  "skill": "rw-sec-boundaries",
+  "part": 2,
+  "title": "Boundaries (punctuation, sentence structure)",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-sec-boundaries.md",
+  "kind": "rw",
+  "next": "Form, Structure, and Sense (grammar)"
+ },
+ {
+  "id": "rw-sec-form_v1",
+  "skill": "rw-sec-form",
+  "part": 1,
+  "title": "Form, Structure, and Sense (grammar)",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-sec-form.md",
+  "kind": "rw",
+  "next": "Form, Structure, and Sense (grammar)"
+ },
+ {
+  "id": "rw-sec-form_v2",
+  "skill": "rw-sec-form",
+  "part": 2,
+  "title": "Form, Structure, and Sense (grammar)",
+  "section_label": "Reading and Writing",
+  "lesson": "C:\\Users\\Laptop\\op\\content\\lessons\\rw-sec-form.md",
+  "kind": "rw",
+  "next": "this was the final topic"
+ }
+]

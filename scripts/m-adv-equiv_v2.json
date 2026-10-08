@@ -1,0 +1,47 @@
+{
+  "id": "m-adv-equiv_v2",
+  "skill": "m-adv-equiv",
+  "part": 2,
+  "title": "Equivalent Expressions, Part 2: Medium and Hard Problems",
+  "section_label": "Math · Advanced Math",
+  "scenes": [
+    {"type": "cards", "title": "Recap of part one", "beats": [
+      {"say": "In part one, we expanded products and used exponent rules. Equivalent expressions have the same value for every allowed x.", "card": {"text": "Same value for every x"}},
+      {"say": "In this video, we factor by splitting the middle term, simplify with fractional exponents, and then rewrite a fraction in a new form.", "card": {"text": "Today: factor, exponents, fractions"}}
+    ]},
+    {"type": "cards", "title": "Medium example 1", "beats": [
+      {"say": "Medium example one. Factor two x squared plus seven x plus three. We use the splitting method, which works whenever the leading coefficient is not one.", "card": {"text": "2x^2 + 7x + 3", "sub": "Factor completely"}}
+    ]},
+    {"type": "steps", "title": "Medium 1: factor by splitting", "start": "2x^2 + 7x + 3", "beats": [
+      {"say": "Multiply the leading coefficient and the constant. Two times three is six. We need two numbers that multiply to six and add to seven. Those numbers are six and one."},
+      {"say": "Split the middle term seven x into six x plus x. This does not change the value, because six x plus x is seven x.", "op": "split 7x into 6x + x", "result": "2x^2 + 6x + x + 3"},
+      {"say": "Group the first two terms and the last two terms, and factor each group. The first group has the common factor two x, and the second group has the common factor one.", "op": "factor each group", "result": "2x(x + 3) + 1(x + 3)"},
+      {"say": "Both groups share the factor x plus three. Factor it out, and what remains is two x plus one.", "op": "factor out (x + 3)", "result": "(2x + 1)(x + 3)", "final": true}
+    ]},
+    {"type": "cards", "title": "Medium example 2", "beats": [
+      {"say": "Medium example two. Simplify x squared times the cube root of x, divided by the square root of x cubed. The trick is to turn every radical into a fractional exponent.", "card": {"text": "frac(x^2 × x^(1/3),x^(3/2))", "sub": "Write as a single power of x"}}
+    ]},
+    {"type": "steps", "title": "Medium 2: fractional exponents", "start": "frac(x^2 × x^(1/3),x^(3/2))", "beats": [
+      {"say": "The cube root of x is x to the one third, and the square root of x cubed is x to the three halves. Now every factor is a power of x."},
+      {"say": "Multiplying powers adds the exponents, and dividing subtracts them. So the exponent is two plus one third minus three halves.", "op": "combine the exponents", "result": "x^(2 + 1/3 − 3/2)"},
+      {"say": "Use a common denominator of six. Twelve sixths plus two sixths minus nine sixths is five sixths. So the expression is x to the five sixths.", "op": "add the fractions", "result": "x^(5/6)", "final": true}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. The expression three x minus four over x plus two can be rewritten as three plus A over x plus two, where A is a constant. What is A?", "card": {"text": "frac(3x − 4,x + 2) = 3 + frac(A,x + 2)", "sub": "Find A"}},
+      {"say": "The idea is to write the numerator using the denominator. We want to see how many copies of x plus two fit inside three x minus four.", "card": {"text": "Write the numerator with x + 2"}}
+    ]},
+    {"type": "steps", "title": "Hard: rewrite the fraction", "start": "frac(3x − 4,x + 2)", "beats": [
+      {"say": "Three x is three times x, so three copies of x plus two would give three x plus six. Our numerator is three x minus four, which is ten less than that."},
+      {"say": "So three x minus four equals three times x plus two, minus ten. Check: three x plus six minus ten is three x minus four.", "op": "numerator = 3(x + 2) − 10", "result": "frac(3(x + 2) − 10,x + 2)"},
+      {"say": "Split the fraction into two fractions. The first is three times x plus two over x plus two, which simplifies to three. The second is negative ten over x plus two.", "op": "split the fraction", "result": "3 − frac(10,x + 2)", "final": true}
+    ]},
+    {"type": "check", "title": "Check with x = 0", "beats": [
+      {"say": "So A is negative ten. Check with x equal to zero. The original is negative four over two, which is negative two. The new form is three plus negative ten over two, which is three minus five, also negative two.", "lines": ["frac(−4,2) = −2", "3 + frac(−10,2) = −2"], "verdict": "A = −10. Both forms equal −2."}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. To factor with a leading coefficient, multiply a and c, find the pair that adds to b, then split and group.", "item": "Split the middle term, then group"},
+      {"say": "Turn radicals into fractional exponents, then add or subtract the exponents with a common denominator.", "item": "Radicals become fractional exponents"},
+      {"say": "To rewrite a fraction, write the numerator using the denominator, then split. In the next video, we look at common traps and the fast way with Desmos.", "item": "Write the numerator using the denominator"}
+    ]}
+  ]
+}

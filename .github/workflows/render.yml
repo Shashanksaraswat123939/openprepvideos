@@ -1,0 +1,68 @@
+name: Render OpenPrep videos
+
+# Run it from the repo's Actions tab: "Render OpenPrep videos" -> Run workflow.
+# It splits the scripts in scripts/ over 4 parallel jobs and uploads the finished MP4s as artifacts.
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: "Number of parallel jobs"
+        default: "4"
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    env:
+      PYTHONUTF8: "1"
+      OPENPREP_TTS: kokoro
+      HF_HUB_DISABLE_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: System packages (voice engine, fonts)
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y espeak-ng fonts-dejavu-core ffmpeg
+
+      - name: Python packages
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: kokoro-model-v1
+
+      - name: Check every script (skips the render if one is broken)
+        run: |
+          mkdir -p out cache logs
+          for f in scripts/*.json; do python render.py "$f" --check; done
+
+      - name: Render this shard
+        run: python worker.py --once --shard ${{ matrix.shard }}/4
+
+      - name: Logs
+        if: always()
+        run: tail -n 40 logs/*.log || true
+
+      - name: Upload videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: videos-shard-${{ matrix.shard }}
+          path: out/*.mp4
+          if-no-files-found: ignore
+          retention-days: 14

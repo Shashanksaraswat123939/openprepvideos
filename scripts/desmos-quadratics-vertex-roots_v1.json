@@ -1,0 +1,48 @@
+{
+  "id": "desmos-quadratics-vertex-roots_v1",
+  "skill": "desmos-quadratics-vertex-roots",
+  "part": 1,
+  "title": "Desmos Basics: Vertex and Roots",
+  "section_label": "Desmos basics",
+  "scenes": [
+    {"type": "cards", "title": "Vertex and roots", "beats": [
+      {"say": "For a parabola, Desmos marks two kinds of special points with grey dots. The vertex is the highest or lowest point, and the x-intercepts are where the curve crosses the x axis.", "card": {"text": "Grey dots mark the vertex and roots"}},
+      {"say": "The x-intercepts are also called roots, or zeros, of the function. They are the values of x that make the function equal zero. Questions use all three names.", "card": {"text": "Roots = zeros = x-intercepts"}},
+      {"say": "We will work through three examples, from an easy one to a hard one, and you will see every key press.", "card": {"text": "Three examples: easy, medium, hard"}}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. Find the roots of the function y equals x squared minus four. In other words, where does the parabola cross the x axis?", "card": {"text": "y = x^2 − 4", "sub": "Find the roots"}}
+    ]},
+    {"type": "desmos", "title": "Easy: find the roots", "beats": [
+      {"say": "Open a fresh graph. We will type the function and let the grey dots show us the roots.", "actions": ["hold: 2"]},
+      {"say": "Type y equals x, press the caret key and a two, then press the right arrow, and type minus four. Desmos draws a parabola that opens upward.", "actions": ["type: y=x^2>-4"]},
+      {"say": "Click the parabola, then click the grey dot on the right where it meets the x axis. Desmos shows the point two comma zero, so x equals two is a root.", "actions": ["bounds: left=-6 right=6 bottom=-6 top=8", "click: 2,0"]},
+      {"say": "Now click the grey dot on the left. Desmos shows negative two comma zero, so x equals negative two is the other root.", "actions": ["click: -2,0"]},
+      {"say": "So the roots are negative two and two. We can confirm with algebra: x squared equals four, so x is plus or minus two.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Medium example", "beats": [
+      {"say": "Medium example. For y equals negative two x squared plus eight x minus six, find the maximum value and both roots.", "card": {"text": "y = −2x^2 + 8x − 6", "sub": "Find the vertex and roots"}}
+    ]},
+    {"type": "desmos", "title": "Medium: vertex and roots", "beats": [
+      {"say": "This parabola has a negative number in front of x squared, so it opens downward and has a highest point instead of a lowest point.", "actions": ["hold: 2"]},
+      {"say": "Type y equals negative two x, then the caret key and a two, then the right arrow, and finish with plus eight x minus six.", "actions": ["type: y=-2x^2>+8x-6"]},
+      {"say": "Click the top of the curve, then click its grey dot. Desmos shows the point two comma two. So the vertex is two comma two, and the maximum value is two.", "actions": ["bounds: left=-2 right=6 bottom=-8 top=6", "click: 2,2"]},
+      {"say": "Now click the two grey dots on the x axis. The roots are x equals one and x equals three.", "actions": ["click: 1,0", "click: 3,0"]},
+      {"say": "Notice that the vertex sits exactly halfway between the roots, at x equals two. The y intercept is the constant term, negative six.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "cards", "title": "Hard example", "beats": [
+      {"say": "Hard example. How many real solutions does the equation x squared minus six x plus thirteen equals zero have?", "card": {"text": "x^2 − 6x + 13 = 0", "sub": "How many real solutions?"}}
+    ]},
+    {"type": "desmos", "title": "Hard: no real roots", "beats": [
+      {"say": "Real solutions of this equation are the x-intercepts of the function y equals x squared minus six x plus thirteen. So we graph that function and count crossings.", "actions": ["hold: 2"]},
+      {"say": "Type y equals x, the caret key and a two, the right arrow, then minus six x plus thirteen.", "actions": ["type: y=x^2>-6x+13"]},
+      {"say": "Click the bottom of the curve and then its grey dot. The vertex is three comma four, which is above the x axis.", "actions": ["bounds: left=-4 right=10 bottom=-4 top=20", "click: 3,4"]},
+      {"say": "The parabola opens upward, and its lowest point is above the axis, so it never touches the x axis. There are no real solutions.", "actions": ["hold: 3"]}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Click the curve, then click a grey dot, to read the vertex and the x-intercepts exactly.", "item": "Click the curve, then its grey dots"},
+      {"say": "Maximum value, minimum value, and vertex all mean the vertex. Roots, zeros, and solutions all mean x-intercepts.", "item": "Max, min, vertex: the turning point"},
+      {"say": "If the parabola never touches the x axis, there are no real solutions. In the next video, we use sliders for unknown constants.", "item": "No x-intercepts: no real solutions"}
+    ]}
+  ]
+}

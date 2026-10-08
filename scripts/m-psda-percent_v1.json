@@ -1,0 +1,189 @@
+{
+  "id": "m-psda-percent_v1",
+  "skill": "m-psda-percent",
+  "part": 1,
+  "title": "Percentages, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Problem-Solving and Data Analysis",
+  "scenes": [
+    {
+      "type": "cards",
+      "title": "Percentages",
+      "beats": [
+        {
+          "say": "Percent means per hundred. The SAT tests four kinds of percent questions. The first is finding a percent of a number.",
+          "card": {
+            "text": "Percent means per hundred"
+          }
+        },
+        {
+          "say": "The second is computing a percent change. The third is working backward from a changed value to the original. And the fourth is applying successive changes, one after another.",
+          "card": {
+            "text": "Of, change, backward, successive"
+          }
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Key ideas",
+      "beats": [
+        {
+          "say": "Convert a percent to a decimal by dividing by one hundred. So thirty-five percent is zero point three five.",
+          "item": "35% is 0.35"
+        },
+        {
+          "say": "Increasing by twenty percent is multiplying by one point two. Decreasing by twenty percent is multiplying by zero point eight. Think in multipliers, not in adding the percent.",
+          "item": "Think in multipliers"
+        },
+        {
+          "say": "Successive changes multiply. A twenty percent increase and then a twenty-five percent decrease is one point two times zero point seven five, which is zero point nine, a ten percent net decrease.",
+          "item": "Successive changes multiply"
+        },
+        {
+          "say": "Percent change always uses the original value as the base, which means the number you divide by.",
+          "item": "Percent change uses the original"
+        },
+        {
+          "say": "To undo a change, divide by the multiplier. If a price is sixty-eight dollars after a fifteen percent discount, the original is sixty-eight divided by zero point eight five, which is eighty dollars.",
+          "item": "Undo a change: divide by the multiplier"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Phrases and multipliers",
+      "columns": [
+        "Phrase",
+        "Multiplier"
+      ],
+      "rows": [
+        [
+          "increase by p percent",
+          "1 + p/100"
+        ],
+        [
+          "decrease by p percent",
+          "1 − p/100"
+        ],
+        [
+          "a is p percent greater than b",
+          "a = (1 + p/100) × b"
+        ]
+      ],
+      "beats": [
+        {
+          "say": "An increase by p percent has a multiplier of one plus p over one hundred. For example, a fifteen percent increase has a multiplier of one point one five.",
+          "reveal_row": 0
+        },
+        {
+          "say": "A decrease by p percent has a multiplier of one minus p over one hundred. For example, a fifteen percent decrease has a multiplier of zero point eight five.",
+          "reveal_row": 1
+        },
+        {
+          "say": "The phrase a is p percent greater than b means a equals the multiplier times b. So the base is b, the number being compared to.",
+          "reveal_row": 2
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Two core formulas",
+      "beats": [
+        {
+          "say": "The part equals the percent over one hundred, times the whole. This is how you find a percent of a number.",
+          "card": {
+            "text": "part = frac(p,100) × whole"
+          }
+        },
+        {
+          "say": "The percent change equals the new value minus the old value, divided by the old value, times one hundred.",
+          "card": {
+            "text": "change = frac(new − old,old) × 100"
+          }
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "title": "Easy example",
+      "beats": [
+        {
+          "say": "Easy example. In part A, what percent of seventy-two is eighteen? In part B, an eighty dollar item increases in price by fifteen percent. What is the new price?",
+          "card": {
+            "text": "A: 18 is what percent of 72?",
+            "sub": "B: $80 up by 15%. New price?"
+          }
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Part A: what percent",
+      "start": "frac(18,72) × 100",
+      "beats": [
+        {
+          "say": "To find what percent eighteen is of seventy-two, divide the part by the whole, and then multiply by one hundred. Eighteen is the part, and seventy-two is the whole."
+        },
+        {
+          "say": "Eighteen divided by seventy-two is zero point two five. This is the decimal form of the percent.",
+          "op": "divide",
+          "result": "0.25 × 100"
+        },
+        {
+          "say": "Multiply by one hundred to convert to a percent. Zero point two five times one hundred is twenty-five. So eighteen is twenty-five percent of seventy-two.",
+          "op": "× 100",
+          "result": "25",
+          "final": true
+        }
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "Part B: the new price",
+      "start": "80 × 1.15",
+      "beats": [
+        {
+          "say": "A fifteen percent increase has a multiplier of one point one five. So we multiply the old price, eighty, by one point one five."
+        },
+        {
+          "say": "Eighty times one point one five is ninety-two. So the new price is ninety-two dollars.",
+          "op": "multiply",
+          "result": "92",
+          "final": true
+        }
+      ]
+    },
+    {
+      "type": "check",
+      "title": "Check part B",
+      "beats": [
+        {
+          "say": "Check by finding the increase directly. Fifteen percent of eighty is zero point one five times eighty, which is twelve. Adding twelve to eighty gives ninety-two. Both methods agree.",
+          "lines": [
+            "0.15 × 80 = 12",
+            "80 + 12 = 92"
+          ],
+          "verdict": "The new price is $92."
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "title": "Quick recap",
+      "beats": [
+        {
+          "say": "To recap. Percent means per hundred, so convert percents to decimals by dividing by one hundred.",
+          "item": "Percent = per hundred"
+        },
+        {
+          "say": "Think in multipliers. Increase by p percent is one plus p over one hundred, and decrease is one minus p over one hundred.",
+          "item": "Increase and decrease are multipliers"
+        },
+        {
+          "say": "Check by computing the change directly. In the next video, we work through a medium problem and a hard problem.",
+          "item": "Check with a direct calculation"
+        }
+      ]
+    }
+  ]
+}

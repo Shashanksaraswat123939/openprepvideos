@@ -1,0 +1,55 @@
+{
+  "id": "m-alg-lin2_v1",
+  "skill": "m-alg-lin2",
+  "part": 1,
+  "title": "Linear Equations in Two Variables, Part 1: The Idea and an Easy Problem",
+  "section_label": "Math · Algebra",
+  "scenes": [
+    {"type": "cards", "title": "Equations in two variables", "beats": [
+      {"say": "A linear equation in two variables, such as y equals two x minus four, describes a straight line on the coordinate plane. Every point on that line is a solution of the equation.", "card": {"text": "A line is a set of solutions"}},
+      {"say": "The SAT asks you to move between slope-intercept form and standard form, find intercepts, and write equations for parallel or perpendicular lines.", "card": {"text": "Forms, intercepts, parallel, perpendicular"}},
+      {"say": "It also asks you to set up equations from stories, such as tickets at two different prices that add up to a fixed total.", "card": {"text": "Set up equations from stories"}}
+    ]},
+    {"type": "list", "title": "Key ideas", "beats": [
+      {"say": "A point p comma q is on a line exactly when putting x equals p and y equals q into the equation makes it true. That is how you test any point.", "item": "On the line means it makes the equation true"},
+      {"say": "In the form y equals m x plus b, you can read the slope m and the y-intercept b directly from the equation.", "item": "y = mx + b shows slope and intercept"},
+      {"say": "In standard form, A x plus B y equals C, the intercepts are quick. Set x to zero to find the y-intercept, and set y to zero to find the x-intercept.", "item": "Standard form: set one variable to zero"},
+      {"say": "In a story equation like eight a plus five c equals two hundred, each coefficient is a price per item, and the constant is the total. An intercept means all of one kind.", "item": "Story equations: price times count"},
+      {"say": "Parallel lines have equal slopes. Perpendicular lines have slopes that are negative reciprocals, so their product is negative one.", "item": "Parallel: equal. Perpendicular: negative reciprocal."}
+    ]},
+    {"type": "table", "title": "Slope and intercepts by form", "columns": ["Form", "Slope", "y-intercept", "x-intercept"], "rows": [["y = mx + b", "m", "b", "−b/m"], ["Ax + By = C", "−A/B", "C/B", "C/A"]], "beats": [
+      {"say": "This table shows where to find the slope and the intercepts in each form. In slope-intercept form, the slope is m, the y-intercept is b, and the x-intercept is negative b over m.", "reveal_row": 0},
+      {"say": "In standard form, the slope is negative A over B, the y-intercept is C over B, and the x-intercept is C over A. The minus sign in the slope is easy to forget.", "reveal_row": 1}
+    ]},
+    {"type": "cards", "title": "Easy example", "beats": [
+      {"say": "Easy example. Find the slope and both intercepts of the line six x minus three y equals twelve. We will find each one with its own short calculation.", "card": {"text": "6x − 3y = 12", "sub": "Find the slope and both intercepts"}}
+    ]},
+    {"type": "steps", "title": "The slope", "start": "m = −frac(6,−3)", "beats": [
+      {"say": "For standard form, the slope is negative A over B. Here A is six and B is negative three, so we write negative six over negative three."},
+      {"say": "Six divided by negative three is negative two, and the minus sign in front flips it. So the slope is two.", "op": "simplify", "result": "m = 2", "final": true}
+    ]},
+    {"type": "steps", "title": "The y-intercept", "start": "6(0) − 3y = 12", "beats": [
+      {"say": "To find the y-intercept, set x equal to zero. That is the point where the line crosses the y axis, so x is zero there."},
+      {"say": "Six times zero is zero, so the equation becomes negative three y equals twelve.", "op": "x = 0", "result": "−3y = 12"},
+      {"say": "Divide both sides by negative three. Twelve divided by negative three is negative four. So the y-intercept is negative four.", "op": "÷ (−3) on both sides", "result": "y = −4", "final": true}
+    ]},
+    {"type": "steps", "title": "The x-intercept", "start": "6x − 3(0) = 12", "beats": [
+      {"say": "To find the x-intercept, set y equal to zero. That is where the line crosses the x axis."},
+      {"say": "Negative three times zero is zero, so the equation becomes six x equals twelve.", "op": "y = 0", "result": "6x = 12"},
+      {"say": "Divide both sides by six. Twelve divided by six is two. So the x-intercept is two.", "op": "÷ 6 on both sides", "result": "x = 2", "final": true}
+    ]},
+    {"type": "steps", "title": "Check by rewriting", "start": "6x − 3y = 12", "beats": [
+      {"say": "As a check, rewrite the equation in slope-intercept form. Start with the original equation, and get y alone."},
+      {"say": "Subtract six x from both sides, so the x term leaves the left side.", "op": "− 6x on both sides", "result": "−3y = −6x + 12"},
+      {"say": "Divide every term by negative three. Negative six x divided by negative three is two x, and twelve divided by negative three is negative four.", "op": "÷ (−3) every term", "result": "y = 2x − 4", "final": true}
+    ]},
+    {"type": "cards", "title": "Everything matches", "beats": [
+      {"say": "The slope is two and the y-intercept is negative four, exactly as we found before. And when y is zero, two x minus four equals zero gives x equals two. Everything agrees.", "card": {"text": "Slope 2, y-int −4, x-int 2", "sub": "Both methods agree"}}
+    ]},
+    {"type": "list", "title": "Quick recap", "beats": [
+      {"say": "To recap. Every point on a line makes its equation true, and slope-intercept form shows the slope and y-intercept directly.", "item": "Points on a line satisfy the equation"},
+      {"say": "In standard form, the slope is negative A over B. For intercepts, set one variable to zero and solve for the other.", "item": "Standard form: slope −A/B, zero a variable"},
+      {"say": "Perpendicular slopes are negative reciprocals. In the next video, we work through a medium problem and a hard problem.", "item": "Perpendicular: negative reciprocal"}
+    ]}
+  ]
+}
