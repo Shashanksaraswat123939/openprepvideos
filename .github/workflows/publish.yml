@@ -1,0 +1,33 @@
+name: Publish videos to a draft release
+
+# Push a tag named publish-<run id> (for example publish-37759874531).
+# It copies that render run's videos into a DRAFT release: visible only to people who can write to the repo.
+on:
+  push:
+    tags: ["publish-*"]
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Work out the run id
+        id: rid
+        run: echo "id=${GITHUB_REF_NAME#publish-}" >> "$GITHUB_OUTPUT"
+      - name: Download the videos from that run
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ steps.rid.outputs.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pattern: videos-shard-*
+          merge-multiple: true
+          path: videos
+      - name: Create the draft release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ls videos | wc -l
+          gh release create "$GITHUB_REF_NAME" videos/*.mp4 --draft --repo "$GITHUB_REPOSITORY" --title "OpenPrep videos (run ${{ steps.rid.outputs.id }})" --notes "Videos from render run ${{ steps.rid.outputs.id }}. Draft: only repo writers can see it."
